@@ -1,0 +1,11 @@
+# build.properties example
+#
+sf.username.origin = telnext@chebanca.it.demogeocal
+sf.password.origin = Milano05!
+sf.serverurl.origin = https://test.salesforce.com
+
+sf.username.target = telnext@chebanca.it.sys
+sf.password.target = Milano05!
+sf.serverurl.target = https://test.salesforce.com
+
+sf.maxPoll = 20

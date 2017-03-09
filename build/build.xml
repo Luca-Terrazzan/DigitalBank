@@ -1,0 +1,100 @@
+<project name="CB! develop" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+
+    <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
+        <classpath>
+            <pathelement location="lib/ant-salesforce.jar" />
+        </classpath>
+    </taskdef>
+
+    <!-- Deploy a destructive change -->
+    <target name="destroy">
+        <sf:deploy username="${username}" password="${password}" sessionId="${sessionId}"
+            serverurl="${serverurl}" deployRoot="destructives"/>
+    </target>
+
+    <!-- Retrieve metadata -->
+    <target name="retrieve" depends="cleanData">
+        <sf:retrieve username="${username}" password="${password}" sessionId="${sessionId}"
+            serverurl="${serverurl}" retrieveTarget="deploy/" unpackaged="deploy/retrieve.package.xml"/>
+    </target>
+
+    <!-- Deploy -->
+    <target name="deploy" depends="removeUserPermissions, fixPackage">
+        <sf:deploy username="${username}" password="${password}" sessionId="${sessionId}"
+            serverurl="${serverurl}" deployRoot="./deploy"/>
+    </target>
+
+    <!-- Deploy CI -->
+    <target name="deployCI" depends="deployParameters, cleanData, copySrc, removeUserPermissions, fixEmailTemplates">
+        <sf:deploy username="${username}" password="${password}" testLevel="${testLevel}"
+            serverurl="${serverurl}" deployRoot="./deploy/src" checkOnly="${validate}"
+            rollbackOnError="${forceDeploy}" />
+    </target>
+
+
+
+
+
+    <!--   _____________________Support tasks___________________________   -->
+
+    <!-- Removes all user system permissions prom a set of profiles -->
+    <target name="removeUserPermissions">
+        <!-- fix profiles -->
+        <replaceregexp flags="gs">
+            <regexp pattern="&lt;userPermissions&gt;(.*)&lt;/userPermissions&gt;" />
+            <substitution expression="" />
+            <fileset dir="./deploy/src/profiles" erroronmissingdir="false">
+                <include name="*.profile" />
+            </fileset>
+        </replaceregexp>
+        <!-- fix permission sets -->
+        <replaceregexp flags="gs">
+            <regexp pattern="&lt;userPermissions&gt;(.*)&lt;/userPermissions&gt;" />
+            <substitution expression="" />
+            <fileset dir="./deploy/src/permissionsets" erroronmissingdir="false">
+                <include name="*.permissionset" />
+            </fileset>
+        </replaceregexp>
+    </target>
+
+    <!-- Removes buggy rows from email template manifest in package.xml -->
+    <target name="fixEmailTemplates">
+        <replaceregexp flags="gs">
+            <regexp pattern="&lt;members&gt;unfiled(.*)public&lt;/members&gt;" />
+            <substitution expression="" />
+            <fileset dir="./deploy/src" erroronmissingdir="true">
+                <include name="package.xml" />
+            </fileset>
+        </replaceregexp>
+    </target>
+
+    <target name="fixPackage">
+        <delete file="./deploy/package.xml"/>
+        <copy file="./deploy/deploy.package.xml" tofile="./deploy/package.xml"/>
+    </target>
+
+    <!-- Removes previous retrieves' data -->
+    <target name="cleanData">
+        <delete includeemptydirs="true">
+            <fileset dir="./deploy" includes="**/*" excludes="**.xml" erroronmissingdir="false"/>
+        </delete>
+    </target>
+
+    <!-- Copy src to a safe location -->
+    <target name="copySrc">
+        <copy todir=".\deploy\src">
+            <fileset dir="..\src"/>
+        </copy>
+    </target>
+
+    <!-- Echo the environment variables -->
+    <target name="deployParameters">
+        <echo message = "username: ${username}, testLevel: ${testLevel}, serverurl: ${serverurl},
+            deployRoot: ./deploy/src, checkOnly: ${validate}, rollbackOnError: ${forceDeploy}"/>
+    </target>
+    <!--   _____________________Support tasks___________________________   -->
+
+</project>
