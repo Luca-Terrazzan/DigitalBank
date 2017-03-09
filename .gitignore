@@ -1,0 +1,39 @@
+*.sublime-project
+*.sublime-settings
+*.sublime-workspace
+build/build.properties
+config
+*.orig
+src/classes/DoCreator
+
+build/build.properties
+build/lib/ant-salesforce.jar
+
+# Anonymous blocks
+.apex
+
+# Ignore progetti soap UI
+SoapUI
+
+# Ignore dei plugin di vs code
+force.json
+.vscode/settings.json
+
+# Ignore speciale per i deploy
+deploy/**/*.*
+!deploy/**/package.xml
+
+# Ignore CI
+build/deploy/*
+build/destructives/package.xml
+build/destructives/destructiveChanges.xml
+
+# SFDC IDE
+.project
+salesforce.schema
+.settings
+Referenced Packages
+
+# ignore vari vscode
+debug.log
+session.properties
