@@ -4,7 +4,7 @@
 <!-- CONTROLLER INIT -->
 	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
 <!-- ATTRIBUTES -->
-	<aura:attribute name="recordId" type="Id" />
+	<!-- <aura:attribute name="recordId" type="Id" /> -->
 	<aura:attribute name="financialAccounts" type="RelatedListController.FinServ__FinancialAccount__c[]" />
 
 <div class="slds-grid slds-wrap">

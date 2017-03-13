@@ -1,8 +1,8 @@
 ({
 	doInit : function(component) {
 		var action = component.get("{!c.getRetailFinancialAccount}");
-		// action.setParams({ account: component.get("v.account") }); // to be enabled once the component is finished
-		action.setParams({ account: "00146000002oWD8AAM"}); // temp hardocding
+		action.setParams({ accountId: component.get("v.recordId") }); // to be enabled once the component is finished
+		//action.setParams({ account: "00146000002oWD8AAM"}); // temp hardocding
 
 		action.setCallback(this, function(response){
 			var state = response.getState();
