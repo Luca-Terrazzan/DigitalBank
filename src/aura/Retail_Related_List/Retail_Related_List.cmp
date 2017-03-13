@@ -1,3 +1,44 @@
-<aura:component >
-	
+<aura:component 
+	controller="RelatedListController" 
+	implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId">
+<!-- CONTROLLER INIT -->
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+<!-- ATTRIBUTES -->
+	<aura:attribute name="recordId" type="Id" />
+	<aura:attribute name="financialAccounts" type="RelatedListController.FinServ__FinancialAccount__c[]" />
+
+<div class="slds-grid slds-wrap">
+<!-- HEADER -->
+	<div class="slds-page-header slds-col slds-size--1-of-1">
+		<div class="slds-grid">
+			<div class="slds-col">
+				<div class="slds-text-heading--label">Retail Financial Accounts</div>
+				<div class="slds-text-heading--medium">Retail Financial Accounts</div>
+			</div>
+		</div>
+	</div>
+<!-- HEADER -->
+
+<!-- TABLE -->
+	<table class="slds-table slds-table--bordered slds-table--cell-buffer slds-col slds-size--1-of-1">
+<!-- TABLE HEADER -->
+		<thead>
+			<tr class="slds-text-title--caps">
+				<th scope="col"><div class="slds-truncate" title="Name">Name</div></th>
+				<th scope="col"><div class="slds-truncate" title="Balance">Balance</div></th>
+			</tr>
+		</thead>
+<!-- TABLE BODY -->
+		<tbody>
+			<aura:iteration items="{!v.financialAccounts}" var="fa">
+                    <tr>
+                        <td>{!fa.Name}</td>
+                        <td>{!fa.FinServ__Balance__c}</td>                 
+                    </tr>
+                </aura:iteration>
+		</tbody>
+	</table>
+<!-- TABLE -->
+</div>
+
 </aura:component>
