@@ -24,6 +24,9 @@
         </h2>
       </div>
     </header>
+    <div class="slds-no-flex">
+      <button class="slds-button slds-button--neutral">New</button>
+    </div>
 <!-- HEADER -->
   </div>
 <!-- TABLE -->
@@ -49,6 +52,6 @@
         </tbody>
     </table>
 <!-- TABLE -->
-
+<div class="slds-card__footer"><a href="javascript:void(0);">View All <span class="slds-assistive-text">entity type</span></a></div>
 </article>
 </aura:component>
