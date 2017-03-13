@@ -1,5 +1,4 @@
-reciprocal role?
-validation rules 1!=1?
-morph business contact into individual not possible
-advisor profile + permision set
-wave for financial servies cloud
+TODO: add rollup # of financial accounts by type for accounts 
+    custom field: IsCommercial__c on FinancialAccount__c, boolean to check whether or not the product has been created through the 720 commercial view
+    custom field: IsCommercial__c on FinancialAccountRole__c formula to have the FA field on the role 
+    The IsCommercial checkbox is set on the 720 creation page for FA, this will probably require custom creation pages.
