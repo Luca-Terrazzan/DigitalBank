@@ -1,0 +1,54 @@
+<aura:component
+	controller="RelatedListController"
+	implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId">
+<!-- CONTROLLER INIT -->
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+<!-- ATTRIBUTES -->
+	<!-- <aura:attribute name="recordId" type="Id" /> -->
+	<aura:attribute name="financialAccounts" type="RelatedListController.FinServ__FinancialAccount__c[]" />
+
+<article class="slds-card">
+<div class="slds-card__header slds-grid">
+<!-- HEADER -->
+    <header class="slds-media slds-media--center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+        <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
+         <c:svgicon svgPath="/resource/ldt__SLDS202/assets/icons/standard-sprite/svg/symbols.svg#coaching" category="standard" size="small" name="coaching" />
+        </span>
+      </div>
+      <div class="slds-media__body">
+        <h2>
+          <a href="javascript:void(0);" class="slds-card__header-link slds-truncate">
+            <span class="slds-text-heading--small"> Commercial Financial Accounts ({!v.financialAccounts.length})</span>
+          </a>
+        </h2>
+      </div>
+    </header>
+<!-- HEADER -->
+  </div>
+<!-- TABLE -->
+    <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-col slds-size--1-of-1">
+<!-- TABLE HEADER -->
+        <thead>
+            <tr class="slds-text-title--caps">
+                <th scope="col"><div class="slds-truncate" title="Name">Name</div></th>
+                <th scope="col"><div class="slds-truncate" title="Balance">Balance</div></th>
+            </tr>
+        </thead>
+<!-- TABLE BODY -->
+        <tbody>
+            <aura:iteration items="{!v.financialAccounts}" var="fa">
+                    <tr>
+                       <th scope="row" data-label="Financial Account Name">
+                        <!-- slight workaround to avoid the /c/ in lightning page url -->
+                        <ui:outputURL value="{!'../' + fa.Id}" label="{!fa.Name}" class="uiOutputURL"/>
+                        </th>
+                        <td>{!fa.FinServ__Balance__c}</td>
+                    </tr>
+                </aura:iteration>
+        </tbody>
+    </table>
+<!-- TABLE -->
+
+</article>
+</aura:component>
