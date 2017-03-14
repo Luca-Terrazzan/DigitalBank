@@ -1,17 +1,29 @@
 /**
  * Encapsulate query logic for Financial Accounts
- **/
+ */
 public class FinancialAccountsSelector extends fflib_SObjectSelector
 {
+    /**
+     * Gets the s object field list.
+     * @return     The s object field list.
+     */
     public List<Schema.SObjectField> getSObjectFieldList()
     {
         return new List<Schema.SObjectField> {
             FinServ__FinancialAccount__c.Id,
             FinServ__FinancialAccount__c.Name,
-            FinServ__FinancialAccount__c.FinServ__Balance__c
+            FinServ__FinancialAccount__c.FinServ__Balance__c,
+            FinServ__FinancialAccount__c.FinServ__FinancialAccountType__c,
+            FinServ__FinancialAccount__c.FinServ__OwnerType__c,
+            FinServ__FinancialAccount__c.FinServ__OpenDate__c,
+            FinServ__FinancialAccount__c.FinServ__Status__c
         };
     }
 
+    /**
+     * Gets a list of strings representing the fields returned by getSObjectFieldList()
+     * @return     The field list string.
+     */
     public List<String> getFieldListString()
     {
         List<String> fieldList = new List<String>();
@@ -21,13 +33,23 @@ public class FinancialAccountsSelector extends fflib_SObjectSelector
         return fieldList;
     }
 
+    /**
+     * Gets currently represented sobject type name
+     * @return     The s object type.
+     */
     public Schema.SObjectType getSObjectType()
     {
         return FinServ__FinancialAccount__c.sObjectType;
     }
 
+    /**
+     * Default selection of items by id
+     * @param      idSet  The identifier set
+     * @return     List of financial accounts
+     */
     public List<FinServ__FinancialAccount__c> selectById(Set<ID> idSet)
     {
+        if (idSet == null || idSet.isEmpty()) return new FinServ__FinancialAccount__c[]{};
         return (List<FinServ__FinancialAccount__c>) selectSObjectsById(idSet);
     }
 
@@ -36,6 +58,11 @@ public class FinancialAccountsSelector extends fflib_SObjectSelector
         return selectByAccount(accountIds, false);
     }
 
+    /**
+     * Select all financial accounts primarily related to a list of accounts
+     * @param      accountIds  The account identifiers
+     * @return     List of financial accounts
+     */
     public FinServ__FinancialAccount__c[] selectByAccount(Set<Id> accountIds, Boolean isCommercial)
     {
         assertIsAccessible();
@@ -43,7 +70,7 @@ public class FinancialAccountsSelector extends fflib_SObjectSelector
                 'select {0} ' +
                     'from {1} ' +
                     'where FinServ__FinancialAccount__c.FinServ__PrimaryOwner__c in {2} ' +
-                    'AND IsCommercial__c = {3}',
+                    'AND IsCommercial__c =: isCommercial',
                 new List<String> {
                     String.join(getFieldListString(), ', '),
                     getSObjectName(),
@@ -61,22 +88,4 @@ public class FinancialAccountsSelector extends fflib_SObjectSelector
         List<Id> idList = new List<Id>(idSet);
         return '(\'' + String.join(idList, '\',\'') + '\')';
     }
-    /*
-     * For more examples see https://github.com/financialforcedev/fflib-apex-common-samplecode
-     *
-    public List<FinServ__FinancialAccount__c> selectBySomethingElse(List<String> somethings)
-    {
-        assertIsAccessible();
-        return (List<FinServ__FinancialAccount__c>) Database.query(
-                String.format(
-                'select {0}, ' +
-                  'from {1} ' +
-                  'where Something__c in :somethings ' +
-                  'order by {2}',
-                new List<String> {
-                    getFieldListString(),
-                    getSObjectName(),
-                    getOrderBy() } ) );
-    }
-     */
 }
