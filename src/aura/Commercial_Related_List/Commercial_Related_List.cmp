@@ -1,5 +1,4 @@
-<aura:component
-	controller="RelatedListController"
+<aura:component controller="RelatedListController"
 	implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId">
 <!-- CONTROLLER INIT -->
 	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
@@ -13,7 +12,7 @@
     <header class="slds-media slds-media--center slds-has-flexi-truncate">
       <div class="slds-media__figure">
         <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
-         <c:svgicon svgPath="/resource/ldt__SLDS202/assets/icons/standard-sprite/svg/symbols.svg#coaching" category="standard" size="small" name="coaching" />
+         <c:svgIcon svgPath="/resource/ldt__SLDS202/assets/icons/standard-sprite/svg/symbols.svg#coaching" category="standard" size="small" name="coaching" />
         </span>
       </div>
       <div class="slds-media__body">
@@ -35,6 +34,9 @@
         <thead>
             <tr class="slds-text-title--caps">
                 <th scope="col"><div class="slds-truncate" title="Name">Name</div></th>
+                <th scope="col"><div class="slds-truncate" title="Name">Type</div></th>
+                <th scope="col"><div class="slds-truncate" title="Status">Status</div></th>
+                <th scope="col"><div class="slds-truncate" title="Date Opened">Date Opened</div></th>
                 <th scope="col"><div class="slds-truncate" title="Balance">Balance</div></th>
             </tr>
         </thead>
@@ -46,6 +48,9 @@
                         <!-- slight workaround to avoid the /c/ in lightning page url -->
                         <ui:outputURL value="{!'../' + fa.Id}" label="{!fa.Name}" class="uiOutputURL"/>
                         </th>
+                        <td>{!fa.FinServ__FinancialAccountType__c}</td>
+                        <td>{!fa.FinServ__Status__c}</td>
+                        <td>{!fa.FinServ__OpenDate__c}</td>
                         <td>{!fa.FinServ__Balance__c}</td>
                     </tr>
                 </aura:iteration>
