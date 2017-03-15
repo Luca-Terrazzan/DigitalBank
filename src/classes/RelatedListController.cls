@@ -11,4 +11,11 @@ public with sharing class RelatedListController {
     {
         return AccountService.selectCommercialProducts(accountId);
     }
+
+    @AuraEnabled
+    public static FinServ__FinancialAccount__c[] getWealthFinancialAccount(Id accountId)
+    {
+        return AccountService.selectWealthProducts(accountId);
+    }
+
 }
