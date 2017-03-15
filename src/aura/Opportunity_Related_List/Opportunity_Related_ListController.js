@@ -9,7 +9,7 @@
             var result = response.getReturnValue();
             console.log("APEX controller SOQL result: " , result);
             if( component.isValid() && state === "SUCCESS" ){
-                component.set("v.financialAccounts", result);
+                component.set("v.opportunities", result);
             } else console.log("fail: " + state);
         });
         $A.enqueueAction(action);
