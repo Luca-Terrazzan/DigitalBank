@@ -33,6 +33,7 @@ build/destructives/destructiveChanges.xml
 salesforce.schema
 .settings
 Referenced Packages
+resource-bundles
 
 # ignore vari vscode
 debug.log
