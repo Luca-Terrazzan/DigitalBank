@@ -55,7 +55,7 @@ public class FinancialAccountsSelector extends fflib_SObjectSelector
 
     public FinServ__FinancialAccount__c[] selectByAccount(Set<Id> accountIds)
     {
-        return selectByAccount(accountIds, false);
+        return selectByAccount(accountIds, 'retail');
     }
 
     /**
@@ -63,29 +63,21 @@ public class FinancialAccountsSelector extends fflib_SObjectSelector
      * @param      accountIds  The account identifiers
      * @return     List of financial accounts
      */
-    public FinServ__FinancialAccount__c[] selectByAccount(Set<Id> accountIds, Boolean isCommercial)
+    public FinServ__FinancialAccount__c[] selectByAccount(Set<Id> accountIds, String category)
     {
         assertIsAccessible();
         String query = String.format(
                 'select {0} ' +
                     'from {1} ' +
-                    'where FinServ__FinancialAccount__c.FinServ__PrimaryOwner__c in {2} ' +
-                    'AND IsCommercial__c =: isCommercial',
+                    'where FinServ__FinancialAccount__c.FinServ__PrimaryOwner__c IN: accountIds ' +
+                    'AND Category__c =: category',
                 new List<String> {
                     String.join(getFieldListString(), ', '),
-                    getSObjectName(),
-                    set2soqlInClause(accountIds),
-                    String.valueOf(isCommercial)
+                    getSObjectName()
                 }
             );
         System.debug('query: ' + query);
         return (List<FinServ__FinancialAccount__c>) Database.query(query);
     }
 
-    private String set2soqlInClause(Set<Id> idSet)
-    {
-        if ( idSet == null || idSet.isEmpty() ) return '';
-        List<Id> idList = new List<Id>(idSet);
-        return '(\'' + String.join(idList, '\',\'') + '\')';
-    }
 }
