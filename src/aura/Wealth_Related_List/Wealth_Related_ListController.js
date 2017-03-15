@@ -1,6 +1,6 @@
 ({
     doInit : function(component) {
-        var action = component.get("{!c.getRetailFinancialAccount}");
+        var action = component.get("{!c.getWealthFinancialAccount}");
         action.setParams({ accountId: component.get("v.recordId") }); // to be enabled once the component is finished
         //action.setParams({ accountId: "00146000002oWD8AAM"}); // temp hardocding
 
