@@ -69,7 +69,7 @@ public class FinancialAccountsSelector extends fflib_SObjectSelector
         String query = String.format(
                 'select {0} ' +
                     'from {1} ' +
-                    'where FinServ__FinancialAccount__c.FinServ__PrimaryOwner__c IN: accountIds ' +
+                    'where FinServ__PrimaryOwner__c IN: accountIds ' +
                     'AND Category__c =: category',
                 new List<String> {
                     String.join(getFieldListString(), ', '),
