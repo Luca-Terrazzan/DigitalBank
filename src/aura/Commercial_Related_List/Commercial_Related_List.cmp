@@ -1,10 +1,10 @@
 <aura:component controller="RelatedListController"
-	implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId">
+    implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId">
 <!-- CONTROLLER INIT -->
-	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
 <!-- ATTRIBUTES -->
-	<!-- <aura:attribute name="recordId" type="Id" /> -->
-	<aura:attribute name="financialAccounts" type="RelatedListController.FinServ__FinancialAccount__c[]" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="financialAccounts" type="RelatedListController.FinServ__FinancialAccount__c[]" />
 
 <article class="slds-card">
 <div class="slds-card__header slds-grid">
@@ -12,7 +12,10 @@
     <header class="slds-media slds-media--center slds-has-flexi-truncate">
       <div class="slds-media__figure">
         <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
-         <c:svgIcon svgPath="/resource/ldt__SLDS202/assets/icons/standard-sprite/svg/symbols.svg#coaching" category="standard" size="small" name="coaching" />
+            <c:svgIcon svgPath="/resource/ldt__SLDS202/assets/icons/standard-sprite/svg/symbols.svg#coaching"
+                category="standard"
+                size="small"
+                name="coaching" />
         </span>
       </div>
       <div class="slds-media__body">
@@ -34,7 +37,7 @@
         <thead>
             <tr class="slds-text-title--caps">
                 <th scope="col"><div class="slds-truncate" title="Name">Name</div></th>
-                <th scope="col"><div class="slds-truncate" title="Name">Type</div></th>
+                <th scope="col"><div class="slds-truncate" title="Type">Type</div></th>
                 <th scope="col"><div class="slds-truncate" title="Status">Status</div></th>
                 <th scope="col"><div class="slds-truncate" title="Date Opened">Date Opened</div></th>
                 <th scope="col"><div class="slds-truncate" title="Balance">Balance</div></th>
