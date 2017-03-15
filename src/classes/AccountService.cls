@@ -10,7 +10,7 @@ public class AccountService
      */
     public static FinServ__FinancialAccount__c[] selectRetailProducts(Id accountId)
     {
-        return new FinancialAccountsSelector().selectByAccount(new Set<Id>{accountId}, false);
+        return new FinancialAccountsSelector().selectByAccount(new Set<Id>{accountId}, 'retail');
     }
     /**
      * Select commercial products only based on a specific Account - mostly individual accounts
@@ -19,6 +19,15 @@ public class AccountService
      */
     public static FinServ__FinancialAccount__c[] selectCommercialProducts(Id accountId)
     {
-        return new FinancialAccountsSelector().selectByAccount(new Set<Id>{accountId}, true);
+        return new FinancialAccountsSelector().selectByAccount(new Set<Id>{accountId}, 'commercial');
+    }
+    /**
+     * Select wealth products only based on a specific Account - mostly individual accounts
+     * @param      accountId  The account identifier
+     * @return     FinServ__FinancialAccount__c[]
+     */
+    public static FinServ__FinancialAccount__c[] selectWealthProducts(Id accountId)
+    {
+        return new FinancialAccountsSelector().selectByAccount(new Set<Id>{accountId}, 'wealth');
     }
 }
