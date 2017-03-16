@@ -4,7 +4,9 @@
     <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
 <!-- ATTRIBUTES -->
     <!-- <aura:attribute name="recordId" type="Id" /> -->
+
     <aura:attribute name="opportunities" type="RelatedListController.Opportunity[]" />
+    <aura:attribute name="category" type="String" />
 
 <article class="slds-card">
 <div class="slds-card__header slds-grid">
@@ -21,7 +23,7 @@
       <div class="slds-media__body">
         <h2>
           <a href="javascript:void(0);" class="slds-card__header-link slds-truncate">
-            <span class="slds-text-heading--small"> Retail Opportunities ({!v.opportunities.length})</span>
+            <span class="slds-text-heading--small"> {!v.category} Opportunities ({!v.opportunities.length})</span>
           </a>
         </h2>
       </div>

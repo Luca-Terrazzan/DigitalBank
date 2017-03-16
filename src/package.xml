@@ -6,24 +6,11 @@
     </types>
     <types>
         <members>*</members>
-        <name>ApexComponent</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
-        <members>*</members>
         <name>ApexTrigger</name>
     </types>
     <types>
         <members>*</members>
         <name>AuraDefinitionBundle</name>
-    </types>
-    <types>
-        <members>AccountContactRelation</members>
-        <members>ContactAccountRelationship__c</members>
-        <name>CustomObject</name>
     </types>
     <types>
         <members>*</members>

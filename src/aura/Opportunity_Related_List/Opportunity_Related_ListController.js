@@ -1,7 +1,12 @@
 ({
-    doInit : function(component) {
-        var action = component.get("{!c.getRetailOpportunities}");
-        action.setParams({ accountId: component.get("v.recordId") }); // to be enabled once the component is finished
+    doInit : function(component, event, helper) {
+
+        var faCategory = component.get("v.category");
+        var action = component.get("{!c.getOpportunities}");
+        action.setParams({
+            accountId: component.get("v.recordId"),
+            category: helper.validateCategory(faCategory)
+        });
         //action.setParams({ accountId: "00146000002oWD8AAM"}); // temp hardocding
 
         action.setCallback(this, function(response){
