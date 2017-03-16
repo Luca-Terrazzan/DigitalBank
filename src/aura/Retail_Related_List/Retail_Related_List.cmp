@@ -4,6 +4,7 @@
     <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
 <!-- ATTRIBUTES -->
     <!-- <aura:attribute name="recordId" type="Id" /> -->
+    <aura:attribute name="category" type="String" />
     <aura:attribute name="financialAccounts" type="RelatedListController.FinServ__FinancialAccount__c[]" />
 
 <article class="slds-card">
@@ -21,7 +22,7 @@
       <div class="slds-media__body">
         <h2>
           <a href="javascript:void(0);" class="slds-card__header-link slds-truncate">
-            <span class="slds-text-heading--small"> Retail Financial Accounts ({!v.financialAccounts.length})</span>
+            <span class="slds-text-heading--small"> {!v.category} Financial Accounts ({!v.financialAccounts.length})</span>
           </a>
         </h2>
       </div>

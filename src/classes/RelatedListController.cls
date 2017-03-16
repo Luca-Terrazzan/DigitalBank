@@ -1,21 +1,14 @@
 public with sharing class RelatedListController {
 
     @AuraEnabled
-    public static FinServ__FinancialAccount__c[] getRetailFinancialAccount(Id accountId)
+    public static FinServ__FinancialAccount__c[] getFinancialAccount(Id accountId, String category)
     {
-        return AccountService.selectRetailProducts(accountId);
+        return AccountService.selectProducts(accountId, category);
     }
 
-    @AuraEnabled
-    public static FinServ__FinancialAccount__c[] getCommercialFinancialAccount(Id accountId)
+     @AuraEnabled
+    public static Opportunity[] getOpportunities(Id accountId)
     {
-        return AccountService.selectCommercialProducts(accountId);
+        return AccountService.selectOpportunities(accountId);
     }
-
-    @AuraEnabled
-    public static FinServ__FinancialAccount__c[] getWealthFinancialAccount(Id accountId)
-    {
-        return AccountService.selectWealthProducts(accountId);
-    }
-
 }

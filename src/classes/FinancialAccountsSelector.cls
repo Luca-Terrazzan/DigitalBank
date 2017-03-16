@@ -77,6 +77,8 @@ public class FinancialAccountsSelector extends fflib_SObjectSelector
                 }
             );
         System.debug('query: ' + query);
+        System.debug('id: ' + accountIds);
+        System.debug('category: ' + category);
         return (List<FinServ__FinancialAccount__c>) Database.query(query);
     }
 

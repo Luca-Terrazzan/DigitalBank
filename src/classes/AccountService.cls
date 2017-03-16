@@ -4,30 +4,18 @@
 public class AccountService
 {
     /**
-     * Select retial products only based on a specific Account - mostly individual accounts
+     * Select products only based on a specific Account - mostly individual accounts
      * @param      accountId  The account identifier
+     * @param      category  The financial account category
      * @return     FinServ__FinancialAccount__c[]
      */
-    public static FinServ__FinancialAccount__c[] selectRetailProducts(Id accountId)
+    public static FinServ__FinancialAccount__c[] selectProducts(Id accountId, String category)
     {
-        return new FinancialAccountsSelector().selectByAccount(new Set<Id>{accountId}, 'retail');
+        return new FinancialAccountsSelector().selectByAccount(new Set<Id>{accountId}, category.toLowerCase());
     }
-    /**
-     * Select commercial products only based on a specific Account - mostly individual accounts
-     * @param      accountId  The account identifier
-     * @return     FinServ__FinancialAccount__c[]
-     */
-    public static FinServ__FinancialAccount__c[] selectCommercialProducts(Id accountId)
+
+    public static Opportunity[] selectOpportunities(Id accountId)
     {
-        return new FinancialAccountsSelector().selectByAccount(new Set<Id>{accountId}, 'commercial');
-    }
-    /**
-     * Select wealth products only based on a specific Account - mostly individual accounts
-     * @param      accountId  The account identifier
-     * @return     FinServ__FinancialAccount__c[]
-     */
-    public static FinServ__FinancialAccount__c[] selectWealthProducts(Id accountId)
-    {
-        return new FinancialAccountsSelector().selectByAccount(new Set<Id>{accountId}, 'wealth');
+        return new OpportunitiesSelector().selectByAccount(new Set<Id>{accountId}, 'opportunity');
     }
 }
