@@ -4,7 +4,8 @@
     <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
 <!-- ATTRIBUTES -->
     <!-- <aura:attribute name="recordId" type="Id" /> -->
-    <aura:attribute name="financialAccounts" type="RelatedListController.FinServ__FinancialAccount__c[]" />
+    <aura:attribute name="category" type="String" />
+    <aura:attribute name="financialAccounts" type="RelatedListController.FinServ__FinancialAccountRole__c[]" />
 
 <article class="slds-card">
 <div class="slds-card__header slds-grid">
@@ -21,7 +22,7 @@
       <div class="slds-media__body">
         <h2>
           <a href="javascript:void(0);" class="slds-card__header-link slds-truncate">
-            <span class="slds-text-heading--small"> Retail Financial Accounts ({!v.financialAccounts.length})</span>
+            <span class="slds-text-heading--small"> {!v.category} Financial Accounts ({!v.financialAccounts.length})</span>
           </a>
         </h2>
       </div>
@@ -39,6 +40,7 @@
                 <th scope="col"><div class="slds-truncate" title="Name">Name</div></th>
                 <th scope="col"><div class="slds-truncate" title="Type">Type</div></th>
                 <th scope="col"><div class="slds-truncate" title="Status">Status</div></th>
+                <th scope="col"><div class="slds-truncate" title="Role">Role</div></th>
                 <th scope="col"><div class="slds-truncate" title="Date Opened">Date Opened</div></th>
                 <th scope="col"><div class="slds-truncate" title="Balance">Balance</div></th>
             </tr>
@@ -49,12 +51,13 @@
                     <tr>
                        <th scope="row" data-label="Financial Account Name">
                         <!-- slight workaround to avoid the /c/ in lightning page url -->
-                        <ui:outputURL value="{!'../' + fa.Id}" label="{!fa.Name}" class="uiOutputURL"/>
+                        <ui:outputURL value="{!'../' + fa.Id}" label="{!fa.FinServ__FinancialAccount__r.Name}" class="uiOutputURL"/>
                         </th>
-                        <td>{!fa.FinServ__FinancialAccountType__c}</td>
-                        <td>{!fa.FinServ__Status__c}</td>
-                        <td>{!fa.FinServ__OpenDate__c}</td>
-                        <td>{!fa.FinServ__Balance__c}</td>
+                        <td>{!fa.FinServ__FinancialAccount__r.FinServ__FinancialAccountType__c}</td>
+                        <td>{!fa.FinServ__FinancialAccount__r.FinServ__Status__c}</td>
+                        <td>{!fa.FinServ__Role__c}</td>
+                        <td>{!fa.FinServ__FinancialAccount__r.FinServ__OpenDate__c}</td>
+                        <td>{!fa.FinServ__FinancialAccount__r.FinServ__Balance__c}</td>
                     </tr>
                 </aura:iteration>
         </tbody>

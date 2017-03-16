@@ -1,14 +1,5 @@
 /**
- * See https://github.com/financialforcedev/fflib-apex-common for more info
- *
- * Install library via
- *   https://githubsfdeploy.herokuapp.com/app/githubdeploy/financialforcedev/fflib-apex-common
- */
-
-/**
- * Class encapsulates query logic for FinServ__FinancialAccountRole__c
- *
- * https://developer.salesforce.com/page/Apex_Enterprise_Patterns_-_Selector_Layer
+ * Selector layer for financial accounts roles
  **/
 public class FinancialAccountRolesSelector extends fflib_SObjectSelector
 {
@@ -16,7 +7,8 @@ public class FinancialAccountRolesSelector extends fflib_SObjectSelector
 	{
 		return new List<Schema.SObjectField> {
                 FinServ__FinancialAccountRole__c.Id,
-                FinServ__FinancialAccountRole__c.FinServ__FinancialAccount__c
+                FinServ__FinancialAccountRole__c.FinServ__FinancialAccount__c,
+                FinServ__FinancialAccountRole__c.FinServ__Role__c
 			};
 	}
 
@@ -26,7 +18,14 @@ public class FinancialAccountRolesSelector extends fflib_SObjectSelector
      */
     public List<String> getFieldListString()
     {
-        List<String> fieldList = new List<String>();
+        List<String> fieldList = new List<String>{
+            'FinServ__FinancialAccount__r.Name',
+            'FinServ__FinancialAccount__r.FinServ__Balance__c',
+            'FinServ__FinancialAccount__r.FinServ__FinancialAccountType__c',
+            'FinServ__FinancialAccount__r.FinServ__OwnerType__c',
+            'FinServ__FinancialAccount__r.FinServ__OpenDate__c',
+            'FinServ__FinancialAccount__r.FinServ__Status__c'
+        };
         for(Schema.SObjectField field : getSObjectFieldList()){
             fieldList.add(field.getDescribe().getName());
         }
@@ -43,22 +42,34 @@ public class FinancialAccountRolesSelector extends fflib_SObjectSelector
 		return (List<FinServ__FinancialAccountRole__c>) selectSObjectsById(idSet);
 	}
 
-	/*
-	 * For more examples see https://github.com/financialforcedev/fflib-apex-common-samplecode
-	 *
-	public List<FinServ__FinancialAccountRole__c> selectBySomethingElse(List<String> somethings)
-	{
-		assertIsAccessible();
-		return (List<FinServ__FinancialAccountRole__c>) Database.query(
-				String.format(
-				'select {0}, ' +
-				  'from {1} ' +
-				  'where Something__c in :somethings ' +
-				  'order by {2}',
-				new List<String> {
-					getFieldListString(),
-					getSObjectName(),
-					getOrderBy() } ) );
-	}
-	 */
+    public FinServ__FinancialAccountRole__c[] selectByAccount(Set<Id> accountIds)
+    {
+        return selectByAccount(accountIds, 'retail');
+    }
+
+    /**
+     * Select all financial accounts related to a set of accounts trhough roles but wihtout them
+     * being their primary owners
+     * @param      accountIds  The account identifiers
+     * @return     List of financial accounts
+     */
+    public FinServ__FinancialAccountRole__c[] selectByAccount(Set<Id> accountIds, String category)
+    {
+        assertIsAccessible();
+        String query = String.format(
+            'SELECT {0} ' +
+            'FROM {1} ' +
+            'WHERE FinServ__FinancialAccount__r.Category__c =: category ' +
+            'AND FinServ__RelatedAccount__c IN : accountIds ' +
+            'AND FinServ__Active__c = true',
+            new List<String> {
+                String.join(getFieldListString(), ', '),
+                getSObjectName()
+            }
+        );
+        System.debug('query: ' + query);
+        FinServ__FinancialAccountRole__c[] roles = (List<FinServ__FinancialAccountRole__c>) Database.query(query);
+        return roles;
+    }
+
 }
