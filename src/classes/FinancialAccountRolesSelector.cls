@@ -1,14 +1,5 @@
 /**
- * See https://github.com/financialforcedev/fflib-apex-common for more info
- *
- * Install library via
- *   https://githubsfdeploy.herokuapp.com/app/githubdeploy/financialforcedev/fflib-apex-common
- */
-
-/**
- * Class encapsulates query logic for FinServ__FinancialAccountRole__c
- *
- * https://developer.salesforce.com/page/Apex_Enterprise_Patterns_-_Selector_Layer
+ * Selector layer for financial accounts roles
  **/
 public class FinancialAccountRolesSelector extends fflib_SObjectSelector
 {
