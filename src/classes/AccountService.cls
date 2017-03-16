@@ -9,13 +9,13 @@ public class AccountService
      * @param      category  The financial account category
      * @return     FinServ__FinancialAccount__c[]
      */
-    public static FinServ__FinancialAccount__c[] selectProducts(Id accountId, String category)
+    public static FinServ__FinancialAccountRole__c[] selectProducts(Id accountId, String category)
     {
-        return new FinancialAccountsSelector().selectByAccount(new Set<Id>{accountId}, category.toLowerCase());
+        return new FinancialAccountRolesSelector().selectByAccount(new Set<Id>{accountId}, category.toLowerCase());
     }
 
-    public static Opportunity[] selectOpportunities(Id accountId)
+    public static Opportunity[] selectOpportunities(Id accountId, String category)
     {
-        return new OpportunitiesSelector().selectByAccount(new Set<Id>{accountId}, 'opportunity');
+        return new OpportunitiesSelector().selectByAccount(new Set<Id>{accountId}, category.toLowerCase());
     }
 }

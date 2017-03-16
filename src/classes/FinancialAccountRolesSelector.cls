@@ -16,7 +16,8 @@ public class FinancialAccountRolesSelector extends fflib_SObjectSelector
 	{
 		return new List<Schema.SObjectField> {
                 FinServ__FinancialAccountRole__c.Id,
-                FinServ__FinancialAccountRole__c.FinServ__FinancialAccount__c
+                FinServ__FinancialAccountRole__c.FinServ__FinancialAccount__c,
+                FinServ__FinancialAccountRole__c.FinServ__Role__c
 			};
 	}
 
@@ -26,7 +27,14 @@ public class FinancialAccountRolesSelector extends fflib_SObjectSelector
      */
     public List<String> getFieldListString()
     {
-        List<String> fieldList = new List<String>();
+        List<String> fieldList = new List<String>{
+            'FinServ__FinancialAccount__r.Name',
+            'FinServ__FinancialAccount__r.FinServ__Balance__c',
+            'FinServ__FinancialAccount__r.FinServ__FinancialAccountType__c',
+            'FinServ__FinancialAccount__r.FinServ__OwnerType__c',
+            'FinServ__FinancialAccount__r.FinServ__OpenDate__c',
+            'FinServ__FinancialAccount__r.FinServ__Status__c'
+        };
         for(Schema.SObjectField field : getSObjectFieldList()){
             fieldList.add(field.getDescribe().getName());
         }
@@ -49,7 +57,8 @@ public class FinancialAccountRolesSelector extends fflib_SObjectSelector
     }
 
     /**
-     * Select all financial accounts primarily related to a list of accounts
+     * Select all financial accounts related to a set of accounts trhough roles but wihtout them
+     * being their primary owners
      * @param      accountIds  The account identifiers
      * @return     List of financial accounts
      */
@@ -59,8 +68,7 @@ public class FinancialAccountRolesSelector extends fflib_SObjectSelector
         String query = String.format(
             'SELECT {0} ' +
             'FROM {1} ' +
-            'WHERE FinServ__FinancialAccount__r.FinServ__PrimaryOwner__c NOT IN: accountIds ' +
-            'AND FinServ__FinancialAccount__r.Category__c =: category ' +
+            'WHERE FinServ__FinancialAccount__r.Category__c =: category ' +
             'AND FinServ__RelatedAccount__c IN : accountIds ' +
             'AND FinServ__Active__c = true',
             new List<String> {
@@ -69,7 +77,8 @@ public class FinancialAccountRolesSelector extends fflib_SObjectSelector
             }
         );
         System.debug('query: ' + query);
-        return (List<FinServ__FinancialAccountRole__c>) Database.query(query);
+        FinServ__FinancialAccountRole__c[] roles = (List<FinServ__FinancialAccountRole__c>) Database.query(query);
+        return roles;
     }
 
 }
