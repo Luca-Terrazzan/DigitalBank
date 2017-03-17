@@ -1,7 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>AccountService</members>
+        <members>AccountsSelector</members>
+        <members>FinancialAccountRolesSelector</members>
+        <members>FinancialAccountsSelector</members>
+        <members>FinancialAccountsSelectorTest</members>
+        <members>OpportunitiesSelector</members>
+        <members>RelatedListController</members>
+        <members>TestUtils</members>
+        <members>fflib_ApexMocks</members>
+        <members>fflib_ApexMocksTest</members>
+        <members>fflib_ApexMocksUtils</members>
+        <members>fflib_ApexMocksUtilsTest</members>
+        <members>fflib_Application</members>
+        <members>fflib_ApplicationTest</members>
+        <members>fflib_ArgumentCaptor</members>
+        <members>fflib_ArgumentCaptorTest</members>
+        <members>fflib_IDGenerator</members>
+        <members>fflib_IDGeneratorTest</members>
+        <members>fflib_IMatcher</members>
+        <members>fflib_ISObjectDomain</members>
+        <members>fflib_ISObjectSelector</members>
+        <members>fflib_ISObjectUnitOfWork</members>
+        <members>fflib_Inheritor</members>
+        <members>fflib_InheritorTest</members>
+        <members>fflib_Match</members>
+        <members>fflib_MatchTest</members>
+        <members>fflib_MatcherDefinitions</members>
+        <members>fflib_MatcherDefinitionsTest</members>
+        <members>fflib_MatchersReturnValue</members>
+        <members>fflib_MethodArgValues</members>
+        <members>fflib_MethodArgValuesTest</members>
+        <members>fflib_MethodCountRecorder</members>
+        <members>fflib_MethodReturnValue</members>
+        <members>fflib_MethodReturnValueRecorder</members>
+        <members>fflib_Mocks</members>
+        <members>fflib_MyList</members>
+        <members>fflib_QualifiedMethod</members>
+        <members>fflib_QualifiedMethodTest</members>
+        <members>fflib_QueryFactory</members>
+        <members>fflib_QueryFactoryTest</members>
+        <members>fflib_SObjectDescribe</members>
+        <members>fflib_SObjectDescribeTest</members>
+        <members>fflib_SObjectDomain</members>
+        <members>fflib_SObjectDomainTest</members>
+        <members>fflib_SObjectMocks</members>
+        <members>fflib_SObjectSelector</members>
+        <members>fflib_SObjectSelectorTest</members>
+        <members>fflib_SObjectUnitOfWork</members>
+        <members>fflib_SObjectUnitOfWorkTest</members>
+        <members>fflib_SecurityUtils</members>
+        <members>fflib_SecurityUtilsTest</members>
+        <members>fflib_StringBuilder</members>
+        <members>fflib_StringBuilderTest</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -9,11 +61,18 @@
         <name>ApexTrigger</name>
     </types>
     <types>
-        <members>*</members>
+        <members>FinancialAccountRoles_Related_List</members>
+        <members>Opportunity_Related_List</members>
+        <members>RetailList</members>
+        <members>modal</members>
+        <members>svg</members>
+        <members>svgIcon</members>
+        <members>ticker</members>
+        <members>toast</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
-        <members>*</members>
+        <members>res</members>
         <name>StaticResource</name>
     </types>
     <version>38.0</version>

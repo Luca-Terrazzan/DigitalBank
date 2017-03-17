@@ -18,7 +18,7 @@ WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, THE SOFTWARE IS PROVIDED "AS I
             role="alert">
             <span class="slds-assistive-text">Info</span>
             <button class="slds-button slds-notify__close" onclick="{!c.closebuttonOnclicked}">
-                <c:svg xlinkHref="/resource/slds/assets/icons/action-sprite/svg/symbols.svg#close"
+                <c:svg_temp xlinkHref="/resource/slds/assets/icons/action-sprite/svg/symbols.svg#close"
                     class="slds-button__icon slds-button--icon-inverse" />
                 <span class="slds-assistive-text">Close</span>
             </button>
