@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>AccountContactRelations</members>
         <members>AccountService</members>
         <members>AccountsSelector</members>
+        <members>DetailComponentController</members>
         <members>FinancialAccountRolesSelector</members>
         <members>FinancialAccountsSelector</members>
         <members>FinancialAccountsSelectorTest</members>
@@ -67,8 +69,6 @@
         <members>modal</members>
         <members>svg</members>
         <members>svgIcon</members>
-        <members>ticker</members>
-        <members>toast</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
