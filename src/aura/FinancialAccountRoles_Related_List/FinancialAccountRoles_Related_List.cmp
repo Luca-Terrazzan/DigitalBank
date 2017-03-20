@@ -48,18 +48,18 @@
 <!-- TABLE BODY -->
         <tbody>
             <aura:iteration items="{!v.financialAccounts}" var="fa">
-                    <tr>
-                       <th scope="row" data-label="Financial Account Name">
-                        <!-- slight workaround to avoid the /c/ in lightning page url -->
-                        <ui:outputURL value="{!'../' + fa.Id}" label="{!fa.FinServ__FinancialAccount__r.Name}" class="uiOutputURL"/>
-                        </th>
-                        <td>{!fa.FinServ__FinancialAccount__r.FinServ__FinancialAccountType__c}</td>
-                        <td>{!fa.FinServ__FinancialAccount__r.FinServ__Status__c}</td>
-                        <td>{!fa.FinServ__Role__c}</td>
-                        <td>{!fa.FinServ__FinancialAccount__r.FinServ__OpenDate__c}</td>
-                        <td>{!fa.FinServ__FinancialAccount__r.FinServ__Balance__c}</td>
-                    </tr>
-                </aura:iteration>
+                <tr>
+                   <th scope="row" data-label="Financial Account Name">
+                    <!-- slight workaround to avoid the /c/ in lightning page url -->
+                    <ui:outputURL value="{!'../' + fa.Id}" label="{!fa.FinServ__FinancialAccount__r.Name}" class="uiOutputURL"/>
+                    </th>
+                    <td>{!fa.FinServ__FinancialAccount__r.FinServ__FinancialAccountType__c}</td>
+                    <td>{!fa.FinServ__FinancialAccount__r.FinServ__Status__c}</td>
+                    <td>{!fa.FinServ__Role__c}</td>
+                    <td>{!fa.FinServ__FinancialAccount__r.FinServ__OpenDate__c}</td>
+                    <td>{!fa.FinServ__FinancialAccount__r.FinServ__Balance__c}</td>
+                </tr>
+            </aura:iteration>
         </tbody>
     </table>
 <!-- TABLE -->
