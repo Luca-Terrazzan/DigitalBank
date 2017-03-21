@@ -11,9 +11,10 @@
     <div role="dialog" tabindex="-1" aura:id="Modalbox" aria-labelledby="header43" class="slds-modal ">
         <div class="slds-modal__container">
             <div class="slds-modal__header">
-                <button class="slds-button slds-button--icon-inverse slds-modal__close" onclick="{!c.removecss}">
+                <button class="slds-button slds-button--icon-inverse slds-modal__close" onclick="{!c.closeNewDialog}">
                     <span>
-                        <c:svg class="slds-button__icon slds-button__icon--large" xlinkHref="/resource/SLDS/assets/icons/action-sprite/svg/symbols.svg#close" />
+                        <c:svg class="slds-button__icon slds-button__icon--large"
+                            xlinkHref="/resource/SLDS/assets/icons/action-sprite/svg/symbols.svg#close" />
                         <span class="slds-assistive-text">Close</span>
                     </span>
                 </button>
@@ -42,8 +43,8 @@
                 </div>
             </div>
             <div class="slds-modal__footer">
-                <button class="slds-button slds-button--neutral" onclick="{!c.removecss}">Cancel</button>
-                <button class="slds-button slds-button--neutral slds-button--brand" onclick="{!c.removecss}">Save</button>
+                <button class="slds-button slds-button--neutral" onclick="{!c.closeNewDialog}">Cancel</button>
+                <button class="slds-button slds-button--neutral slds-button--brand" onclick="{!c.closeNewDialog}">Save</button>
             </div>
         </div>
     </div>
@@ -76,7 +77,6 @@
     <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-col slds-size--1-of-1">
 <!-- TABLE HEADER -->
         <thead>
-            <c:modal />
             <tr class="slds-text-title--caps">
                 <th scope="col"><div class="slds-truncate" title="Name">Name</div></th>
                 <th scope="col"><div class="slds-truncate" title="Type">Type</div></th>

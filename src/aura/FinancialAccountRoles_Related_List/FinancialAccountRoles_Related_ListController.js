@@ -21,9 +21,15 @@
     },
 
     showNewDialog : function(component, event, helper) {
-        var cmpTarget = cmp.find('Modalbox');
-        var cmpBack = cmp.find('MB-Back');
+        var cmpTarget = component.find('Modalbox');
+        var cmpBack = component.find('MB-Back');
         $A.util.addClass(cmpTarget, 'slds-fade-in-open');
         $A.util.addClass(cmpBack, 'slds-backdrop--open');
+    },
+    closeNewDialog : function(component, event, helper) {
+        var cmpTarget = component.find('Modalbox');
+        var cmpBack = component.find('MB-Back');
+        $A.util.removeClass(cmpBack,'slds-backdrop--open');
+        $A.util.removeClass(cmpTarget, 'slds-fade-in-open');
     }
 })
