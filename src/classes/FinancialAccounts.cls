@@ -14,10 +14,6 @@
  **/
 public class FinancialAccounts extends fflib_SObjectDomain
 {
-
-    private List<FinServ__FinancialAccount__c> sumRecords = new List<FinServ__FinancialAccount__c>();
-    private List<FinServ__FinancialAccount__c> oldSumRecords = new List<FinServ__FinancialAccount__c>();
-
     public FinancialAccounts(List<FinServ__FinancialAccount__c> records)
     {
         super(records);
@@ -34,14 +30,14 @@ public class FinancialAccounts extends fflib_SObjectDomain
         Map<Id, Account> accountsMap = this.getAccountsMap();
         for(FinServ__FinancialAccount__c fa: (FinServ__FinancialAccount__c[]) Records) {
             Account accToUpdate = accountsMap.get(fa.FinServ__PrimaryOwner__c);
-            Decimal sum = (Decimal) accToUpdate.get(fa.Category__c);
+            Decimal sum = (Decimal) accToUpdate.get(fa.Category__c + 'Balance__c');
             sum += fa.FinServ__Balance__c;
-            accToUpdate.put(fa.Category__c, sum);
+            accToUpdate.put(fa.Category__c + 'Balance__c', sum);
         }
         update accountsMap.values();
     }
 
-    public override void onAfterUpdate(Map<Id,SObject> existingRecords)
+    /*public override void onAfterUpdate(Map<Id,SObject> existingRecords)
     {
         List<Account> primaryOwners = new List<Account>();
         for(FinServ__FinancialAccount__c record : oldSumRecords)
@@ -82,29 +78,18 @@ public class FinancialAccounts extends fflib_SObjectDomain
             primaryOwners.add(toAdd);
         }
         update primaryOwners;
-    }
+    }*/
 
     public override void onAfterDelete()
     {
-        List<Account> primaryOwners = new List<Account>();
-        for(FinServ__FinancialAccount__c record : sumRecords)
-        {
-            Account toAdd = new Account(Id = record.FinServ__PrimaryOwner__c);
-            if(record.FinServ__Balance__c == null) {
-                record.FinServ__Balance__c = 0;
-            }
-            if (record.Category__c == 'Retail') {
-                toAdd.Retail_Financial_Accounts__c = record.FinServ__PrimaryOwner__r.Retail_Financial_Accounts__c - record.FinServ__Balance__c;
-            }
-            if (record.Category__c == 'Wealth') {
-                toAdd.Wealth_AUM__c = record.FinServ__PrimaryOwner__r.Wealth_AUM__c - record.FinServ__Balance__c;
-            }
-            if (record.Category__c == 'Commercial') {
-                toAdd.Commercial_Financial_Accounts__c = record.FinServ__PrimaryOwner__r.Commercial_Financial_Accounts__c - record.FinServ__Balance__c;
-            }
-            primaryOwners.add(toAdd);
+        Map<Id, Account> accountsMap = this.getAccountsMap();
+        for(FinServ__FinancialAccount__c fa: (FinServ__FinancialAccount__c[]) Records) {
+            Account accToUpdate = accountsMap.get(fa.FinServ__PrimaryOwner__c);
+            Decimal sum = (Decimal) accToUpdate.get(fa.Category__c + 'Balance__c');
+            sum -= fa.FinServ__Balance__c;
+            accToUpdate.put(fa.Category__c + 'Balance__c', sum);
         }
-        update primaryOwners;
+        update accountsMap.values();
     }
 
     public Map<Id, Account> getAccountsMap()
@@ -114,7 +99,7 @@ public class FinancialAccounts extends fflib_SObjectDomain
             accounts.add(fa.FinServ__PrimaryOwner__c);
         }
         Map<Id, Account> accountMap = new Map<Id, Account>(
-            [SELECT Retail_Financial_Accounts__c, Wealth_AUM__c, Commercial_Financial_Accounts__c
+            [SELECT RetailBalance__c, WealthBalance__c, CommercialBalance__c
                 FROM Account
                 WHERE Id IN: accounts]
         );
