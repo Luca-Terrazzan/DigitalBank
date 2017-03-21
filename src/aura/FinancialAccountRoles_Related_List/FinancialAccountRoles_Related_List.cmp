@@ -1,41 +1,82 @@
 <aura:component controller="RelatedListController"
     implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId">
 <!-- CONTROLLER INIT -->
-    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
 <!-- ATTRIBUTES -->
-    <!-- <aura:attribute name="recordId" type="Id" /> -->
-    <aura:attribute name="category" type="String" />
-    <aura:attribute name="financialAccounts" type="RelatedListController.FinServ__FinancialAccountRole__c[]" />
+<aura:attribute name="recordId" type="Id" />
+<aura:attribute name="category" type="String" />
+<aura:attribute name="financialAccounts" type="RelatedListController.FinServ__FinancialAccountRole__c[]" />
 
 <article class="slds-card">
+    <div role="dialog" tabindex="-1" aura:id="Modalbox" aria-labelledby="header43" class="slds-modal ">
+        <div class="slds-modal__container">
+            <div class="slds-modal__header">
+                <button class="slds-button slds-button--icon-inverse slds-modal__close" onclick="{!c.removecss}">
+                    <span>
+                        <c:svg class="slds-button__icon slds-button__icon--large" xlinkHref="/resource/SLDS/assets/icons/action-sprite/svg/symbols.svg#close" />
+                        <span class="slds-assistive-text">Close</span>
+                    </span>
+                </button>
+                <h2 id="header43" class="slds-text-heading--medium">Modal Header</h2>
+            </div>
+            <div class="slds-modal__content slds-p-around--medium">
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div class="slds-form-element slds-is-required">
+                        <div class="slds-form-element__control">
+                            <ui:inputText aura:id="accName" label="Name"
+                                class="slds-input"
+                                labelClass="slds-form-element__label"
+                                value="{!v.acc.Name}"
+                                placeholder="Name" required="true"/>
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-is-required">
+                        <div class="slds-form-element__control">
+                            <ui:inputText aura:id="accEmail" label="Email"
+                                class="slds-input"
+                                labelClass="slds-form-element__label"
+                                value="{!v.acc.Email__c }"
+                                placeholder="Email" required="true"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-modal__footer">
+                <button class="slds-button slds-button--neutral" onclick="{!c.removecss}">Cancel</button>
+                <button class="slds-button slds-button--neutral slds-button--brand" onclick="{!c.removecss}">Save</button>
+            </div>
+        </div>
+    </div>
 <div class="slds-card__header slds-grid">
 <!-- HEADER -->
     <header class="slds-media slds-media--center slds-has-flexi-truncate">
-      <div class="slds-media__figure">
-        <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
-            <c:svgIcon svgPath="/resource/ldt__SLDS202/assets/icons/standard-sprite/svg/symbols.svg#endorsement"
-                category="standard"
-                size="small"
-                name="thumbup" />
-        </span>
-      </div>
-      <div class="slds-media__body">
-        <h2>
-          <a href="javascript:void(0);" class="slds-card__header-link slds-truncate">
-            <span class="slds-text-heading--small"> {!v.category} Financial Accounts ({!v.financialAccounts.length})</span>
-          </a>
-        </h2>
-      </div>
+        <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
+                <c:svgIcon svgPath="/resource/ldt__SLDS202/assets/icons/standard-sprite/svg/symbols.svg#endorsement"
+                    category="standard"
+                    size="small"
+                    name="thumbup" />
+            </span>
+        </div>
+        <div class="slds-media__body">
+            <h2>
+                <a href="javascript:void(0);" class="slds-card__header-link slds-truncate">
+                    <span class="slds-text-heading--small"> {!v.category} Financial Accounts ({!v.financialAccounts.length})</span>
+                </a>
+            </h2>
+        </div>
     </header>
     <div class="slds-no-flex">
-      <button class="slds-button slds-button--neutral">New</button>
+        <div class="slds-backdrop " aura:id="MB-Back"></div>
+        <button class="slds-button slds-button--neutral" onclick="{!c.showNewDialog}">New</button>
     </div>
 <!-- HEADER -->
-  </div>
+</div>
 <!-- TABLE -->
     <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-col slds-size--1-of-1">
 <!-- TABLE HEADER -->
         <thead>
+            <c:modal />
             <tr class="slds-text-title--caps">
                 <th scope="col"><div class="slds-truncate" title="Name">Name</div></th>
                 <th scope="col"><div class="slds-truncate" title="Type">Type</div></th>
@@ -49,9 +90,8 @@
         <tbody>
             <aura:iteration items="{!v.financialAccounts}" var="fa">
                 <tr>
-                   <th scope="row" data-label="Financial Account Name">
-                    <!-- slight workaround to avoid the /c/ in lightning page url -->
-                    <ui:outputURL value="{!'../' + fa.Id}" label="{!fa.FinServ__FinancialAccount__r.Name}" class="uiOutputURL"/>
+                    <th scope="row" data-label="Financial Account Name">
+                        <ui:outputURL value="{!'../' + fa.Id}" label="{!fa.FinServ__FinancialAccount__r.Name}" class="uiOutputURL"/>
                     </th>
                     <td>{!fa.FinServ__FinancialAccount__r.FinServ__FinancialAccountType__c}</td>
                     <td>{!fa.FinServ__FinancialAccount__r.FinServ__Status__c}</td>

@@ -21,10 +21,9 @@
     },
 
     showNewDialog : function(component, event, helper) {
-        console.log('test new');
-        var overlay = component.find('FAList');
-        var box = component.find('ModalBox');
-        $A.util.addClass(overlay, 'slds-backdrop--open');
-        $A.util.addClass(box, 'slds-backdrop--open');
+        var cmpTarget = cmp.find('Modalbox');
+        var cmpBack = cmp.find('MB-Back');
+        $A.util.addClass(cmpTarget, 'slds-fade-in-open');
+        $A.util.addClass(cmpBack, 'slds-backdrop--open');
     }
 })
