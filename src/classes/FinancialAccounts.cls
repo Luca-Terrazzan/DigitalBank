@@ -29,11 +29,12 @@ public class FinancialAccounts extends fflib_SObjectDomain
                 FinServ__PrimaryOwner__r.Wealth_AUM__c, FinServ__PrimaryOwner__r.Commercial_Financial_Accounts__c
             FROM FinServ__FinancialAccount__c
             WHERE Id IN: System.Trigger.newMap.keySet()];
-        oldSumRecords = [SELECT Category__c, FinServ__Balance__c, FinServ__PrimaryOwner__r.Retail_Financial_Accounts__c,
-                FinServ__PrimaryOwner__r.Wealth_AUM__c, FinServ__PrimaryOwner__r.Commercial_Financial_Accounts__c
-            FROM FinServ__FinancialAccount__c
-            WHERE Id IN: System.Trigger.oldMap.keySet()];
-
+        if (!System.Trigger.isInsert) {
+            oldSumRecords = [SELECT Category__c, FinServ__Balance__c, FinServ__PrimaryOwner__r.Retail_Financial_Accounts__c,
+                    FinServ__PrimaryOwner__r.Wealth_AUM__c, FinServ__PrimaryOwner__r.Commercial_Financial_Accounts__c
+                FROM FinServ__FinancialAccount__c
+                WHERE Id IN: System.Trigger.oldMap.keySet()];
+        }
     }
 
     public override void onValidate(Map<Id,SObject> existingRecords)
