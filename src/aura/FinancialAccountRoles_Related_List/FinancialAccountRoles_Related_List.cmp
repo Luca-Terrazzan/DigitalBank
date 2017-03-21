@@ -5,7 +5,8 @@
 <!-- ATTRIBUTES -->
 <aura:attribute name="recordId" type="Id" />
 <aura:attribute name="category" type="String" />
-<aura:attribute name="financialAccounts" type="RelatedListController.FinServ__FinancialAccountRole__c[]" />
+<aura:attribute name="financialAccounts" type="FinServ__FinancialAccountRole__c[]" />
+<aura:attribute name="newFinAcc" type="FinServ__FinancialAccount__c" />
 
 <article class="slds-card">
     <div role="dialog" tabindex="-1" aura:id="Modalbox" aria-labelledby="header43" class="slds-modal ">
@@ -24,20 +25,29 @@
                 <div class="slds-modal__content slds-p-around--medium">
                     <div class="slds-form-element slds-is-required">
                         <div class="slds-form-element__control">
-                            <ui:inputText aura:id="accName" label="Name"
+                            <ui:inputText aura:id="faName" label="Name"
                                 class="slds-input"
                                 labelClass="slds-form-element__label"
-                                value="{!v.acc.Name}"
+                                value="{!newFinAcc.Name}"
                                 placeholder="Name" required="true"/>
                         </div>
                     </div>
                     <div class="slds-form-element slds-is-required">
                         <div class="slds-form-element__control">
-                            <ui:inputText aura:id="accEmail" label="Email"
+                            <ui:inputText aura:id="faBalance" label="Balance"
                                 class="slds-input"
                                 labelClass="slds-form-element__label"
-                                value="{!v.acc.Email__c }"
-                                placeholder="Email" required="true"/>
+                                value="{!newFinAcc.FinServ__Balance__c }"
+                                placeholder="0" required="true"/>
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-is-required">
+                        <div class="slds-form-element__control">
+                            <ui:inputText aura:id="faOwner" label="Primary Owner"
+                                class="slds-input"
+                                labelClass="slds-form-element__label"
+                                value="{!newFinAcc.FinServ__PrimaryOwner__c }"
+                                placeholder="" required="true"/>
                         </div>
                     </div>
                 </div>
