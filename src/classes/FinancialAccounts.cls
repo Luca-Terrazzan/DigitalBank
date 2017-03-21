@@ -24,47 +24,21 @@ public class FinancialAccounts extends fflib_SObjectDomain
     }
 
     public override void onValidate()
-    {
-        sumRecords = [SELECT Category__c, FinServ__Balance__c, FinServ__PrimaryOwner__r.Retail_Financial_Accounts__c,
-                FinServ__PrimaryOwner__r.Wealth_AUM__c, FinServ__PrimaryOwner__r.Commercial_Financial_Accounts__c
-            FROM FinServ__FinancialAccount__c
-            WHERE Id IN: System.Trigger.newMap.keySet()];
-        if (!System.Trigger.isInsert) {
-            oldSumRecords = [SELECT Category__c, FinServ__Balance__c, FinServ__PrimaryOwner__r.Retail_Financial_Accounts__c,
-                    FinServ__PrimaryOwner__r.Wealth_AUM__c, FinServ__PrimaryOwner__r.Commercial_Financial_Accounts__c
-                FROM FinServ__FinancialAccount__c
-                WHERE Id IN: System.Trigger.oldMap.keySet()];
-        }
-    }
+    {}
 
     public override void onValidate(Map<Id,SObject> existingRecords)
-    {
-        for(FinServ__FinancialAccount__c record : (List<FinServ__FinancialAccount__c>) Records)
-        {
-        }
-    }
+    {}
 
     public override void onAfterInsert()
     {
-        List<Account> primaryOwners = new List<Account>();
-        for(FinServ__FinancialAccount__c record : sumRecords)
-        {
-            Account toAdd = new Account(Id = record.FinServ__PrimaryOwner__c);
-            if(record.FinServ__Balance__c == null) {
-                record.FinServ__Balance__c = 0;
-            }
-            if (record.Category__c == 'Retail') {
-                toAdd.Retail_Financial_Accounts__c = record.FinServ__PrimaryOwner__r.Retail_Financial_Accounts__c + record.FinServ__Balance__c;
-            }
-            if (record.Category__c == 'Wealth') {
-                toAdd.Wealth_AUM__c = record.FinServ__PrimaryOwner__r.Wealth_AUM__c + record.FinServ__Balance__c;
-            }
-            if (record.Category__c == 'Commercial') {
-                toAdd.Commercial_Financial_Accounts__c = record.FinServ__PrimaryOwner__r.Commercial_Financial_Accounts__c + record.FinServ__Balance__c;
-            }
-            primaryOwners.add(toAdd);
+        Map<Id, Account> accountsMap = this.getAccountsMap();
+        for(FinServ__FinancialAccount__c fa: (FinServ__FinancialAccount__c[]) Records) {
+            Account accToUpdate = accountsMap.get(fa.FinServ__PrimaryOwner__c);
+            Decimal sum = (Decimal) accToUpdate.get(fa.Category__c);
+            sum += fa.FinServ__Balance__c;
+            accToUpdate.put(fa.Category__c, sum);
         }
-        update primaryOwners;
+        update accountsMap.values();
     }
 
     public override void onAfterUpdate(Map<Id,SObject> existingRecords)
@@ -133,11 +107,18 @@ public class FinancialAccounts extends fflib_SObjectDomain
         update primaryOwners;
     }
 
-    public void someMethod()
+    public Map<Id, Account> getAccountsMap()
     {
-        for(FinServ__FinancialAccount__c record : (List<FinServ__FinancialAccount__c>) Records)
-        {
+        Set<Id> accounts = new Set<Id>();
+        for(FinServ__FinancialAccount__c fa: (FinServ__FinancialAccount__c[]) Records) {
+            accounts.add(fa.FinServ__PrimaryOwner__c);
         }
+        Map<Id, Account> accountMap = new Map<Id, Account>(
+            [SELECT Retail_Financial_Accounts__c, Wealth_AUM__c, Commercial_Financial_Accounts__c
+                FROM Account
+                WHERE Id IN: accounts]
+        );
+        return accountMap;
     }
 
     public class Constructor implements fflib_SObjectDomain.IConstructable2
