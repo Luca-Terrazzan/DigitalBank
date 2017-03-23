@@ -57,6 +57,7 @@
 		<members>fflib_StringBuilder</members>
 		<members>fflib_StringBuilderTest</members>
 		<members>FinancialAccounts</members>
+		<members>FinancialAccountsTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -77,5 +78,5 @@
 		<members>res</members>
 		<name>StaticResource</name>
 	</types>
-	<version>38.0</version>
+	<version>36.0</version>
 </Package>
