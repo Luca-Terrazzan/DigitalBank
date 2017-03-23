@@ -24,7 +24,7 @@ public class FinancialAccounts extends fflib_SObjectDomain
 
     public override void onValidate()
     {
-        accountsMap = this.getAccountsMap(null);
+        accountsMap = this.getAccountsMap();
     }
 
     public override void onValidate(Map<Id,SObject> existingRecords)
@@ -47,8 +47,15 @@ public class FinancialAccounts extends fflib_SObjectDomain
 
     public override void onAfterDelete()
     {
-        rollUp((FinServ__FinancialAccount__c[]) Records, false);
+        // fflib doesn't execute validation while deleting, accountmap needs to be manually invoked
+        accountsMap = this.getAccountsMap();
+        rollUp((FinServ__FinancialAccount__c[]) Records, true);
         update accountsMap.values();
+    }
+
+    private Map<Id, Account> getAccountsMap()
+    {
+        return this.getAccountsMap(null);
     }
 
     private Map<Id, Account> getAccountsMap(FinServ__FinancialAccount__c[] loopRecords)
@@ -74,7 +81,9 @@ public class FinancialAccounts extends fflib_SObjectDomain
     {
         for(FinServ__FinancialAccount__c fa: faccounts) {
             Account accToUpdate = accountsMap.get(fa.FinServ__PrimaryOwner__c);
+            if (String.isBlank(fa.Category__c)) continue;
             Decimal sum = (Decimal) accToUpdate.get(fa.Category__c + 'Balance__c');
+            if (sum == null) sum = 0;
             if (!subtract) sum += fa.FinServ__Balance__c;
             else           sum -= fa.FinServ__Balance__c;
             accToUpdate.put(fa.Category__c + 'Balance__c', sum);
