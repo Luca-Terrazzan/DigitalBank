@@ -29,48 +29,36 @@ public class FinancialAccounts extends fflib_SObjectDomain
 
     public override void onValidate(Map<Id,SObject> existingRecords)
     {
-        accountsMap = this.getAccountsMap(null);
-        //oldAccountsMap = this.getAccountsMap
+        accountsMap = this.getAccountsMap(existingRecords.values());
     }
 
     public override void onAfterInsert()
     {
-        for(FinServ__FinancialAccount__c fa: (FinServ__FinancialAccount__c[]) Records) {
-            Account accToUpdate = accountsMap.get(fa.FinServ__PrimaryOwner__c);
-            Decimal sum = (Decimal) accToUpdate.get(fa.Category__c + 'Balance__c');
-            sum += fa.FinServ__Balance__c;
-            accToUpdate.put(fa.Category__c + 'Balance__c', sum);
-        }
+        rollUp((FinServ__FinancialAccount__c[]) Records, false);
         update accountsMap.values();
     }
 
     public override void onAfterUpdate(Map<Id,SObject> existingRecords)
     {
-        Map<Id, Account> accountsMap = this.getAccountsMap(existingRecords.values());
-        for(FinServ__FinancialAccount__c fa: (FinServ__FinancialAccount__c[]) Records) {
-            Account accToUpdate = accountsMap.get(fa.FinServ__PrimaryOwner__c);
-            Decimal sum = (Decimal) accToUpdate.get(fa.Category__c + 'Balance__c');
-            sum += fa.FinServ__Balance__c;
-            accToUpdate.put(fa.Category__c + 'Balance__c', sum);
-        }
+        rollUp((FinServ__FinancialAccount__c[]) existingRecords.values(), true);
+        rollUp((FinServ__FinancialAccount__c[]) Records, false);
         update accountsMap.values();
     }
 
     public override void onAfterDelete()
     {
-        for(FinServ__FinancialAccount__c fa: (FinServ__FinancialAccount__c[]) Records) {
-            Account accToUpdate = accountsMap.get(fa.FinServ__PrimaryOwner__c);
-            Decimal sum = (Decimal) accToUpdate.get(fa.Category__c + 'Balance__c');
-            sum -= fa.FinServ__Balance__c;
-            accToUpdate.put(fa.Category__c + 'Balance__c', sum);
-        }
+        rollUp((FinServ__FinancialAccount__c[]) Records, false);
         update accountsMap.values();
     }
 
     private Map<Id, Account> getAccountsMap(FinServ__FinancialAccount__c[] loopRecords)
     {
         Set<Id> accounts = new Set<Id>();
-        if (loopRecords == null || loopRecords.isEmpty()) loopRecords = Records;
+        if (loopRecords == null || loopRecords.isEmpty()) {
+            loopRecords = Records;
+        } else {
+            loopRecords.addAll((FinServ__FinancialAccount__c[]) Records);
+        }
         for(FinServ__FinancialAccount__c fa: loopRecords) {
             accounts.add(fa.FinServ__PrimaryOwner__c);
         }
@@ -80,6 +68,17 @@ public class FinancialAccounts extends fflib_SObjectDomain
                 WHERE Id IN: accounts]
         );
         return accountsMap;
+    }
+
+    private void rollUp(FinServ__FinancialAccount__c[] faccounts, Boolean subtract)
+    {
+        for(FinServ__FinancialAccount__c fa: faccounts) {
+            Account accToUpdate = accountsMap.get(fa.FinServ__PrimaryOwner__c);
+            Decimal sum = (Decimal) accToUpdate.get(fa.Category__c + 'Balance__c');
+            if (!subtract) sum += fa.FinServ__Balance__c;
+            else           sum -= fa.FinServ__Balance__c;
+            accToUpdate.put(fa.Category__c + 'Balance__c', sum);
+        }
     }
 
     public class Constructor implements fflib_SObjectDomain.IConstructable2
