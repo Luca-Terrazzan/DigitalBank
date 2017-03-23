@@ -70,7 +70,8 @@ public class FinancialAccounts extends fflib_SObjectDomain
             accounts.add(fa.FinServ__PrimaryOwner__c);
         }
         Map<Id, Account> accountsMap = new Map<Id, Account>(
-            [SELECT RetailBalance__c, WealthBalance__c, CommercialBalance__c
+            [SELECT RetailBalance__c, WealthBalance__c, CommercialBalance__c,
+                    RetailLoan__c, CommercialLoan__c
                 FROM Account
                 WHERE Id IN: accounts]
         );
@@ -82,11 +83,12 @@ public class FinancialAccounts extends fflib_SObjectDomain
         for(FinServ__FinancialAccount__c fa: faccounts) {
             Account accToUpdate = accountsMap.get(fa.FinServ__PrimaryOwner__c);
             if (String.isBlank(fa.Category__c)) continue;
-            Decimal sum = (Decimal) accToUpdate.get(fa.Category__c + 'Balance__c');
+            String suffix = fa.IsLoan__c ? 'Loan__c' : 'Balance__c';
+            Decimal sum = (Decimal) accToUpdate.get(fa.Category__c + suffix);
             if (sum == null) sum = 0;
             if (!subtract) sum += fa.FinServ__Balance__c;
             else           sum -= fa.FinServ__Balance__c;
-            accToUpdate.put(fa.Category__c + 'Balance__c', sum);
+            accToUpdate.put(fa.Category__c + suffix, sum);
         }
     }
 
