@@ -6,9 +6,13 @@
 <aura:attribute name="recordId" type="Id" />
 <aura:attribute name="category" type="String" />
 <aura:attribute name="financialAccounts" type="FinServ__FinancialAccountRole__c[]" />
-<aura:attribute name="newFinAcc" type="FinServ__FinancialAccount__c" />
+<aura:attribute name="newFinAcc" type="FinServ__FinancialAccount__c" default='{"Name": "pippo"}'/>
 
 <article class="slds-card">
+    <!-- import css, remove in production -->
+    <ltng:require styles="{!$Resource.slds +
+        '/assets/styles/salesforce-lightning-design-system.css'}"/>
+    <!--                                  -->
     <div role="dialog" tabindex="-1" aura:id="Modalbox" aria-labelledby="header43" class="slds-modal ">
         <div class="slds-modal__container">
             <div class="slds-modal__header">
@@ -28,7 +32,7 @@
                             <ui:inputText aura:id="faName" label="Name"
                                 class="slds-input"
                                 labelClass="slds-form-element__label"
-                                value="{!newFinAcc.Name}"
+                                value="{!v.newFinAcc.Name}"
                                 placeholder="Name" required="true"/>
                         </div>
                     </div>
@@ -37,7 +41,7 @@
                             <ui:inputText aura:id="faBalance" label="Balance"
                                 class="slds-input"
                                 labelClass="slds-form-element__label"
-                                value="{!newFinAcc.FinServ__Balance__c }"
+                                value="{!v.newFinAcc.FinServ__Balance__c }"
                                 placeholder="0" required="true"/>
                         </div>
                     </div>
@@ -46,7 +50,7 @@
                             <ui:inputText aura:id="faOwner" label="Primary Owner"
                                 class="slds-input"
                                 labelClass="slds-form-element__label"
-                                value="{!newFinAcc.FinServ__PrimaryOwner__c }"
+                                value="{!v.newFinAcc.FinServ__PrimaryOwner__c }"
                                 placeholder="" required="true"/>
                         </div>
                     </div>
