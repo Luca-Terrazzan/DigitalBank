@@ -14,6 +14,8 @@
  **/
 public class FinancialAccounts extends fflib_SObjectDomain
 {
+
+
     private Map<Id, Account> accountsMap = new Map<Id, Account>();
     private Map<Id, Account> oldAccountsMap = new Map<Id, Account>();
 
@@ -73,7 +75,7 @@ public class FinancialAccounts extends fflib_SObjectDomain
             [SELECT RetailBalance__c, WealthBalance__c, CommercialBalance__c,
                     RetailLoan__c, CommercialLoan__c
                 FROM Account
-                WHERE Id IN: accounts]
+                WHERE Id IN: accounts FOR UPDATE]
         );
         return accountsMap;
     }
@@ -83,12 +85,13 @@ public class FinancialAccounts extends fflib_SObjectDomain
         for(FinServ__FinancialAccount__c fa: faccounts) {
             Account accToUpdate = accountsMap.get(fa.FinServ__PrimaryOwner__c);
             if (String.isBlank(fa.Category__c)) continue;
-            String suffix = fa.IsLoan__c ? 'Loan__c' : 'Balance__c';
+            String suffix = fa.IsLoan__c && fa.Category__c != 'Wealth' ? 'Loan__c' : 'Balance__c';
             Decimal sum = (Decimal) accToUpdate.get(fa.Category__c + suffix);
             if (sum == null) sum = 0;
-            if (!subtract) sum += fa.FinServ__Balance__c;
-            else           sum -= fa.FinServ__Balance__c;
+            if (!subtract) sum += fa.FinServ__Balance__c != null ? fa.FinServ__Balance__c : 0.0;
+            else           sum -= fa.FinServ__Balance__c != null ? fa.FinServ__Balance__c : 0.0;
             accToUpdate.put(fa.Category__c + suffix, sum);
+            System.debug('new account: ' + accToUpdate);
         }
     }
 
