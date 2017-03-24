@@ -2,10 +2,16 @@
  * Static utilities method for record insertion while testing
  */
 public with sharing class TestUtils {
-    private static final String[] CATEGORIES = new String[]{
+    private static final String[] CATEGORIES = new String[]
+    {
         'Retail',
         'Wealth',
         'Commercial'
+    };
+    private static final Map<Boolean, String> LOAN_TYPES = new Map<Boolean, String>
+    {
+        true  => 'Credit Card',
+        false => 'Savings'
     };
 
     public static void insertIndividuals(Integer accNumber)
@@ -24,11 +30,11 @@ public with sharing class TestUtils {
         insert testAccounts;
     }
 
-    public static void insertFinancialAccounts()
+    public static void insertFinancialAccounts(Boolean insertLoans)
     {
         Account[] testAccounts = [SELECT Id FROM Account
             WHERE RecordType.DeveloperName = 'IndustriesIndividual'
-            AND Name LIKE 'testAccount%'];
+            AND Name LIKE 'testAccount%' ORDER BY Name];
         if (testAccounts.isEmpty()) return;
         FinServ__FinancialAccount__c[] testFinAccounts = new FinServ__FinancialAccount__c[]{};
         for(Integer i = 0; i < testAccounts.size(); i++) {
@@ -38,6 +44,7 @@ public with sharing class TestUtils {
                         Name = 'Account' + i + 'FinancialAccount' + j,
                         FinServ__PrimaryOwner__c = testAccounts[i].Id,
                         FinServ__Balance__c = Math.random() * 1000,
+                        FinServ__FinancialAccountType__c = LOAN_TYPES.get(insertLoans),
                         Category__c = CATEGORIES[j]
                     )
                 );

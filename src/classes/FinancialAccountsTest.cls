@@ -6,9 +6,9 @@ private class FinancialAccountsTest {
 
     @isTest
     static void testRollupInsert() {
-        TestUtils.insertIndividuals(1);
+        TestUtils.insertIndividuals(3);
         Test.startTest();
-            TestUtils.insertFinancialAccounts();
+            TestUtils.insertFinancialAccounts(false);
         Test.stopTest();
         Decimal balance = (Decimal) [
             SELECT SUM(FinServ__Balance__c) balance, Finserv__PrimaryOwner__r.Name name, Category__c category
@@ -22,8 +22,8 @@ private class FinancialAccountsTest {
 
     @isTest
     static void testRollUpUpdate() {
-        TestUtils.insertIndividuals(1);
-        TestUtils.insertFinancialAccounts();
+        TestUtils.insertIndividuals(3);
+        TestUtils.insertFinancialAccounts(false);
         FinServ__FinancialAccount__c fa = [SELECT FinServ__Balance__c FROM FinServ__FinancialAccount__c
             WHERE Category__c = 'Retail' LIMIT 1];
         Test.startTest();
@@ -43,14 +43,17 @@ private class FinancialAccountsTest {
     @isTest
     static void testRollUpDelete()
     {
-        TestUtils.insertIndividuals(1);
-        TestUtils.insertFinancialAccounts();
-        FinServ__FinancialAccount__c fa = [SELECT FinServ__Balance__c FROM FinServ__FinancialAccount__c
-            WHERE Category__c = 'Retail' LIMIT 1];
+        TestUtils.insertIndividuals(3);
+        TestUtils.insertFinancialAccounts(false);
+        Account acc = [SELECT RetailBalance__c FROM Account WHERE Name = 'testAccount0'];
+        FinServ__FinancialAccount__c fa = [SELECT Name, FinServ__Balance__c, Finserv__PrimaryOwner__r.Name FROM FinServ__FinancialAccount__c
+            WHERE Name = 'Account0FinancialAccount0' LIMIT 1];
+        System.assertEquals(acc.Id, fa.Finserv__PrimaryOwner__c);
+        System.assert(acc.RetailBalance__c > 0);
         Test.startTest();
             delete fa;
         Test.stopTest();
-        Account acc = [SELECT RetailBalance__c FROM Account WHERE Name = 'testAccount0'];
+        acc = [SELECT RetailBalance__c FROM Account WHERE Name = 'testAccount0'];
         System.assertEquals(0.0, acc.RetailBalance__c);
     }
 }
