@@ -91,7 +91,6 @@ public class FinancialAccounts extends fflib_SObjectDomain
             if (!subtract) sum += fa.FinServ__Balance__c != null ? fa.FinServ__Balance__c : 0.0;
             else           sum -= fa.FinServ__Balance__c != null ? fa.FinServ__Balance__c : 0.0;
             accToUpdate.put(fa.Category__c + suffix, sum);
-            System.debug('new account: ' + accToUpdate);
         }
     }
 
