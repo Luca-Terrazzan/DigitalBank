@@ -34,9 +34,7 @@ public class FinancialAccountRoles extends fflib_SObjectDomain
     public override void onAfterInsert()
     {
         FinServ__FinancialAccountRole__c[] roles = filterRolesByCategory(Records, 'Commercial');
-        System.debug('roles: ' + roles);
         accountsMap = this.getAccountsMap(roles);
-        System.debug('Account Map: ' + accountsMap);
         rollUp((FinServ__FinancialAccountRole__c[]) roles, false);
         update accountsMap.values();
     }
