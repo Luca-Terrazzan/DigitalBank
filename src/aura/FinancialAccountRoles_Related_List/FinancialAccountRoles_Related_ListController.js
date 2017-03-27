@@ -20,16 +20,11 @@
         $A.enqueueAction(action);
     },
 
-    showNewDialog : function(component, event, helper) {
-        var cmpTarget = component.find('Modalbox');
-        var cmpBack = component.find('MB-Back');
-        $A.util.addClass(cmpTarget, 'slds-fade-in-open');
-        $A.util.addClass(cmpBack, 'slds-backdrop--open');
-    },
-    closeNewDialog : function(component, event, helper) {
-        var cmpTarget = component.find('Modalbox');
-        var cmpBack = component.find('MB-Back');
-        $A.util.removeClass(cmpBack,'slds-backdrop--open');
-        $A.util.removeClass(cmpTarget, 'slds-fade-in-open');
+    createRecord : function (component, event, helper) {
+        var createRecordEvent = $A.get("e.force:createRecord");
+        createRecordEvent.setParams({
+            "entityApiName": "FinServ__FinancialAccountRole__c"
+        });
+        createRecordEvent.fire();
     }
 })
