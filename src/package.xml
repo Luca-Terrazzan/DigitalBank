@@ -41,15 +41,11 @@
 		<members>fflib_MyList</members>
 		<members>fflib_QualifiedMethod</members>
 		<members>fflib_QualifiedMethodTest</members>
-		<members>fflib_QueryFactory</members>
-		<members>fflib_QueryFactoryTest</members>
 		<members>fflib_SObjectDescribe</members>
 		<members>fflib_SObjectDescribeTest</members>
 		<members>fflib_SObjectDomain</members>
 		<members>fflib_SObjectDomainTest</members>
 		<members>fflib_SObjectMocks</members>
-		<members>fflib_SObjectSelector</members>
-		<members>fflib_SObjectSelectorTest</members>
 		<members>fflib_SObjectUnitOfWork</members>
 		<members>fflib_SObjectUnitOfWorkTest</members>
 		<members>fflib_SecurityUtils</members>
@@ -58,6 +54,7 @@
 		<members>fflib_StringBuilderTest</members>
 		<members>FinancialAccounts</members>
 		<members>FinancialAccountsTest</members>
+		<members>FinancialAccountRoles</members>
 		<name>ApexClass</name>
 	</types>
 	<types>

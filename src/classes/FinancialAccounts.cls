@@ -17,31 +17,26 @@ public class FinancialAccounts extends fflib_SObjectDomain
 
 
     private Map<Id, Account> accountsMap = new Map<Id, Account>();
-    private Map<Id, Account> oldAccountsMap = new Map<Id, Account>();
 
     public FinancialAccounts(List<FinServ__FinancialAccount__c> records)
     {
         super(records);
     }
 
-    public override void onValidate()
-    {
-        accountsMap = this.getAccountsMap();
-    }
+    public override void onValidate(){}
 
-    public override void onValidate(Map<Id,SObject> existingRecords)
-    {
-        accountsMap = this.getAccountsMap(existingRecords.values());
-    }
+    public override void onValidate(Map<Id,SObject> existingRecords){}
 
     public override void onAfterInsert()
     {
+        accountsMap = this.getAccountsMap();
         rollUp((FinServ__FinancialAccount__c[]) Records, false);
         update accountsMap.values();
     }
 
     public override void onAfterUpdate(Map<Id,SObject> existingRecords)
     {
+        accountsMap = this.getAccountsMap(existingRecords.values());
         rollUp((FinServ__FinancialAccount__c[]) existingRecords.values(), true);
         rollUp((FinServ__FinancialAccount__c[]) Records, false);
         update accountsMap.values();
