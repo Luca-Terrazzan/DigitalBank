@@ -46,9 +46,7 @@ public class FinancialAccountRoles extends fflib_SObjectDomain
         FinServ__FinancialAccountRole__c[] oldRoles = filterRolesByCategory(existingRecords.values(), 'Commercial');
         FinServ__FinancialAccountRole__c[] roles    = newRoles.clone();
         roles.addAll(oldRoles);
-        System.debug('roles: ' + roles);
         accountsMap = this.getAccountsMap(roles);
-        System.debug('Account Map: ' + accountsMap);
         rollUp(newRoles, false);
         rollUp(oldRoles, true);
         update accountsMap.values();
@@ -95,10 +93,6 @@ public class FinancialAccountRoles extends fflib_SObjectDomain
     private FinServ__FinancialAccountRole__c[] filterRolesByCategory(FinServ__FinancialAccountRole__c[] roles, String category) {
         FinServ__FinancialAccountRole__c[] filteredRecords = new FinServ__FinancialAccountRole__c[]{};
         for(FinServ__FinancialAccountRole__c record : roles) {
-            System.debug('filtering: -----------------------------------');
-            System.debug('filtering: ' + record.IslinkingPrimaryOwner__c);
-            System.debug('filtering: ' + record.FinancialAccountCategory__c);
-            System.debug('filtering: ' + record.FinServ__Role__c);
             if (!record.IslinkingPrimaryOwner__c &&
                     record.FinancialAccountCategory__c == category &&
                     ROLL_UP_ROLES.contains(record.FinServ__Role__c)) {
