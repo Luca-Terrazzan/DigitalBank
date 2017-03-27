@@ -24,13 +24,23 @@ public with sharing class TestUtils {
         };
         // Fill accounts
         for(Integer i = 0; i < accNumber; i++) {
-            testAccounts.add(new Account(Name = 'testAccount' + i, RecordTypeId = individualAccount.Id));
+            testAccounts.add(
+                new Account(
+                    Name = 'testAccount' + i,
+                    RecordTypeId = individualAccount.Id
+                )
+            );
         }
         // Insert test accounts
         insert testAccounts;
     }
 
     public static void insertFinancialAccounts(Boolean insertLoans)
+    {
+        insertFinancialAccounts(insertLoans, null);
+    }
+
+    public static void insertFinancialAccounts(Boolean insertLoans, Id coowner)
     {
         Account[] testAccounts = [SELECT Id FROM Account
             WHERE RecordType.DeveloperName = 'IndustriesIndividual'
@@ -41,8 +51,9 @@ public with sharing class TestUtils {
             for(Integer j = 0; j < CATEGORIES.size(); j++) {
                 testFinAccounts.add(
                     new FinServ__FinancialAccount__c(
-                        Name = 'Account' + i + 'FinancialAccount' + j,
+                        Name = 'Acc:' + i + '_Cat:' + CATEGORIES[j] + '_IsLoan:' +insertLoans,
                         FinServ__PrimaryOwner__c = testAccounts[i].Id,
+                        FinServ__JointOwner__c = coowner != null && coowner != testAccounts[i].Id ? coowner : null,
                         FinServ__Balance__c = Math.random() * 1000,
                         FinServ__FinancialAccountType__c = LOAN_TYPES.get(insertLoans),
                         Category__c = CATEGORIES[j]

@@ -14,7 +14,7 @@
  **/
 public class FinancialAccountRoles extends fflib_SObjectDomain
 {
-    private FinServ__FinancialAccountRole__c[] filteredRecords;
+    private final Set<String> ROLL_UP_ROLES = new Set<String>();
     private Map<Id, Account> accountsMap = new Map<Id, Account>();
     private Map<Id, Account> oldAccountsMap = new Map<Id, Account>();
 
@@ -22,49 +22,52 @@ public class FinancialAccountRoles extends fflib_SObjectDomain
     public FinancialAccountRoles(List<FinServ__FinancialAccountRole__c> records)
     {
         super(records);
-        this.filteredRecords = new FinServ__FinancialAccountRole__c[]{};
-    }
-
-    public override void onValidate()
-    {
-        for(FinServ__FinancialAccountRole__c record : (List<FinServ__FinancialAccountRole__c>) Records)
-        {
-            // no need to check for the financial account since it is a master detail
-            if (record.Finserv__RelatedAccount__c != null && !record.IslinkingPrimaryOwner__c) {
-                filteredRecords.add(record);
-            }
+        for(RollUpRoles__mdt role: [SELECT MasterLabel FROM RollUpRoles__mdt LIMIT 500]) {
+            ROLL_UP_ROLES.add(role.MasterLabel);
         }
     }
 
-    public override void onValidate(Map<Id,SObject> existingRecords)
-    {
-        for(FinServ__FinancialAccountRole__c record : (List<FinServ__FinancialAccountRole__c>) Records)
-        {
-            // no need to check for the financial account since it is a master detail
-            if (record.Finserv__RelatedAccount__c != null && !record.IslinkingPrimaryOwner__c) {
-                filteredRecords.add(record);
-            }
-        }
-    }
+    public override void onValidate() {}
+
+    public override void onValidate(Map<Id,SObject> existingRecords) {}
 
     public override void onAfterInsert()
     {
-
+        FinServ__FinancialAccountRole__c[] roles = filterRolesByCategory(Records, 'Commercial');
+        System.debug('roles: ' + roles);
+        accountsMap = this.getAccountsMap(roles);
+        System.debug('Account Map: ' + accountsMap);
+        rollUp((FinServ__FinancialAccountRole__c[]) roles, false);
+        update accountsMap.values();
+    }
+    public override void onAfterUpdate(Map<Id, SObject> existingRecords)
+    {
+        FinServ__FinancialAccountRole__c[] newRoles = filterRolesByCategory(Records, 'Commercial');
+        FinServ__FinancialAccountRole__c[] oldRoles = filterRolesByCategory(existingRecords.values(), 'Commercial');
+        FinServ__FinancialAccountRole__c[] roles    = newRoles.clone();
+        roles.addAll(oldRoles);
+        System.debug('roles: ' + roles);
+        accountsMap = this.getAccountsMap(roles);
+        System.debug('Account Map: ' + accountsMap);
+        rollUp(newRoles, false);
+        rollUp(oldRoles, true);
+        update accountsMap.values();
+    }
+    public override void onAfterDelete()
+    {
+        FinServ__FinancialAccountRole__c[] roles = filterRolesByCategory(Records, 'Commercial');
+        accountsMap = this.getAccountsMap(roles);
+        rollUp((FinServ__FinancialAccountRole__c[]) roles, true);
+        update accountsMap.values();
     }
 
     private Map<Id, Account> getAccountsMap()
     {
         return this.getAccountsMap(null);
     }
-
     private Map<Id, Account> getAccountsMap(FinServ__FinancialAccountRole__c[] loopRecords)
     {
         Set<Id> accounts = new Set<Id>();
-        if (loopRecords == null || loopRecords.isEmpty()) {
-            loopRecords = Records;
-        } else {
-            loopRecords.addAll((FinServ__FinancialAccountRole__c[]) Records);
-        }
         for(FinServ__FinancialAccountRole__c fa: loopRecords) {
             accounts.add(fa.Finserv__RelatedAccount__c);
         }
@@ -76,18 +79,33 @@ public class FinancialAccountRoles extends fflib_SObjectDomain
         return accountsMap;
     }
 
-    private void rollUp(FinServ__FinancialAccountRole__c[] roles, Boolean subtract)
-    {
+    private void rollUp(FinServ__FinancialAccountRole__c[] roles, Boolean subtract) {
         for(FinServ__FinancialAccountRole__c far: roles) {
             Account accToUpdate = accountsMap.get(far.Finserv__RelatedAccount__c);
             if (String.isBlank(far.FinancialAccountCategory__c)) continue;
-            String suffix = far.IsLoan__c && far.FinancialAccountCategory__c != 'Wealth' ? 'Loan__c' : 'Balance__c';
+            String suffix = far.IsLoan__c ? 'Loan__c' : 'Balance__c';
             Decimal sum = (Decimal) accToUpdate.get(far.FinancialAccountCategory__c + suffix);
             if (sum == null) sum = 0;
             if (!subtract) sum += far.Balance__c != null ? far.Balance__c : 0.0;
             else           sum -= far.Balance__c != null ? far.Balance__c : 0.0;
             accToUpdate.put(far.FinancialAccountCategory__c + suffix, sum);
         }
+    }
+
+    private FinServ__FinancialAccountRole__c[] filterRolesByCategory(FinServ__FinancialAccountRole__c[] roles, String category) {
+        FinServ__FinancialAccountRole__c[] filteredRecords = new FinServ__FinancialAccountRole__c[]{};
+        for(FinServ__FinancialAccountRole__c record : roles) {
+            System.debug('filtering: -----------------------------------');
+            System.debug('filtering: ' + record.IslinkingPrimaryOwner__c);
+            System.debug('filtering: ' + record.FinancialAccountCategory__c);
+            System.debug('filtering: ' + record.FinServ__Role__c);
+            if (!record.IslinkingPrimaryOwner__c &&
+                    record.FinancialAccountCategory__c == category &&
+                    ROLL_UP_ROLES.contains(record.FinServ__Role__c)) {
+                filteredRecords.add(record);
+            }
+        }
+        return filteredRecords;
     }
 
     public class Constructor implements fflib_SObjectDomain.IConstructable2
