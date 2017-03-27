@@ -11,6 +11,7 @@ build/lib/ant-salesforce.jar
 
 # Anonymous blocks
 .apex
+debug
 
 # Ignore progetti soap UI
 SoapUI

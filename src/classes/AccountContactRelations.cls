@@ -35,8 +35,6 @@ public class AccountContactRelations extends fflib_SObjectDomain
 
     public override void onAfterInsert()
     {
-        System.debug('Executing context after insert: '
-            + (System.Trigger.isAfter && System.Trigger.isInsert));
         AccountContactRelationship__c[] shadows = new AccountContactRelationship__c[]{};
         for(AccountContactRelation record : (List<AccountContactRelation>) Records)
         {
