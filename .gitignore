@@ -26,6 +26,7 @@ deploy/**/*.*
 
 # Ignore CI
 build/deploy/*
+!build/deploy/package.xml
 build/destructives/package.xml
 build/destructives/destructiveChanges.xml
 
