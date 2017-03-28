@@ -16,19 +16,26 @@
     </target>
 
     <!-- Retrieve metadata -->
-    <target name="retrieve" depends="cleanData">
-        <sf:retrieve username="${username}" password="${password}" sessionId="${sessionId}"
-            serverurl="${serverurl}" retrieveTarget="deploy/" unpackaged="deploy/retrieve.package.xml"/>
+    <target name="retrieve">
+        <sf:retrieve username="${username.origin}" password="${password.origin}"
+            serverurl="${serverurl.origin}" retrieveTarget="./deploy/src" unpackaged="deploy/package.xml"/>
     </target>
 
     <!-- Deploy -->
     <target name="deploy" depends="removeUserPermissions, fixPackage">
-        <sf:deploy username="${username}" password="${password}" sessionId="${sessionId}"
-            serverurl="${serverurl}" deployRoot="./deploy"/>
+        <sf:deploy username="${username}" password="${password}"
+            serverurl="${serverurl}" deployRoot="./deploy/src"/>
     </target>
 
     <!-- Deploy CI -->
     <target name="deployCI" depends="deployParameters, cleanData, copySrc, removeUserPermissions, fixEmailTemplates">
+        <sf:deploy username="${username}" password="${password}" testLevel="${testLevel}"
+            serverurl="${serverurl}" deployRoot="./deploy/src" checkOnly="${validate}"
+            rollbackOnError="${forceDeploy}" />
+    </target>
+
+    <!-- Manual Deploy CI -->
+    <target name="manualDeployCI" depends="deployParameters, removeUserPermissions, fixEmailTemplates">
         <sf:deploy username="${username}" password="${password}" testLevel="${testLevel}"
             serverurl="${serverurl}" deployRoot="./deploy/src" checkOnly="${validate}"
             rollbackOnError="${forceDeploy}" />

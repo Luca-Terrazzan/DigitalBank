@@ -1,0 +1,74 @@
+<aura:component controller="RelatedListController"
+    implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId">
+<!-- CONTROLLER INIT -->
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+<!-- ATTRIBUTES -->
+    <!-- <aura:attribute name="recordId" type="Id" /> -->
+
+    <aura:attribute name="opportunities" type="RelatedListController.Opportunity[]" />
+    <aura:attribute name="category" type="String" />
+
+<article class="slds-card">
+<div class="slds-card__header slds-grid">
+<!-- HEADER -->
+    <header class="slds-media slds-media--center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+        <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
+            <c:svgIcon svgPath="/resource/ldt__SLDS202/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+                category="standard"
+                size="small"
+                name="opportunity" />
+        </span>
+      </div>
+      <div class="slds-media__body">
+        <h2>
+          <a href="javascript:void(0);" class="slds-card__header-link slds-truncate">
+            <span class="slds-text-heading--small"> {!v.category} Opportunities ({!v.opportunities.length})</span>
+          </a>
+        </h2>
+      </div>
+    </header>
+    <div class="slds-no-flex">
+      <button class="slds-button slds-button--neutral">New</button>
+    </div>
+<!-- HEADER -->
+  </div>
+<!-- TABLE -->
+    <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-col slds-size--1-of-1">
+<!-- TABLE HEADER -->
+        <thead>
+            <tr class="slds-text-title--caps">
+                <th scope="col"><div class="slds-truncate" title="Name">Name</div></th>
+                <th scope="col"><div class="slds-truncate" title="Stage">Stage</div></th>
+                <th scope="col"><div class="slds-truncate" title="Amount">Amount</div></th>
+                <th scope="col"><div class="slds-truncate" title="Category">Category</div></th>
+                <th scope="col"><div class="slds-truncate" title="Financial Account">Financial Account</div></th>
+                <th scope="col"><div class="slds-truncate" title="Role">Role</div></th>
+                <th scope="col"><div class="slds-truncate" title="Close Date">Close Date</div></th>
+            </tr>
+        </thead>
+<!-- TABLE BODY -->
+        <tbody>
+            <aura:iteration items="{!v.opportunities}" var="op">
+                    <tr>
+                       <th scope="row" data-label="Opportunity Name">
+                        <!-- slight workaround to avoid the /c/ in lightning page url -->
+                        <ui:outputURL value="{!'../' + op.Id}" label="{!op.Name}" class="uiOutputURL"/>
+                        </th>
+                        <td>{!op.StageName}</td>
+                        <td>{!op.Amount}</td>
+                        <td>{!op.Category__c}</td>
+                        <th scope="row" data-label="Financial Account">
+                        <!-- slight workaround to avoid the /c/ in lightning page url -->
+                        <ui:outputURL value="{!'../' + op.Financial_Account_Role__r.FinServ__FinancialAccount__r.Name}" label="{!op.Financial_Account_Role__r.FinServ__FinancialAccount__r.Name}" class="uiOutputURL"/>
+                        </th>
+                        <td>{!op.Financial_Account_Role__r.FinServ__Role__c}</td>
+                        <td>{!op.CloseDate}</td>
+                    </tr>
+                </aura:iteration>
+        </tbody>
+    </table>
+<!-- TABLE -->
+<div class="slds-card__footer"><a href="javascript:void(0);">View All <span class="slds-assistive-text">entity type</span></a></div>
+</article>
+</aura:component>
