@@ -20,7 +20,8 @@
             Opportunity.Name,
             Opportunity.Amount,
             Opportunity.StageName,
-            Opportunity.CloseDate
+            Opportunity.CloseDate,
+            Opportunity.Category__c
         };
     }
     /**

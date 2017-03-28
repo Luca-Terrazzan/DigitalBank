@@ -3,6 +3,17 @@
  */
 public class AccountService
 {
+    public class Row{
+        @AuraEnabled
+        public String label1 {get;set;}
+        @AuraEnabled
+        public String value1 {get;set;}
+        @AuraEnabled
+        public String label2 {get;set;}
+        @AuraEnabled
+        public String value2 {get;set;}
+    }
+
     /**
      * Select products only based on a specific Account - mostly individual accounts
      * @param      accountId  The account identifier
@@ -17,5 +28,11 @@ public class AccountService
     public static Opportunity[] selectOpportunities(Id accountId, String category)
     {
         return new OpportunitiesSelector().selectByAccount(new Set<Id>{accountId}, category.toLowerCase());
+    }
+
+    @AuraEnabled
+    public static String getAccountFields(Id accountId, String fieldList)
+    {
+        return new AccountsSelector().getAccountFields(accountId, fieldList);
     }
 }
