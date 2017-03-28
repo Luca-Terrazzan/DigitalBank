@@ -18,5 +18,14 @@
             } else console.log("fail: " + state);
         });
         $A.enqueueAction(action);
+    },
+
+    createRecord : function (component, event, helper) {
+        var createRecordEvent = $A.get("e.force:createRecord");
+        createRecordEvent.setParams({
+            "entityApiName": "FinServ__FinancialAccountRole__c",
+            "recordTypeId": "01246000000kXOT"
+        });
+        createRecordEvent.fire();
     }
 })

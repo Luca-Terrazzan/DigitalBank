@@ -1,6 +1,6 @@
 <aura:component implements="force:appHostable">
     <ltng:require styles="{!$Resource.slds +
-                          '/assets/styles/salesforce-lightning-design-system.css'}"/>
+        '/assets/styles/salesforce-lightning-design-system.css'}"/>
     <div class="main">
         <div role="dialog" tabindex="-1" aura:id="Modalbox" aria-labelledby="header43" class="slds-modal ">
             <div class="slds-modal__container">
@@ -9,7 +9,7 @@
                         <span>
                             <c:svg class="slds-button__icon slds-button__icon--large" xlinkHref="/resource/SLDS/assets/icons/action-sprite/svg/symbols.svg#close" />
                             <span class="slds-assistive-text">Close</span>
-                        </span>                 
+                        </span>
                     </button>
                     <h2 id="header43" class="slds-text-heading--medium">Modal Header</h2>
                 </div>
@@ -18,19 +18,19 @@
                         <div class="slds-form-element slds-is-required">
                             <div class="slds-form-element__control">
                                 <ui:inputText aura:id="accName" label="Name"
-                                              class="slds-input"
-                                              labelClass="slds-form-element__label"
-                                              value="{!v.acc.Name}"
-                                              placeholder="Name" required="true"/>
+                                    class="slds-input"
+                                    labelClass="slds-form-element__label"
+                                    value="{!v.acc.Name}"
+                                    placeholder="Name" required="true"/>
                             </div>
                         </div>
                         <div class="slds-form-element slds-is-required">
                             <div class="slds-form-element__control">
                                 <ui:inputText aura:id="accEmail" label="Email"
-                                              class="slds-input"
-                                              labelClass="slds-form-element__label"
-                                              value="{!v.acc.Email__c }"
-                                              placeholder="Email" required="true"/>
+                                    class="slds-input"
+                                    labelClass="slds-form-element__label"
+                                    value="{!v.acc.Email__c }"
+                                    placeholder="Email" required="true"/>
                             </div>
                         </div>
                     </div>
