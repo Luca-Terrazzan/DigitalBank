@@ -72,12 +72,15 @@
         <members>RetailList</members>
         <members>svg</members>
         <members>svgIcon</members>
-        <members>toast</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
         <members>Digital_Bank</members>
         <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>CustomLabels</members>
+        <name>CustomLabels</name>
     </types>
     <types>
         <members>*</members>
@@ -89,8 +92,12 @@
         <members>AccountContactRelationship__c</members>
         <members>AccountContactRole</members>
         <members>Activity</members>
+        <members>AgencyData__c</members>
         <members>Bank_Info__kav</members>
+        <members>Campaign</members>
         <members>Collateral__c</members>
+        <members>Concession__c</members>
+        <members>Contact</members>
         <members>Contract</members>
         <members>Eligibility__c</members>
         <members>Entitlement_Mandate__c</members>
@@ -100,6 +107,7 @@
         <members>News__c</members>
         <members>NextBestAction__c</members>
         <members>NextBestOffer__c</members>
+        <members>Opportunity</members>
         <members>Referral__c</members>
         <members>RollUpRoles__mdt</members>
         <members>Social_Activity_and_Influence__c</members>
@@ -110,6 +118,28 @@
     <types>
         <members>FinServ__LifeEvent__c</members>
         <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Topic_Shared_Document_Folder</members>
+        <members>Topic_Shared_Document_Folder/DLogo.png</members>
+        <members>Topic_Shared_Document_Folder/DeloitteSFDCLogo.png</members>
+        <members>Topic_Shared_Document_Folder/Deloitte_Logo.png</members>
+        <members>Topic_Shared_Document_Folder/Grey_light_png.png</members>
+        <members>Topic_Shared_Document_Folder/Houses.jpg</members>
+        <members>Topic_Shared_Document_Folder/Singapore_Best_Savings_Account_Picture_1_jpg.jpg</members>
+        <members>Topic_Shared_Document_Folder/Start_up_jpg.jpg</members>
+        <members>Topic_Shared_Document_Folder/Start_up_jpg1.jpg</members>
+        <members>Topic_Shared_Document_Folder/Tax_jpg.jpg</members>
+        <members>Topic_Shared_Document_Folder/X20170312_161222_jpg.jpg</members>
+        <members>Topic_Shared_Document_Folder/X720_View_png.png</members>
+        <members>Topic_Shared_Document_Folder/X720_png.png</members>
+        <members>Topic_Shared_Document_Folder/credit_card_png.png</members>
+        <members>Topic_Shared_Document_Folder/cs_growth_blocks22_png.png</members>
+        <members>Topic_Shared_Document_Folder/cs_growth_blocks22_png1.png</members>
+        <members>Topic_Shared_Document_Folder/cs_growth_blocks22_png2.png</members>
+        <members>Topic_Shared_Document_Folder/download_jpg.jpg</members>
+        <members>Topic_Shared_Document_Folder/sky.jpg</members>
+        <name>Document</name>
     </types>
     <types>
         <members>unfiled$public</members>
@@ -154,6 +184,10 @@
         <name>Layout</name>
     </types>
     <types>
+        <members>*</members>
+        <name>Letterhead</name>
+    </types>
+    <types>
         <members>Admin</members>
         <members>Advisor</members>
         <members>Company Communities User</members>
@@ -180,6 +214,11 @@
         <members>StandardAul</members>
         <members>customer community clone</members>
         <name>Profile</name>
+    </types>
+    <types>
+        <members>Account.My_New_Event</members>
+        <members>Account.New_Event</members>
+        <name>QuickAction</name>
     </types>
     <types>
         <members>unfiled$public</members>
