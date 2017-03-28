@@ -101,6 +101,8 @@
         <members>Contract</members>
         <members>Eligibility__c</members>
         <members>Entitlement_Mandate__c</members>
+        <members>FinServ__FinancialAccountRole__c</members>
+        <members>FinServ__FinancialAccount__c</members>
         <members>High_Growth_proposal__kav</members>
         <members>Journeys__c</members>
         <members>Knowledge__kav</members>
@@ -116,7 +118,7 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>FinServ__LifeEvent__c</members>
+        <members>AccountContactRelationship__c</members>
         <name>CustomTab</name>
     </types>
     <types>

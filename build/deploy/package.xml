@@ -80,6 +80,14 @@
         <name>Layout</name>
     </types>
     <types>
+        <members>Digital_Bank</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>AccountContactRelationship__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
         <members>AccountContactRelations</members>
         <members>AccountService</members>
         <members>AccountsSelector</members>
