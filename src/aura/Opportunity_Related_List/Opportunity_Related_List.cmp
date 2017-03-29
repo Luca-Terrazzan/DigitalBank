@@ -14,7 +14,7 @@
     <header class="slds-media slds-media--center slds-has-flexi-truncate">
       <div class="slds-media__figure">
         <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
-            <c:svgIcon svgPath="/resource/ldt__SLDS202/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+            <c:svgIcon svgPath="/resource/slds/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
                 category="standard"
                 size="small"
                 name="opportunity" />
