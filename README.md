@@ -8,7 +8,7 @@
 Official repository documentation for the Digital Bank Global Initiative.
 
 ## Deploy
-The list of relevant metadata is contained into [package.xml](src/master/src/package.xml).
+The list of relevant metadata is contained into [package.xml](src/package.xml).
 
 ## Process
 Deploy process description goes here
