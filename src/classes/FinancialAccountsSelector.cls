@@ -78,9 +78,4 @@ public class FinancialAccountsSelector extends fflib_SObjectSelector
             );
         return (List<FinServ__FinancialAccount__c>) Database.query(query);
     }
-
-    public static Id getDefaultRecordType()
-    {
-        return null;
-    }
 }

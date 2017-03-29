@@ -7,8 +7,6 @@
             category: helper.validateCategory(faCategory)
         });
 
-        console.log("calling selector with data: " + helper.validateCategory(faCategory));
-
         action.setCallback(this, function(response){
             var state = response.getState();
             var result = response.getReturnValue();
@@ -18,13 +16,16 @@
             } else console.log("fail: " + state);
         });
         $A.enqueueAction(action);
+        helper.getFinancialAccountRoleDefaultRecordType(component);
     },
 
     createRecord : function (component, event, helper) {
         var createRecordEvent = $A.get("e.force:createRecord");
+        var rt = component.get("v.roleRecordType");
+        console.log("using rt: ", rt);
         createRecordEvent.setParams({
             "entityApiName": "FinServ__FinancialAccountRole__c",
-            "recordTypeId": "01246000000kXOT" /* REFACTOR */
+            "recordTypeId": rt
         });
         createRecordEvent.fire();
     }

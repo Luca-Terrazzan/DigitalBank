@@ -6,7 +6,7 @@
 <aura:attribute name="recordId" type="Id" />
 <aura:attribute name="category" type="String" />
 <aura:attribute name="financialAccounts" type="FinServ__FinancialAccountRole__c[]" />
-<aura:attribute name="newFinAcc" type="FinServ__FinancialAccount__c" default='{"Name": "pippo"}'/>
+<aura:attribute name="roleRecordType" type="Id" />
 
 <article class="slds-card">
 <div class="slds-card__header slds-grid">

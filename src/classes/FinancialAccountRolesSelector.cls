@@ -67,9 +67,22 @@ public class FinancialAccountRolesSelector extends fflib_SObjectSelector
                 getSObjectName()
             }
         );
-        System.debug('query: ' + query);
         FinServ__FinancialAccountRole__c[] roles = (List<FinServ__FinancialAccountRole__c>) Database.query(query);
         return roles;
+    }
+
+    public static Id getDefaultRecordType()
+    {
+        Id result;
+        try {
+            result = [SELECT Id
+                FROM RecordType
+                WHERE SObjectType = 'FinServ__FinancialAccountRole__c' AND DeveloperName = 'AccountRole'].Id;
+        } catch (QueryException qe) {
+            throw new QueryException('Cannot find a suitable recordType for the Financial Account Role. ' +
+                qe.getMessage());
+        }
+        return result;
     }
 
 }
