@@ -20,10 +20,10 @@
     <tab>FinServ__FinancialGoal__c</tab>
     <tab>FinServ__FinancialHolding__c</tab>
     <tab>standard-CollaborationGroup</tab>
-    <tab>standard-home</tab>
     <tab>FinServ__WMHouseholds</tab>
     <tab>standard-Lead</tab>
     <tab>standard-Opportunity</tab>
+    <tab>standard-home</tab>
     <tab>standard-Order</tab>
     <tab>standard-OtherUserProfile</tab>
     <tab>standard-Pricebook2</tab>
@@ -32,4 +32,5 @@
     <tab>standard-report</tab>
     <tab>FinServ__Securities__c</tab>
     <tab>standard-UserProvisioningRequest</tab>
+    <tab>FinServ__LifeEvent__c</tab>
 </CustomApplication>
