@@ -23,8 +23,6 @@
     <tab>standard-home</tab>
     <tab>FinServ__WMHouseholds</tab>
     <tab>standard-Lead</tab>
-    <tab>FinServ__LifeEvent__c</tab>
-    <tab>Modal</tab>
     <tab>standard-Opportunity</tab>
     <tab>standard-Order</tab>
     <tab>standard-OtherUserProfile</tab>
