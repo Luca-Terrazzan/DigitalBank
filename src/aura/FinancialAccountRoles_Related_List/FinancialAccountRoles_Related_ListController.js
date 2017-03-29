@@ -24,7 +24,7 @@
         var createRecordEvent = $A.get("e.force:createRecord");
         createRecordEvent.setParams({
             "entityApiName": "FinServ__FinancialAccountRole__c",
-            "recordTypeId": "01246000000kXOT"
+            "recordTypeId": "01246000000kXOT" /* REFACTOR */
         });
         createRecordEvent.fire();
     }

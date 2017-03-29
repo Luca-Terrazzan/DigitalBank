@@ -11,4 +11,10 @@ public with sharing class RelatedListController {
     {
         return AccountService.selectOpportunities(accountId, category);
     }
+
+    @AuraEnabled
+    public static Id getFinAccDefaultRecordType()
+    {
+        return FinancialAccountsSelector.getDefaultRecordType();
+    }
 }
