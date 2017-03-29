@@ -1346,7 +1346,7 @@
     <fields>
         <fullName>CustomerValue__c</fullName>
         <externalId>false</externalId>
-        <formula>CASE(Profitability__c, 
+        <formula>CASE(Profitability__c,
 					&apos;Very Low&apos;, IMAGE(&quot;/resource/res/img/star1.png&quot;, &quot;zero stars&quot;),
 					&apos;Low&apos;, IMAGE(&quot;/resource/res/img/star2.png&quot;, &quot;one star&quot;),
 					&apos;Average&apos;, IMAGE(&quot;/resource/res/img/star3.png&quot;, &quot;two stars&quot;),
@@ -5322,8 +5322,6 @@
         <lookupPhoneDialogsAdditionalFields>CORE.USERS.ALIAS</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>ACCOUNT.TYPE</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>ACCOUNT.PHONE1</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>00N46000005AlND</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>00N46000005AlN8</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ACCOUNT.SITE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ACCOUNT.PHONE1</searchResultsAdditionalFields>

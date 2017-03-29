@@ -14,9 +14,16 @@ The list of relevant metadata is contained into [package.xml](src/package.xml).
 Deploy process description goes here
 
 * Add every needed FSC custom object manually to the package.xml, this is not done by default from MavensMate but is required if you added custom fields, validation rules, etc... to a FSC object.
-* step 2
-    * sub-step1
-* step 3
+* If present, remove the the following rows:
+    * Account.object
+
+                ...
+                <lookupPhoneDialogsAdditionalFields>00N46000005AlND</lookupPhoneDialogsAdditionalFields>
+                <lookupPhoneDialogsAdditionalFields>00N46000005AlN8</lookupPhoneDialogsAdditionalFields>
+                ...
+
+        This is a bug in SFDC metadata for some layout types, that reference hardcoded Ids which are obviously not going to work into other orgs.
+
 
 
 ## Manual Steps
