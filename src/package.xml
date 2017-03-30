@@ -75,6 +75,10 @@
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
+        <members>*</members>
+        <name>Community</name>
+    </types>
+    <types>
         <members>Digital_Bank</members>
         <name>CustomApplication</name>
     </types>
@@ -116,6 +120,10 @@
         <members>Start_UP__kav</members>
         <members>User</members>
         <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomSite</name>
     </types>
     <types>
         <members>AccountContactRelationship__c</members>
@@ -223,6 +231,10 @@
         <name>Letterhead</name>
     </types>
     <types>
+        <members>*</members>
+        <name>Network</name>
+    </types>
+    <types>
         <members>Admin</members>
         <members>Advisor</members>
         <members>Company Communities User</members>
@@ -273,6 +285,10 @@
     <types>
         <members>*</members>
         <name>ReportType</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>SiteDotCom</name>
     </types>
     <types>
         <members>res</members>
