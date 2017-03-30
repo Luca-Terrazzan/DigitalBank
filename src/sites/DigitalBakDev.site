@@ -17,7 +17,7 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>dorsignola@deloitte.com.gbdev</siteAdmin>
+    <siteAdmin>dorsignola@deloitte.com.gbtest</siteAdmin>
     <siteType>ChatterNetwork</siteType>
     <subdomain>digitalbankcommunity-developer-edition</subdomain>
 </CustomSite>
