@@ -102,8 +102,15 @@
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <validationRules>
-        <fullName>SameOwnership</fullName>
+        <fullName>Must_Provide_Amount</fullName>
         <active>true</active>
+        <errorConditionFormula>MovedAmount__c == null || MovedAmount__c == 0</errorConditionFormula>
+        <errorDisplayField>MovedAmount__c</errorDisplayField>
+        <errorMessage>Moved Amount is mandatory and greater than 0.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SameOwnership</fullName>
+        <active>false</active>
         <errorConditionFormula>ReceivingFinancialAccount__r.FinServ__PrimaryOwner__c !=  GivingFinancialAccount__r.FinServ__PrimaryOwner__c</errorConditionFormula>
         <errorMessage>Cannot move money between Financial Accounts of different customers.</errorMessage>
     </validationRules>
