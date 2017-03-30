@@ -1995,10 +1995,98 @@
         <recordType>Account.FinServ__IndustriesIndividual</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>AccountContactRelation-Account Contact Relationship Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AccountContactRelationship__c-Contact-Account Relationship Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AccountContactRole-Account Contact Role Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AgencyData__c-Agency Data Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Bank_Info__kav-Bank Info Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Campaign-Campaign Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Collateral__c-Collateral Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Concession__c-Concession Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact-Contact %28Marketing%29 Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contract-Contract Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Eligibility__c-Eligibility Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>FinServ__FinancialAccountRole__c-Unmanaged Account Role Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>FinServ__FinancialAccountRole__c-Unmanaged Account Role Layout</layout>
+        <recordType>FinServ__FinancialAccountRole__c.FinServ__AccountRole</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Journeys__c-Journey Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Knowledge__kav-Knowledge Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Lead-Lead %28Marketing%29 Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>News__c-News Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>NextBestAction__c-Next Best Action Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>NextBestOffer__c-Next Best Offer Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Opportunity-Opportunity %28Marketing%29 Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Opportunity-Opportunity %28Marketing%29 Layout</layout>
+        <recordType>Opportunity.FinServ__General</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Opportunity-Opportunity %28Marketing%29 Layout</layout>
+        <recordType>Opportunity.FinServ__RetirementPlanning</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Opportunity-Opportunity %28Marketing%29 Layout</layout>
+        <recordType>Opportunity.FinServ__WalletShareOpportunity</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>OpportunityLineItem-Opportunity Product Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Referral__c-Referral Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>RollUpRoles__mdt-Roll up roles Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Social_Activity_and_Influence__c-Social Activity and Influence Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Start_UP__kav-Start Up Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Task-Task Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>User-User Layout</layout>
     </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>

@@ -8,13 +8,10 @@
     <tab>standard-Contract</tab>
     <tab>FinServ__Alert__c</tab>
     <tab>standard-AppLauncher</tab>
-    <tab>standard-ProcessInstanceWorkitem</tab>
     <tab>standard-Asset</tab>
     <tab>FinServ__AssetsAndLiabilities__c</tab>
-    <tab>standard-Event</tab>
     <tab>standard-Campaign</tab>
     <tab>standard-Case</tab>
-    <tab>standard-Feed</tab>
     <tab>FinServ__WMClients</tab>
     <tab>standard-Contact</tab>
     <tab>standard-Dashboard</tab>
@@ -23,12 +20,10 @@
     <tab>FinServ__FinancialGoal__c</tab>
     <tab>FinServ__FinancialHolding__c</tab>
     <tab>standard-CollaborationGroup</tab>
-    <tab>standard-home</tab>
     <tab>FinServ__WMHouseholds</tab>
     <tab>standard-Lead</tab>
-    <tab>FinServ__LifeEvent__c</tab>
-    <tab>Modal</tab>
     <tab>standard-Opportunity</tab>
+    <tab>standard-home</tab>
     <tab>standard-Order</tab>
     <tab>standard-OtherUserProfile</tab>
     <tab>standard-Pricebook2</tab>
@@ -36,6 +31,6 @@
     <tab>FinServ__ReciprocalRole__c</tab>
     <tab>standard-report</tab>
     <tab>FinServ__Securities__c</tab>
-    <tab>standard-Task</tab>
     <tab>standard-UserProvisioningRequest</tab>
+    <tab>FinServ__LifeEvent__c</tab>
 </CustomApplication>
