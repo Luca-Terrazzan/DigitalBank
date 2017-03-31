@@ -1,11 +1,25 @@
 # Digital Bank #
 
-# Table of Contents
-1. [Deploy](#deploy)
-2. [Process](#process)
-3. [Manual Steps](#manual-steps)
-
 Official repository documentation for the Digital Bank Global Initiative.
+
+# Table of Contents
+1. [Changelog](#change-log)
+2. [Deploy](#deploy)
+3. [Process](#process)
+4. [Manual Steps](#manual-steps)
+
+## Change Log
+
+##### V2.1.0
+###### 31/03/2017
+* **fixed** "new" button on Opportunity related list, still need an hardcoded id for record type
+* creation of Financial Account on opportunity win
+
+##### V2.0.0
+###### 31/03/2017
+* **new feature**: transaction management, it is now possibile for external systems to integrate with DigitalBank anc create new transactions between financial accounts.
+    * New transactions move money between financial accouts, and if above a certain threshold will also generate a relevant alert on receiving products!
+* added required fields on Contact for iOS app interface
 
 ## Deploy
 The list of relevant metadata is contained into [package.xml](src/package.xml).
@@ -28,11 +42,3 @@ Deploy process description goes here
 
 * If the Digital Bank_ app is not available, be sure to check if it's activated as a lightning app
 * Adjust any Field Level Security settings that might miss from the Admin/System Administrator profile (this is actually a bug in the profile naming).
-
-
-## Manual Steps
-Each manual step required to fix the deploy afterwards goes here
-
-add manually FinServ objects to package.xml if you added some custom fields to them
-
-Activate bitbucket-pipelines.yml
