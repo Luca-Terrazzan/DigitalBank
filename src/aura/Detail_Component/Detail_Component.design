@@ -1,0 +1,4 @@
+<design:component >
+    <design:attribute name="category" label="Category" description="The desired financial account category to show in the related list. Must be 'retail', 'commercial' or 'wealth'" />
+    <design:attribute name="fields" label="Fields" description="A comma separated list of desired fields." />
+</design:component>

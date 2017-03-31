@@ -1,9 +1,9 @@
-# image: telnext/bitbucketci
+image: telnext/bitbucketci
 
-# pipelines:
-#   branches:
-#     master:
-#       - step:
-#           script:
-#             - cd build
-#             - ant deployCI -Dusername=${username} -Dpassword=${password} -Dserverurl=${serverurl} -Dvalidate=${validate} -DtestLevel=${testLevel} -DrollbackOnError=${forceDeploy}
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - cd build
+            - ant deployCI -Dusername=${username} -Dpassword=${password} -Dserverurl=${serverurl} -Dvalidate=${validate} -DtestLevel=${testLevel} -DrollbackOnError=${forceDeploy}

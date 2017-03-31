@@ -19,7 +19,8 @@ private class FinancialAccountsSelectorTest {
         // Insert test financial accounts + roles
         FinServ__FinancialAccount__c[] testFinAccounts = new FinServ__FinancialAccount__c[]{
             new FinServ__FinancialAccount__c(Name = 'testFinAccount1',
-                FinServ__PrimaryOwner__c = testAccounts[0].Id)
+                FinServ__PrimaryOwner__c = testAccounts[0].Id,
+                Category__c = 'Retail')
         };
         insert testFinAccounts;
     }

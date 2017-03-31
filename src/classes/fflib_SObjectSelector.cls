@@ -93,12 +93,6 @@ public abstract with sharing class fflib_SObjectSelector
     abstract List<Schema.SObjectField> getSObjectFieldList();
 
     /**
-     * Implement this method to get a list of strings representing the current fields to be queried
-     * TODO: abstract implementation
-     **/
-    virtual List<String> getFieldListString() { return null; }
-
-    /**
      * Constructs the Selector, defaults to not including any FieldSet fields automatically
      **/
     public fflib_SObjectSelector()

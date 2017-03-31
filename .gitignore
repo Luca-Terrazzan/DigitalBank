@@ -11,6 +11,7 @@ build/lib/ant-salesforce.jar
 
 # Anonymous blocks
 .apex
+debug
 
 # Ignore progetti soap UI
 SoapUI
@@ -25,6 +26,7 @@ deploy/**/*.*
 
 # Ignore CI
 build/deploy/*
+!build/deploy/package.xml
 build/destructives/package.xml
 build/destructives/destructiveChanges.xml
 
