@@ -41,6 +41,10 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -62,10 +66,6 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>SaveEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>SmsHighlightAction</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -304,14 +304,11 @@ If(LEN( Account.BillingCountry) &gt;0, Account.BillingCountry,&quot;&quot;)</for
         <fullName>FinServ__CountryOfBirth__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <globalPicklist>FinServ__Countries</globalPicklist>
         <label>Country Of Birth</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>FinServ__Countries</valueSetName>
-        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__CountryOfResidence__c</fullName>
@@ -369,30 +366,28 @@ If(LEN( Account.BillingCountry) &gt;0, Account.BillingCountry,&quot;&quot;)</for
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Gender</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Female</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Male</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Decline to Specify</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Female</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Male</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Decline to Specify</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Other</fullName>
-                    <default>false</default>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__IndividualId__c</fullName>
@@ -411,18 +406,16 @@ If(LEN( Account.BillingCountry) &gt;0, Account.BillingCountry,&quot;&quot;)</for
         <description>Individual Type</description>
         <externalId>false</externalId>
         <label>Individual Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Individual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Individual</fullName>
-                    <default>false</default>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__LanguagesSpoken__c</fullName>
@@ -464,38 +457,36 @@ If(LEN( MailingCountry) &gt;0, MailingCountry,&quot;&quot;)</formula>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Marital Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Single</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Married</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Separated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Divorced</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Widowed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Single</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Married</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Separated</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Divorced</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Widowed</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Other</fullName>
-                    <default>false</default>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__NumberOfDependents__c</fullName>
@@ -591,27 +582,21 @@ If(LEN( OtherCountry) &gt;0, OtherCountry,&quot;&quot;)</formula>
         <fullName>FinServ__PrimaryLanguage__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <globalPicklist>FinServ__Languages</globalPicklist>
         <label>Primary Language</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>FinServ__Languages</valueSetName>
-        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__SecondaryLanguage__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
+        <globalPicklist>FinServ__Languages</globalPicklist>
         <label>Secondary Language</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>FinServ__Languages</valueSetName>
-        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__ShippingAddress__c</fullName>
@@ -644,38 +629,36 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Tax Bracket</label>
+        <picklist>
+            <picklistValues>
+                <fullName>10%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>25%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>28%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>33%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>35%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>10%</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>15%</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>25%</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>28%</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>33%</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>35%</fullName>
-                    <default>false</default>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__TaxId__c</fullName>
@@ -711,27 +694,25 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <fullName>Gender__c</fullName>
         <externalId>false</externalId>
         <label>Gender</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Male</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Female</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Male</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Female</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Other</fullName>
-                    <default>false</default>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>HasOptedOutOfEmail</fullName>
@@ -776,6 +757,29 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
     </fields>
     <fields>
         <fullName>LeadSource</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Inquiry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
@@ -783,26 +787,24 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <fullName>Level__c</fullName>
         <externalId>false</externalId>
         <label>Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Secondary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tertiary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Primary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Secondary</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Tertiary</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Primary</fullName>
-                    <default>false</default>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>MailingAddress</fullName>
@@ -812,35 +814,33 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <fullName>Method_of_Contact__c</fullName>
         <externalId>false</externalId>
         <label>Method of Contact</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Text</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Email</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Mobile Phone</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Home Phone</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Mail</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Text</fullName>
-                    <default>false</default>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>MobilePhone</fullName>
@@ -915,31 +915,29 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <fullName>Status__c</fullName>
         <externalId>false</externalId>
         <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dormant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Exited</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Active</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Dormant</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Closed</fullName>
-                    <default>false</default>
-                </value>
-                <value>
-                    <fullName>Exited</fullName>
-                    <default>false</default>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Title</fullName>
