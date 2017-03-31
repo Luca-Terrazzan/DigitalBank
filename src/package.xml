@@ -14,6 +14,7 @@
         <members>OpportunitiesSelector</members>
         <members>RelatedListController</members>
         <members>TestUtils</members>
+        <members>TransactionRest</members>
         <members>fflib_ApexMocks</members>
         <members>fflib_ApexMocksTest</members>
         <members>fflib_ApexMocksUtils</members>

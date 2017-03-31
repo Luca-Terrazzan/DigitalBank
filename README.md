@@ -15,7 +15,7 @@ Deploy process description goes here
 
 * Add every needed FSC custom object manually to the package.xml, this is not done by default from MavensMate but is required if you added custom fields, validation rules, etc... to a FSC object.
 * Clone any managed layout that has been modified/you intend to modify. This is necessary to have it in the list of deployable metadatas and to make it visible in Mavensmate.
-    * Apply any necessary assignment to the new layouts.
+    * Apply any necessary Record Type assignment to the new layouts.
 * If present, remove the the following rows:
     * Account.object
 
