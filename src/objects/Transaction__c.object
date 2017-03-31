@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Represent a movement of money between Financial Accounts</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>GivingFinancialAccount__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Giving Financial Account</label>
+        <referenceTo>FinServ__FinancialAccount__c</referenceTo>
+        <relationshipLabel>Transactions (Giving Financial Account)</relationshipLabel>
+        <relationshipName>GivingTransactions</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MovedAmount__c</fullName>
+        <externalId>false</externalId>
+        <label>Moved Amount</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReceivingFinancialAccount__c</fullName>
+        <externalId>false</externalId>
+        <label>Receiving Financial Account</label>
+        <referenceTo>FinServ__FinancialAccount__c</referenceTo>
+        <relationshipLabel>Transactions</relationshipLabel>
+        <relationshipName>Transactions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>Transaction</label>
+    <nameField>
+        <displayFormat>TR-{00000}</displayFormat>
+        <label>Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Transactions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Must_Provide_Amount</fullName>
+        <active>true</active>
+        <errorConditionFormula>MovedAmount__c == null || MovedAmount__c == 0</errorConditionFormula>
+        <errorDisplayField>MovedAmount__c</errorDisplayField>
+        <errorMessage>Moved Amount is mandatory and greater than 0.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SameOwnership</fullName>
+        <active>false</active>
+        <errorConditionFormula>ReceivingFinancialAccount__r.FinServ__PrimaryOwner__c !=  GivingFinancialAccount__r.FinServ__PrimaryOwner__c</errorConditionFormula>
+        <errorMessage>Cannot move money between Financial Accounts of different customers.</errorMessage>
+    </validationRules>
+</CustomObject>
