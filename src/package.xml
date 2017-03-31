@@ -118,6 +118,7 @@
         <members>RollUpRoles__mdt</members>
         <members>Social_Activity_and_Influence__c</members>
         <members>Start_UP__kav</members>
+        <members>Transaction__c</members>
         <members>User</members>
         <name>CustomObject</name>
     </types>
@@ -180,6 +181,14 @@
         <members>ClientRecordPage1</members>
         <members>ClientRecordPage2</members>
         <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>FlowDefinition</name>
     </types>
     <types>
         <members>Account-Account %28Marketing%29 Layout</members>
