@@ -18,5 +18,14 @@
             } else console.log("fail: " + state);
         });
         $A.enqueueAction(action);
+    },
+
+    createRecord : function (component, event, helper) {
+        var createRecordEvent = $A.get("e.force:createRecord");
+        createRecordEvent.setParams({
+            "entityApiName": "Opportunity",
+            "recordTypeId": "01246000000kXOd"
+        });
+        createRecordEvent.fire();
     }
 })
