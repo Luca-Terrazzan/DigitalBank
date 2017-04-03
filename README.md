@@ -42,3 +42,4 @@ Deploy process description goes here
 
 * If the Digital Bank_ app is not available, be sure to check if it's activated as a lightning app
 * Adjust any Field Level Security settings that might miss from the Admin/System Administrator profile (this is actually a bug in the profile naming).
+* Always check for Process Builder Flows version in target environment. Flows are notoriously bugged and might need an additional manual deploy.
