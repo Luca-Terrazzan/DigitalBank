@@ -1104,7 +1104,9 @@
     <fields>
         <fullName>IsLoan__c</fullName>
         <externalId>false</externalId>
-        <formula>IF(ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Credit Card&quot;)|| ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Overdrafts&quot;)|| ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Short Term Loans&quot;)|| ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Long Term Loans&quot;), true, false)</formula>
+        <formula>IF(ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Credit Card&quot;)|| ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Overdrafts&quot;)|| ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Short Term Loans&quot;)|| ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Long Term Loans&quot;)|| ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Mortgage: 10 years&quot;)|| ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Mortgage: 15 years&quot;) 
+|| ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Mortgage: 30 years&quot;)|| ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Business credit card&quot;)|| ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Premium Credit Card&quot;)|| ISPICKVAL(FinServ__FinancialAccountType__c, &quot;Value credit card&quot;) 
+, true, false)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>IsLoan</label>
         <trackHistory>false</trackHistory>
