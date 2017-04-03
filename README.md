@@ -10,6 +10,12 @@ Official repository documentation for the Digital Bank Global Initiative.
 
 ## Change Log
 
+##### V2.1.0 r2
+###### 03/04/2017
+* Updated layouts
+* Updated flow versions
+    * new version for financial account creation on Opp closing
+
 ##### V2.1.0
 ###### 31/03/2017
 * **fixed** "new" button on Opportunity related list, still need an hardcoded id for record type
