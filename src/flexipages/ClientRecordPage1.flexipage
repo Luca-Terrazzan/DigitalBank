@@ -73,6 +73,17 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>relatedListApiName</name>
+                <value>Opportunity_Product__r</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
                 <value>Contracts</value>
             </componentInstanceProperties>
             <componentName>force:relatedListSingleContainer</componentName>
@@ -202,9 +213,6 @@
                 <value>Retail</value>
             </componentInstanceProperties>
             <componentName>Opportunity_Related_List</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentName>FinServ:goalDetailList</componentName>
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
@@ -351,9 +359,6 @@
         </componentInstances>
         <componentInstances>
             <componentName>FinServ:assetsAndLiabilities</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentName>FinServ:goalDetailList</componentName>
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>

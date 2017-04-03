@@ -56,23 +56,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Id%2E Decision Makers</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Needs Analysis</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Negotiation%2FReview</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Perception Analysis</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Proposal%2FPrice Quote</fullName>
+            <fullName>Documentation Sent</fullName>
             <default>false</default>
         </values>
         <values>
@@ -80,11 +64,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Qualification</fullName>
+            <fullName>Waiting for Client%27s Feedback</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Value Proposition</fullName>
+            <fullName>Waiting for Winning</fullName>
             <default>false</default>
         </values>
     </businessProcesses>
@@ -100,23 +84,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Id%2E Decision Makers</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Needs Analysis</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Negotiation%2FReview</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Perception Analysis</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Proposal%2FPrice Quote</fullName>
+            <fullName>Documentation Sent</fullName>
             <default>false</default>
         </values>
         <values>
@@ -124,11 +92,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Qualification</fullName>
+            <fullName>Waiting for Client%27s Feedback</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Value Proposition</fullName>
+            <fullName>Waiting for Winning</fullName>
             <default>false</default>
         </values>
     </businessProcesses>
@@ -358,23 +326,15 @@
                 <won>false</won>
             </picklistValues>
             <picklistValues>
-                <fullName>Qualification</fullName>
+                <fullName>Documentation Sent</fullName>
                 <default>false</default>
                 <closed>false</closed>
                 <forecastCategory>Pipeline</forecastCategory>
-                <probability>10</probability>
+                <probability>30</probability>
                 <won>false</won>
             </picklistValues>
             <picklistValues>
-                <fullName>Needs Analysis</fullName>
-                <default>false</default>
-                <closed>false</closed>
-                <forecastCategory>Pipeline</forecastCategory>
-                <probability>20</probability>
-                <won>false</won>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Value Proposition</fullName>
+                <fullName>Waiting for Client&apos;s Feedback</fullName>
                 <default>false</default>
                 <closed>false</closed>
                 <forecastCategory>Pipeline</forecastCategory>
@@ -382,35 +342,11 @@
                 <won>false</won>
             </picklistValues>
             <picklistValues>
-                <fullName>Id. Decision Makers</fullName>
+                <fullName>Waiting for Winning</fullName>
                 <default>false</default>
                 <closed>false</closed>
                 <forecastCategory>Pipeline</forecastCategory>
-                <probability>60</probability>
-                <won>false</won>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Perception Analysis</fullName>
-                <default>false</default>
-                <closed>false</closed>
-                <forecastCategory>Pipeline</forecastCategory>
-                <probability>70</probability>
-                <won>false</won>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Proposal/Price Quote</fullName>
-                <default>false</default>
-                <closed>false</closed>
-                <forecastCategory>Pipeline</forecastCategory>
-                <probability>75</probability>
-                <won>false</won>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Negotiation/Review</fullName>
-                <default>false</default>
-                <closed>false</closed>
-                <forecastCategory>Pipeline</forecastCategory>
-                <probability>90</probability>
+                <probability>99</probability>
                 <won>false</won>
             </picklistValues>
             <picklistValues>

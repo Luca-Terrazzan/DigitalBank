@@ -373,6 +373,13 @@
         <fields>NAME</fields>
         <relatedList>Collateral__c.Account__c</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>Product2</fields>
+        <fields>Financial_Account__c</fields>
+        <fields>ServiceDate</fields>
+        <fields>Quantity</fields>
+        <relatedList>OpportunityLineItem.Account__c</relatedList>
+    </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <runAssignmentRulesDefault>false</runAssignmentRulesDefault>
     <showEmailCheckbox>true</showEmailCheckbox>

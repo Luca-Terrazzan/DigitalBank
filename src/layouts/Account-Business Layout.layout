@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -298,6 +299,13 @@
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>Collateral__c.Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Product2</fields>
+        <fields>Financial_Account__c</fields>
+        <fields>ServiceDate</fields>
+        <fields>Quantity</fields>
+        <relatedList>OpportunityLineItem.Account__c</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
