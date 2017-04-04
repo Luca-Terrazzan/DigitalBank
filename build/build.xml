@@ -35,7 +35,7 @@
     </target>
 
     <!-- Manual Deploy CI -->
-    <target name="manualDeployCI" depends="deployParameters, removeUserPermissions, fixEmailTemplates">
+    <target name="manualDeployCI" depends="deployParameters, removeUserPermissions, fixEmailTemplates, fixSiteUsername">
         <sf:deploy username="${username}" password="${password}" testLevel="${testLevel}"
             serverurl="${serverurl}" deployRoot="./deploy/src" checkOnly="${validate}"
             rollbackOnError="${forceDeploy}" />
@@ -78,9 +78,15 @@
         </replaceregexp>
     </target>
 
-    <target name="fixPackage">
-        <delete file="./deploy/package.xml"/>
-        <copy file="./deploy/deploy.package.xml" tofile="./deploy/package.xml"/>
+    <!-- Fix hardcoded usernames in *.site -->
+    <target name="fixSiteUsername">
+        <replaceregexp flags="gs">
+            <regexp pattern="dorsignola@deloitte.com.gbdev" />
+            <substitution expression="dorsignola@deloitte.com.gbtest" />
+            <fileset dir="./deploy/src/sites" erroronmissingdir="true">
+                <include name="package.xml" />
+            </fileset>
+        </replaceregexp>
     </target>
 
     <!-- Removes previous retrieves' data -->
@@ -101,6 +107,11 @@
     <target name="deployParameters">
         <echo message = "username: ${username}, testLevel: ${testLevel}, serverurl: ${serverurl},
             deployRoot: ./deploy/src, checkOnly: ${validate}, rollbackOnError: ${forceDeploy}"/>
+    </target>
+
+    <target name="fixPackage">
+        <delete file="./deploy/package.xml"/>
+        <copy file="./deploy/deploy.package.xml" tofile="./deploy/package.xml"/>
     </target>
     <!--   _____________________Support tasks___________________________   -->
 
