@@ -3,10 +3,11 @@
 <!-- CONTROLLER INIT -->
     <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
 <!-- ATTRIBUTES -->
-    <!-- <aura:attribute name="recordId" type="Id" /> -->
-
-    <aura:attribute name="opportunities" type="RelatedListController.Opportunity[]" />
+    <aura:attribute name="recordId" type="Id" />
     <aura:attribute name="category" type="String" />
+    <aura:attribute name="opportunities" type="Opportunity[]" />
+    <aura:attribute name="roleRecordType" type="Id" />
+
 
 <article class="slds-card">
 <div class="slds-card__header slds-grid">
