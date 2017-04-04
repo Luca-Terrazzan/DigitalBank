@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -245,26 +241,31 @@
         <fullName>Category__c</fullName>
         <externalId>false</externalId>
         <label>Category</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Retail</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Wealth</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Commercial</fullName>
-                <default>false</default>
-            </picklistValues>
-            <restrictedPicklist>true</restrictedPicklist>
-            <sorted>false</sorted>
-        </picklist>
         <required>true</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Retail</fullName>
+                    <default>false</default>
+                    <label>Retail</label>
+                </value>
+                <value>
+                    <fullName>Wealth</fullName>
+                    <default>false</default>
+                    <label>Wealth</label>
+                </value>
+                <value>
+                    <fullName>Commercial</fullName>
+                    <default>false</default>
+                    <label>Commercial</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__Address1__c</fullName>
@@ -425,154 +426,190 @@
         <description>Indicates source of financial account data, such as a third party integration or manual entry.</description>
         <externalId>false</externalId>
         <label>Source</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Integrator</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Pending</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Manual Entry</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Integrator</fullName>
+                    <default>false</default>
+                    <label>Integrator</label>
+                </value>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Manual Entry</fullName>
+                    <default>false</default>
+                    <label>Manual Entry</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__FinancialAccountType__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Type</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Mutual Fund</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Fixed Annuity</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Variable Annuity</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Managed Account</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Individual Life</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Term Life</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Variable Life</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Whole Life</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Fixed Incomes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equities</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cash and Equivalents</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Options</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>ETFs</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Brokerage</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Discount Brokerage</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cash Management Account</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>CD</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Checking</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Savings</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Credit Card</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Overdrafts</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Short Term Loans</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Long Term Loans</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Premium Credit Card</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Value credit card</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Business credit card</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Mortgage: 10 years</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Mortgage: 15 years</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Mortgage: 30 years</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Mutual Fund</fullName>
+                    <default>false</default>
+                    <label>Mutual Fund</label>
+                </value>
+                <value>
+                    <fullName>Fixed Annuity</fullName>
+                    <default>false</default>
+                    <label>Fixed Annuity</label>
+                </value>
+                <value>
+                    <fullName>Variable Annuity</fullName>
+                    <default>false</default>
+                    <label>Variable Annuity</label>
+                </value>
+                <value>
+                    <fullName>Managed Account</fullName>
+                    <default>false</default>
+                    <label>Managed Account</label>
+                </value>
+                <value>
+                    <fullName>Individual Life</fullName>
+                    <default>false</default>
+                    <label>Individual Life</label>
+                </value>
+                <value>
+                    <fullName>Term Life</fullName>
+                    <default>false</default>
+                    <label>Term Life</label>
+                </value>
+                <value>
+                    <fullName>Variable Life</fullName>
+                    <default>false</default>
+                    <label>Variable Life</label>
+                </value>
+                <value>
+                    <fullName>Whole Life</fullName>
+                    <default>false</default>
+                    <label>Whole Life</label>
+                </value>
+                <value>
+                    <fullName>Fixed Incomes</fullName>
+                    <default>false</default>
+                    <label>Fixed Incomes</label>
+                </value>
+                <value>
+                    <fullName>Equities</fullName>
+                    <default>false</default>
+                    <label>Equities</label>
+                </value>
+                <value>
+                    <fullName>Cash and Equivalents</fullName>
+                    <default>false</default>
+                    <label>Cash and Equivalents</label>
+                </value>
+                <value>
+                    <fullName>Options</fullName>
+                    <default>false</default>
+                    <label>Options</label>
+                </value>
+                <value>
+                    <fullName>ETFs</fullName>
+                    <default>false</default>
+                    <label>ETFs</label>
+                </value>
+                <value>
+                    <fullName>Brokerage</fullName>
+                    <default>false</default>
+                    <label>Brokerage</label>
+                </value>
+                <value>
+                    <fullName>Discount Brokerage</fullName>
+                    <default>false</default>
+                    <label>Discount Brokerage</label>
+                </value>
+                <value>
+                    <fullName>Cash Management Account</fullName>
+                    <default>false</default>
+                    <label>Cash Management Account</label>
+                </value>
+                <value>
+                    <fullName>CD</fullName>
+                    <default>false</default>
+                    <label>CD</label>
+                </value>
+                <value>
+                    <fullName>Checking</fullName>
+                    <default>false</default>
+                    <label>Checking</label>
+                </value>
+                <value>
+                    <fullName>Savings</fullName>
+                    <default>false</default>
+                    <label>Savings</label>
+                </value>
+                <value>
+                    <fullName>Credit Card</fullName>
+                    <default>false</default>
+                    <label>Credit Card</label>
+                </value>
+                <value>
+                    <fullName>Overdrafts</fullName>
+                    <default>false</default>
+                    <label>Overdrafts</label>
+                </value>
+                <value>
+                    <fullName>Short Term Loans</fullName>
+                    <default>false</default>
+                    <label>Short Term Loans</label>
+                </value>
+                <value>
+                    <fullName>Long Term Loans</fullName>
+                    <default>false</default>
+                    <label>Long Term Loans</label>
+                </value>
+                <value>
+                    <fullName>Premium Credit Card</fullName>
+                    <default>false</default>
+                    <label>Premium Credit Card</label>
+                </value>
+                <value>
+                    <fullName>Value credit card</fullName>
+                    <default>false</default>
+                    <label>Value credit card</label>
+                </value>
+                <value>
+                    <fullName>Business credit card</fullName>
+                    <default>false</default>
+                    <label>Business credit card</label>
+                </value>
+                <value>
+                    <fullName>Mortgage: 10 years</fullName>
+                    <default>false</default>
+                    <label>Mortgage: 10 years</label>
+                </value>
+                <value>
+                    <fullName>Mortgage: 15 years</fullName>
+                    <default>false</default>
+                    <label>Mortgage: 15 years</label>
+                </value>
+                <value>
+                    <fullName>Mortgage: 30 years</fullName>
+                    <default>false</default>
+                    <label>Mortgage: 30 years</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__HeldAway__c</fullName>
@@ -638,33 +675,40 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Investment Objectives</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Safety</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Income</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Growth</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Tax Optimization</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Liquidity</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Safety</fullName>
+                    <default>false</default>
+                    <label>Safety</label>
+                </value>
+                <value>
+                    <fullName>Income</fullName>
+                    <default>false</default>
+                    <label>Income</label>
+                </value>
+                <value>
+                    <fullName>Growth</fullName>
+                    <default>false</default>
+                    <label>Growth</label>
+                </value>
+                <value>
+                    <fullName>Tax Optimization</fullName>
+                    <default>false</default>
+                    <label>Tax Optimization</label>
+                </value>
+                <value>
+                    <fullName>Liquidity</fullName>
+                    <default>false</default>
+                    <label>Liquidity</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
         <visibleLines>4</visibleLines>
     </fields>
     <fields>
@@ -730,33 +774,40 @@
         <description>The model asset allocation for this financial account.</description>
         <externalId>false</externalId>
         <label>Model Portfolio</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Conservative</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Moderate</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Balanced</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Growth</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Aggressive</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Conservative</fullName>
+                    <default>false</default>
+                    <label>Conservative</label>
+                </value>
+                <value>
+                    <fullName>Moderate</fullName>
+                    <default>false</default>
+                    <label>Moderate</label>
+                </value>
+                <value>
+                    <fullName>Balanced</fullName>
+                    <default>false</default>
+                    <label>Balanced</label>
+                </value>
+                <value>
+                    <fullName>Growth</fullName>
+                    <default>false</default>
+                    <label>Growth</label>
+                </value>
+                <value>
+                    <fullName>Aggressive</fullName>
+                    <default>false</default>
+                    <label>Aggressive</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__OpenDate__c</fullName>
@@ -785,25 +836,30 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Ownership</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Individual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Joint</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Trust</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Individual</fullName>
+                    <default>false</default>
+                    <label>Individual</label>
+                </value>
+                <value>
+                    <fullName>Joint</fullName>
+                    <default>false</default>
+                    <label>Joint</label>
+                </value>
+                <value>
+                    <fullName>Trust</fullName>
+                    <default>false</default>
+                    <label>Trust</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__PaperlessDelivery__c</fullName>
@@ -929,29 +985,35 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Rebalance Frequency</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Monthly</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Quarterly</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Semiannually</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Annually</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Semiannually</fullName>
+                    <default>false</default>
+                    <label>Semiannually</label>
+                </value>
+                <value>
+                    <fullName>Annually</fullName>
+                    <default>false</default>
+                    <label>Annually</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__RecordTypeName__c</fullName>
@@ -1019,29 +1081,35 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Status</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Open</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>On Hold</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Pending</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>false</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>On Hold</fullName>
+                    <default>false</default>
+                    <label>On Hold</label>
+                </value>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__TaxID__c</fullName>
@@ -1060,46 +1128,55 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Tax Status</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Qualified</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Nonqualified</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Qualified</fullName>
+                    <default>false</default>
+                    <label>Qualified</label>
+                </value>
+                <value>
+                    <fullName>Nonqualified</fullName>
+                    <default>false</default>
+                    <label>Nonqualified</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__TimeHorizon__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Time Horizon</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Long Term</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Medium Term</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Short Term</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Long Term</fullName>
+                    <default>false</default>
+                    <label>Long Term</label>
+                </value>
+                <value>
+                    <fullName>Medium Term</fullName>
+                    <default>false</default>
+                    <label>Medium Term</label>
+                </value>
+                <value>
+                    <fullName>Short Term</fullName>
+                    <default>false</default>
+                    <label>Short Term</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>IsLoan__c</fullName>
@@ -2028,4 +2105,5 @@
         <errorConditionFormula>FinServ__PrimaryOwner__c = FinServ__JointOwner__c</errorConditionFormula>
         <errorMessage>The primary and joint owner must be different.</errorMessage>
     </validationRules>
+    <visibility>Public</visibility>
 </CustomObject>

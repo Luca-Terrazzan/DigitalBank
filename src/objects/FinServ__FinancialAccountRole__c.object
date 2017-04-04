@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -180,157 +176,195 @@
         <description>Role that describes how the organizational entity or person is involved with the financial account.</description>
         <externalId>false</externalId>
         <label>Role</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Accountant</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Additional Owner</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Administrator</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Advisor</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Annuitant</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Appoint / Remove Authority</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Authorized Agent</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Authorized Agent / Beneficial Owner</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Authorized Individual</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Authorized Signer</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Beneficial Owner</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Beneficiary</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Business Manager</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Committee Member</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Conservator</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Control Person</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Corporation</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Cosigner</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Custodian</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Deceased Grantor</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Decedent</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Discretionary</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Foundation</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Full Authority</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Grantor</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Guardian</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Insured</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Interested Party</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Minor Primary Owner</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Original Depositor</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Power of Attorney</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Proprietor</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>TOD Beneficiary</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Trustee</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Primary Owner</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Accountant</fullName>
+                    <default>false</default>
+                    <label>Accountant</label>
+                </value>
+                <value>
+                    <fullName>Additional Owner</fullName>
+                    <default>false</default>
+                    <label>Additional Owner</label>
+                </value>
+                <value>
+                    <fullName>Administrator</fullName>
+                    <default>false</default>
+                    <label>Administrator</label>
+                </value>
+                <value>
+                    <fullName>Advisor</fullName>
+                    <default>false</default>
+                    <label>Advisor</label>
+                </value>
+                <value>
+                    <fullName>Annuitant</fullName>
+                    <default>false</default>
+                    <label>Annuitant</label>
+                </value>
+                <value>
+                    <fullName>Appoint / Remove Authority</fullName>
+                    <default>false</default>
+                    <label>Appoint / Remove Authority</label>
+                </value>
+                <value>
+                    <fullName>Authorized Agent</fullName>
+                    <default>false</default>
+                    <label>Authorized Agent</label>
+                </value>
+                <value>
+                    <fullName>Authorized Agent / Beneficial Owner</fullName>
+                    <default>false</default>
+                    <label>Authorized Agent / Beneficial Owner</label>
+                </value>
+                <value>
+                    <fullName>Authorized Individual</fullName>
+                    <default>false</default>
+                    <label>Authorized Individual</label>
+                </value>
+                <value>
+                    <fullName>Authorized Signer</fullName>
+                    <default>false</default>
+                    <label>Authorized Signer</label>
+                </value>
+                <value>
+                    <fullName>Beneficial Owner</fullName>
+                    <default>false</default>
+                    <label>Beneficial Owner</label>
+                </value>
+                <value>
+                    <fullName>Beneficiary</fullName>
+                    <default>false</default>
+                    <label>Beneficiary</label>
+                </value>
+                <value>
+                    <fullName>Business Manager</fullName>
+                    <default>false</default>
+                    <label>Business Manager</label>
+                </value>
+                <value>
+                    <fullName>Committee Member</fullName>
+                    <default>false</default>
+                    <label>Committee Member</label>
+                </value>
+                <value>
+                    <fullName>Conservator</fullName>
+                    <default>false</default>
+                    <label>Conservator</label>
+                </value>
+                <value>
+                    <fullName>Control Person</fullName>
+                    <default>false</default>
+                    <label>Control Person</label>
+                </value>
+                <value>
+                    <fullName>Corporation</fullName>
+                    <default>false</default>
+                    <label>Corporation</label>
+                </value>
+                <value>
+                    <fullName>Cosigner</fullName>
+                    <default>false</default>
+                    <label>Cosigner</label>
+                </value>
+                <value>
+                    <fullName>Custodian</fullName>
+                    <default>false</default>
+                    <label>Custodian</label>
+                </value>
+                <value>
+                    <fullName>Deceased Grantor</fullName>
+                    <default>false</default>
+                    <label>Deceased Grantor</label>
+                </value>
+                <value>
+                    <fullName>Decedent</fullName>
+                    <default>false</default>
+                    <label>Decedent</label>
+                </value>
+                <value>
+                    <fullName>Discretionary</fullName>
+                    <default>false</default>
+                    <label>Discretionary</label>
+                </value>
+                <value>
+                    <fullName>Foundation</fullName>
+                    <default>false</default>
+                    <label>Foundation</label>
+                </value>
+                <value>
+                    <fullName>Full Authority</fullName>
+                    <default>false</default>
+                    <label>Full Authority</label>
+                </value>
+                <value>
+                    <fullName>Grantor</fullName>
+                    <default>false</default>
+                    <label>Grantor</label>
+                </value>
+                <value>
+                    <fullName>Guardian</fullName>
+                    <default>false</default>
+                    <label>Guardian</label>
+                </value>
+                <value>
+                    <fullName>Insured</fullName>
+                    <default>false</default>
+                    <label>Insured</label>
+                </value>
+                <value>
+                    <fullName>Interested Party</fullName>
+                    <default>false</default>
+                    <label>Interested Party</label>
+                </value>
+                <value>
+                    <fullName>Minor Primary Owner</fullName>
+                    <default>false</default>
+                    <label>Minor Primary Owner</label>
+                </value>
+                <value>
+                    <fullName>Original Depositor</fullName>
+                    <default>false</default>
+                    <label>Original Depositor</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Power of Attorney</fullName>
+                    <default>false</default>
+                    <label>Power of Attorney</label>
+                </value>
+                <value>
+                    <fullName>Proprietor</fullName>
+                    <default>false</default>
+                    <label>Proprietor</label>
+                </value>
+                <value>
+                    <fullName>TOD Beneficiary</fullName>
+                    <default>false</default>
+                    <label>TOD Beneficiary</label>
+                </value>
+                <value>
+                    <fullName>Trustee</fullName>
+                    <default>false</default>
+                    <label>Trustee</label>
+                </value>
+                <value>
+                    <fullName>Primary Owner</fullName>
+                    <default>false</default>
+                    <label>Primary Owner</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>FinServ__SourceSystemId__c</fullName>
@@ -668,4 +702,5 @@
         <errorConditionFormula>ISBLANK(TEXT(FinServ__Role__c))</errorConditionFormula>
         <errorMessage>Role is required.</errorMessage>
     </validationRules>
+    <visibility>Public</visibility>
 </CustomObject>

@@ -44,16 +44,19 @@
     <filter>
         <criteriaItems>
             <column>FinServ__FinancialAccount__c.Category__c</column>
+            <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Commercial</value>
         </criteriaItems>
         <criteriaItems>
             <column>FinServ__FinancialAccount__c.IsLoan__c</column>
+            <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>1</value>
         </criteriaItems>
         <criteriaItems>
             <column>FinServ__FinancialAccountRole__c.FinServ__Role__c</column>
+            <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>Administrator,Authorized Agent,Authorized Agent / Beneficial Owner,Authorized Individual,Authorized Signer,Beneficial Owner,Business Manager,Control Person,Cosigner,Full Authority,Primary Owner</value>
         </criteriaItems>

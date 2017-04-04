@@ -358,7 +358,15 @@
             <componentName>FinancialAccountRoles_Related_List</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>FinServ:assetsAndLiabilities</componentName>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>FinServ__ClientAssetsAndLiabilities__r</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
@@ -513,7 +521,7 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
-            <componentName>sfa:activityPanel</componentName>
+            <componentName>runtime_sales_activities:activityPanel</componentName>
         </componentInstances>
         <mode>Replace</mode>
         <name>activityTabContent</name>
@@ -577,8 +585,10 @@
         <type>Region</type>
     </flexiPageRegions>
     <masterLabel>Client Record Page</masterLabel>
-    <pageTemplate>flexipage:recordHomeTemplateDesktop</pageTemplate>
     <parentFlexiPage>sfa__Account_rec_L</parentFlexiPage>
     <sobjectType>Account</sobjectType>
+    <template>
+        <name>flexipage:recordHomeTemplateDesktop</name>
+    </template>
     <type>RecordPage</type>
 </FlexiPage>
