@@ -22,7 +22,6 @@
     createRecord : function (component, event, helper) {
         var createRecordEvent = $A.get("e.force:createRecord");
         var rt = component.get("v.roleRecordType");
-        console.log("using rt: ", rt);
         createRecordEvent.setParams({
             "entityApiName": "FinServ__FinancialAccountRole__c",
             "recordTypeId": rt

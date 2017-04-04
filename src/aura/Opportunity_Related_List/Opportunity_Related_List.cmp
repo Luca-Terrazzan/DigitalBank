@@ -12,24 +12,24 @@
 <div class="slds-card__header slds-grid">
 <!-- HEADER -->
     <header class="slds-media slds-media--center slds-has-flexi-truncate">
-      <div class="slds-media__figure">
-        <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
-            <c:svgIcon svgPath="/resource/slds/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
-                category="standard"
-                size="small"
-                name="opportunity" />
-        </span>
-      </div>
-      <div class="slds-media__body">
-        <h2>
-          <a href="javascript:void(0);" class="slds-card__header-link slds-truncate">
-            <span class="slds-text-heading--small"> {!v.category} Opportunities ({!v.opportunities.length})</span>
-          </a>
-        </h2>
-      </div>
+        <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
+                <c:svgIcon svgPath="/resource/slds/assets/icons/standard-sprite/svg/symbols.svg#opportunity"
+                    category="standard"
+                    size="small"
+                    name="opportunity" />
+            </span>
+        </div>
+        <div class="slds-media__body">
+            <h2>
+                <a href="javascript:void(0);" class="slds-card__header-link slds-truncate">
+                    <span class="slds-text-heading--small"> {!v.category} Opportunities ({!v.opportunities.length})</span>
+                </a>
+            </h2>
+        </div>
     </header>
     <div class="slds-no-flex">
-      <button class="slds-button slds-button--neutral" onclick="{!c.createRecord}">New</button>
+        <button class="slds-button slds-button--neutral" onclick="{!c.createRecord}">New</button>
     </div>
 <!-- HEADER -->
   </div>

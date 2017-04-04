@@ -13,8 +13,14 @@ public with sharing class RelatedListController {
     }
 
     @AuraEnabled
-    public static Id getDefaultRecordType()
+    public static Id getFADefaultRecordType()
     {
         return FinancialAccountRolesSelector.getDefaultRecordType();
+    }
+
+    @AuraEnabled
+    public static Id getOppDefaultRecordType()
+    {
+        return OpportunitiesSelector.getDefaultRecordType();
     }
 }

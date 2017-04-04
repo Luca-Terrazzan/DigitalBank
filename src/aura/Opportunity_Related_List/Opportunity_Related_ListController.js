@@ -18,13 +18,15 @@
             } else console.log("fail: " + state);
         });
         $A.enqueueAction(action);
+        helper.getOpportunityDefaultRecordType(component);
     },
 
     createRecord : function (component, event, helper) {
         var createRecordEvent = $A.get("e.force:createRecord");
+        var rt = component.get("v.roleRecordType");
         createRecordEvent.setParams({
             "entityApiName": "Opportunity",
-            "recordTypeId": "01246000000kXOd"
+            "recordTypeId": rt
         });
         createRecordEvent.fire();
     }

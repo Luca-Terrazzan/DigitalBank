@@ -89,4 +89,18 @@
         return (List<Opportunity>) Database.query(query);
     }
 
+    public static Id getDefaultRecordType()
+    {
+        Id result;
+        try {
+            result = [SELECT Id
+                FROM RecordType
+                WHERE SObjectType = 'Opportunity' AND DeveloperName = 'WalletShareOpportunity'].Id;
+        } catch (QueryException qe) {
+            throw new QueryException('Cannot find a suitable recordType for Opportunities. ' +
+                qe.getMessage());
+        }
+        return result;
+    }
+
 }

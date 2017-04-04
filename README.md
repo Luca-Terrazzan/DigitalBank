@@ -10,6 +10,11 @@ Official repository documentation for the Digital Bank Global Initiative.
 
 ## Change Log
 
+##### V2.1.0._r3
+###### 04/04/2017
+* Removed **Financial Account** and **Role** columns on Opportunity related list in 720
+* Fix: dymanic fetch of Opportunity Record Type while creating a new Opp in the custom related list
+
 ##### V2.1.0 r2
 ###### 03/04/2017
 * Updated layouts
