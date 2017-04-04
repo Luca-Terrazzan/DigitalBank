@@ -84,7 +84,7 @@
             <regexp pattern="dorsignola@deloitte.com.gbdev" />
             <substitution expression="dorsignola@deloitte.com.gbtest" />
             <fileset dir="./deploy/src/sites" erroronmissingdir="true">
-                <include name="package.xml" />
+                <include name="*.site" />
             </fileset>
         </replaceregexp>
     </target>
