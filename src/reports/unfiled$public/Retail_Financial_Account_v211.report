@@ -45,11 +45,13 @@
     <filter>
         <criteriaItems>
             <column>FinServ__FinancialAccount__c.Category__c</column>
+            <isUnlocked>false</isUnlocked>
             <operator>equals</operator>
             <value>Wealth</value>
         </criteriaItems>
         <criteriaItems>
             <column>FinServ__FinancialAccount__c.IsLoan__c</column>
+            <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>0</value>
         </criteriaItems>

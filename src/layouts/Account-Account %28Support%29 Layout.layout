@@ -467,6 +467,9 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>LOB_Referring__c</fields>
+        <fields>LOB_Receiving__c</fields>
+        <fields>Product__c</fields>
         <relatedList>Referral__c.Account__c</relatedList>
     </relatedLists>
     <relatedLists>

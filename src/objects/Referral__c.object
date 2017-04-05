@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -68,6 +64,182 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Referrals</relationshipLabel>
+        <relationshipName>Referrals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LOB_Receiving__c</fullName>
+        <description>This is the line of business receiving the referral</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the line of business receiving the referral</inlineHelpText>
+        <label>LOB Receiving</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Line_of_Business</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LOB_Referring__c</fullName>
+        <description>This is the line of business sending the referral</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the line of business sending the referral</inlineHelpText>
+        <label>LOB Referring</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Line_of_Business</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This is the product that is related to the referral</description>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Referrals</relationshipLabel>
+        <relationshipName>Referrals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Reason_Lost__c</fullName>
+        <description>A reason needs to be set if the referral status is updated to &quot;No Opportunity&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A reason needs to be set if the referral status is updated to &quot;No Opportunity&quot;</inlineHelpText>
+        <label>Reason Lost</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Interested</fullName>
+                    <default>false</default>
+                    <label>Not Interested</label>
+                </value>
+                <value>
+                    <fullName>Not Qualified</fullName>
+                    <default>false</default>
+                    <label>Not Qualified</label>
+                </value>
+                <value>
+                    <fullName>Can&apos;t Meet Need</fullName>
+                    <default>false</default>
+                    <label>Can&apos;t Meet Need</label>
+                </value>
+                <value>
+                    <fullName>Lost to Competition</fullName>
+                    <default>false</default>
+                    <label>Lost to Competition</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Referral_Status__c</fullName>
+        <description>This is the current status of the referral</description>
+        <externalId>false</externalId>
+        <label>Referral Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>true</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Receiving</fullName>
+                    <default>false</default>
+                    <label>Receiving</label>
+                </value>
+                <value>
+                    <fullName>Decision Pending</fullName>
+                    <default>false</default>
+                    <label>Decision Pending</label>
+                </value>
+                <value>
+                    <fullName>Create Opportunity</fullName>
+                    <default>false</default>
+                    <label>Create Opportunity</label>
+                </value>
+                <value>
+                    <fullName>No Opportunity</fullName>
+                    <default>false</default>
+                    <label>No Opportunity</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>User_Receiving_Referral__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This is the user that is receiving the referral</description>
+        <externalId>false</externalId>
+        <label>Referred To Party</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Referrals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>User_Sending_Referral__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This is the user that is sending the referral</description>
+        <externalId>false</externalId>
+        <label>Referred from Party</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Referrals1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WAVEAccountName__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>WAVEAccountName</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>Referral</label>
     <nameField>
         <label>Referral Name</label>
@@ -77,4 +249,23 @@
     <pluralLabel>Referrals</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Closed_Referral_read_only</fullName>
+        <active>true</active>
+        <description>When a referral is changed to &quot;Create Opportunity&quot; or &quot;No Opportunity&quot; status, the Referral Name and Account fields need to be made read only.</description>
+        <errorConditionFormula>IF( or( ISPICKVAL( Referral_Status__c ,&apos;Create Opportunity&apos;), ISPICKVAL( Referral_Status__c ,&apos;No Opportunity&apos;)), or( ISCHANGED( Account__c ), ISCHANGED( Name )),false)</errorConditionFormula>
+        <errorMessage>If the Referral Status is Create Opportunity or No Opportunity, the Referral and Account Name fields cannot be changed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reason_Lost_if_Status_equals_No_Oppty</fullName>
+        <active>true</active>
+        <description>Populate Reason Lost field on referral if the Referral Status is updated to &quot;No Opportunity&quot;</description>
+        <errorConditionFormula>AND(
+ ISPICKVAL( Referral_Status__c , &quot;No Opportunity&quot;),
+ ISPICKVAL( Reason_Lost__c , &quot;&quot;) 
+ )</errorConditionFormula>
+        <errorDisplayField>Reason_Lost__c</errorDisplayField>
+        <errorMessage>The Reason Lost field needs to be populated if the Referral Status is &quot;No Opportunity&quot;</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
 </CustomObject>

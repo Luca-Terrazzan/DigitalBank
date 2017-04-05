@@ -21,7 +21,24 @@
     <enableNicknameDisplay>false</enableNicknameDisplay>
     <enablePrivateMessages>false</enablePrivateMessages>
     <enableReputation>false</enableReputation>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
     <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <navigationLinkSet>
+        <navigationMenuItem>
+            <label>Articles</label>
+            <position>1</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>Topics</target>
+            <type>NavigationalTopic</type>
+        </navigationMenuItem>
+        <navigationMenuItem>
+            <label>Case</label>
+            <position>2</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>Case</target>
+            <type>SalesforceObject</type>
+        </navigationMenuItem>
+    </navigationLinkSet>
     <networkMemberGroups>
         <permissionSet>FinServ__FSCWaveIntegration</permissionSet>
         <permissionSet>FinServ__Advisor</permissionSet>

@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -114,4 +110,5 @@
         <errorConditionFormula>ReceivingFinancialAccount__r.FinServ__PrimaryOwner__c !=  GivingFinancialAccount__r.FinServ__PrimaryOwner__c</errorConditionFormula>
         <errorMessage>Cannot move money between Financial Accounts of different customers.</errorMessage>
     </validationRules>
+    <visibility>Public</visibility>
 </CustomObject>

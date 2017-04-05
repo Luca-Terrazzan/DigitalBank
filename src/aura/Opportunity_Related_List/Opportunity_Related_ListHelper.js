@@ -16,7 +16,7 @@
 
     getOpportunityDefaultRecordType : function(component) {
         if (!component.get("v.roleRecordType")) {
-            var action = component.get("{!c.getDefaultRecordType}");
+            var action = component.get("{!c.getOppDefaultRecordType}");
 
             action.setCallback(this, function(response){
                 var state = response.getState();

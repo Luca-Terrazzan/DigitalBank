@@ -10,6 +10,12 @@ Official repository documentation for the Digital Bank Global Initiative.
 
 ## Change Log
 
+##### V2.1.1
+###### 05/04/2017
+* New metadata version 39.0
+* New build.xml, fixes deploy with hardcoded usernames in *.site metadata
+* Fix: Opp fetching logic
+
 ##### V2.1.0._r3
 ###### 04/04/2017
 * Removed **Financial Account** and **Role** columns on Opportunity related list in 720
