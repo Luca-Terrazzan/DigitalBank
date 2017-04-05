@@ -53,21 +53,9 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>GivingFinancialAccount__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
+        <fullName>Amount__c</fullName>
         <externalId>false</externalId>
-        <label>Giving Financial Account</label>
-        <referenceTo>FinServ__FinancialAccount__c</referenceTo>
-        <relationshipLabel>Transactions (Giving Financial Account)</relationshipLabel>
-        <relationshipName>GivingTransactions</relationshipName>
-        <required>true</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>MovedAmount__c</fullName>
-        <externalId>false</externalId>
-        <label>Moved Amount</label>
+        <label>Amount</label>
         <precision>18</precision>
         <required>true</required>
         <scale>3</scale>
@@ -76,17 +64,188 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>ReceivingFinancialAccount__c</fullName>
+        <fullName>Credit_Debit__c</fullName>
         <externalId>false</externalId>
-        <label>Receiving Financial Account</label>
+        <label>Credit Debit</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>account_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Financial Account</label>
         <referenceTo>FinServ__FinancialAccount__c</referenceTo>
-        <relationshipLabel>Transactions</relationshipLabel>
+        <relationshipLabel>Receiving Transactions</relationshipLabel>
         <relationshipName>Transactions</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>bank_reference_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Bank Reference Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>created_by__c</fullName>
+        <externalId>false</externalId>
+        <label>Created By</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>created_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Created Date</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>currency_code__c</fullName>
+        <externalId>false</externalId>
+        <label>Currency Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>currency_desc__c</fullName>
+        <externalId>false</externalId>
+        <label>Currency Desc</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>customer_reference_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Reference Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>external_reference__c</fullName>
+        <externalId>false</externalId>
+        <label>External Reference</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>funds_available_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Funds Available Date</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>institution_id__c</fullName>
+        <externalId>false</externalId>
+        <label>Institution Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>transaction_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Date</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>transaction_id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Transaction id</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>transaction_type_code__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Type Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>transaction_type_desc__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Type Desc</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>updated_by__c</fullName>
+        <externalId>false</externalId>
+        <label>Updated By</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>updated_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Updated Date</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <label>Transaction</label>
     <nameField>
@@ -100,14 +259,14 @@
     <validationRules>
         <fullName>Must_Provide_Amount</fullName>
         <active>true</active>
-        <errorConditionFormula>MovedAmount__c == null || MovedAmount__c == 0</errorConditionFormula>
-        <errorDisplayField>MovedAmount__c</errorDisplayField>
+        <errorConditionFormula>Amount__c == null || Amount__c == 0</errorConditionFormula>
+        <errorDisplayField>Amount__c</errorDisplayField>
         <errorMessage>Moved Amount is mandatory and greater than 0.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>SameOwnership</fullName>
         <active>false</active>
-        <errorConditionFormula>ReceivingFinancialAccount__r.FinServ__PrimaryOwner__c !=  GivingFinancialAccount__r.FinServ__PrimaryOwner__c</errorConditionFormula>
+        <errorConditionFormula>account_number__r.FinServ__PrimaryOwner__c !=  00N46000005EV6J.00N46000002TLeU</errorConditionFormula>
         <errorMessage>Cannot move money between Financial Accounts of different customers.</errorMessage>
     </validationRules>
     <visibility>Public</visibility>
