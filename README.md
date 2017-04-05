@@ -10,6 +10,14 @@ Official repository documentation for the Digital Bank Global Initiative.
 
 ## Change Log
 
+##### V2.1.2
+###### 05/04/2017
+* New transaction management:
+    * Updated whole transaction data model to match iOS Digital Bank transactional data
+    * New process builder to match new fields
+    * Rebuilt transactionApi to support new fields dynamically, just put all DigitalBank transaction fields into the JSON!
+* Hotfix for "new" button on related lists
+
 ##### V2.1.1
 ###### 05/04/2017
 * New metadata version 39.0
