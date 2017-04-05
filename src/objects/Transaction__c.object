@@ -58,7 +58,7 @@
         <externalId>false</externalId>
         <label>Giving Financial Account</label>
         <referenceTo>FinServ__FinancialAccount__c</referenceTo>
-        <relationshipLabel>Transactions (Giving Financial Account)</relationshipLabel>
+        <relationshipLabel>Giving Transactions</relationshipLabel>
         <relationshipName>GivingTransactions</relationshipName>
         <required>true</required>
         <trackTrending>false</trackTrending>
@@ -80,13 +80,37 @@
         <externalId>false</externalId>
         <label>Receiving Financial Account</label>
         <referenceTo>FinServ__FinancialAccount__c</referenceTo>
-        <relationshipLabel>Transactions</relationshipLabel>
+        <relationshipLabel>Receiving Transactions</relationshipLabel>
         <relationshipName>Transactions</relationshipName>
         <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Accepted</fullName>
+                    <default>false</default>
+                    <label>Accepted</label>
+                </value>
+                <value>
+                    <fullName>Refused</fullName>
+                    <default>false</default>
+                    <label>Refused</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <label>Transaction</label>
     <nameField>

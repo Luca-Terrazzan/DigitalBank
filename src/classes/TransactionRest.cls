@@ -15,6 +15,7 @@ global with sharing class TransactionRest  {
         global String giving;
         global String receiving;
         global Decimal amount;
+        global String status;
     }
     global class Response {
         global Boolean outcome;
@@ -48,7 +49,8 @@ global with sharing class TransactionRest  {
         Transaction__c newTransaction = new Transaction__c(
             GivingFinancialAccount__r = giver,
             ReceivingFinancialAccount__r = receiver,
-            MovedAmount__c = request.amount
+            MovedAmount__c = request.amount,
+            Status__c = request.status
         );
 
         Response resp = new Response();
