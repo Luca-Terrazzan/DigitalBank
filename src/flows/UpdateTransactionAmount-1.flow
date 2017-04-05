@@ -28,7 +28,7 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision4</targetReference>
+            <targetReference>myDecision3</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
@@ -59,7 +59,7 @@
                         <stringValue>Number</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.MovedAmount__c</leftValueReference>
+                <leftValueReference>myVariable_current.Amount__c</leftValueReference>
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <numberValue>0.0</numberValue>
@@ -78,13 +78,13 @@
                 <numberValue>1.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision4</name>
-        <label>myDecision4</label>
+        <name>myDecision3</name>
+        <label>myDecision3</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>myRule_5</name>
+            <name>myRule_4</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -111,14 +111,14 @@
                         <stringValue>Number</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.MovedAmount__c</leftValueReference>
+                <leftValueReference>myVariable_current.Amount__c</leftValueReference>
                 <operator>GreaterThanOrEqualTo</operator>
                 <rightValue>
                     <numberValue>25000.0</numberValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_5_A1</targetReference>
+                <targetReference>myRule_4_A1</targetReference>
             </connector>
             <label>Create Alert</label>
         </rules>
@@ -128,61 +128,27 @@
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>[Transaction__c].GivingFinancialAccount__c.FinServ__Balance__c -[Transaction__c].MovedAmount__c </stringValue>
+                <stringValue>[Transaction__c].account_number__c.FinServ__Balance__c + [Transaction__c].Amount__c </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A2_FinServ_Balance_c</name>
+        <name>formula_2_myRule_1_A1_FinServ_Balance_c</name>
         <dataType>Currency</dataType>
-        <expression>{!myVariable_current.GivingFinancialAccount__c.FinServ__Balance__c} -{!myVariable_current.MovedAmount__c}</expression>
+        <expression>{!myVariable_current.account_number__c.FinServ__Balance__c} + {!myVariable_current.Amount__c}</expression>
         <scale>18</scale>
     </formulas>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>[Transaction__c].ReceivingFinancialAccount__c.FinServ__Balance__c + [Transaction__c].MovedAmount__c </stringValue>
+                <stringValue>TEXT([Transaction__c].Amount__c ) &amp; &quot;$ just have been moved to&quot; &amp; [Transaction__c].account_number__c.Name &amp; &quot;.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_3_myRule_1_A1_FinServ_Balance_c</name>
-        <dataType>Currency</dataType>
-        <expression>{!myVariable_current.ReceivingFinancialAccount__c.FinServ__Balance__c} + {!myVariable_current.MovedAmount__c}</expression>
-        <scale>18</scale>
-    </formulas>
-    <formulas>
-        <processMetadataValues>
-            <name>originalFormula</name>
-            <value>
-                <stringValue>TEXT([Transaction__c].MovedAmount__c) &amp; &quot;$ just have been moved to&quot; &amp; [Transaction__c].ReceivingFinancialAccount__c.Name &amp; &quot;.&quot;</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>formula_6_myRule_5_A1_FinServ_MessageDescription_c</name>
+        <name>formula_5_myRule_4_A1_FinServ_MessageDescription_c</name>
         <dataType>String</dataType>
-        <expression>TEXT({!myVariable_current.MovedAmount__c}) &amp; &quot;$ just have been moved to&quot; &amp; {!myVariable_current.ReceivingFinancialAccount__c.Name} &amp; &quot;.&quot;</expression>
+        <expression>TEXT({!myVariable_current.Amount__c} ) &amp; &quot;$ just have been moved to&quot; &amp; {!myVariable_current.account_number__c.Name} &amp; &quot;.&quot;</expression>
     </formulas>
-    <formulas>
-        <processMetadataValues>
-            <name>originalFormula</name>
-            <value>
-                <stringValue>[Transaction__c].ReceivingFinancialAccount__c.FinServ__PrimaryOwner__c.Id </stringValue>
-            </value>
-        </processMetadataValues>
-        <name>formula_7_myRule_5_A1_FinServ_Account_c</name>
-        <dataType>String</dataType>
-        <expression>{!myVariable_current.ReceivingFinancialAccount__c.FinServ__PrimaryOwner__c.Id}</expression>
-    </formulas>
-    <formulas>
-        <processMetadataValues>
-            <name>originalFormula</name>
-            <value>
-                <stringValue>[Transaction__c].ReceivingFinancialAccount__c.Id </stringValue>
-            </value>
-        </processMetadataValues>
-        <name>formula_8_myRule_5_A1_FinServ_FinancialAccount_c</name>
-        <dataType>String</dataType>
-        <expression>{!myVariable_current.ReceivingFinancialAccount__c.Id}</expression>
-    </formulas>
-    <interviewLabel>UpdateTransactionsAmounts-5_InterviewLabel</interviewLabel>
-    <label>UpdateTransactionsAmounts</label>
+    <interviewLabel>UpdateTransactionAmount-1_InterviewLabel</interviewLabel>
+    <label>UpdateTransactionAmount</label>
     <processMetadataValues>
         <name>ObjectType</name>
         <value>
@@ -209,9 +175,9 @@
     </processMetadataValues>
     <processType>Workflow</processType>
     <recordCreates>
-        <name>myRule_5_A1</name>
+        <name>myRule_4_A1</name>
         <label>Create Alert</label>
-        <locationX>500</locationX>
+        <locationX>400</locationX>
         <locationY>200</locationY>
         <inputAssignments>
             <processMetadataValues>
@@ -235,12 +201,12 @@
             <processMetadataValues>
                 <name>rightHandSideType</name>
                 <value>
-                    <stringValue>Formula</stringValue>
+                    <stringValue>Reference</stringValue>
                 </value>
             </processMetadataValues>
             <field>FinServ__Account__c</field>
             <value>
-                <elementReference>formula_7_myRule_5_A1_FinServ_Account_c</elementReference>
+                <elementReference>myVariable_current.account_number__r.FinServ__PrimaryOwner__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -265,12 +231,12 @@
             <processMetadataValues>
                 <name>rightHandSideType</name>
                 <value>
-                    <stringValue>Formula</stringValue>
+                    <stringValue>Reference</stringValue>
                 </value>
             </processMetadataValues>
             <field>FinServ__FinancialAccount__c</field>
             <value>
-                <elementReference>formula_8_myRule_5_A1_FinServ_FinancialAccount_c</elementReference>
+                <elementReference>myVariable_current.account_number__r.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -300,7 +266,7 @@
             </processMetadataValues>
             <field>FinServ__MessageDescription__c</field>
             <value>
-                <elementReference>formula_6_myRule_5_A1_FinServ_MessageDescription_c</elementReference>
+                <elementReference>formula_5_myRule_4_A1_FinServ_MessageDescription_c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -381,7 +347,7 @@
         <processMetadataValues>
             <name>reference</name>
             <value>
-                <stringValue>[Transaction__c].Receiving Financial Account</stringValue>
+                <stringValue>[Transaction__c].Financial Account</stringValue>
             </value>
         </processMetadataValues>
         <name>myRule_1_A1</name>
@@ -389,7 +355,7 @@
         <locationX>100</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myRule_1_A2</targetReference>
+            <targetReference>myDecision3</targetReference>
         </connector>
         <filters>
             <processMetadataValues>
@@ -401,7 +367,7 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>myVariable_current.ReceivingFinancialAccount__c</elementReference>
+                <elementReference>myVariable_current.account_number__c</elementReference>
             </value>
         </filters>
         <inputAssignments>
@@ -431,78 +397,7 @@
             </processMetadataValues>
             <field>FinServ__Balance__c</field>
             <value>
-                <elementReference>formula_3_myRule_1_A1_FinServ_Balance_c</elementReference>
-            </value>
-        </inputAssignments>
-        <object>FinServ__FinancialAccount__c</object>
-    </recordUpdates>
-    <recordUpdates>
-        <processMetadataValues>
-            <name>evaluationType</name>
-            <value>
-                <stringValue>always</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>isChildRelationship</name>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>reference</name>
-            <value>
-                <stringValue>[Transaction__c].Giving Financial Account</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_1_A2</name>
-        <label>Update Giver</label>
-        <locationX>100</locationX>
-        <locationY>300</locationY>
-        <connector>
-            <targetReference>myDecision4</targetReference>
-        </connector>
-        <filters>
-            <processMetadataValues>
-                <name>implicit</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>myVariable_current.GivingFinancialAccount__c</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>Currency</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Balance</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Formula</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>FinServ__Balance__c</field>
-            <value>
-                <elementReference>formula_2_myRule_1_A2_FinServ_Balance_c</elementReference>
+                <elementReference>formula_2_myRule_1_A1_FinServ_Balance_c</elementReference>
             </value>
         </inputAssignments>
         <object>FinServ__FinancialAccount__c</object>

@@ -11,11 +11,6 @@
 @RestResource(urlMapping='/transactionApi')
 global with sharing class TransactionRest  {
 
-    global class TransactionData {
-        global String giving;
-        global String receiving;
-        global Decimal amount;
-    }
     global class Response {
         global Boolean outcome;
         global String[] messages;
@@ -30,29 +25,27 @@ global with sharing class TransactionRest  {
 
     @HttpGet
     global static Transaction__c show() {
-
         Transaction__c obj;
-
         return obj;
-
     }
 
     @HttpPost
-    global static Response create(TransactionData request) {
-        FinServ__FinancialAccount__c giver = new FinServ__FinancialAccount__c(
-            FinServ__FinancialAccountNumber__c = request.giving
-        );
+    global static Response create(Map<String, String> request) {
         FinServ__FinancialAccount__c receiver = new FinServ__FinancialAccount__c(
-            FinServ__FinancialAccountNumber__c = request.receiving
+            FinServ__FinancialAccountNumber__c = request.get('account_number')
         );
         Transaction__c newTransaction = new Transaction__c(
-            GivingFinancialAccount__r = giver,
-            ReceivingFinancialAccount__r = receiver,
-            MovedAmount__c = request.amount
+            Amount__c = Decimal.valueOf(request.get('amount')),
+            Account_number__r = receiver
         );
+        request.remove('amount');
+        request.remove('account_number');
+
+        for (String key : request.keySet()) {
+            newTransaction.put(key + '__c', request.get(key));
+        }
 
         Response resp = new Response();
-
         try {
             insert newTransaction;
         } catch (DmlException dmle) {
@@ -64,22 +57,16 @@ global with sharing class TransactionRest  {
         resp.outcome = true;
         resp.itemId = newTransaction.Id;
         resp.messages.add('Operation successful');
-
         return resp;
     }
 
     @HttpPut
     global static Transaction__c updateObject() {
-
         Transaction__c obj;
-
         return obj;
-
     }
 
     @HttpDelete
-    global static void remove() {
-
-    }
+    global static void remove() {}
 
 }
