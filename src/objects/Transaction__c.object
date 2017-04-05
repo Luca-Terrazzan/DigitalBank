@@ -256,18 +256,5 @@
     <pluralLabel>Transactions</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
-    <validationRules>
-        <fullName>Must_Provide_Amount</fullName>
-        <active>true</active>
-        <errorConditionFormula>Amount__c == null || Amount__c == 0</errorConditionFormula>
-        <errorDisplayField>Amount__c</errorDisplayField>
-        <errorMessage>Moved Amount is mandatory and greater than 0.</errorMessage>
-    </validationRules>
-    <validationRules>
-        <fullName>SameOwnership</fullName>
-        <active>false</active>
-        <errorConditionFormula>account_number__r.FinServ__PrimaryOwner__c !=  00N46000005EV6J.00N46000002TLeU</errorConditionFormula>
-        <errorMessage>Cannot move money between Financial Accounts of different customers.</errorMessage>
-    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>
