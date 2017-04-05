@@ -72,7 +72,7 @@
         <replaceregexp flags="gs">
             <regexp pattern="&lt;members&gt;unfiled(.*)public&lt;/members&gt;" />
             <substitution expression="" />
-            <fileset dir="./deploy/src" erroronmissingdir="true">
+            <fileset dir="./deploy/src" erroronmissingdir="false">
                 <include name="package.xml" />
             </fileset>
         </replaceregexp>
@@ -83,7 +83,7 @@
         <replaceregexp flags="gs">
             <regexp pattern="dorsignola@deloitte.com.gbdev" />
             <substitution expression="dorsignola@deloitte.com.gbtest" />
-            <fileset dir="./deploy/src/sites" erroronmissingdir="true">
+            <fileset dir="./deploy/src/sites" erroronmissingdir="false">
                 <include name="*.site" />
             </fileset>
         </replaceregexp>
