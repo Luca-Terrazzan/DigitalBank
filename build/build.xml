@@ -105,8 +105,7 @@
 
     <!-- Echo the environment variables -->
     <target name="deployParameters">
-        <echo message = "username: ${username}, testLevel: ${testLevel}, serverurl: ${serverurl},
-            deployRoot: ./deploy/src, checkOnly: ${validate}, rollbackOnError: ${forceDeploy}"/>
+        <echo message = "username: ${username}, testLevel: ${testLevel}, serverurl: ${serverurl}, deployRoot: ./deploy/src, checkOnly: ${validate}, rollbackOnError: ${forceDeploy}"/>
     </target>
 
     <target name="fixPackage">

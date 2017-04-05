@@ -16,7 +16,7 @@
 
     getFinancialAccountRoleDefaultRecordType : function(component) {
         if (!component.get("v.roleRecordType")) {
-            var action = component.get("{!c.getOppDefaultRecordType}");
+            var action = component.get("{!c.getFADefaultRecordType}");
 
             action.setCallback(this, function(response){
                 var state = response.getState();
