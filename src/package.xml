@@ -76,10 +76,6 @@
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
-        <members>Digital_Bank</members>
-        <name>CustomApplication</name>
-    </types>
-    <types>
         <members>CustomLabels</members>
         <name>CustomLabels</name>
     </types>
