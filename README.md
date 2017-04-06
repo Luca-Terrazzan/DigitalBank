@@ -10,6 +10,14 @@ Official repository documentation for the Digital Bank Global Initiative.
 
 ## Change Log
 
+##### V2.1.2_r2
+###### 06/04/2017
+* Transactions update:
+    * transactions are now linked to FA primary owner too to have a key transaction related list on account
+    * process builder updated to populate the transaction account owner
+    * added transaction related list to account
+* Removed application metadata form package.xml, has issues with nav lightning applications + CTI
+
 ##### V2.1.2
 ###### 05/04/2017
 * New transaction management:
@@ -68,3 +76,4 @@ Deploy process description goes here
 * If the Digital Bank_ app is not available, be sure to check if it's activated as a lightning app
 * Adjust any Field Level Security settings that might miss from the Admin/System Administrator profile (this is actually a bug in the profile naming).
 * Always check for Process Builder Flows version in target environment. Flows are notoriously bugged and might need an additional manual deploy.
+* Manually place CTI_Phone_UtilityBar in the DigitalBank app and set up CTI as needed

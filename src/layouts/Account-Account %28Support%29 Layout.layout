@@ -491,6 +491,13 @@
         <fields>Quantity</fields>
         <relatedList>OpportunityLineItem.Account__c</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Amount__c</fields>
+        <fields>account_number__c</fields>
+        <fields>CREATED_DATE</fields>
+        <relatedList>Transaction__c.Account__c</relatedList>
+    </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>true</showHighlightsPanel>

@@ -35,10 +35,10 @@
     </target>
 
     <!-- Manual Deploy CI -->
-    <target name="manualDeployCI" depends="deployParameters, removeUserPermissions, fixEmailTemplates, fixSiteUsername">
-        <sf:deploy username="${username}" password="${password}" testLevel="${testLevel}"
-            serverurl="${serverurl}" deployRoot="./deploy/src" checkOnly="${validate}"
-            rollbackOnError="${forceDeploy}" />
+    <target name="manualDeployCI" depends="deployParameters, cleanData, copySrc, removeUserPermissions, fixEmailTemplates, fixSiteUsername">
+        <sf:deploy username="${sf.username}" password="${sf.password}" testLevel="${sf.testLevel}"
+            serverurl="${sf.serverurl}" deployRoot="./deploy/src" checkOnly="${sf.validate}"
+            rollbackOnError="${sf.forceDeploy}" />
     </target>
 
 
