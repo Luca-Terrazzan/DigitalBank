@@ -497,6 +497,8 @@
         <fields>account_number__c</fields>
         <fields>CREATED_DATE</fields>
         <relatedList>Transaction__c.Account__c</relatedList>
+        <sortField>CREATED_DATE</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>

@@ -76,6 +76,10 @@
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
+        <members>Digital_Bank</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
         <members>CustomLabels</members>
         <name>CustomLabels</name>
     </types>
@@ -167,6 +171,7 @@
         <name>EmailTemplate</name>
     </types>
     <types>
+        <members>CTI_Phone_UtilityBar</members>
         <members>ClientRecordPage1</members>
         <members>ClientRecordPage2</members>
         <name>FlexiPage</name>
@@ -176,10 +181,6 @@
         <name>Flow</name>
     </types>
     <types>
-        <members>*</members>
-        <name>FlowDefinition</name>
-    </types>
-    <types>
         <members>Account-Account %28Marketing%29 Layout</members>
         <members>Account-Account %28Sales%29 Layout</members>
         <members>Account-Account %28Support%29 Layout</members>
@@ -187,6 +188,7 @@
         <members>Account-Business Layout</members>
         <members>Account-New Detail Page</members>
         <members>Account-Wealth Layout</members>
+        <members>AccountContactRelation-Account Contact Relationship Layout</members>
         <members>AccountContactRelation-Account Contact Relationship Layout</members>
         <members>AccountContactRelationship__c-Contact-Account Relationship Layout</members>
         <members>AccountContactRole-Account Contact Role Layout</members>
@@ -245,7 +247,6 @@
         <members>Customer Portal Manager Standard</members>
         <members>CustomerManager</members>
         <members>DigitalBakDev Profile</members>
-        <members>Overage High Volume Customer Portal User</members>
         <members>Partner</members>
         <members>Partner Community Login User</members>
         <members>Partner Community User</members>
@@ -259,6 +260,7 @@
     <types>
         <members>Account.My_New_Event</members>
         <members>Account.New_Event</members>
+        <members>Case.NewChildCase</members>
         <name>QuickAction</name>
     </types>
     <types>
@@ -287,6 +289,7 @@
     </types>
     <types>
         <members>Bank_Info__kav</members>
+        <members>FinServ__FinancialAccount__c</members>
         <members>Opportunity</members>
         <name>Workflow</name>
     </types>

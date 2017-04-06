@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>UpdateTransactionAmount</members>
+        <members>UpdateTransactionAmount-1</members>
+        <members>UpdateTransactionAmount-2</members>
+        <members>UpdateTransactionAmount-3</members>
         <name>Flow</name>
     </types>
-    <types>
-        <members>*</members>
-        <name>FlowDefinition</name>
-    </types>
-    <version>36.0</version>
+    <version>39.0</version>
 </Package>
