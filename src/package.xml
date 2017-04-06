@@ -16,6 +16,7 @@
         <members>TestUtils</members>
         <members>TransactionPatternDetector</members>
         <members>TransactionRest</members>
+        <members>TransactionsSelector</members>
         <members>fflib_ApexMocks</members>
         <members>fflib_ApexMocksTest</members>
         <members>fflib_ApexMocksUtils</members>
