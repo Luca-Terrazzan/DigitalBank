@@ -173,6 +173,7 @@
         <name>EmailTemplate</name>
     </types>
     <types>
+        <members>CTI_Phone_UtilityBar</members>
         <members>ClientRecordPage1</members>
         <members>ClientRecordPage2</members>
         <name>FlexiPage</name>
