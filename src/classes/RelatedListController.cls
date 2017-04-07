@@ -23,4 +23,10 @@ public with sharing class RelatedListController {
     {
         return OpportunitiesSelector.getDefaultRecordType();
     }
+
+    @AuraEnabled
+    public static Transaction__c[] getTransactions(Id accountId, String category)
+    {
+        return AccountService.selectTransactions(accountId, category);
+    }
 }
