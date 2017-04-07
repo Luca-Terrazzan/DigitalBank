@@ -1,0 +1,11 @@
+{
+    "request": {
+        "amount" : 123123,
+        "account_number": "lfs1",
+        "bank_reference_number": "asd123",
+        "transaction_id": "asdsd",
+        "transaction_type_desc": "some description",
+        "transaction_type_code": "some code",
+        "transaction_date": "03/11/2016"
+    }
+}
