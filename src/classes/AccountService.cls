@@ -30,6 +30,11 @@ public class AccountService
         return new OpportunitiesSelector().selectByAccount(new Set<Id>{accountId}, category.toLowerCase());
     }
 
+    public static Transaction__c[] selectTransactions(Id accountId, String category)
+    {
+        return new TransactionsSelector().selectByAccount(new Set<Id>{accountId}, category.toLowerCase());
+    }
+
     @AuraEnabled
     public static String getAccountFields(Id accountId, String fieldList)
     {
