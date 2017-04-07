@@ -10,6 +10,10 @@ Official repository documentation for the Digital Bank Global Initiative.
 
 ## Change Log
 
+##### V2.1.3
+###### 07/04/2017
+* Added recent transactions related list to accounts with segmentation by category
+
 ##### V2.1.2_r2
 ###### 06/04/2017
 * Transactions update:
