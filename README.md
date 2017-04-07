@@ -12,6 +12,11 @@ Official repository documentation for the Digital Bank Global Initiative.
 
 ##### V2.1.3
 ###### 07/04/2017
+* Added support for case + service cloud
+* Added support for branches
+
+##### V2.1.3
+###### 07/04/2017
 * Added recent transactions related list to accounts with segmentation by category
 
 ##### V2.1.2_r2

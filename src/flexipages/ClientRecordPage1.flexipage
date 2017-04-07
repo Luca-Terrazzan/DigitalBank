@@ -551,6 +551,17 @@
             <componentName>flexipage:tabset</componentName>
         </componentInstances>
         <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>Cases</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <componentInstances>
             <componentName>cooper:companyInsightTeaserCard</componentName>
         </componentInstances>
         <mode>Replace</mode>

@@ -916,6 +916,34 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Preferred_Branch__c</fullName>
+        <externalId>false</externalId>
+        <label>Preferred Branch</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Branch 1</fullName>
+                    <default>false</default>
+                    <label>Branch 1</label>
+                </value>
+                <value>
+                    <fullName>Branch 2</fullName>
+                    <default>false</default>
+                    <label>Branch 2</label>
+                </value>
+                <value>
+                    <fullName>Branch 3</fullName>
+                    <default>false</default>
+                    <label>Branch 3</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Primary__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -3290,6 +3318,21 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Preferred_Branch__c</picklist>
+            <values>
+                <fullName>Branch 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Status__c</picklist>
             <values>
                 <fullName>Active</fullName>
@@ -5507,6 +5550,21 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
             </values>
             <values>
                 <fullName>Prof%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Preferred_Branch__c</picklist>
+            <values>
+                <fullName>Branch 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch 3</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

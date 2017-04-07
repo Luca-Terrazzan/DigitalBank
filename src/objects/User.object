@@ -64,6 +64,34 @@
         <trackFeedHistory>true</trackFeedHistory>
         <type>Hierarchy</type>
     </fields>
+    <fields>
+        <fullName>Primary_Branch__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Branch</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Branch 1</fullName>
+                    <default>false</default>
+                    <label>Branch 1</label>
+                </value>
+                <value>
+                    <fullName>Branch 2</fullName>
+                    <default>false</default>
+                    <label>Branch 2</label>
+                </value>
+                <value>
+                    <fullName>Branch 3</fullName>
+                    <default>false</default>
+                    <label>Branch 3</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
     <listViews>
         <fullName>ActiveUsers</fullName>
         <filterScope>Everything</filterScope>
