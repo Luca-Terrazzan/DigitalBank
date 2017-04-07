@@ -20,7 +20,9 @@
             Transaction__c.Name,
             Transaction__c.Amount__c,
             Transaction__c.transaction_date__c,
-            Transaction__c.account_number__c
+            Transaction__c.account_number__c,
+            Transaction__c.Account__c,
+            Transaction__c.Category__c
         };
     }
     /**
@@ -30,7 +32,7 @@
     public List<String> getFieldListString()
     {
         List<String> fieldList = new List<String>{
-            'Financial_Account_Role__r.FinServ__FinancialAccount__r.Name'
+            'account_number__r.Name'
         };
         for(Schema.SObjectField field : getSObjectFieldList()){
             fieldList.add(field.getDescribe().getName());
@@ -73,7 +75,7 @@
         assertIsAccessible();
         String query = 'select {0} ' +
             'from {1} ' +
-            'where AccountId IN: accountIds ';
+            'where Account__c IN: accountIds ';
         if(!String.isBlank(category)) {
             query += 'AND Category__c =: category';
         }

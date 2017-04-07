@@ -5,8 +5,7 @@
 <!-- ATTRIBUTES -->
     <aura:attribute name="recordId" type="Id" />
     <aura:attribute name="category" type="String" />
-    <aura:attribute name="transactions" type="Transactions[]" />
-    <aura:attribute name="roleRecordType" type="Id" />
+    <aura:attribute name="transactions" type="Transaction__c[]" />
 
 
 <article class="slds-card">
@@ -46,11 +45,14 @@
         <tbody>
             <aura:iteration items="{!v.transactions}" var="tr">
                     <tr>
-                        <td>{tr.Name}</td>
-                        <td>{!tr.Amount}</td>
                         <th scope="row" data-label="transaction Name">
                         <!-- slight workaround to avoid the /c/ in lightning page url -->
-                        <ui:outputURL value="{!'../' + tr.account_number__c}" label="{!tr.account_number__c}" class="uiOutputURL"/>
+                        <ui:outputURL value="{!'../' + tr.Name}" label="{!tr.Name}" class="uiOutputURL"/>
+                        </th>
+                        <td>{!tr.Amount__c}</td>
+                        <th scope="row" data-label="Financial Account Name">
+                        <!-- slight workaround to avoid the /c/ in lightning page url -->
+                        <ui:outputURL value="{!'../' + tr.account_number__r.Name}" label="{!tr.account_number__r.Name}" class="uiOutputURL"/>
                         </th>
                         <td>{!tr.transaction_date__c}</td>
                     </tr>
