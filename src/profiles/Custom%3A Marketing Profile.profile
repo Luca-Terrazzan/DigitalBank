@@ -62,6 +62,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TransactionsSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>fflib_ApexMocks</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -2175,6 +2179,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Transaction__c.Account__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Transaction__c.Category__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
