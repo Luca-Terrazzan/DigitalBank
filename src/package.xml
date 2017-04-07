@@ -169,8 +169,8 @@
         <name>EmailTemplate</name>
     </types>
     <types>
-        <members>ClientRecordPage1</members>
-        <members>ClientRecordPage2</members>
+        <members>BusinessPage</members>
+        <members>IndividualPage</members>
         <name>FlexiPage</name>
     </types>
     <types>
