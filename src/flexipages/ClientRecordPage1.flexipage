@@ -32,6 +32,12 @@
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
+                <name>category</name>
+            </componentInstanceProperties>
+            <componentName>TransactionRelatedList</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
                 <name>parentFieldApiName</name>
                 <value>Account.Id</value>
             </componentInstanceProperties>
@@ -227,6 +233,13 @@
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
+                <name>category</name>
+                <value>Retail</value>
+            </componentInstanceProperties>
+            <componentName>TransactionRelatedList</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
                 <name>parentFieldApiName</name>
                 <value>Account.Id</value>
             </componentInstanceProperties>
@@ -294,6 +307,13 @@
                 <value>Wealth</value>
             </componentInstanceProperties>
             <componentName>FinancialAccountRoles_Related_List</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>category</name>
+                <value>Wealth</value>
+            </componentInstanceProperties>
+            <componentName>TransactionRelatedList</componentName>
         </componentInstances>
         <componentInstances>
             <componentName>FinServ:goalDetailList</componentName>
@@ -367,6 +387,13 @@
                 <value>Commercial</value>
             </componentInstanceProperties>
             <componentName>FinancialAccountRoles_Related_List</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>category</name>
+                <value>Commercial</value>
+            </componentInstanceProperties>
+            <componentName>TransactionRelatedList</componentName>
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
@@ -522,6 +549,17 @@
                 <value>facet-5a296679-559d-4144-963a-fb61b66279ea</value>
             </componentInstanceProperties>
             <componentName>flexipage:tabset</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>Cases</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
         </componentInstances>
         <componentInstances>
             <componentName>cooper:companyInsightTeaserCard</componentName>

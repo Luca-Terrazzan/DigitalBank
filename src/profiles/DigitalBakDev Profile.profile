@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-    <applicationVisibilities>
-        <application>Digital_Bank</application>
-        <default>false</default>
-        <visible>false</visible>
-    </applicationVisibilities>
     <classAccesses>
         <apexClass>AccountContactRelations</apexClass>
         <enabled>false</enabled>
@@ -59,6 +54,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>TransactionRest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TransactionsSelector</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1439,6 +1438,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contact.Preferred_Branch__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Contact.Primary__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1555,6 +1559,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Entitlement_Mandate__c.Account__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event.Assigned_To_Branch__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2123,6 +2132,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.Assigned_To_Branch__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Task.Description</field>
         <readable>true</readable>
@@ -2175,6 +2189,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Transaction__c.Account__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Transaction__c.Category__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2255,6 +2274,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Transaction__c.updated_date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>User.Primary_Branch__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <layoutAssignments>

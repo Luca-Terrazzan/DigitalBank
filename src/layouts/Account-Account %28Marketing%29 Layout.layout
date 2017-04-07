@@ -387,9 +387,9 @@
         <fields>NAME</fields>
         <fields>Amount__c</fields>
         <fields>account_number__c</fields>
-        <fields>CREATED_DATE</fields>
+        <fields>transaction_date__c</fields>
         <relatedList>Transaction__c.Account__c</relatedList>
-        <sortField>CREATED_DATE</sortField>
+        <sortField>transaction_date__c</sortField>
         <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>

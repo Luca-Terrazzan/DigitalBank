@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -289,6 +290,16 @@
         <relatedList>FinServ__AccountAccountRelation__c.FinServ__Account__c</relatedList>
     </relatedLists>
     <relatedLists>
+        <fields>CASES.CASE_NUMBER</fields>
+        <fields>NAME</fields>
+        <fields>CASES.SUBJECT</fields>
+        <fields>CASES.PRIORITY</fields>
+        <fields>CASES.CREATED_DATE_DATE_ONLY</fields>
+        <fields>CASES.STATUS</fields>
+        <fields>OWNER_NAME</fields>
+        <relatedList>RelatedCaseList</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>NAME</fields>
         <fields>FinServ__Symbol__c</fields>
         <fields>FinServ__GainLoss__c</fields>
@@ -414,9 +425,9 @@
         <fields>NAME</fields>
         <fields>Amount__c</fields>
         <fields>account_number__c</fields>
-        <fields>CREATED_DATE</fields>
+        <fields>transaction_date__c</fields>
         <relatedList>Transaction__c.Account__c</relatedList>
-        <sortField>CREATED_DATE</sortField>
+        <sortField>transaction_date__c</sortField>
         <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>

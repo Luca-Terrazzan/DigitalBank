@@ -34,6 +34,15 @@
     </actionOverrides>
     <enableFeeds>false</enableFeeds>
     <fields>
+        <fullName>Assigned_To_Branch__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Owner:User.Primary_Branch__c)</formula>
+        <label>Assigned To Branch</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>FinServ__Expectations__c</fullName>
         <deprecated>false</deprecated>
         <description>Notes about client&apos;s expectations</description>
