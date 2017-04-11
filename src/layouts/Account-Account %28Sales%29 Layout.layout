@@ -104,6 +104,10 @@
                 <behavior>Edit</behavior>
                 <field>Profitability__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>VIP_Gold__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

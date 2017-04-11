@@ -10,6 +10,14 @@ Official repository documentation for the Digital Bank Global Initiative.
 
 ## Change Log
 
+##### V2.1.4 - Risky McRiskFace
+###### 11/04/2017
+* Added risk management:
+    * Added FICO to contact
+    * Added multiple fields on account to perform risk evaluations
+* Added Marketing Cloud connected app
+* Added case flieds for mulesoft integration
+
 ##### V2.1.3
 ###### 07/04/2017
 * Added support for case + service cloud
@@ -27,7 +35,7 @@ Official repository documentation for the Digital Bank Global Initiative.
     * added transaction related list to account
 * Removed application metadata form package.xml, has issues with nav lightning applications + CTI
 
-##### V2.1.2
+##### V2.1.2 - Panicked Pinoy
 ###### 05/04/2017
 * New transaction management:
     * Updated whole transaction data model to match iOS Digital Bank transactional data
