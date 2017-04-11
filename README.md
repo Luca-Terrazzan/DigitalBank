@@ -15,6 +15,8 @@ Official repository documentation for the Digital Bank Global Initiative.
 * Added risk management:
     * Added FICO to contact
     * Added multiple fields on account to perform risk evaluations
+* Added Marketing Cloud connected app
+* Added case flieds for mulesoft integration
 
 ##### V2.1.3
 ###### 07/04/2017
