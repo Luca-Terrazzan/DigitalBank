@@ -94,6 +94,7 @@
         <members>AgencyData__c</members>
         <members>Bank_Info__kav</members>
         <members>Campaign</members>
+        <members>Case</members>
         <members>Collateral__c</members>
         <members>Concession__c</members>
         <members>Contact</members>
