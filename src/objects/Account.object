@@ -54,11 +54,7 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>IndividualPage</content>
-        <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>ViewCustomerPortalUser</actionName>
@@ -90,6 +86,7 @@
         <fullName>FinServ__IndividualCompactLayout</fullName>
         <fields>Name</fields>
         <fields>CustomerValue__c</fields>
+        <fields>VIP_Gold__c</fields>
         <fields>RetailBalance__c</fields>
         <fields>RetailLoan__c</fields>
         <fields>WealthBalance__c</fields>
@@ -1292,6 +1289,30 @@
         <type>Currency</type>
     </fields>
     <fields>
+        <fullName>Credit_Risk__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(FinServ__PrimaryContact__r.FICO_Score__c &gt; 0, 8 - (FinServ__PrimaryContact__r.FICO_Score__c - 400) * 8 / 400,
+			4)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Credit Risk</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CustomerCommunity__c</fullName>
         <externalId>false</externalId>
         <formula>IF( FinServ__PrimaryContact__r.IsPortalEnabled__c = TRUE, &apos;Digital Bank&apos;, &apos;None&apos; )</formula>
@@ -2319,6 +2340,26 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Income_Risk__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(FinServ__PrimaryContact__r.FinServ__AnnualIncome__c = 0,8,
+IF(FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &gt; 0 &amp;&amp; FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &lt; 10000,7,
+IF(FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &gt;= 10000 &amp;&amp; FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &lt; 20000,6,
+IF(FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &gt;= 20000 &amp;&amp; FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &lt; 30000,5,
+IF(FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &gt;= 30000 &amp;&amp; FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &lt; 50000,4,
+IF(FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &gt;= 40000 &amp;&amp; FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &lt; 70000,3,
+IF(FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &gt;= 70000 &amp;&amp; FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &lt; 100000,2,
+IF(FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &gt;= 100000 &amp;&amp; FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &lt; 150000,1,
+IF(FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &gt;= 150000,0,8)))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Income Risk</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Industry</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
@@ -2615,6 +2656,20 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>RawRiskFactor__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (RetailLoan__c &gt; 0, 
+MIN((RetailBalance__c + WealthBalance__c ) / RetailLoan__c, 100),
+-1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Raw Risk Factor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>RetailBalance__c</fullName>
         <externalId>false</externalId>
         <label>Retail Deposits</label>
@@ -2633,6 +2688,46 @@
         <scale>0</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RiskFactor__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( RawRiskFactor__c = -1, 8,
+		IF (RawRiskFactor__c &lt; 1,
+						-RawRiskFactor__c * 2 + 8 
+						,3 - 3 * (RawRiskFactor__c - 1) / 99)
+		)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Factor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RiskIndex__c</fullName>
+        <externalId>false</externalId>
+        <formula>8 + RiskFactor__c + Credit_Risk__c + Income_Risk__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Index</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(RiskIndex__c &lt; 16, &apos;Low Risk&apos;,
+IF(RiskIndex__c &gt; 24, &apos;High Risk&apos;,
+		&apos;Average Risk&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>SLAExpirationDate__c</fullName>
@@ -2794,6 +2889,14 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>VIP_Gold__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>VIP Gold</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>WealthBalance__c</fullName>
