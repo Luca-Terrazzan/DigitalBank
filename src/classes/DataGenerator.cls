@@ -6,6 +6,7 @@ public with sharing class DataGenerator {
     private FinServ__FinancialAccount__c[] finAccounts;
     private Contact[] contacts;
     private Id individualRT;
+    private User[] salesAssociates;
 
 
     /**
@@ -16,6 +17,7 @@ public with sharing class DataGenerator {
         households = new Account[]{};
         finAccounts = new FinServ__FinancialAccount__c[]{};
         contacts = new Contact[]{};
+        salesAssociates = [SELECT Id FROM User WHERE UserRole.Name = 'Sales Associate'];
 
         individualRT = [SELECT Id FROM RecordType
             WHERE SObjectType = 'Account' AND DeveloperName = 'IndustriesIndividual'].Id;
@@ -42,6 +44,9 @@ public with sharing class DataGenerator {
             Mock__c = true,
             RecordTypeId = individualRT,
             Name = firstname + ' ' + lastname,
+            Account_Owner_Retail__c = randomPickSObject(salesAssociates).Id,
+            Account_Owner_Wealth__c = randomPickSObject(salesAssociates).Id,
+            Account_Owner_Commercial__c = randomPickSObject(salesAssociates).Id,
             FinServ__PersonalInterests__c = randomPick(CustomConstants.interests),
             FinServ__FinancialInterests__c = randomPick(CustomConstants.financial_interests),
             Profitability__c = randomPick(CustomConstants.profitability),
@@ -70,6 +75,9 @@ public with sharing class DataGenerator {
     }
 
     private String randomPick(String[] stringlist) {
+        return stringlist[(Integer) Math.floor(Math.random()*stringlist.size())];
+    }
+    private SObject randomPickSObject(SObject[] stringlist) {
         return stringlist[(Integer) Math.floor(Math.random()*stringlist.size())];
     }
 }
