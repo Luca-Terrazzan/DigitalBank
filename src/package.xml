@@ -179,6 +179,14 @@
         <name>Flow</name>
     </types>
     <types>
+        <members>*</members>
+        <name>GlobalValueSet</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Group</name>
+    </types>
+    <types>
         <members>Account-Account %28Marketing%29 Layout</members>
         <members>Account-Account %28Sales%29 Layout</members>
         <members>Account-Account %28Support%29 Layout</members>
@@ -296,7 +304,14 @@
     </types>
     <types>
         <members>Bank_Info__kav</members>
+        <members>Contact</members>
+        <members>FinServ__FinancialAccount__c</members>
         <members>Opportunity</members>
+        <members>et4ae5__Automated_Send__c</members>
+        <members>et4ae5__IndividualEmailResult__c</members>
+        <members>et4ae5__SMSDefinition__c</members>
+        <members>et4ae5__SendDefinition__c</members>
+        <members>et4ae5__SupportRequest__c</members>
         <name>Workflow</name>
     </types>
     <version>39.0</version>
