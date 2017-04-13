@@ -29,6 +29,10 @@
                 <behavior>Required</behavior>
                 <field>Priority</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Assigned_To_Branch__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -107,6 +111,16 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+    <miniLayout>
+        <fields>OwnerId</fields>
+        <fields>Assigned_To_Branch__c</fields>
+        <fields>Subject</fields>
+        <fields>ActivityDate</fields>
+        <fields>Priority</fields>
+        <fields>Status</fields>
+        <fields>WhoId</fields>
+        <fields>WhatId</fields>
+    </miniLayout>
     <quickActionList>
         <quickActionListItems>
             <quickActionName>Task.EditDescription_0</quickActionName>

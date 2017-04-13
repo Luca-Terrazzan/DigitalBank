@@ -23,6 +23,10 @@
                 <behavior>Edit</behavior>
                 <field>Profitability__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Customer_Tier__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -40,6 +44,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>CustomerValue__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Branch__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -111,10 +119,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>FinServ__FinancialInterests__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>WealthBalance__c</field>
             </layoutItems>
         </layoutColumns>
@@ -134,6 +138,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>FinServ__TimeHorizon__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>FinServ__FinancialInterests__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -164,10 +172,6 @@
                 <behavior>Edit</behavior>
                 <field>CommercialBalance__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CommercialLoan__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -185,6 +189,37 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>LinkedIn_Profile__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CommercialLoan__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Risk Form</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Credit_Risk__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>RiskFactor__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Income_Risk__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Risk__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -287,6 +322,16 @@
         <fields>FinServ__EndDate__c</fields>
         <fields>FinServ__Active__c</fields>
         <relatedList>FinServ__AccountAccountRelation__c.FinServ__Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>CASES.CASE_NUMBER</fields>
+        <fields>NAME</fields>
+        <fields>CASES.SUBJECT</fields>
+        <fields>CASES.PRIORITY</fields>
+        <fields>CASES.CREATED_DATE_DATE_ONLY</fields>
+        <fields>CASES.STATUS</fields>
+        <fields>OWNER_NAME</fields>
+        <relatedList>RelatedCaseList</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
@@ -414,9 +459,9 @@
         <fields>NAME</fields>
         <fields>Amount__c</fields>
         <fields>account_number__c</fields>
-        <fields>CREATED_DATE</fields>
+        <fields>transaction_date__c</fields>
         <relatedList>Transaction__c.Account__c</relatedList>
-        <sortField>CREATED_DATE</sortField>
+        <sortField>transaction_date__c</sortField>
         <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
