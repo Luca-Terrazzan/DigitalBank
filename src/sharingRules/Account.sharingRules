@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Branch_1</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>Branch 1</label>
+        <sharedTo>
+            <group>Branch_1</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Branch__c</field>
+            <operation>equals</operation>
+            <value>Branch 1</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Branch_2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>Branch 2</label>
+        <sharedTo>
+            <group>Branch_2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Branch__c</field>
+            <operation>equals</operation>
+            <value>Branch 2</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Branch_3</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>Branch 3</label>
+        <sharedTo>
+            <group>Branch_3</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Branch__c</field>
+            <operation>equals</operation>
+            <value>Branch 3</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -281,6 +281,15 @@
         <name>ReportType</name>
     </types>
     <types>
+        <members>Account</members>
+        <members>Case</members>
+        <members>FinServ__FinancialAccount__c</members>
+        <members>FinServ__FinancialGoal__c</members>
+        <members>Lead</members>
+        <members>Opportunity</members>
+        <name>SharingRules</name>
+    </types>
+    <types>
         <members>res</members>
         <members>slds</members>
         <name>StaticResource</name>
