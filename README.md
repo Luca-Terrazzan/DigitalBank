@@ -10,6 +10,16 @@ Official repository documentation for the Digital Bank Global Initiative.
 
 ## Change Log
 
+##### V2.1.4_r2 - Gender Issues
+###### 13/04/2017
+* Renamed Gender__c custom field to avoid conflicts with FSC (really?)
+* Added sharing rules for several object to manage branches
+* Added really poorly made booking bug unmanaged triggers
+* New process builder to automatically populate risk related fields on contacts on creation
+* Several new fields and layouts
+* Definitively removed flowdefinitions from the package.xml
+* USer grouping to manage visibilities by branches
+
 ##### V2.1.4 - Risky McRiskFace
 ###### 11/04/2017
 * Added risk management:
@@ -94,3 +104,4 @@ Deploy process description goes here
 * Adjust any Field Level Security settings that might miss from the Admin/System Administrator profile (this is actually a bug in the profile naming).
 * Always check for Process Builder Flows version in target environment. Flows are notoriously bugged and might need an additional manual deploy.
 * Manually place CTI_Phone_UtilityBar in the DigitalBank app and set up CTI as needed
+* Deploy Groups and Global Value Sets manually and beforehand, this is  aknown issue with salesforce deployments.

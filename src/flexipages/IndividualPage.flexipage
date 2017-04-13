@@ -197,6 +197,10 @@
                 <value>Loans</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
+                <name>reportFilter</name>
+                <value>FK_ACC_ID</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
                 <name>reportName</name>
                 <value>Retail_FA_Loans</value>
             </componentInstanceProperties>
@@ -285,6 +289,10 @@
                 <value>Deposit</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
+                <name>reportFilter</name>
+                <value>FK_ACC_ID</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
                 <name>reportName</name>
                 <value>Retail_Financial_Account_v211</value>
             </componentInstanceProperties>
@@ -350,6 +358,10 @@
                 <value>1440</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
+                <name>reportFilter</name>
+                <value>FK_ACC_ID</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
                 <name>reportName</name>
                 <value>New_FA_Commercial</value>
             </componentInstanceProperties>
@@ -363,6 +375,10 @@
             <componentInstanceProperties>
                 <name>cacheAge</name>
                 <value>1440</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>reportFilter</name>
+                <value>FK_ACC_ID</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>reportName</name>

@@ -102,7 +102,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>VIP_Gold__c</field>
+                <field>Customer_Tier__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Branch__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
