@@ -104,3 +104,4 @@ Deploy process description goes here
 * Adjust any Field Level Security settings that might miss from the Admin/System Administrator profile (this is actually a bug in the profile naming).
 * Always check for Process Builder Flows version in target environment. Flows are notoriously bugged and might need an additional manual deploy.
 * Manually place CTI_Phone_UtilityBar in the DigitalBank app and set up CTI as needed
+* Deploy Groups and Global Value Sets manually and beforehand, this is  aknown issue with salesforce deployments.
