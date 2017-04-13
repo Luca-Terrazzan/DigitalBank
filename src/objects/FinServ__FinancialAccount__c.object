@@ -238,6 +238,19 @@
         <label>Investment Account</label>
     </fieldSets>
     <fields>
+        <fullName>Branch__c</fullName>
+        <externalId>false</externalId>
+        <label>Branch</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Branch</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Category__c</fullName>
         <externalId>false</externalId>
         <label>Category</label>
@@ -1190,6 +1203,15 @@
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
+    <fields>
+        <fullName>Mock__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Mock</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
     <label>Financial Account</label>
     <listViews>
         <fullName>FinServ__All</fullName>
@@ -1199,6 +1221,7 @@
         <columns>FinServ__Balance__c</columns>
         <columns>FinServ__InsuredAmount__c</columns>
         <columns>FinServ__OpenDate__c</columns>
+        <columns>Category__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -1214,6 +1237,21 @@
         <active>true</active>
         <description>Bank accounts such as savings, checking, and credit</description>
         <label>Bank Account</label>
+        <picklistValues>
+            <picklist>Branch__c</picklist>
+            <values>
+                <fullName>Branch 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
         <picklistValues>
             <picklist>Category__c</picklist>
             <values>
@@ -1434,6 +1472,21 @@
         <active>true</active>
         <description>General financial accounts</description>
         <label>General Account</label>
+        <picklistValues>
+            <picklist>Branch__c</picklist>
+            <values>
+                <fullName>Branch 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
         <picklistValues>
             <picklist>Category__c</picklist>
             <values>
@@ -1691,6 +1744,21 @@
         <description>Insurance policies</description>
         <label>Insurance Policy</label>
         <picklistValues>
+            <picklist>Branch__c</picklist>
+            <values>
+                <fullName>Branch 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Category__c</picklist>
             <values>
                 <fullName>Commercial</fullName>
@@ -1882,6 +1950,21 @@
         <active>true</active>
         <description>Investment accounts such as brokerage accounts</description>
         <label>Investment Account</label>
+        <picklistValues>
+            <picklist>Branch__c</picklist>
+            <values>
+                <fullName>Branch 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
         <picklistValues>
             <picklist>Category__c</picklist>
             <values>

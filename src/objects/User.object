@@ -93,6 +93,27 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>booking__BookingBug_Mapped_Staff_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>BookingBug Mapped Staff Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>booking__Branch__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Branch</label>
+        <relationshipName>Branch</relationshipName>
+        <restrictedAdminField>false</restrictedAdminField>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
         <fullName>et4ae5__Default_ET_Page__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
