@@ -103,9 +103,11 @@
         <members>Entitlement_Mandate__c</members>
         <members>FinServ__FinancialAccountRole__c</members>
         <members>FinServ__FinancialAccount__c</members>
+        <members>FinServ__FinancialGoal__c</members>
         <members>High_Growth_proposal__kav</members>
         <members>Journeys__c</members>
         <members>Knowledge__kav</members>
+        <members>Lead</members>
         <members>News__c</members>
         <members>NextBestAction__c</members>
         <members>NextBestOffer__c</members>
@@ -238,30 +240,8 @@
     </types>
     <types>
         <members>Admin</members>
-        <members>Advisor</members>
-        <members>Company Communities User</members>
-        <members>ContractManager</members>
-        <members>Custom%3A Marketing Profile</members>
-        <members>Custom%3A Sales Profile</members>
-        <members>Custom%3A Support Profile</members>
-        <members>Customer Community Login User</members>
-        <members>Customer Community Plus Clone</members>
-        <members>Customer Community Plus Login User</members>
-        <members>Customer Community Plus User</members>
-        <members>Customer Community User</members>
-        <members>Customer Portal Manager Custom</members>
-        <members>Customer Portal Manager Standard</members>
-        <members>CustomerManager</members>
-        <members>DigitalBakDev Profile</members>
-        <members>Overage High Volume Customer Portal User</members>
-        <members>Partner</members>
-        <members>Partner Community Login User</members>
-        <members>Partner Community User</members>
-        <members>PlatformPortal</members>
-        <members>SolutionManager</members>
+        <members>Associate</members>
         <members>Standard</members>
-        <members>StandardAul</members>
-        <members>customer community clone</members>
         <name>Profile</name>
     </types>
     <types>
