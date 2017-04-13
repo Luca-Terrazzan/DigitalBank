@@ -21,8 +21,14 @@ public with sharing class CustomConstants {
     public static final String[] marketing_segment_commercial = new String[]{'Business Owner','Employee: Commercial','Employee: Corporate','Employee: Small Business','Investor'};
 
     // Financial Account
-    public static final String[] categories = new String[]{'Retail', 'Commercial', 'Wealth'};
-    public static final String[] Retail_type = new String[]{'Checking', 'Savings', 'Credit Card'};
-    public static final String[] Wealth_type = new String[]{'Equities', 'Fixed Incomes', 'Cash and Equivalents'};
-    public static final String[] Commercial_type = new String[]{'Short Terms Loans', 'Long Terms Loans', 'Business Credit Card'};
+    // only retail and wealth for now!
+    public static final String[] categories = new String[]{'Retail', 'Wealth', 'Commercial'};
+    public static final String[] retail_type = new String[]{'Checking', 'Savings', 'Credit Card'};
+    public static final String[] wealth_type = new String[]{'Equities', 'Fixed Incomes', 'Cash and Equivalents'};
+    public static final String[] commercial_type = new String[]{'Short Terms Loans', 'Long Terms Loans', 'Business Credit Card'};
+    public static final String[] fa_status = new String[]{'Open', 'Closed', 'On Hold', 'Pending'};
+    public static final String[] fa_ownership = new String[]{'Individual', 'Joint', 'Trust'};
+    public static final String[] fa_taxstatus = new String[]{'Qualified', 'Nonqualified'};
+    public static final String[] fa_source = new String[]{'Integrator', 'Pending', 'Manual Entry'};
+    public static final String[] fa_paperless = new String[]{'true', 'false'};
 }

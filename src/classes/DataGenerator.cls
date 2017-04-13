@@ -8,7 +8,6 @@ public with sharing class DataGenerator {
     private Id individualRT;
     private User[] salesAssociates;
 
-
     /**
      * Singleton
      */
@@ -29,6 +28,7 @@ public with sharing class DataGenerator {
 
     public void commitWork() {
         insert this.individuals;
+        insert this.finAccounts;
     }
 
     public DataGenerator createIndividuals(Integer n) {
@@ -44,6 +44,7 @@ public with sharing class DataGenerator {
             Mock__c = true,
             RecordTypeId = individualRT,
             Name = firstname + ' ' + lastname,
+            Party_ID__c = firstname + '-' + lastname + String.valueOf(Math.random()),
             Account_Owner_Retail__c = randomPickSObject(salesAssociates).Id,
             Account_Owner_Wealth__c = randomPickSObject(salesAssociates).Id,
             Account_Owner_Commercial__c = randomPickSObject(salesAssociates).Id,
@@ -71,6 +72,46 @@ public with sharing class DataGenerator {
             FinServ__TimeHorizon__c = randomPick(CustomConstants.time_horizon),
             Industry = randomPick(CustomConstants.industry),
             Website = 'www.DigitalBank.com'
+        );
+    }
+
+    public DataGenerator randomizeFinancialAccounts(Integer retails, Integer wealths, Integer commercials) {
+        for(Integer i = retails; i > 0; i--) {
+            Account rand = (Account)randomPickSObject(individuals);
+            finAccounts.add(createFinancialAccount('Retail', rand.Party_ID__c, rand.Name, null, null));
+        }
+        for(Integer i = wealths; i > 0; i--) {
+            Account rand = (Account)randomPickSObject(individuals);
+            finAccounts.add(createFinancialAccount('Wealth', rand.Party_ID__c, rand.Name, null, null));
+        }
+        for(Integer i = commercials; i > 0; i--) {
+            Account rand = (Account)randomPickSObject(individuals);
+            Account comm_rand = (Account)randomPickSObject(individuals);
+            finAccounts.add(createFinancialAccount('Commercial', rand.Party_ID__c, rand.Name, comm_rand.Party_ID__c, comm_rand.Name));
+        }
+        return this;
+    }
+
+    private FinServ__FinancialAccount__c createFinancialAccount(String cat, String ownerExtId, String ownerName, String comm_ownerExtId, String comm_ownerName) {
+        // only retail and wealth for now!
+        Account owner = new Account(Party_Id__c = ownerExtId);
+        Account comm_owner = String.isNotBlank(comm_ownerExtId) ? new Account(Party_Id__c = comm_ownerExtId) : null;
+        String category = String.isBlank(cat) ? randomPick(CustomConstants.categories) : cat;
+        String faType = category == 'Retail' ? randomPick(CustomConstants.retail_type) :
+            category == 'Wealth' ? randomPick(CustomConstants.wealth_type) : randomPick(CustomConstants.commercial_type);
+        return new FinServ__FinancialAccount__c(
+            Name = ownerName + ' ' + faType,
+            Mock__c = true,
+            FinServ__PrimaryOwner__r =  owner,
+            FinServ__JointOwner__r = comm_owner,
+            Category__c = category,
+            FinServ__FinancialAccountType__c = faType,
+            FinServ__Status__c = randomPick(CustomConstants.fa_status),
+            FinServ__Ownership__c = String.isBlank(comm_ownerExtId) ? 'Individual' : 'Joint',
+            FinServ__FinancialAccountSource__c = randomPick(CustomConstants.fa_source),
+            FinServ__Balance__c = category == 'Retail' ? Math.random() * 100000 : Math.random() * 1000000 + 100000,
+            FinServ__OpenDate__c = System.today() - (Integer) (Math.random() * 500) - 20,
+            FinServ__PaperlessDelivery__c = Math.random() >= 0.5 ? true : false
         );
     }
 
