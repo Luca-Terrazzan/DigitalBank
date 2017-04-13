@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Asset Management</fullName>
+        <default>false</default>
+        <label>Asset Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance</fullName>
+        <default>false</default>
+        <label>Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Mortgage</fullName>
+        <default>false</default>
+        <label>Mortgage</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail</fullName>
+        <default>false</default>
+        <label>Retail</label>
+    </customValue>
+    <customValue>
+        <fullName>Wealth Management</fullName>
+        <default>false</default>
+        <label>Wealth Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial</fullName>
+        <default>false</default>
+        <label>Commercial</label>
+    </customValue>
+    <customValue>
+        <fullName>Treasury</fullName>
+        <default>false</default>
+        <label>Treasury</label>
+    </customValue>
+    <customValue>
+        <fullName>Merchant Services</fullName>
+        <default>false</default>
+        <label>Merchant Services</label>
+    </customValue>
+    <customValue>
+        <fullName>International Services</fullName>
+        <default>false</default>
+        <label>International Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Equipment Finance</fullName>
+        <default>false</default>
+        <label>Equipment Finance</label>
+    </customValue>
+    <masterLabel>Line of Business</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
