@@ -18,6 +18,7 @@ Official repository documentation for the Digital Bank Global Initiative.
 * New process builder to automatically populate risk related fields on contacts on creation
 * Several new fields and layouts
 * Definitively removed flowdefinitions from the package.xml
+* USer grouping to manage visibilities by branches
 
 ##### V2.1.4 - Risky McRiskFace
 ###### 11/04/2017
