@@ -10,6 +10,15 @@ Official repository documentation for the Digital Bank Global Initiative.
 
 ## Change Log
 
+##### V2.1.4_r2 - Gender Issues
+###### 13/04/2017
+* Renamed Gender__c custom field to avoid conflicts with FSC (really?)
+* Added sharing rules for several object to manage branches
+* Added really poorly made booking bug unmanaged triggers
+* New process builder to automatically populate risk related fields on contacts on creation
+* Several new fields and layouts
+* Definitively removed flowdefinitions from the package.xml
+
 ##### V2.1.4 - Risky McRiskFace
 ###### 11/04/2017
 * Added risk management:
