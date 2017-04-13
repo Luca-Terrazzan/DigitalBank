@@ -179,10 +179,6 @@
         <name>Flow</name>
     </types>
     <types>
-        <members>*</members>
-        <name>FlowDefinition</name>
-    </types>
-    <types>
         <members>Account-Account %28Marketing%29 Layout</members>
         <members>Account-Account %28Sales%29 Layout</members>
         <members>Account-Account %28Support%29 Layout</members>
@@ -283,6 +279,15 @@
     <types>
         <members>*</members>
         <name>ReportType</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <members>Case</members>
+        <members>FinServ__FinancialAccount__c</members>
+        <members>FinServ__FinancialGoal__c</members>
+        <members>Lead</members>
+        <members>Opportunity</members>
+        <name>SharingRules</name>
     </types>
     <types>
         <members>res</members>
