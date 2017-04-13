@@ -11,9 +11,7 @@ public with sharing class CustomConstants {
     public static final String[] investment_objectives = new String[]{'Conservative Income','Income','Balanced','Growth','Aggressive Growth'};
     public static final String[] marketing_segment_wealth = new String[]{'Female Investor','High Net Worth','Mass Affluent','Millennial'};
     public static final String[] risk_tolerance = new String[]{'Aggressive','Conservative','Moderate','None'};
-    public static final String[] branch_retail = new String[]{'Branch 1', 'Branch 2', 'Branch 3'};
-    public static final String[] branch_wealth = new String[]{'Branch 1', 'Branch 2', 'Branch 3'};
-    public static final String[] branch_commercial = new String[]{'Branch 1', 'Branch 2', 'Branch 3'};
+    public static final String[] branches = new String[]{'Branch 1', 'Branch 2', 'Branch 3'};
     public static final String[] investment_experience = new String[]{'Experienced','Moderately Experienced','Moderately Inexperienced','Inexperienced'};
     public static final String[] service_model = new String[]{'Tier1', 'Tier2', 'Tier3'};
     public static final String[] time_horizon = new String[]{'Long Term','Medium Term','Short Term'};

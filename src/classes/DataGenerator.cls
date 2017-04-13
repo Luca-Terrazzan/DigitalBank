@@ -64,9 +64,7 @@ public with sharing class DataGenerator {
             Linkedin_Profile__c = 'linkedin.com/' + lastname,
             FinServ__InvestmentObjectives__c = randomPick(CustomConstants.investment_objectives),
             FinServ__RiskTolerance__c = randomPick(CustomConstants.risk_tolerance),
-            Retail_Branch__c = randomPick(CustomConstants.branch_retail),
-            Wealth_Branch__c = randomPick(CustomConstants.branch_Wealth),
-            Commercial_Branch__c = randomPick(CustomConstants.branch_commercial),
+            Branch__c = randomPick(CustomConstants.branches),
             FinServ__InvestmentExperience__c = randomPick(CustomConstants.investment_experience),
             FinServ__ServiceModel__c = randomPick(CustomConstants.service_model),
             FinServ__TimeHorizon__c = randomPick(CustomConstants.time_horizon),
@@ -111,7 +109,8 @@ public with sharing class DataGenerator {
             FinServ__FinancialAccountSource__c = randomPick(CustomConstants.fa_source),
             FinServ__Balance__c = category == 'Retail' ? Math.random() * 100000 : Math.random() * 1000000 + 100000,
             FinServ__OpenDate__c = System.today() - (Integer) (Math.random() * 500) - 20,
-            FinServ__PaperlessDelivery__c = Math.random() >= 0.5 ? true : false
+            FinServ__PaperlessDelivery__c = Math.random() >= 0.5 ? true : false,
+            Branch__c = randomPick(CustomConstants.branches)
         );
     }
 

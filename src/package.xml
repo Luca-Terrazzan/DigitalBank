@@ -4,6 +4,8 @@
         <members>AccountContactRelations</members>
         <members>AccountService</members>
         <members>AccountsSelector</members>
+        <members>CustomConstants</members>
+        <members>DataGenerator</members>
         <members>DetailComponentController</members>
         <members>FinancialAccountRoles</members>
         <members>FinancialAccountRolesSelector</members>
@@ -61,8 +63,6 @@
         <members>fflib_SecurityUtilsTest</members>
         <members>fflib_StringBuilder</members>
         <members>fflib_StringBuilderTest</members>
-        <members>DataGenerator</members>
-        <members>CustomConstants</members>
         <name>ApexClass</name>
     </types>
     <types>
