@@ -128,7 +128,7 @@ public with sharing class DataGenerator {
 
     public DataGenerator createOpportunities(Integer opps) {
         Account[] individualsPool = individuals.isEmpty() ? [SELECT Id, Name
-                FROM Account LIMIT : opps] : individuals;
+                FROM Account WHERE RecordType.DeveloperName = 'IndustriesIndividual' LIMIT : opps] : individuals;
         for(Integer i = opps; i > 0; i--) {
             Account rand = (Account)randomPickSObject(individualsPool);
             Opportunity opp = createOpportunity();
@@ -141,7 +141,7 @@ public with sharing class DataGenerator {
     }
     public DataGenerator closeOpportunities(Decimal chance) {
         for(Opportunity opp: opportunities) {
-            if (Math.random() >= chance) opp.StageName = 'Closed Won';
+            if (Math.random() <= chance) opp.StageName = 'Closed Won';
         }
         update opportunities;
         return this;

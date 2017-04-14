@@ -3,7 +3,7 @@
 delete [SELECT Id FROM Opportunity WHERE Mock__c = true];
 
 DataGenerator dg = DataGenerator.getInstance();
-dg.createOpportunities(500).commitWork().closeOpportunities(0.30);
+dg.createOpportunities(500).commitWork().closeOpportunities(0.10);
 //dg.createIndividuals(200).
 //    randomizeFinancialAccounts(500, 50, 1000).
     //.createOpportunities(500)
