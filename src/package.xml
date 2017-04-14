@@ -4,6 +4,8 @@
         <members>AccountContactRelations</members>
         <members>AccountService</members>
         <members>AccountsSelector</members>
+        <members>CustomConstants</members>
+        <members>DataGenerator</members>
         <members>DetailComponentController</members>
         <members>FinancialAccountRoles</members>
         <members>FinancialAccountRolesSelector</members>
@@ -104,6 +106,7 @@
         <members>FinServ__FinancialAccountRole__c</members>
         <members>FinServ__FinancialAccount__c</members>
         <members>FinServ__FinancialGoal__c</members>
+        <members>FinServ__Revenue__c</members>
         <members>High_Growth_proposal__kav</members>
         <members>Journeys__c</members>
         <members>Knowledge__kav</members>
@@ -174,6 +177,7 @@
     <types>
         <members>BusinessPage</members>
         <members>IndividualPage</members>
+        <members>WealthHome1</members>
         <name>FlexiPage</name>
     </types>
     <types>
@@ -189,9 +193,6 @@
         <name>Group</name>
     </types>
     <types>
-        <members>Account-Account %28Marketing%29 Layout</members>
-        <members>Account-Account %28Sales%29 Layout</members>
-        <members>Account-Account %28Support%29 Layout</members>
         <members>Account-Account Layout</members>
         <members>Account-Business Layout</members>
         <members>Account-New Detail Page</members>
@@ -203,29 +204,21 @@
         <members>AgencyData__c-Agency Data Layout</members>
         <members>Bank_Info__kav-Bank Info Layout</members>
         <members>Campaign-Campaign Layout</members>
-        <members>Collateral__c-Collateral Layout</members>
-        <members>Concession__c-Concession Layout</members>
-        <members>Contact-Contact %28Marketing%29 Layout</members>
-        <members>Contact-Contact %28Sales%29 Layout</members>
-        <members>Contact-Contact %28Support%29 Layout</members>
         <members>Contact-Contact Layout</members>
         <members>Contract-Contract Layout</members>
         <members>Eligibility__c-Eligibility Layout</members>
         <members>FinServ__FinancialAccountRole__c-Unmanaged Account Role Layout</members>
+        <members>FinServ__Revenue__c-Revenue Layout</members>
         <members>Journeys__c-Journey Layout</members>
         <members>Knowledge__kav-Knowledge Layout</members>
-        <members>Lead-Lead %28Marketing%29 Layout</members>
-        <members>Lead-Lead %28Sales%29 Layout</members>
-        <members>Lead-Lead %28Support%29 Layout</members>
         <members>Lead-Lead Layout</members>
         <members>News__c-News Layout</members>
         <members>NextBestAction__c-Next Best Action Layout</members>
         <members>NextBestOffer__c-Next Best Offer Layout</members>
-        <members>Opportunity-Opportunity %28Marketing%29 Layout</members>
-        <members>Opportunity-Opportunity %28Sales%29 Layout</members>
-        <members>Opportunity-Opportunity %28Support%29 Layout</members>
         <members>Opportunity-Opportunity Layout</members>
         <members>OpportunityLineItem-Opportunity Product Layout</members>
+        <members>Pricebook2-Price Book Layout</members>
+        <members>Product2-Product Layout</members>
         <members>Referral__c-Referral Layout</members>
         <members>RollUpRoles__mdt-Roll up roles Layout</members>
         <members>Social_Activity_and_Influence__c-Social Activity and Influence Layout</members>
@@ -287,6 +280,7 @@
         <members>Contact</members>
         <members>FinServ__FinancialAccount__c</members>
         <members>Opportunity</members>
+        <members>OpportunityLineItem</members>
         <members>et4ae5__Automated_Send__c</members>
         <members>et4ae5__IndividualEmailResult__c</members>
         <members>et4ae5__SMSDefinition__c</members>
