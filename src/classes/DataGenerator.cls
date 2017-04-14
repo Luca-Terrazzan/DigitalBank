@@ -1,8 +1,14 @@
 public with sharing class DataGenerator {
     private static DataGenerator instance = null;
+    private static Integer randomizer = 0;
 
     private Account[] individuals;
-	private Account[] households;
+    private Account[] households;
+
+	private Opportunity[] opportunities;
+    private PricebookEntry[] prices;
+    private OpportunityLineItem[] olis;
+
     private FinServ__FinancialAccount__c[] finAccounts;
     private Contact[] contacts;
     private Id individualRT;
@@ -16,7 +22,10 @@ public with sharing class DataGenerator {
         households = new Account[]{};
         finAccounts = new FinServ__FinancialAccount__c[]{};
         contacts = new Contact[]{};
+        opportunities = new Opportunity[]{};
         salesAssociates = [SELECT Id FROM User WHERE UserRole.Name = 'Sales Associate'];
+        prices = [SELECT Name, Pricebook2Id, UnitPrice, Product2.Name, Category__c FROM PricebookEntry];
+        olis = new OpportunityLineItem[]{};
 
         individualRT = [SELECT Id FROM RecordType
             WHERE SObjectType = 'Account' AND DeveloperName = 'IndustriesIndividual'].Id;
@@ -26,9 +35,12 @@ public with sharing class DataGenerator {
         return instance;
     }
 
-    public void commitWork() {
+    public DataGenerator commitWork() {
         insert this.individuals;
         insert this.finAccounts;
+        insert this.opportunities;
+        insert this.olis;
+        return this;
     }
 
     public DataGenerator createIndividuals(Integer n) {
@@ -114,10 +126,57 @@ public with sharing class DataGenerator {
         );
     }
 
+    public DataGenerator createOpportunities(Integer opps) {
+        Account[] individualsPool = individuals.isEmpty() ? [SELECT Id, Name
+                FROM Account LIMIT : opps] : individuals;
+        for(Integer i = opps; i > 0; i--) {
+            Account rand = (Account)randomPickSObject(individualsPool);
+            Opportunity opp = createOpportunity();
+            opp.AccountId = rand.Id;
+            opp.Name += ' ' + rand.Name + ' Opportunity';
+            opportunities.add(opp);
+        }
+        System.debug(opportunities);
+        return this;
+    }
+    public DataGenerator closeOpportunities(Decimal chance) {
+        for(Opportunity opp: opportunities) {
+            if (Math.random() >= chance) opp.StageName = 'Closed Won';
+        }
+        update opportunities;
+        return this;
+    }
+    private Opportunity createOpportunity() {
+        PricebookEntry randPrice = (PricebookEntry) randomPickSObject(prices);
+        String randomId = randPrice.Id + String.valueOf(randomizer);
+        randomizer++;
+        OpportunityLineItem oli = new OpportunityLineItem(
+            UnitPrice = randPrice.UnitPrice,
+            Quantity = 1,
+
+            PricebookEntryId = randPrice.Id
+        );
+        Opportunity opp = new Opportunity(
+            Mock__c = true,
+            Name = randPrice.Name,
+            ExternalId__c = randomId,
+            Branch__c = randomPick(CustomConstants.branches),
+            Category__c = String.isEmpty(randPrice.Category__c) ? 'Retail' : randPrice.Category__c,
+            StageName = randomPick(CustomConstants.opp_stages),
+            CloseDate = System.today() + 15 + (Integer) Math.random() * 100,
+            Pricebook2Id = randPrice.Pricebook2Id,
+            Amount = Math.random()
+        );
+        oli.Opportunity = new Opportunity(ExternalId__c = randomId);
+        olis.add(oli);
+        return opp;
+    }
+
     private String randomPick(String[] stringlist) {
         return stringlist[(Integer) Math.floor(Math.random()*stringlist.size())];
     }
     private SObject randomPickSObject(SObject[] stringlist) {
+        if (stringlist == null || stringlist.isEmpty()) return null;
         return stringlist[(Integer) Math.floor(Math.random()*stringlist.size())];
     }
 }

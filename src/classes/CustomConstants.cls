@@ -19,7 +19,6 @@ public with sharing class CustomConstants {
     public static final String[] marketing_segment_commercial = new String[]{'Business Owner','Employee: Commercial','Employee: Corporate','Employee: Small Business','Investor'};
 
     // Financial Account
-    // only retail and wealth for now!
     public static final String[] categories = new String[]{'Retail', 'Wealth', 'Commercial'};
     public static final String[] retail_type = new String[]{'Checking', 'Savings', 'Credit Card'};
     public static final String[] wealth_type = new String[]{'Equities', 'Fixed Incomes', 'Cash and Equivalents'};
@@ -29,4 +28,7 @@ public with sharing class CustomConstants {
     public static final String[] fa_taxstatus = new String[]{'Qualified', 'Nonqualified'};
     public static final String[] fa_source = new String[]{'Integrator', 'Pending', 'Manual Entry'};
     public static final String[] fa_paperless = new String[]{'true', 'false'};
+
+    // Opportunity
+    public static final String[] opp_stages = new String[]{'Prospecting','Documentation Sent','Waiting for Client\'s Feedback','Waiting for Winning'};
 }
