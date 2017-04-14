@@ -5,7 +5,7 @@
         <accessLevel>Edit</accessLevel>
         <label>Branch 1</label>
         <sharedTo>
-            <group>Branch_1</group>
+            <group>Lead_B1</group>
         </sharedTo>
         <criteriaItems>
             <field>Branch__c</field>
@@ -18,7 +18,7 @@
         <accessLevel>Edit</accessLevel>
         <label>Branch 2</label>
         <sharedTo>
-            <group>Branch_2</group>
+            <group>Lead_B2</group>
         </sharedTo>
         <criteriaItems>
             <field>Branch__c</field>
@@ -31,7 +31,7 @@
         <accessLevel>Edit</accessLevel>
         <label>Branch 3</label>
         <sharedTo>
-            <group>Branch_3</group>
+            <group>Lead_B3</group>
         </sharedTo>
         <criteriaItems>
             <field>Branch__c</field>
