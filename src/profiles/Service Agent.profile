@@ -350,7 +350,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Account.Digital_Identity__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -405,7 +405,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Account.FinServ__AUM__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -535,7 +535,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Account.FinServ__TotalBankDeposits__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -550,7 +550,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Account.FinServ__TotalFinancialAccounts__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -575,7 +575,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Account.FinServ__TotalInsurance__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -590,7 +590,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Account.FinServ__TotalInvestments__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -605,7 +605,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Account.FinServ__TotalLiabilities__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -620,12 +620,12 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Account.FinServ__TotalNonfinancialAssets__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Account.FinServ__WalletShare__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3277,9 +3277,9 @@
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
+        <modifyAllRecords>true</modifyAllRecords>
         <object>Account</object>
-        <viewAllRecords>false</viewAllRecords>
+        <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -3448,15 +3448,6 @@
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>Lead</object>
-        <viewAllRecords>false</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>News__c</object>
         <viewAllRecords>true</viewAllRecords>
@@ -3478,15 +3469,6 @@
         <modifyAllRecords>true</modifyAllRecords>
         <object>NextBestOffer__c</object>
         <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>Opportunity</object>
-        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -3540,7 +3522,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Account.FinServ__IndustriesHousehold</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -3757,10 +3738,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ConvertLeads</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>CreateCustomizeFilters</name>
     </userPermissions>
     <userPermissions>
@@ -3877,10 +3854,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ImportLeads</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ImportPersonal</name>
     </userPermissions>
     <userPermissions>
@@ -3978,10 +3951,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ManageKnowledgeImportExport</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ManageLeads</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -4110,10 +4079,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>TransferAnyEntity</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>TransferAnyLead</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
