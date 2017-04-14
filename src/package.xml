@@ -71,7 +71,6 @@
     </types>
     <types>
         <members>Detail_Component</members>
-        <members>FinancialAccountExporter</members>
         <members>FinancialAccountRoles_Related_List</members>
         <members>Opportunity_Related_List</members>
         <members>RetailList</members>
