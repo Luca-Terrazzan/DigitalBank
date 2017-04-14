@@ -21,8 +21,9 @@ force.json
 .vscode/settings.json
 
 # Ignore speciale per i deploy
-deploy/**/*.*
-!deploy/**/package.xml
+deploy
+#deploy/**/*.*
+#!deploy/**/package.xml non utile per digitalbank
 
 # Ignore CI
 build/deploy/*

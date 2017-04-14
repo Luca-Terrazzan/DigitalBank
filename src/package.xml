@@ -235,7 +235,7 @@
     </types>
     <types>
         <members>Admin</members>
-        <members>Associate</members>
+        <members>Branch Manager</members>
         <members>Standard</members>
         <name>Profile</name>
     </types>
