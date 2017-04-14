@@ -4,6 +4,8 @@
         <members>AccountContactRelations</members>
         <members>AccountService</members>
         <members>AccountsSelector</members>
+        <members>CustomConstants</members>
+        <members>DataGenerator</members>
         <members>DetailComponentController</members>
         <members>FinancialAccountRoles</members>
         <members>FinancialAccountRolesSelector</members>
@@ -69,6 +71,7 @@
     </types>
     <types>
         <members>Detail_Component</members>
+        <members>FinancialAccountExporter</members>
         <members>FinancialAccountRoles_Related_List</members>
         <members>Opportunity_Related_List</members>
         <members>RetailList</members>
