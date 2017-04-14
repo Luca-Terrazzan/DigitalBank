@@ -85,7 +85,6 @@
     <compactLayouts>
         <fullName>FinServ__IndividualCompactLayout</fullName>
         <fields>Name</fields>
-        <fields>RiskFactor__c</fields>
         <fields>Customer_Tier__c</fields>
         <fields>RetailBalance__c</fields>
         <fields>RetailLoan__c</fields>
