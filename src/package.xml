@@ -116,6 +116,7 @@
         <members>NextBestOffer__c</members>
         <members>Opportunity</members>
         <members>PricebookEntry</members>
+        <members>Product2</members>
         <members>Referral__c</members>
         <members>RollUpRoles__mdt</members>
         <members>Social_Activity_and_Influence__c</members>
