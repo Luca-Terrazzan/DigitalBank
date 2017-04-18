@@ -16,6 +16,8 @@
         <members>OpportunitiesSelector</members>
         <members>RelatedListController</members>
         <members>TestUtils</members>
+        <members>TransactionPatternDetector</members>
+        <members>TransactionPatternDetectorSchedule</members>
         <members>TransactionRest</members>
         <members>TransactionsSelector</members>
         <members>fflib_ApexMocks</members>
@@ -63,8 +65,6 @@
         <members>fflib_SecurityUtilsTest</members>
         <members>fflib_StringBuilder</members>
         <members>fflib_StringBuilderTest</members>
-        <members>TransactionPatternDetectorSchedule</members>
-        <members>TransactionPatternDetector</members>
         <name>ApexClass</name>
     </types>
     <types>
