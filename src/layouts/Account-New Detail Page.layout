@@ -375,10 +375,12 @@
         <relatedList>FinServ__AssetsAndLiabilities__c.FinServ__PrimaryOwner__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>FinServ__Type__c</fields>
-        <fields>FinServ__SubType__c</fields>
+        <fields>NAME</fields>
         <fields>FinServ__Amount__c</fields>
+        <fields>Profit__c</fields>
         <fields>FinServ__Date__c</fields>
+        <fields>Opportunity__c</fields>
+        <fields>FinServ__FinancialAccount__c</fields>
         <relatedList>FinServ__Revenue__c.FinServ__Account__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -437,13 +439,6 @@
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>Collateral__c.Account__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>Product2</fields>
-        <fields>Financial_Account__c</fields>
-        <fields>ServiceDate</fields>
-        <fields>Quantity</fields>
-        <relatedList>OpportunityLineItem.Account__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>

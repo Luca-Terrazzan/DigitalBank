@@ -48,6 +48,17 @@
             <componentName>force:relatedListSingleContainer</componentName>
         </componentInstances>
         <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>FinServ__Revenues__r</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <componentInstances>
             <componentName>FinServ:goalDetailList</componentName>
         </componentInstances>
         <componentInstances>
@@ -80,17 +91,6 @@
             <componentInstanceProperties>
                 <name>relatedListApiName</name>
                 <value>Journeys__r</value>
-            </componentInstanceProperties>
-            <componentName>force:relatedListSingleContainer</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>parentFieldApiName</name>
-                <value>Account.Id</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>relatedListApiName</name>
-                <value>Opportunity_Product__r</value>
             </componentInstanceProperties>
             <componentName>force:relatedListSingleContainer</componentName>
         </componentInstances>

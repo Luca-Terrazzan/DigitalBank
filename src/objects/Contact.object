@@ -175,6 +175,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Discovery5__c</fullName>
+        <externalId>false</externalId>
+        <label>Discovery 5</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>DoNotCall</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>

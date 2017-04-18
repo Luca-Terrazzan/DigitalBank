@@ -236,6 +236,31 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>Expected_Margin__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Category__c, &quot;Retail&quot;), 0.2, 
+		IF(ISPICKVAL(Category__c, &quot;Wealth&quot;), 0.3, 0.5))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Expected Margin</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ExternalId__c</fullName>
+        <externalId>true</externalId>
+        <label>ExternalId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>FinServ__FinancialAccount__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
@@ -285,6 +310,15 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Mock__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Mock</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Name</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
@@ -327,10 +361,44 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>ProductId__c</fullName>
+        <externalId>false</externalId>
+        <label>ProductId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Category__c, &quot;Retail&quot;), Sum_of_Total_Prices__c * 0.2,
+		IF(ISPICKVAL(Category__c, &quot;Wealth&quot;), Sum_of_Total_Prices__c * 0.3, Sum_of_Total_Prices__c * 0.5))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Profit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>StageName</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sum_of_Total_Prices__c</fullName>
+        <externalId>false</externalId>
+        <label>Revenue</label>
+        <summarizedField>OpportunityLineItem.TotalPrice</summarizedField>
+        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
     </fields>
     <fields>
         <fullName>TotalOpportunityQuantity</fullName>

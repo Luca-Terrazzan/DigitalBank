@@ -32,6 +32,10 @@
                 <field>LeadSource</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>FinServ__FinancialAccount__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Required</behavior>
                 <field>Category__c</field>
             </layoutItems>
@@ -39,8 +43,24 @@
                 <behavior>Edit</behavior>
                 <field>Branch__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Sum_of_Total_Prices__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Revenue__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Expected_Margin__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ProductId__c</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Amount</field>
@@ -350,6 +370,18 @@
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedOpportunityHistoryList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>FinServ__Revenue__c.Opportunity__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>FinServ__Status__c</fields>
+        <fields>FinServ__FinancialAccountNumber__c</fields>
+        <fields>FinServ__Balance__c</fields>
+        <fields>FinServ__OpenDate__c</fields>
+        <relatedList>FinServ__FinancialAccount__c.Opportunity__c</relatedList>
     </relatedLists>
     <relatedObjects>AccountId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>

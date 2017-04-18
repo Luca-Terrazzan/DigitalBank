@@ -85,7 +85,6 @@
     <compactLayouts>
         <fullName>FinServ__IndividualCompactLayout</fullName>
         <fields>Name</fields>
-        <fields>RiskFactor__c</fields>
         <fields>Customer_Tier__c</fields>
         <fields>RetailBalance__c</fields>
         <fields>RetailLoan__c</fields>
@@ -1299,35 +1298,6 @@
         <scale>0</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Currency</type>
-    </fields>
-    <fields>
-        <fullName>Commercial_Branch__c</fullName>
-        <externalId>false</externalId>
-        <label>Commercial Branch</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Branch 1</fullName>
-                    <default>false</default>
-                    <label>Branch 1</label>
-                </value>
-                <value>
-                    <fullName>Branch 2</fullName>
-                    <default>false</default>
-                    <label>Branch 2</label>
-                </value>
-                <value>
-                    <fullName>Branch 3</fullName>
-                    <default>false</default>
-                    <label>Branch 3</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Credit_Risk__c</fullName>
@@ -2762,35 +2732,6 @@ MIN((RetailBalance__c + WealthBalance__c ) / RetailLoan__c, 100),
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>Retail_Branch__c</fullName>
-        <externalId>false</externalId>
-        <label>Retail Branch</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Branch 1</fullName>
-                    <default>false</default>
-                    <label>Branch 1</label>
-                </value>
-                <value>
-                    <fullName>Branch 2</fullName>
-                    <default>false</default>
-                    <label>Branch 2</label>
-                </value>
-                <value>
-                    <fullName>Branch 3</fullName>
-                    <default>false</default>
-                    <label>Branch 3</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
         <fullName>RiskFactor__c</fullName>
         <externalId>false</externalId>
         <formula>IF( RawRiskFactor__c = -1, 8,
@@ -3000,35 +2941,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
         <scale>0</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Currency</type>
-    </fields>
-    <fields>
-        <fullName>Wealth_Branch__c</fullName>
-        <externalId>false</externalId>
-        <label>Wealth Branch</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Branch 1</fullName>
-                    <default>false</default>
-                    <label>Branch 1</label>
-                </value>
-                <value>
-                    <fullName>Branch 2</fullName>
-                    <default>false</default>
-                    <label>Branch 2</label>
-                </value>
-                <value>
-                    <fullName>Branch 3</fullName>
-                    <default>false</default>
-                    <label>Branch 3</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Website</fullName>
@@ -3292,21 +3204,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Commercial_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>CustomerPriority__c</picklist>
             <values>
                 <fullName>High</fullName>
@@ -3860,21 +3757,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Retail_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>SLA__c</picklist>
             <values>
                 <fullName>Bronze</fullName>
@@ -3955,21 +3837,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
             </values>
             <values>
                 <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Wealth_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -4030,21 +3897,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Commercial_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>CustomerPriority__c</picklist>
             <values>
                 <fullName>High</fullName>
@@ -4598,21 +4450,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Retail_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>SLA__c</picklist>
             <values>
                 <fullName>Bronze</fullName>
@@ -4693,21 +4530,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
             </values>
             <values>
                 <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Wealth_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -4768,21 +4590,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Commercial_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>CustomerPriority__c</picklist>
             <values>
                 <fullName>High</fullName>
@@ -5336,21 +5143,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Retail_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>SLA__c</picklist>
             <values>
                 <fullName>Bronze</fullName>
@@ -5431,21 +5223,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
             </values>
             <values>
                 <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Wealth_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -5505,21 +5282,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Commercial_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>CustomerPriority__c</picklist>
             <values>
                 <fullName>High</fullName>
@@ -6065,21 +5827,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Retail_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>SLA__c</picklist>
             <values>
                 <fullName>Bronze</fullName>
@@ -6163,21 +5910,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
                 <default>false</default>
             </values>
         </picklistValues>
-        <picklistValues>
-            <picklist>Wealth_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>booking__BBAccount</fullName>
@@ -6219,21 +5951,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
         </picklistValues>
         <picklistValues>
             <picklist>Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Commercial_Branch__c</picklist>
             <values>
                 <fullName>Branch 1</fullName>
                 <default>false</default>
@@ -6805,21 +6522,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Retail_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>SLA__c</picklist>
             <values>
                 <fullName>Bronze</fullName>
@@ -6900,21 +6602,6 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
             </values>
             <values>
                 <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Wealth_Branch__c</picklist>
-            <values>
-                <fullName>Branch 1</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 2</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Branch 3</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
