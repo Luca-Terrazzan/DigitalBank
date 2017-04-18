@@ -116,6 +116,7 @@
         <members>NextBestOffer__c</members>
         <members>Opportunity</members>
         <members>OpportunityLineItem</members>
+        <members>Pricebook2</members>
         <members>PricebookEntry</members>
         <members>Product2</members>
         <members>Referral__c</members>
