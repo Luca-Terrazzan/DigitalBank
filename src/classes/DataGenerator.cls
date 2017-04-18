@@ -24,7 +24,7 @@ public with sharing class DataGenerator {
         contacts = new Contact[]{};
         opportunities = new Opportunity[]{};
         salesAssociates = [SELECT Id FROM User WHERE UserRole.Name = 'Sales Associate'];
-        prices = [SELECT Name, Pricebook2Id, UnitPrice, Product2.Name, Category__c FROM PricebookEntry];
+        prices = [SELECT Name, Pricebook2Id, UnitPrice, Product2.Name, Category__c FROM PricebookEntry WHERE IsActive = true];
         olis = new OpportunityLineItem[]{};
 
         individualRT = [SELECT Id FROM RecordType

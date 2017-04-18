@@ -16,6 +16,8 @@
         <members>OpportunitiesSelector</members>
         <members>RelatedListController</members>
         <members>TestUtils</members>
+        <members>TransactionPatternDetector</members>
+        <members>TransactionPatternDetectorSchedule</members>
         <members>TransactionRest</members>
         <members>TransactionsSelector</members>
         <members>fflib_ApexMocks</members>
@@ -208,7 +210,6 @@
         <members>AgencyData__c-Agency Data Layout</members>
         <members>Bank_Info__kav-Bank Info Layout</members>
         <members>Campaign-Campaign Layout</members>
-        <members>Contact-Contact Layout</members>
         <members>Contract-Contract Layout</members>
         <members>Eligibility__c-Eligibility Layout</members>
         <members>FinServ__FinancialAccountRole__c-Unmanaged Account Role Layout</members>

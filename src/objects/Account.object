@@ -2399,6 +2399,14 @@ IF(FinServ__PrimaryContact__r.FinServ__AnnualIncome__c &gt;= 150000,0,8)))))))))
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>IsCommercial__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(CommercialBalance__c &gt; 0, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IsCommercial</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>IsCustomerPortal</fullName>
     </fields>
     <fields>
@@ -2834,6 +2842,18 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Salary__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Salary</label>
+        <referenceTo>FinServ__FinancialAccount__c</referenceTo>
+        <relationshipLabel>Salary Owner</relationshipLabel>
+        <relationshipName>SalaryOwner</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ShippingAddress</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -2980,6 +3000,14 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
         <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>isRetail__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(RetailBalance__c &gt; 0, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>isRetail</label>
+        <type>Checkbox</type>
     </fields>
     <listViews>
         <fullName>AllAccounts</fullName>
