@@ -16,6 +16,8 @@
         <members>OpportunitiesSelector</members>
         <members>RelatedListController</members>
         <members>TestUtils</members>
+        <members>TransactionPatternDetector</members>
+        <members>TransactionPatternDetectorSchedule</members>
         <members>TransactionRest</members>
         <members>TransactionsSelector</members>
         <members>fflib_ApexMocks</members>
@@ -115,6 +117,8 @@
         <members>NextBestAction__c</members>
         <members>NextBestOffer__c</members>
         <members>Opportunity</members>
+        <members>OpportunityLineItem</members>
+        <members>Pricebook2</members>
         <members>PricebookEntry</members>
         <members>Product2</members>
         <members>Referral__c</members>
@@ -236,6 +240,8 @@
     <types>
         <members>Admin</members>
         <members>Branch Manager</members>
+        <members>Relationship Manager</members>
+        <members>Service Agent</members>
         <members>Standard</members>
         <name>Profile</name>
     </types>

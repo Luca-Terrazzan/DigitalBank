@@ -210,6 +210,15 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>mock_createddate__c</fullName>
+        <description>Since createddate field is not writeable, use this mock field to test BI functionalities</description>
+        <externalId>false</externalId>
+        <label>mock_createddate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>transaction_date__c</fullName>
         <externalId>false</externalId>
         <label>Transaction Date</label>

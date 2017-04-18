@@ -74,6 +74,10 @@
                 <behavior>Edit</behavior>
                 <field>RetailLoan__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Salary__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

@@ -2834,6 +2834,18 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Salary__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Salary</label>
+        <referenceTo>FinServ__FinancialAccount__c</referenceTo>
+        <relationshipLabel>Salary Owner</relationshipLabel>
+        <relationshipName>SalaryOwner</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ShippingAddress</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
