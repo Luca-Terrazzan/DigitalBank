@@ -1,11 +1,23 @@
 {
     "request": {
-        "amount" : 123123,
-        "account_number": "lfs1",
-        "bank_reference_number": "asd123",
-        "transaction_id": "asdsd",
-        "transaction_type_desc": "some description",
-        "transaction_type_code": "some code",
-        "transaction_date": "03/11/2016"
+        "amount" : 50000,
+        "account_number": "rbmc_1",
+        "bank_reference_number": "BR0032223",
+        "transaction_id": "10042323",
+        "transaction_type_desc": "Cheque from bank BK3232",
+        "transaction_type_code": "CHQ",
+        "transaction_date": "03/27/2017"
+    }
+}
+
+{
+    "request": {
+        "amount" : -50000,
+        "account_number": "rbmc_comm_1",
+        "bank_reference_number": "BR0032223",
+        "transaction_id": "230002323",
+        "transaction_type_desc": "Cheque from bank BK3232",
+        "transaction_type_code": "CHQ",
+        "transaction_date": "03/27/2017"
     }
 }

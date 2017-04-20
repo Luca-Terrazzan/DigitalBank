@@ -1,7 +1,7 @@
 global class TransactionPatternDetector implements Database.Batchable<SObject> {
     private static final String query = 'SELECT id, name, finserv__primaryowner__c,' +
-        '(SELECT name, mock_createddate__c, created_date__c, amount__c FROM transactions__r WHERE category__c = \'retail\' '+
-        'ORDER BY mock_createddate__c desc) FROM finserv__financialaccount__c WHERE category__c = \'retail\' and isloan__c = false';
+        '(SELECT name, transaction_date__c, created_date__c, amount__c FROM transactions__r WHERE category__c = \'retail\' '+
+        'ORDER BY transaction_date__c desc) FROM finserv__financialaccount__c WHERE category__c = \'retail\' and isloan__c = false';
 
     global TransactionPatternDetector() {
 
@@ -19,7 +19,7 @@ global class TransactionPatternDetector implements Database.Batchable<SObject> {
             Transaction__c[] transactions = scope[i].transactions__r;
             if (transactions.size() < 3) continue;
             for (Integer j = 0; j < transactions.size(); j++) {
-                if (transactions[j].Mock_CreatedDate__c == null || ( transactions[j].Mock_CreatedDate__c.Month() != System.Today().Month() - j) ) {
+                if (transactions[j].transaction_date__c == null || ( transactions[j].transaction_date__c.Month() != System.Today().Month() - j) ) {
                     isSalary = false;
                     i++;
                     break;
