@@ -136,10 +136,12 @@ public with sharing class DataGenerator {
             opp.Name += ' ' + rand.Name + ' Opportunity';
             opportunities.add(opp);
         }
-        System.debug(opportunities);
         return this;
     }
     public DataGenerator closeOpportunities(Decimal chance) {
+        if (opportunities.isEmpty()) {
+            opportunities = [SELECT StageName FROM Opportunity WHERE Mock__c = true LIMIT 50000];
+        }
         for(Opportunity opp: opportunities) {
             if (Math.random() <= chance) opp.StageName = 'Closed Won';
         }
@@ -148,7 +150,7 @@ public with sharing class DataGenerator {
     }
     private Opportunity createOpportunity() {
         PricebookEntry randPrice = (PricebookEntry) randomPickSObject(prices);
-        String randomId = randPrice.Id + String.valueOf(randomizer);
+        String randomId = randPrice.Id + String.valueOf(randomizer) + System.currentTimeMillis();
         randomizer++;
         OpportunityLineItem oli = new OpportunityLineItem(
             UnitPrice = randPrice.UnitPrice,
@@ -178,5 +180,29 @@ public with sharing class DataGenerator {
     private SObject randomPickSObject(SObject[] stringlist) {
         if (stringlist == null || stringlist.isEmpty()) return null;
         return stringlist[(Integer) Math.floor(Math.random()*stringlist.size())];
+    }
+
+    public static void demoTransactions() {
+        delete [SELECT Id FROM Transaction__c WHERE Transaction_Id__c IN ('103242323', '111042323')];
+        Map<String, String> map1 = new Map<String, String>{
+            'amount' => '-50000',
+            'account_number' => 'rbmc_comm_1',
+            'bank_reference_number' => 'BR0032223',
+            'transaction_id' => '103242323',
+            'transaction_type_desc' => 'Cheque from bank BK3232',
+            'transaction_type_code' => 'CHQ',
+            'transaction_date' => '04/20/2017'
+        };
+        Map<String, String> map2 = new Map<String, String>{
+            'amount' => '50000',
+            'account_number' => 'rbmc_1',
+            'bank_reference_number' => 'BR0032223',
+            'transaction_id' => '111042323',
+            'transaction_type_desc' => 'Cheque from bank BK3232',
+            'transaction_type_code' => 'CHQ',
+            'transaction_date' => '04/20/2017'
+        };
+        TransactionRest.create(map1);
+        TransactionRest.create(map2);
     }
 }
