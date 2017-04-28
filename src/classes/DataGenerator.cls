@@ -184,10 +184,10 @@ public with sharing class DataGenerator {
         return opp;
     }
 
-    private String randomPick(String[] stringlist) {
+    public static String randomPick(String[] stringlist) {
         return stringlist[(Integer) Math.floor(Math.random()*stringlist.size())];
     }
-    private SObject randomPickSObject(SObject[] stringlist) {
+    public static SObject randomPickSObject(SObject[] stringlist) {
         if (stringlist == null || stringlist.isEmpty()) return null;
         return stringlist[(Integer) Math.floor(Math.random()*stringlist.size())];
     }
@@ -218,5 +218,14 @@ public with sharing class DataGenerator {
         };
         TransactionRest.create(map1);
         TransactionRest.create(map2);
+    }
+
+    public static void randomizeOpportunitiesOwnerships() {
+        Opportunity[] opps = [SELECT Id FROM Opportunity WHERE Mock__c = true LIMIT 50000];
+        User[] teamMembers = [SELECT Id FROM User WHERE IsActive = true AND UserRole.DeveloperName = 'Opportunity_mail_receiver'];
+        for (Opportunity opp : opps) {
+            opp.OwnerId = randomPickSObject(teamMembers).Id;
+        }
+        update opps;
     }
 }
