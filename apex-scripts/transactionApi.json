@@ -6,7 +6,9 @@
         "transaction_id": "10042323",
         "transaction_type_desc": "Cheque from bank BK3232",
         "transaction_type_code": "CHQ",
-        "transaction_date": "03/27/2017"
+        "transaction_date": "03/27/2017",
+        "channel": "Deposit",
+        "status": "true"
     }
 }
 

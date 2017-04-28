@@ -191,7 +191,9 @@ public with sharing class DataGenerator {
             'transaction_id' => '103242323',
             'transaction_type_desc' => 'Cheque from bank BK3232',
             'transaction_type_code' => 'CHQ',
-            'transaction_date' => '04/20/2017'
+            'transaction_date' => '04/20/2017',
+            'Channel' => 'Withdrawal',
+            'Status' => 'true'
         };
         Map<String, String> map2 = new Map<String, String>{
             'amount' => '50000',
@@ -200,7 +202,9 @@ public with sharing class DataGenerator {
             'transaction_id' => '111042323',
             'transaction_type_desc' => 'Cheque from bank BK3232',
             'transaction_type_code' => 'CHQ',
-            'transaction_date' => '04/20/2017'
+            'transaction_date' => '04/20/2017',
+            'Channel' => 'Deposit',
+            'Status' => 'true'
         };
         TransactionRest.create(map1);
         TransactionRest.create(map2);

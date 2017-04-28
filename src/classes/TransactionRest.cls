@@ -37,14 +37,16 @@ global with sharing class TransactionRest  {
         Transaction__c newTransaction = new Transaction__c(
             Amount__c = Decimal.valueOf(request.get('amount')),
             Transaction_date__c = Date.parse(request.get('transaction_date')),
-            Account_number__r = receiver
+            Account_number__r = receiver,
+            Status__c = Boolean.valueOf(request.get('status'))
         );
         request.remove('amount');
         request.remove('transaction_date');
         request.remove('account_number');
+        request.remove('status');
 
         for (String key : request.keySet()) {
-            newTransaction.put(key + '__c', request.get(key));
+            newTransaction.put(key + '__c', String.valueOf(request.get(key)));
         }
 
         Response resp = new Response();
