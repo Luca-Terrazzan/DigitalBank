@@ -22,7 +22,10 @@
             Transaction__c.transaction_date__c,
             Transaction__c.account_number__c,
             Transaction__c.Account__c,
-            Transaction__c.Category__c
+            Transaction__c.Category__c,
+            Transaction__c.Status_Img__c,
+            Transaction__c.Channel__c,
+            Transaction__c.Description__c
         };
     }
     /**

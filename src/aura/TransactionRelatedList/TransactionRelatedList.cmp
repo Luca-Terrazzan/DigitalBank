@@ -37,8 +37,10 @@
             <tr class="slds-text-title--caps">
                 <th scope="col"><div class="slds-truncate" title="Name">Name</div></th>
                 <th scope="col"><div class="slds-truncate" title="Amount">Amount</div></th>
+                <th scope="col"><div class="slds-truncate" title="Channel">Channel</div></th>
                 <th scope="col"><div class="slds-truncate" title="Financial Account">Financial Account</div></th>
                 <th scope="col"><div class="slds-truncate" title="Transaction Date">Transaction Date</div></th>
+                <th scope="col"><div class="slds-truncate" title="Status Img">Status</div></th>
             </tr>
         </thead>
 <!-- TABLE BODY -->
@@ -47,14 +49,16 @@
                     <tr>
                         <th scope="row" data-label="transaction Name">
                         <!-- slight workaround to avoid the /c/ in lightning page url -->
-                        <ui:outputURL value="{!'../' + tr.Name}" label="{!tr.Name}" class="uiOutputURL"/>
+                        <ui:outputURL value="{!'../' + tr.Id}" label="{!tr.Name}" class="uiOutputURL"/>
                         </th>
                         <td>{!tr.Amount__c}</td>
+                        <td>{!tr.Channel__c}</td>
                         <th scope="row" data-label="Financial Account Name">
                         <!-- slight workaround to avoid the /c/ in lightning page url -->
-                        <ui:outputURL value="{!'../' + tr.account_number__r.Name}" label="{!tr.account_number__r.Name}" class="uiOutputURL"/>
+                        <ui:outputURL value="{!'../' + tr.account_number__r.Id}" label="{!tr.account_number__r.Name}" class="uiOutputURL"/>
                         </th>
                         <td>{!tr.transaction_date__c}</td>
+                        <td  style="width: 15px ; height: 15px"><ui:outputRichText value="{!tr.Status_img__c}"/></td>
                     </tr>
                 </aura:iteration>
         </tbody>
