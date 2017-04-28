@@ -14,6 +14,8 @@ public with sharing class DataGenerator {
     private Id individualRT;
     private User[] salesAssociates;
 
+    private User[] teamMembers;
+
     /**
      * Singleton
      */
@@ -26,6 +28,7 @@ public with sharing class DataGenerator {
         salesAssociates = [SELECT Id FROM User WHERE UserRole.Name = 'Sales Associate'];
         prices = [SELECT Name, Pricebook2Id, UnitPrice, Product2.Name, Category__c FROM PricebookEntry WHERE IsActive = true];
         olis = new OpportunityLineItem[]{};
+        teamMembers = [SELECT Id FROM User WHERE IsActive = true AND UserRole.DeveloperName = 'Opportunity_mail_receiver'];
 
         individualRT = [SELECT Id FROM RecordType
             WHERE SObjectType = 'Account' AND DeveloperName = 'IndustriesIndividual'].Id;
@@ -40,6 +43,10 @@ public with sharing class DataGenerator {
         insert this.finAccounts;
         insert this.opportunities;
         insert this.olis;
+        this.individuals.clear();
+        this.finAccounts.clear();
+        this.opportunities.clear();
+        this.olis.clear();
         return this;
     }
 
@@ -53,6 +60,7 @@ public with sharing class DataGenerator {
         String firstname = randomPick(CustomConstants.names);
         String lastname = randomPick(CustomConstants.last_names);
         return new Account(
+            OwnerId = randomPickSObject(teamMembers).Id,
             Mock__c = true,
             RecordTypeId = individualRT,
             Name = firstname + ' ' + lastname,
@@ -110,6 +118,7 @@ public with sharing class DataGenerator {
         String faType = category == 'Retail' ? randomPick(CustomConstants.retail_type) :
             category == 'Wealth' ? randomPick(CustomConstants.wealth_type) : randomPick(CustomConstants.commercial_type);
         return new FinServ__FinancialAccount__c(
+            OwnerId = randomPickSObject(teamMembers).Id,
             Name = ownerName + ' ' + faType,
             Mock__c = true,
             FinServ__PrimaryOwner__r =  owner,
@@ -153,12 +162,13 @@ public with sharing class DataGenerator {
         String randomId = randPrice.Id + String.valueOf(randomizer) + System.currentTimeMillis();
         randomizer++;
         OpportunityLineItem oli = new OpportunityLineItem(
+            Mock__c = true,
             UnitPrice = randPrice.UnitPrice,
             Quantity = 1,
-
             PricebookEntryId = randPrice.Id
         );
         Opportunity opp = new Opportunity(
+            OwnerId = randomPickSObject(teamMembers).Id,
             Mock__c = true,
             Name = randPrice.Name,
             ExternalId__c = randomId,
