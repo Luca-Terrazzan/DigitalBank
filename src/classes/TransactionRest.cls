@@ -36,7 +36,7 @@ global with sharing class TransactionRest  {
         );
         Transaction__c newTransaction = new Transaction__c(
             Amount__c = Decimal.valueOf(request.get('amount')),
-            Transaction_date__c = Date.parse(request.get('transaction_date')),
+            Transaction_date__c = System.today(),
             Account_number__r = receiver,
             Status__c = Boolean.valueOf(request.get('status'))
         );
