@@ -83,11 +83,39 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision8</targetReference>
+            <targetReference>myDecision5</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_4</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_4</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_4_A1</targetReference>
+            </connector>
+            <label>Populate Account Field</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>2.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision5</name>
+        <label>myDecision5</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_6</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -121,37 +149,9 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_4_A1</targetReference>
+                <targetReference>myRule_6_A1</targetReference>
             </connector>
             <label>Create Alert</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>2.0</numberValue>
-            </value>
-        </processMetadataValues>
-        <name>myDecision8</name>
-        <label>myDecision8</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_9</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>formula_myRule_9</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_9_A1</targetReference>
-            </connector>
-            <label>Populate Account Field</label>
         </rules>
     </decisions>
     <description>Whenever a valid transaction is created, update its related financial accounts balances</description>
@@ -171,12 +171,12 @@
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>[Transaction__c].CreatedDate + 10</stringValue>
+                <stringValue>TODAY() + 10</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_5_myRule_4_A2_CloseDate</name>
+        <name>formula_7_myRule_6_A2_CloseDate</name>
         <dataType>Date</dataType>
-        <expression>{!myVariable_current.CreatedDate} + 10</expression>
+        <expression>TODAY() + 10</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
@@ -185,7 +185,7 @@
                 <stringValue>&quot;$ &quot; + TEXT([Transaction__c].Amount__c) + &quot; Transaction Opportunity&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_6_myRule_4_A2_Name</name>
+        <name>formula_8_myRule_6_A2_Name</name>
         <dataType>String</dataType>
         <expression>&quot;$ &quot; + TEXT({!myVariable_current.Amount__c}) + &quot; Transaction Opportunity&quot;</expression>
     </formulas>
@@ -196,16 +196,16 @@
                 <stringValue>TEXT([Transaction__c].Amount__c ) &amp; &quot;$ just have been moved to &quot; &amp; [Transaction__c].account_number__c.Name &amp; &quot;.&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_7_myRule_4_A1_FinServ_MessageDescription_c</name>
+        <name>formula_9_myRule_6_A1_FinServ_MessageDescription_c</name>
         <dataType>String</dataType>
         <expression>TEXT({!myVariable_current.Amount__c} ) &amp; &quot;$ just have been moved to &quot; &amp; {!myVariable_current.account_number__c.Name} &amp; &quot;.&quot;</expression>
     </formulas>
     <formulas>
-        <name>formula_myRule_9</name>
+        <name>formula_myRule_4</name>
         <dataType>Boolean</dataType>
         <expression>true</expression>
     </formulas>
-    <interviewLabel>UpdateTransactionAmount-5_InterviewLabel</interviewLabel>
+    <interviewLabel>UpdateTransactionAmount-7_InterviewLabel</interviewLabel>
     <label>UpdateTransactionAmount</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -233,12 +233,12 @@
     </processMetadataValues>
     <processType>Workflow</processType>
     <recordCreates>
-        <name>myRule_4_A1</name>
+        <name>myRule_6_A1</name>
         <label>Create Alert</label>
-        <locationX>400</locationX>
+        <locationX>600</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myRule_4_A2</targetReference>
+            <targetReference>myRule_6_A2</targetReference>
         </connector>
         <inputAssignments>
             <processMetadataValues>
@@ -327,7 +327,7 @@
             </processMetadataValues>
             <field>FinServ__MessageDescription__c</field>
             <value>
-                <elementReference>formula_7_myRule_4_A1_FinServ_MessageDescription_c</elementReference>
+                <elementReference>formula_9_myRule_6_A1_FinServ_MessageDescription_c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -393,13 +393,10 @@
         <object>FinServ__Alert__c</object>
     </recordCreates>
     <recordCreates>
-        <name>myRule_4_A2</name>
+        <name>myRule_6_A2</name>
         <label>Create Opportunity</label>
-        <locationX>400</locationX>
+        <locationX>600</locationX>
         <locationY>300</locationY>
-        <connector>
-            <targetReference>myDecision8</targetReference>
-        </connector>
         <inputAssignments>
             <processMetadataValues>
                 <name>dataType</name>
@@ -517,7 +514,7 @@
             </processMetadataValues>
             <field>CloseDate</field>
             <value>
-                <elementReference>formula_5_myRule_4_A2_CloseDate</elementReference>
+                <elementReference>formula_7_myRule_6_A2_CloseDate</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -577,7 +574,7 @@
             </processMetadataValues>
             <field>Name</field>
             <value>
-                <elementReference>formula_6_myRule_4_A2_Name</elementReference>
+                <elementReference>formula_8_myRule_6_A2_Name</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -732,10 +729,13 @@
                 <stringValue>[Transaction__c]</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_9_A1</name>
+        <name>myRule_4_A1</name>
         <label>Populate Account Field</label>
-        <locationX>900</locationX>
+        <locationX>400</locationX>
         <locationY>200</locationY>
+        <connector>
+            <targetReference>myDecision5</targetReference>
+        </connector>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>

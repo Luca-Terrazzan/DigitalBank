@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Mobile_Welcome</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_6_A1</name>
+        <label>Send welcome email</label>
+        <locationX>600</locationX>
+        <locationY>200</locationY>
+        <actionName>Opportunity.Mobile_Welcome</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
     <assignments>
         <name>myVariable_waitStartTimeAssignment</name>
         <label>myVariable_waitStartTimeAssignment</label>
@@ -28,47 +48,23 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision3</targetReference>
+            <targetReference>myDecision5</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_1</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Number</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Number</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>Number</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Number</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.Amount__c</leftValueReference>
-                <operator>GreaterThan</operator>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
-                    <numberValue>0.0</numberValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>myRule_1_A1</targetReference>
             </connector>
-            <label>Valid Transaction</label>
+            <label>If has been closed won</label>
         </rules>
     </decisions>
     <decisions>
@@ -78,139 +74,90 @@
                 <numberValue>1.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision3</name>
-        <label>myDecision3</label>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>myDecision8</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>default</defaultConnectorLabel>
-        <rules>
-            <name>myRule_4</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <processMetadataValues>
-                    <name>inputDataType</name>
-                    <value>
-                        <stringValue>Number</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>leftHandSideType</name>
-                    <value>
-                        <stringValue>Number</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>operatorDataType</name>
-                    <value>
-                        <stringValue>Number</stringValue>
-                    </value>
-                </processMetadataValues>
-                <processMetadataValues>
-                    <name>rightHandSideType</name>
-                    <value>
-                        <stringValue>Number</stringValue>
-                    </value>
-                </processMetadataValues>
-                <leftValueReference>myVariable_current.Amount__c</leftValueReference>
-                <operator>GreaterThanOrEqualTo</operator>
-                <rightValue>
-                    <numberValue>25000.0</numberValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>myRule_4_A1</targetReference>
-            </connector>
-            <label>Create Alert</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <processMetadataValues>
-            <name>index</name>
-            <value>
-                <numberValue>2.0</numberValue>
-            </value>
-        </processMetadataValues>
-        <name>myDecision8</name>
-        <label>myDecision8</label>
+        <name>myDecision5</name>
+        <label>myDecision5</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>myRule_9</name>
+            <name>myRule_6</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>formula_myRule_9</leftValueReference>
+                <leftValueReference>formula_myRule_6</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_9_A1</targetReference>
+                <targetReference>myRule_6_A1</targetReference>
             </connector>
-            <label>Populate Account Field</label>
+            <label>Closed from mobile</label>
         </rules>
     </decisions>
-    <description>Whenever a valid transaction is created, update its related financial accounts balances</description>
+    <description>Creates a financial account + role whenever an opportunity goes to state closed-won</description>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>[Transaction__c].account_number__c.FinServ__Balance__c + [Transaction__c].Amount__c </stringValue>
+                <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_FinServ_Balance_c</name>
+        <name>formula_2_myRule_1_A2_FinServ_Date_c</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Opportunity].Sum_of_Total_Prices__c * [Opportunity].Expected_Margin__c </stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_3_myRule_1_A2_Profit_c</name>
         <dataType>Currency</dataType>
-        <expression>{!myVariable_current.account_number__c.FinServ__Balance__c} + {!myVariable_current.Amount__c}</expression>
+        <expression>{!myVariable_current.Sum_of_Total_Prices__c} * {!myVariable_current.Expected_Margin__c}</expression>
         <scale>18</scale>
     </formulas>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>[Transaction__c].CreatedDate + 10</stringValue>
+                <stringValue>[Opportunity].ProductId__c </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_5_myRule_4_A2_CloseDate</name>
-        <dataType>Date</dataType>
-        <expression>{!myVariable_current.CreatedDate} + 10</expression>
+        <name>formula_4_myRule_1_A1_Product_c</name>
+        <dataType>String</dataType>
+        <expression>{!myVariable_current.ProductId__c}</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>&quot;$ &quot; + TEXT([Transaction__c].Amount__c) + &quot; Transaction Opportunity&quot;</stringValue>
+                <stringValue>ISCHANGED([Opportunity].StageName ) &amp;&amp; ISPICKVAL([Opportunity].StageName, &quot;Closed Won&quot;) &amp;&amp; !ISBLANK([Opportunity].AccountId) </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_6_myRule_4_A2_Name</name>
-        <dataType>String</dataType>
-        <expression>&quot;$ &quot; + TEXT({!myVariable_current.Amount__c}) + &quot; Transaction Opportunity&quot;</expression>
-    </formulas>
-    <formulas>
-        <processMetadataValues>
-            <name>originalFormula</name>
-            <value>
-                <stringValue>TEXT([Transaction__c].Amount__c ) &amp; &quot;$ just have been moved to &quot; &amp; [Transaction__c].account_number__c.Name &amp; &quot;.&quot;</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>formula_7_myRule_4_A1_FinServ_MessageDescription_c</name>
-        <dataType>String</dataType>
-        <expression>TEXT({!myVariable_current.Amount__c} ) &amp; &quot;$ just have been moved to &quot; &amp; {!myVariable_current.account_number__c.Name} &amp; &quot;.&quot;</expression>
-    </formulas>
-    <formulas>
-        <name>formula_myRule_9</name>
+        <name>formula_myRule_1</name>
         <dataType>Boolean</dataType>
-        <expression>true</expression>
+        <expression>ISCHANGED({!myVariable_current.StageName} ) &amp;&amp; ISPICKVAL({!myVariable_current.StageName}, &quot;Closed Won&quot;) &amp;&amp; !ISBLANK({!myVariable_current.AccountId})</expression>
     </formulas>
-    <interviewLabel>UpdateTransactionAmount-5_InterviewLabel</interviewLabel>
-    <label>UpdateTransactionAmount</label>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>$User.MobileIntegrationUser__c == true</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_6</name>
+        <dataType>Boolean</dataType>
+        <expression>$User.MobileIntegrationUser__c == true</expression>
+    </formulas>
+    <interviewLabel>Create_Financial_Account_on_Opportunity_win-20_InterviewLabel</interviewLabel>
+    <label>Create Financial Account on Opportunity win</label>
     <processMetadataValues>
         <name>ObjectType</name>
         <value>
-            <stringValue>Transaction__c</stringValue>
+            <stringValue>Opportunity</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -228,208 +175,18 @@
     <processMetadataValues>
         <name>TriggerType</name>
         <value>
-            <stringValue>onCreateOnly</stringValue>
+            <stringValue>onAllChanges</stringValue>
         </value>
     </processMetadataValues>
     <processType>Workflow</processType>
     <recordCreates>
-        <name>myRule_4_A1</name>
-        <label>Create Alert</label>
-        <locationX>400</locationX>
+        <name>myRule_1_A1</name>
+        <label>Create Financial Account</label>
+        <locationX>100</locationX>
         <locationY>200</locationY>
         <connector>
-            <targetReference>myRule_4_A2</targetReference>
+            <targetReference>myRule_1_A2</targetReference>
         </connector>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Account</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Reference</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>FinServ__Account__c</field>
-            <value>
-                <elementReference>myVariable_current.account_number__r.FinServ__PrimaryOwner__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Financial Account</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Reference</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>FinServ__FinancialAccount__c</field>
-            <value>
-                <elementReference>myVariable_current.account_number__r.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Message Description</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Formula</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>FinServ__MessageDescription__c</field>
-            <value>
-                <elementReference>formula_7_myRule_4_A1_FinServ_MessageDescription_c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Message</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>FinServ__Message__c</field>
-            <value>
-                <stringValue>New Important Transaction!</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>Picklist</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Severity</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Picklist</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>FinServ__Severity__c</field>
-            <value>
-                <stringValue>Info</stringValue>
-            </value>
-        </inputAssignments>
-        <object>FinServ__Alert__c</object>
-    </recordCreates>
-    <recordCreates>
-        <name>myRule_4_A2</name>
-        <label>Create Opportunity</label>
-        <locationX>400</locationX>
-        <locationY>300</locationY>
-        <connector>
-            <targetReference>myDecision8</targetReference>
-        </connector>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Account ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Reference</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>AccountId</field>
-            <value>
-                <elementReference>myVariable_current.Account__r.Id</elementReference>
-            </value>
-        </inputAssignments>
         <inputAssignments>
             <processMetadataValues>
                 <name>dataType</name>
@@ -457,7 +214,7 @@
             </processMetadataValues>
             <field>Branch__c</field>
             <value>
-                <elementReference>myVariable_current.Account__r.Branch__c</elementReference>
+                <elementReference>myVariable_current.Branch__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -487,14 +244,44 @@
             </processMetadataValues>
             <field>Category__c</field>
             <value>
-                <elementReference>myVariable_current.account_number__r.Category__c</elementReference>
+                <elementReference>myVariable_current.Category__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <processMetadataValues>
                 <name>dataType</name>
                 <value>
-                    <stringValue>Date</stringValue>
+                    <stringValue>Currency</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Balance</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Currency</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>FinServ__Balance__c</field>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -506,18 +293,78 @@
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>Close Date</stringValue>
+                    <stringValue>Primary Owner</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
                 <name>rightHandSideType</name>
                 <value>
-                    <stringValue>Formula</stringValue>
+                    <stringValue>Reference</stringValue>
                 </value>
             </processMetadataValues>
-            <field>CloseDate</field>
+            <field>FinServ__PrimaryOwner__c</field>
             <value>
-                <elementReference>formula_5_myRule_4_A2_CloseDate</elementReference>
+                <elementReference>myVariable_current.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Mock</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Mock__c</field>
+            <value>
+                <elementReference>myVariable_current.Mock__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Financial Account Name</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Name</field>
+            <value>
+                <elementReference>myVariable_current.Name</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -536,7 +383,7 @@
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>Financial Account</stringValue>
+                    <stringValue>Opportunity</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -545,16 +392,116 @@
                     <stringValue>Reference</stringValue>
                 </value>
             </processMetadataValues>
-            <field>FinServ__FinancialAccount__c</field>
+            <field>Opportunity__c</field>
             <value>
-                <elementReference>myVariable_current.account_number__r.Id</elementReference>
+                <elementReference>myVariable_current.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <processMetadataValues>
                 <name>dataType</name>
                 <value>
-                    <stringValue>String</stringValue>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Product</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Product__c</field>
+            <value>
+                <elementReference>formula_4_myRule_1_A1_Product_c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>FinServ__FinancialAccount__c</object>
+    </recordCreates>
+    <recordCreates>
+        <name>myRule_1_A2</name>
+        <label>Create Revenue</label>
+        <locationX>100</locationX>
+        <locationY>300</locationY>
+        <connector>
+            <targetReference>myDecision5</targetReference>
+        </connector>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Branch</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Branch__c</field>
+            <value>
+                <elementReference>myVariable_current.Branch__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Account</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>FinServ__Account__c</field>
+            <value>
+                <elementReference>myVariable_current.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Currency</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -566,7 +513,37 @@
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>Name</stringValue>
+                    <stringValue>Amount</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>FinServ__Amount__c</field>
+            <value>
+                <elementReference>myVariable_current.Sum_of_Total_Prices__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Date</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -575,9 +552,39 @@
                     <stringValue>Formula</stringValue>
                 </value>
             </processMetadataValues>
-            <field>Name</field>
+            <field>FinServ__Date__c</field>
             <value>
-                <elementReference>formula_6_myRule_4_A2_Name</elementReference>
+                <elementReference>formula_2_myRule_1_A2_FinServ_Date_c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Opportunity</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Opportunity__c</field>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -607,80 +614,9 @@
             </processMetadataValues>
             <field>OwnerId</field>
             <value>
-                <elementReference>myVariable_current.Account__r.OwnerId</elementReference>
+                <elementReference>myVariable_current.OwnerId</elementReference>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>Picklist</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Stage</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Picklist</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>StageName</field>
-            <value>
-                <stringValue>Prospecting</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Opportunity</object>
-    </recordCreates>
-    <recordUpdates>
-        <processMetadataValues>
-            <name>evaluationType</name>
-            <value>
-                <stringValue>always</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>isChildRelationship</name>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>reference</name>
-            <value>
-                <stringValue>[Transaction__c].Financial Account</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_1_A1</name>
-        <label>Update receiver</label>
-        <locationX>100</locationX>
-        <locationY>200</locationY>
-        <connector>
-            <targetReference>myDecision3</targetReference>
-        </connector>
-        <filters>
-            <processMetadataValues>
-                <name>implicit</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>myVariable_current.account_number__c</elementReference>
-            </value>
-        </filters>
         <inputAssignments>
             <processMetadataValues>
                 <name>dataType</name>
@@ -697,7 +633,7 @@
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>Balance</stringValue>
+                    <stringValue>Profit</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -706,81 +642,13 @@
                     <stringValue>Formula</stringValue>
                 </value>
             </processMetadataValues>
-            <field>FinServ__Balance__c</field>
+            <field>Profit__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_FinServ_Balance_c</elementReference>
+                <elementReference>formula_3_myRule_1_A2_Profit_c</elementReference>
             </value>
         </inputAssignments>
-        <object>FinServ__FinancialAccount__c</object>
-    </recordUpdates>
-    <recordUpdates>
-        <processMetadataValues>
-            <name>evaluationType</name>
-            <value>
-                <stringValue>always</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>isChildRelationship</name>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>reference</name>
-            <value>
-                <stringValue>[Transaction__c]</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_9_A1</name>
-        <label>Populate Account Field</label>
-        <locationX>900</locationX>
-        <locationY>200</locationY>
-        <filters>
-            <processMetadataValues>
-                <name>implicit</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>myVariable_current.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>ID</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Account</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Reference</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>Account__c</field>
-            <value>
-                <elementReference>myVariable_current.account_number__r.FinServ__PrimaryOwner__c</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Transaction__c</object>
-    </recordUpdates>
+        <object>FinServ__Revenue__c</object>
+    </recordCreates>
     <startElementReference>myVariable_waitStartTimeAssignment</startElementReference>
     <variables>
         <name>myVariable_current</name>
@@ -788,7 +656,7 @@
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>true</isOutput>
-        <objectType>Transaction__c</objectType>
+        <objectType>Opportunity</objectType>
     </variables>
     <variables>
         <name>myVariable_old</name>
@@ -796,7 +664,7 @@
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>false</isOutput>
-        <objectType>Transaction__c</objectType>
+        <objectType>Opportunity</objectType>
     </variables>
     <variables>
         <name>myVariable_waitStartTimeVariable</name>
