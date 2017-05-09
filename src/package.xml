@@ -13,6 +13,7 @@
         <members>FinancialAccountsSelector</members>
         <members>FinancialAccountsSelectorTest</members>
         <members>FinancialAccountsTest</members>
+        <members>MarketingCloudHandler</members>
         <members>OpportunitiesSelector</members>
         <members>RelatedListController</members>
         <members>TestUtils</members>
