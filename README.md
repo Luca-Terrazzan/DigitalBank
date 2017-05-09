@@ -10,6 +10,14 @@ Official repository documentation for the Digital Bank Global Initiative.
 
 ## Change Log
 
+##### V3.0.0 - Back to the future
+###### 09/05/2017
+* Switched repository to TEST environment ORG
+* New metadata clean + fetch
+* Several weeks worth of developments, including (in no particular order):
+    * todo1
+    * todo2
+
 ##### V2.1.4_r2 - Gender Issues
 ###### 13/04/2017
 * Renamed Gender__c custom field to avoid conflicts with FSC (really?)
