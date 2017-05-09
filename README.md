@@ -15,8 +15,11 @@ Official repository documentation for the Digital Bank Global Initiative.
 * Switched repository to TEST environment ORG
 * New metadata clean + fetch
 * Several weeks worth of developments, including (in no particular order):
-    * todo1
-    * todo2
+    * [FEATURE] Social Studio custom interaction, you can now create opportunities directly through social studio, progressing through an email process
+    * [FEATURE] Push Notification management, ability to send push notification to the mobile app based on a contact's device
+    * [ENHANCEMENT] New dashboards and homepage with many different new reports
+    * [ENHANCEMENT] New communities along with new article and knowledge management
+    * [ENHANCEMENT] Updated data generation to allow for Revenues and data ownership randomization
 
 ##### V2.1.4_r2 - Gender Issues
 ###### 13/04/2017
