@@ -20,6 +20,29 @@
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <rules>
+        <fullName>BackupTriggeredSendWorkflow</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>et4ae5__Automated_Send__c.et4ae5__BackupWorkflow__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>et4ae5__Automated_Send__c.et4ae5__Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>et4ae5__UnpopulateTSBackupWokflow</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>et4ae5__Automated_Send__c.et4ae5__BackupWorkflow__c</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
         <fullName>et4ae5__PopulateTrigSendBackupWorkflow</fullName>
         <actions>
             <name>et4ae5__PopulateTSBackupWorkflow</name>

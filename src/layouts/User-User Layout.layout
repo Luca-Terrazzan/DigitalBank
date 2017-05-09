@@ -8,6 +8,34 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Primary_Branch__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>booking__Branch__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>booking__BookingBug_Mapped_Staff_Id__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>dsfs__DSProSFMembershipStatus__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>dsfs__DSProSFUsername__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>dsfs__DSProSFPassword__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>et4ae5__ExactTargetUsername__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>et4ae5__ExactTargetForAppExchangeAdmin__c</field>
             </layoutItems>
             <layoutItems>
@@ -16,11 +44,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>et4ae5__ExactTargetUsername__c</field>
+                <field>et4ae5__ValidExactTargetAdmin__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Primary_Branch__c</field>
+                <field>et4ae5__ValidExactTargetUser__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>et4ae5__Default_ET_Page__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns/>
@@ -51,7 +83,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h46000000HfJn</masterLabel>
+        <masterLabel>00h46000000HfQV</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

@@ -188,6 +188,14 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Mock__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Mock</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Opportunity__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
@@ -212,6 +220,11 @@
     <label>Revenue</label>
     <listViews>
         <fullName>FinServ__All</fullName>
+        <columns>NAME</columns>
+        <columns>Branch__c</columns>
+        <columns>FinServ__FinancialAccount__c</columns>
+        <columns>FinServ__Account__c</columns>
+        <columns>FinServ__Amount__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

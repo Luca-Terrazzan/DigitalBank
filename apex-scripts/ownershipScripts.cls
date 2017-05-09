@@ -12,7 +12,6 @@ for(Lead opp: [SELECT Id, OwnerId FROM Lead WHERE isConverted = false]) {
 
 for(Case opp: [SELECT Id, OwnerId FROM Case WHERE ContactId != null]) {
     opp.OwnerId = '00546000000aFjq';
-    opp.Branch__c = 'Branch 1';
     objs.add(opp);
 }
 

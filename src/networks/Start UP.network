@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <branding>
+        <primaryColor>#1797C0</primaryColor>
+        <primaryComplementColor>#FFFFFF</primaryComplementColor>
+        <quaternaryColor>#B1BAC1</quaternaryColor>
+        <quaternaryComplementColor>#222222</quaternaryComplementColor>
+        <secondaryColor>#51606E</secondaryColor>
+        <tertiaryColor>#DDE4E9</tertiaryColor>
+        <tertiaryComplementColor>#222222</tertiaryComplementColor>
+        <zeronaryColor>#51606E</zeronaryColor>
+        <zeronaryComplementColor>#FFFFFF</zeronaryComplementColor>
+    </branding>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <emailSenderAddress>dorsignola@deloitte.it</emailSenderAddress>
+    <emailSenderName>Start UP</emailSenderName>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <navigationLinkSet>
+        <navigationMenuItem>
+            <label>Topics</label>
+            <position>1</position>
+            <publiclyAvailable>true</publiclyAvailable>
+            <target>ShowMoreTopics</target>
+            <type>NavigationalTopic</type>
+        </navigationMenuItem>
+        <navigationMenuItem>
+            <label>Article</label>
+            <position>2</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>ShowMoreTopics</target>
+            <type>NavigationalTopic</type>
+        </navigationMenuItem>
+    </navigationLinkSet>
+    <networkMemberGroups>
+        <profile>Admin</profile>
+        <profile>customer community plus start up</profile>
+    </networkMemberGroups>
+    <picassoSite>Start_UP1</picassoSite>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Start_UP</site>
+    <status>Live</status>
+    <tabs>
+        <defaultTab>home</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>StartUP</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/welcomecommunityvAM</welcomeTemplate>
+</Network>

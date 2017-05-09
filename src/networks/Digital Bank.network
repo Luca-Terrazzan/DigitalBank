@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <branding>
+        <primaryColor>#1797C0</primaryColor>
+        <primaryComplementColor>#FFFFFF</primaryComplementColor>
+        <quaternaryColor>#B1BAC1</quaternaryColor>
+        <quaternaryComplementColor>#222222</quaternaryComplementColor>
+        <secondaryColor>#51606E</secondaryColor>
+        <tertiaryColor>#DDE4E9</tertiaryColor>
+        <tertiaryComplementColor>#222222</tertiaryComplementColor>
+        <zeronaryColor>#51606E</zeronaryColor>
+        <zeronaryComplementColor>#FFFFFF</zeronaryComplementColor>
+    </branding>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <emailSenderAddress>mrezzaghi@deloitte.it</emailSenderAddress>
+    <emailSenderName>Digital Bank</emailSenderName>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <navigationLinkSet>
+        <navigationMenuItem>
+            <label>Topics</label>
+            <position>1</position>
+            <publiclyAvailable>true</publiclyAvailable>
+            <target>ShowMoreTopics</target>
+            <type>NavigationalTopic</type>
+        </navigationMenuItem>
+        <navigationMenuItem>
+            <label>Articles</label>
+            <position>2</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>ShowMoreTopics</target>
+            <type>NavigationalTopic</type>
+        </navigationMenuItem>
+    </navigationLinkSet>
+    <networkMemberGroups>
+        <profile>Admin</profile>
+        <profile>customer community plus user</profile>
+        <profile>partner</profile>
+        <profile>platformportal</profile>
+        <profile>highvolumeportal</profile>
+        <profile>force.com - free user</profile>
+        <profile>chatter free user</profile>
+        <profile>chatter moderator user</profile>
+        <profile>company communities user</profile>
+        <profile>customer community user</profile>
+        <profile>customer community login user</profile>
+        <profile>partner community login user</profile>
+        <profile>partner community user</profile>
+        <profile>chatter only user</profile>
+        <profile>cross org data proxy user</profile>
+        <profile>work.com only user</profile>
+        <profile>customer portal manager custom</profile>
+        <profile>silver partner user</profile>
+        <profile>high volume customer portal user</profile>
+        <profile>gold partner user</profile>
+        <profile>authenticated website</profile>
+        <profile>customer portal manager standard</profile>
+        <profile>overage customer portal manager standard</profile>
+        <profile>overage high volume customer portal user</profile>
+        <profile>overage customer portal manager custom</profile>
+        <profile>analytics cloud security user</profile>
+        <profile>analytics cloud integration user</profile>
+        <profile>solutionmanager</profile>
+        <profile>readonly</profile>
+        <profile>custom: sales profile</profile>
+        <profile>custom: marketing profile</profile>
+        <profile>custom: support profile</profile>
+        <profile>marketingprofile</profile>
+        <profile>contractmanager</profile>
+        <profile>Standard</profile>
+        <profile>standardaul</profile>
+        <profile>servicecloud</profile>
+        <profile>customermanager</profile>
+        <profile>customer community plus login user</profile>
+        <profile>advisor</profile>
+        <profile>customer community user plus</profile>
+        <profile>community digital bank</profile>
+    </networkMemberGroups>
+    <picassoSite>Digital_Bank1</picassoSite>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Digital_Bank</site>
+    <status>Live</status>
+    <tabs>
+        <defaultTab>home</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>DigitalBank</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/welcomecommunityvAM</welcomeTemplate>
+</Network>

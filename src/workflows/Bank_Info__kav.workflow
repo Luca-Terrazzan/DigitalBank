@@ -5,11 +5,11 @@
         <description>send mail</description>
         <protected>false</protected>
         <recipients>
-            <recipient>CEO</recipient>
-            <type>roleSubordinates</type>
+            <recipient>Start_Up</recipient>
+            <type>group</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>unfiled$public/New_article</template>
+        <template>unfiled$public/Article_Economic_Forecast</template>
     </alerts>
     <rules>
         <fullName>AutoMail to customer community</fullName>

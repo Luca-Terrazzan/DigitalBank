@@ -45,6 +45,7 @@
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
@@ -63,6 +64,35 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Retail</fullName>
+                    <default>false</default>
+                    <label>Retail</label>
+                </value>
+                <value>
+                    <fullName>Wealth</fullName>
+                    <default>false</default>
+                    <label>Wealth</label>
+                </value>
+                <value>
+                    <fullName>Commercial</fullName>
+                    <default>false</default>
+                    <label>Commercial</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Contact__c</fullName>
@@ -241,12 +271,357 @@
         <unique>false</unique>
     </fields>
     <label>Referral</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Referral Name</label>
         <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
     <pluralLabel>Referrals</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Closed_Retail</fullName>
+        <active>true</active>
+        <description>This record type will be used for closed retail referrals</description>
+        <label>Closed Retail</label>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wealth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LOB_Receiving__c</picklist>
+            <values>
+                <fullName>Asset Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LOB_Referring__c</picklist>
+            <values>
+                <fullName>Asset Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_Lost__c</picklist>
+            <values>
+                <fullName>Can%27t Meet Need</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost to Competition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Referral_Status__c</picklist>
+            <values>
+                <fullName>Create Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>No Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Receiving</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Commercial</fullName>
+        <active>true</active>
+        <description>Create Commercial Referrals for Business Accounts</description>
+        <label>Commercial</label>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wealth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LOB_Receiving__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Merchant Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treasury</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LOB_Referring__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Merchant Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Treasury</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_Lost__c</picklist>
+            <values>
+                <fullName>Can%27t Meet Need</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost to Competition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Referral_Status__c</picklist>
+            <values>
+                <fullName>Create Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>No Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Receiving</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Retail</fullName>
+        <active>true</active>
+        <description>Retail referrals should be used for person accounts</description>
+        <label>Retail</label>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wealth</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LOB_Receiving__c</picklist>
+            <values>
+                <fullName>Asset Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LOB_Referring__c</picklist>
+            <values>
+                <fullName>Asset Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wealth Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_Lost__c</picklist>
+            <values>
+                <fullName>Can%27t Meet Need</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost to Competition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Referral_Status__c</picklist>
+            <values>
+                <fullName>Create Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>No Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Receiving</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>

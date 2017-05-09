@@ -1,0 +1,5 @@
+*** NEW REFERRAL ASSIGNMENT NOTIFICATION *** 
+
+The following referral has been assigned to you. 
+Account name: {!Referral__c.Account__c}
+Referral name: {!Referral__c.Name}

@@ -121,23 +121,23 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Customer_Tier__c</field>
+                <field>Discovery1__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Branch__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>isRetail__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>IsCommercial__c</field>
+                <field>Discovery3__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Salary__c</field>
+                <field>Discovery4__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Discovery2__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Retail_Cross_selling_campaign__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -316,6 +316,13 @@
             <sortOrder>9</sortOrder>
         </platformActionListItems>
     </platformActionList>
+    <relatedContent>
+        <relatedContentItems>
+            <layoutItem>
+                <component>wits:newsPanel</component>
+            </layoutItem>
+        </relatedContentItems>
+    </relatedContent>
     <relatedLists>
         <relatedList>RelatedNoteList</relatedList>
     </relatedLists>
@@ -337,6 +344,8 @@
         <fields>OPPORTUNITY.AMOUNT</fields>
         <fields>OPPORTUNITY.CLOSE_DATE</fields>
         <relatedList>RelatedOpportunityList</relatedList>
+        <sortField>OPPORTUNITY.CLOSE_DATE</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
@@ -356,10 +365,11 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>FinServ__Status__c</fields>
-        <fields>FinServ__FinancialAccountNumber__c</fields>
+        <fields>Category__c</fields>
+        <fields>FinServ__FinancialAccountType__c</fields>
         <fields>FinServ__Balance__c</fields>
-        <fields>FinServ__OpenDate__c</fields>
+        <fields>FinServ__FinancialAccountNumber__c</fields>
+        <fields>FinServ__Status__c</fields>
         <relatedList>FinServ__FinancialAccount__c.FinServ__PrimaryOwner__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -391,8 +401,8 @@
         <fields>FinServ__Amount__c</fields>
         <fields>Profit__c</fields>
         <fields>FinServ__Date__c</fields>
-        <fields>Opportunity__c</fields>
         <fields>FinServ__FinancialAccount__c</fields>
+        <fields>Opportunity__c</fields>
         <relatedList>FinServ__Revenue__c.FinServ__Account__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -451,15 +461,6 @@
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>Collateral__c.Account__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>Amount__c</fields>
-        <fields>account_number__c</fields>
-        <fields>transaction_date__c</fields>
-        <relatedList>Transaction__c.Account__c</relatedList>
-        <sortField>transaction_date__c</sortField>
-        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
