@@ -82,7 +82,7 @@
         if(!String.isBlank(category)) {
             query += 'AND Category__c =: category';
         }
-        query += ' ORDER BY transaction_date__c';
+        query += ' ORDER BY transaction_date__c DESC';
         query = String.format(
             query,
             new List<String> {

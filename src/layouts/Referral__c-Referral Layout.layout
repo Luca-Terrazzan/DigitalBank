@@ -31,6 +31,10 @@
                 <behavior>Edit</behavior>
                 <field>Reason_Lost__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Category__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

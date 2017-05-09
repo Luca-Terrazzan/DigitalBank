@@ -16,9 +16,11 @@ trigger BookingBugEvent on booking__BBBookings__c (after insert, after update) {
     // provides event-contact, event-account and event-branch mappings
     Set<Integer> branchIds = new Set<Integer>();
     Set<Integer> customerIds = new Set<Integer>();
+    Set<Integer> bbIds = new Set<Integer>();
     for (booking__BBBookings__c b : bookings) {
         customerIds.add(Integer.valueOf(b.booking__Member_id__c));
         branchIds.add(Integer.valueOf(b.booking__Company_id__c));
+        bbIds.add(Integer.valueOf(b.booking__BookingBug_Id__c));
     }
     Map<Integer, Id> branchIdsMap = booking.BookingsProcess.getBBBranches(branchIds);
 
@@ -26,7 +28,12 @@ trigger BookingBugEvent on booking__BBBookings__c (after insert, after update) {
     // in a real world implementation we would know the integration type
     Map<Integer, Id> bbContacts = booking.BookingsProcess.getBBContacts(customerIds);
     Map<Integer, Id> bbAccounts = booking.BookingsProcess.getBBAccounts(customerIds);
-
+	List<Opportunity> opps = [Select id, booking__BookingBug_Id__c from Opportunity Where booking__BookingBug_Id__c IN: bbIds];
+    Map<Integer, Id> bbOpps = new Map<Integer, Id>();
+    for(Opportunity o : opps) {
+        bbOpps.put(Integer.valueOf(o.booking__BookingBug_Id__c), o.Id);
+	}
+    system.debug('***opps map:' + bbOpps);
     // get owner Ids for provided bookings
     Map<Integer, Id> ownerIds = booking.BookingsProcess.getBookingOwnerIdMap(bookings);
 
@@ -54,7 +61,7 @@ trigger BookingBugEvent on booking__BBBookings__c (after insert, after update) {
         }
 
         ev.WhoId = bbContacts.get(integer.ValueOf(b.booking__Member_id__c));
-        ev.WhatId = bbAccounts.get(integer.valueOf(b.booking__Member_id__c));
+        ev.WhatId = bbOpps.get(integer.valueOf(b.booking__BookingBug_Id__c));
 
         events.add(ev);
     }
@@ -63,6 +70,7 @@ trigger BookingBugEvent on booking__BBBookings__c (after insert, after update) {
 
     // will start a self-terminating Apex Scheduler which adds the question list
     // comment this part if no questions are configured [JSON format]
+    /*
     Integer delay = 10; // adjustable. 10 seconds default.
     DateTime dt = DateTime.now().addSeconds(delay);
     String hour = String.valueOf(dt.hour()),
@@ -80,7 +88,7 @@ trigger BookingBugEvent on booking__BBBookings__c (after insert, after update) {
         
         /*[SELECT NextFireTime
                       FROM CronTrigger
-                      WHERE NextFireTime > :DateTime.Now()];*/
+                      WHERE NextFireTime > :DateTime.Now()];
     
     //System.debug('**** cronTrigger: ' + ct);
     
@@ -92,4 +100,5 @@ trigger BookingBugEvent on booking__BBBookings__c (after insert, after update) {
     if (cj.size() == 0)
         System.schedule(jobName, fireTime, new booking.QuestionScheduler(new List<booking__BBMember__c>(), bookings, cfg, objType, jobName));
     // end of question Scheduler
+    */
 }

@@ -31,4 +31,9 @@ public with sharing class CustomConstants {
 
     // Opportunity
     public static final String[] opp_stages = new String[]{'Prospecting','Documentation Sent','Waiting for Client\'s Feedback','Waiting for Winning'};
+
+    // Transaction
+    public static final String[] depositChannels = new String[]{'Deposit','E-Transfer','Currency Exchange'};
+    public static final String[] retrieveChannels = new String[]{'Bill Payment','Withdrawal','Currency Exchange'};
+    
 }

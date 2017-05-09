@@ -5,11 +5,7 @@
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
         <label>Information</label>
-        <layoutColumns>
-            <layoutItems>
-                <field>Attached_File__c</field>
-            </layoutItems>
-        </layoutColumns>
+        <layoutColumns/>
         <style>OneColumn</style>
     </layoutSections>
 </Layout>

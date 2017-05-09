@@ -14,6 +14,9 @@ public with sharing class DataGenerator {
     private Id individualRT;
     private User[] salesAssociates;
 
+    private Transaction__c[] transactions;
+    private FinServ__Revenue__c[] revenues;
+
     private User[] teamMembers;
 
     /**
@@ -25,8 +28,10 @@ public with sharing class DataGenerator {
         finAccounts = new FinServ__FinancialAccount__c[]{};
         contacts = new Contact[]{};
         opportunities = new Opportunity[]{};
+        transactions = new Transaction__c[]{};
+        revenues = new FinServ__Revenue__c[]{};
         salesAssociates = [SELECT Id FROM User WHERE UserRole.Name = 'Sales Associate'];
-        prices = [SELECT Name, Pricebook2Id, UnitPrice, Product2.Name, Category__c FROM PricebookEntry WHERE IsActive = true];
+        prices = [SELECT Name, Pricebook2Id, UnitPrice, Product2.Name, Category__c FROM PricebookEntry WHERE IsActive = true AND UnitPrice > 0];
         olis = new OpportunityLineItem[]{};
         teamMembers = [SELECT Id FROM User WHERE IsActive = true AND UserRole.DeveloperName = 'Opportunity_mail_receiver'];
 
@@ -136,12 +141,13 @@ public with sharing class DataGenerator {
     }
 
     public DataGenerator createOpportunities(Integer opps) {
-        Account[] individualsPool = individuals.isEmpty() ? [SELECT Id, Name
+        Account[] individualsPool = individuals.isEmpty() ? [SELECT Id, Name, FinServ__PrimaryContact__c
                 FROM Account WHERE RecordType.DeveloperName = 'IndustriesIndividual' LIMIT : opps] : individuals;
         for(Integer i = opps; i > 0; i--) {
             Account rand = (Account)randomPickSObject(individualsPool);
             Opportunity opp = createOpportunity();
             opp.AccountId = rand.Id;
+            opp.Referring_Customer__c = rand.FinServ__PrimaryContact__c;
             opp.Name += ' ' + rand.Name + ' Opportunity';
             opportunities.add(opp);
         }
@@ -184,12 +190,81 @@ public with sharing class DataGenerator {
         return opp;
     }
 
+    public DataGenerator createTransactions(Integer transactionsNumber) {
+        for(Integer i = 0; i < transactionsNumber; i++) {
+            transactions.add(createTransaction());
+        }
+        insert transactions;
+        transactions.clear();
+        return this;
+    }
+    private Transaction__c createTransaction() {
+        Boolean isDeposit = Math.random() >= 0.2 ? true : false;
+        Boolean bigTransaction = Math.random() >= 0.9 ? true : false;
+        Decimal amount = Math.random();
+        amount = bigTransaction ? amount * 100000 + 25000 : amount * 1000 + 5; 
+        amount = isDeposit ? amount : -amount;
+        FinServ__FinancialAccount__c finAccount = pickRandomFinAccount();
+        Transaction__c newTransaction = new Transaction__c(
+            Amount__c = amount,
+            account_number__c = finAccount.Id,
+            Mock__c = true,
+            Channel__c = isDeposit ? randomPick(CustomConstants.depositChannels) : randomPick(CustomConstants.retrieveChannels),
+            Status__c = true,
+            transaction_date__c = System.today() - (Integer) (Math.random() * 180),
+            transaction_id__c = String.valueOf(Math.random()) + String.valueOf(Math.random())
+        );
+        return newTransaction;
+    }
+
+    public DataGenerator createRevenues(Integer revenuesNumber) {
+        for(Integer i = 0; i < revenuesNumber; i++) {
+            revenues.add(createRevenue());
+        }
+        insert revenues;
+        revenues.clear();
+        return this;
+    }
+    public FinServ__Revenue__c createRevenue() {
+        FinServ__FinancialAccount__c randomFinAccount = pickRandomFinAccount();
+        FinServ__Revenue__c revenue = new FinServ__Revenue__c(
+            Mock__c = true,
+            FinServ__Date__c = System.today() - (Integer) (Math.random() * 90),
+            Branch__c = randomFinAccount.Branch__c
+        );
+        return revenue;
+    }
+
     public static String randomPick(String[] stringlist) {
         return stringlist[(Integer) Math.floor(Math.random()*stringlist.size())];
     }
     public static SObject randomPickSObject(SObject[] stringlist) {
         if (stringlist == null || stringlist.isEmpty()) return null;
         return stringlist[(Integer) Math.floor(Math.random()*stringlist.size())];
+    }
+    public Account pickRandomAccount() {
+        if (!individuals.isEmpty()) {
+            return (Account) randomPickSObject(individuals);
+        } else {
+            individuals = [SELECT Id, Name FROM Account
+                WHERE RecordType.DeveloperName = 'IndustriesIndividual' LIMIT : 10000];
+            if (individuals.isEmpty()) {
+                return null;
+            }
+            return (Account) randomPickSObject(individuals);
+        }
+    }
+    public FinServ__FinancialAccount__c pickRandomFinAccount() {
+        if (!finAccounts.isEmpty()) {
+            return (FinServ__FinancialAccount__c) randomPickSObject(finAccounts);
+        } else {
+            finAccounts = [SELECT Name, Category__c, Branch__c FROM FinServ__FinancialAccount__c
+                WHERE Mock__c = true LIMIT : 10000];
+            if (finAccounts.isEmpty()) {
+                return null;
+            }
+            return (FinServ__FinancialAccount__c) randomPickSObject(finAccounts);
+        }
     }
 
     public static void demoTransactions() {

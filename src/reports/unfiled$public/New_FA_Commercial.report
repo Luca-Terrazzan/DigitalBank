@@ -58,7 +58,7 @@
             <column>FinServ__FinancialAccountRole__c.FinServ__Role__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
-            <value>Administrator,Authorized Agent,Authorized Agent / Beneficial Owner,Authorized Individual,Authorized Signer,Beneficial Owner,Business Manager,Control Person,Cosigner,Full Authority,Primary Owner</value>
+            <value>Administrator,Authorized Agent,Authorized Agent / Beneficial Owner,Authorized Individual,Authorized Signer,Beneficial Owner,Business Manager,Control Person,Cosigner,Full Authority,Primary Owner,Accountant</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>

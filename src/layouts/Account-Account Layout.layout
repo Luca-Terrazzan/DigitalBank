@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -102,23 +101,23 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Customer_Tier__c</field>
+                <field>Discovery1__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Branch__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>isRetail__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>IsCommercial__c</field>
+                <field>Discovery3__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Salary__c</field>
+                <field>Discovery4__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Discovery2__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Retail_Cross_selling_campaign__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -389,16 +388,17 @@
     <relatedContent>
         <relatedContentItems>
             <layoutItem>
-                <component>runtime_sales_social:socialPanel</component>
+                <component>wits:newsPanel</component>
             </layoutItem>
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>FinServ__Status__c</fields>
-        <fields>FinServ__FinancialAccountNumber__c</fields>
+        <fields>Category__c</fields>
+        <fields>FinServ__FinancialAccountType__c</fields>
         <fields>FinServ__Balance__c</fields>
-        <fields>FinServ__OpenDate__c</fields>
+        <fields>FinServ__FinancialAccountNumber__c</fields>
+        <fields>FinServ__Status__c</fields>
         <relatedList>FinServ__FinancialAccount__c.FinServ__PrimaryOwner__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -414,6 +414,8 @@
         <fields>OPPORTUNITY.AMOUNT</fields>
         <fields>OPPORTUNITY.CLOSE_DATE</fields>
         <relatedList>RelatedOpportunityList</relatedList>
+        <sortField>OPPORTUNITY.CLOSE_DATE</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>CASES.CASE_NUMBER</fields>
@@ -512,15 +514,6 @@
         <fields>NAME</fields>
         <relatedList>Collateral__c.Account__c</relatedList>
     </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>Amount__c</fields>
-        <fields>account_number__c</fields>
-        <fields>transaction_date__c</fields>
-        <relatedList>Transaction__c.Account__c</relatedList>
-        <sortField>transaction_date__c</sortField>
-        <sortOrder>Desc</sortOrder>
-    </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>true</showHighlightsPanel>
@@ -528,7 +521,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h46000000HfJb</masterLabel>
+        <masterLabel>00h46000000HfQJ</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

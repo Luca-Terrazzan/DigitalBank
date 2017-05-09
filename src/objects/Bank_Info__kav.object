@@ -44,7 +44,7 @@
         <description>UPLOAD A FILE</description>
         <externalId>false</externalId>
         <label>file</label>
-        <required>false</required>
+        <required>true</required>
         <trackHistory>false</trackHistory>
         <type>File</type>
     </fields>

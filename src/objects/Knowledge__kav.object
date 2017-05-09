@@ -27,7 +27,7 @@
         <description>test</description>
         <externalId>false</externalId>
         <label>File Knowledge</label>
-        <required>false</required>
+        <required>true</required>
         <type>File</type>
     </fields>
     <label>Knowledge</label>

@@ -66,7 +66,7 @@ trigger BookingBugContact on booking__BBMember__c (after insert, after update) {
 
     // will start a self-terminating Apex Scheduler which adds the question list
     // comment this part if no questions are configured [JSON format]
-    Integer delay = 10; // adjustable. 10 seconds default.
+    /*Integer delay = 10; // adjustable. 10 seconds default.
     DateTime dt = DateTime.now().addSeconds(delay);
     String hour = String.valueOf(dt.hour()),
           min = String.valueOf(dt.minute()),
@@ -84,5 +84,6 @@ trigger BookingBugContact on booking__BBMember__c (after insert, after update) {
     
     if (cj.size() == 0)
         System.schedule(jobName, fireTime, new booking.QuestionScheduler(members, new List<booking__BBBookings__c>(), cfg, objType, jobName));
+	*/
     // end of question Scheduler
 }

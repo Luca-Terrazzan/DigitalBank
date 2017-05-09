@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Mobile_Welcome</fullName>
+        <ccEmails>digitalbank.deloitte@gmail.com</ccEmails>
+        <description>Mobile Welcome</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SocialAccountContact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>unfiled$public/MobileWelcome</template>
+    </alerts>
+    <rules>
+        <fullName>Marloes Opportunity</fullName>
+        <active>false</active>
+        <formula>OwnerId = &apos;00546000000aF9d&apos;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
     <rules>
         <fullName>New Opportunity</fullName>
         <actions>
             <name>New_Opportunity</name>
             <type>Task</type>
         </actions>
-        <active>true</active>
+        <active>false</active>
         <formula>OwnerId != null</formula>
         <triggerType>onCreateOnly</triggerType>
     </rules>

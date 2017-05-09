@@ -88,7 +88,17 @@
         <actionName>ViewSelfService</actionName>
         <type>Default</type>
     </actionOverrides>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>Contact</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Contact</fullName>
+        <fields>Name</fields>
+        <fields>AccountId</fields>
+        <fields>Phone</fields>
+        <fields>Email</fields>
+        <fields>MobilePhone</fields>
+        <fields>OwnerId</fields>
+        <label>Contact</label>
+    </compactLayouts>
     <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
     <fields>
@@ -119,6 +129,10 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>CanAllowPortalSelfReg</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
         <fullName>Deceased_Date__c</fullName>
         <externalId>false</externalId>
         <label>Deceased Date</label>
@@ -133,6 +147,17 @@
     <fields>
         <fullName>Description</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Device_ID__c</fullName>
+        <description>Mobile device ID from Digital Bank app</description>
+        <externalId>false</externalId>
+        <label>Device ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Discovery1__c</fullName>
@@ -181,6 +206,116 @@
         <length>255</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiscoveryA1__c</fullName>
+        <externalId>false</externalId>
+        <label>DiscoveryA1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiscoveryA2__c</fullName>
+        <externalId>false</externalId>
+        <label>DiscoveryA2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiscoveryA3__c</fullName>
+        <externalId>false</externalId>
+        <label>DiscoveryA3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiscoveryA4__c</fullName>
+        <externalId>false</externalId>
+        <label>DiscoveryA4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiscoveryA5__c</fullName>
+        <externalId>false</externalId>
+        <label>DiscoveryA5</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiscoveryA__c</fullName>
+        <externalId>false</externalId>
+        <label>Discovery A</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiscoveryQ1__c</fullName>
+        <externalId>false</externalId>
+        <formula>&apos;Did you achieve a Master’s degree or PhD?&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DiscoveryQ1</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiscoveryQ2__c</fullName>
+        <externalId>false</externalId>
+        <formula>&apos;Are you a home owner today?&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DiscoveryQ2</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiscoveryQ3__c</fullName>
+        <externalId>false</externalId>
+        <formula>&apos;Are you planning to purchase an “important” asset such as a car within the next year?&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DiscoveryQ3</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiscoveryQ4__c</fullName>
+        <externalId>false</externalId>
+        <formula>&apos;Are you planning to use Digital Bank as your primary bank?&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DiscoveryQ4</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiscoveryQ5__c</fullName>
+        <externalId>false</externalId>
+        <formula>&apos;Do you have long term savings goals?&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DiscoveryQ5</label>
+        <required>false</required>
         <type>Text</type>
         <unique>false</unique>
     </fields>
@@ -797,6 +932,17 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Institution_Id__c</fullName>
+        <description>Technical field for Digital Bank App Integration</description>
+        <externalId>false</externalId>
+        <label>Institution Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>IsPortalEnabled__c</fullName>
         <defaultValue>false</defaultValue>
         <description>Equals TRUE if the related user is enabled in at least one community</description>
@@ -920,6 +1066,16 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <trackFeedHistory>true</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Notification__c</fullName>
+        <description>Techincal field for Digital Bank App integration</description>
+        <externalId>false</externalId>
+        <label>Notification</label>
+        <length>131000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>OtherAddress</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -983,6 +1139,16 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Profile_Picture__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(&quot;resource/TigerWoods&quot;,&quot;No Image&quot;,100,100)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Profile Picture</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>ReportsToId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
@@ -1034,6 +1200,30 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
     <fields>
         <fullName>Title</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Contact</fullName>
+                    <default>false</default>
+                    <label>Contact</label>
+                </value>
+                <value>
+                    <fullName>Institution</fullName>
+                    <default>false</default>
+                    <label>Institution</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>booking__Bookingbug_Id__c</fullName>
@@ -2434,6 +2624,7 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
     <recordTypes>
         <fullName>FinServ__IndustriesBusiness</fullName>
         <active>true</active>
+        <compactLayoutAssignment>Contact</compactLayoutAssignment>
         <description>Contact data for an institution or a business account</description>
         <label>Business</label>
         <picklistValues>
@@ -4670,10 +4861,22 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
                 <default>false</default>
             </values>
         </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Institution</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>FinServ__IndustriesIndividual</fullName>
         <active>true</active>
+        <compactLayoutAssignment>Contact</compactLayoutAssignment>
         <description>Contact data for a retail client</description>
         <label>Individual</label>
         <picklistValues>
@@ -6906,10 +7109,22 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
                 <default>false</default>
             </values>
         </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Institution</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>booking__BBContact</fullName>
         <active>true</active>
+        <compactLayoutAssignment>Contact</compactLayoutAssignment>
         <label>BBContact</label>
         <picklistValues>
             <picklist>FinServ__CountryOfBirth__c</picklist>
@@ -9146,6 +9361,17 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Institution</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>et4ae5__Mobile_Country_Code__c</picklist>
             <values>
                 <fullName>AC</fullName>
@@ -10206,6 +10432,58 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <errorMessage>The record type can&apos;t be changed to Individual.</errorMessage>
     </validationRules>
     <webLinks>
+        <fullName>APXTConga4__Conga_Composer_OAuth</fullName>
+        <availability>online</availability>
+        <description>*** DO NOT USE THIS BUTTON ON A PAGE LAYOUT *** 
+
+OAuth buttons require additional setup. Please see the Composer Installation Guide for more details.
+
+COPY THE URL FROM THIS BUTTON and paste it into your own custom button or link. Then add optional parameters to finely tune the button&apos;s behavior. See the Composer Configuration Guide for details.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conga Composer (OAuth)</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/APXTConga4__Conga_Composer
+?id={!Contact.Id}</url>
+        <width>900</width>
+    </webLinks>
+    <webLinks>
+        <fullName>APXTConga4__Conga_Mail_Merge</fullName>
+        <availability>online</availability>
+        <description>*** DO NOT USE THIS BUTTON ON A PAGE LAYOUT *** 
+
+COPY THE URL FROM THIS BUTTON and paste it into your own custom button or link. Then add optional parameters to finely tune the button&apos;s behavior. See the Conga Configuration Guide for details.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>false</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>false</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conga Composer</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Contact.Id}</url>
+        <width>900</width>
+    </webLinks>
+    <webLinks>
         <fullName>FinServ__AddRelation</fullName>
         <availability>online</availability>
         <displayType>button</displayType>
@@ -10234,6 +10512,18 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <showsLocation>false</showsLocation>
         <showsStatus>false</showsStatus>
         <url>/apex/booking__popup_booking?contact={!Contact.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__Send_with_DocuSign</fullName>
+        <availability>online</availability>
+        <description>This button will initiate a DocuSign Envelope that is linked to the Contact</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send with DocuSign</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/apex/dsfs__DocuSign_JavaScript&quot;)}
+DocuSign_CreateEnvelope();</url>
     </webLinks>
     <webLinks>
         <fullName>et4ae5__ExactTarget_Resubscribe</fullName>
