@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <excludeButtons>DataDotComClean</excludeButtons>
-    <excludeButtons>Submit</excludeButtons>
+    <emailDefault>false</emailDefault>
+    <headers>PersonalTagging</headers>
+    <headers>PublicTagging</headers>
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
@@ -39,10 +40,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>AnnualRevenue</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Branch__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -123,13 +120,6 @@
                 <behavior>Edit</behavior>
                 <field>Primary__c</field>
             </layoutItems>
-            <layoutItems>
-                <height>200</height>
-                <page>et4ae5__LeadActions</page>
-                <showLabel>false</showLabel>
-                <showScrollbars>false</showScrollbars>
-                <width>100%</width>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -166,10 +156,9 @@
         <style>OneColumn</style>
     </layoutSections>
     <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
+        <customLabel>false</customLabel>
+        <detailHeading>false</detailHeading>
         <editHeading>false</editHeading>
-        <label>Custom Links</label>
         <layoutColumns/>
         <layoutColumns/>
         <layoutColumns/>
@@ -195,13 +184,13 @@
     <relatedContent>
         <relatedContentItems>
             <layoutItem>
-                <behavior>Readonly</behavior>
-                <field>CampaignId</field>
+                <component>wits:newsPanel</component>
             </layoutItem>
         </relatedContentItems>
         <relatedContentItems>
             <layoutItem>
-                <component>runtime_sales_social:socialPanel</component>
+                <behavior>Readonly</behavior>
+                <field>CampaignId</field>
             </layoutItem>
         </relatedContentItems>
     </relatedContent>
@@ -241,31 +230,17 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>et4ae5__EmailName__c</fields>
-        <fields>et4ae5__fBusiness_Unit__c</fields>
-        <fields>et4ae5__Created_Date_Time__c</fields>
-        <fields>et4ae5__Send_Status_View__c</fields>
-        <fields>et4ae5__Status_Date_Time__c</fields>
-        <fields>et4ae5__FromName__c</fields>
-        <fields>et4ae5__FromEmail__c</fields>
-        <fields>et4ae5__Campaigns__c</fields>
-        <fields>et4ae5__Reports__c</fields>
-        <relatedList>et4ae5__SendDefinition__c.et4ae5__Lead__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>et4ae5__IndividualEmailResult__c.et4ae5__Lead__c</relatedList>
+        <fields>dsfs__Sender__c</fields>
+        <fields>dsfs__Subject__c</fields>
+        <fields>dsfs__Envelope_Status__c</fields>
+        <fields>dsfs__Hrs_Sent_to_Sign__c</fields>
+        <fields>dsfs__Sent_Date_Time__c</fields>
+        <relatedList>dsfs__DocuSign_Status__c.dsfs__Lead__c</relatedList>
     </relatedLists>
     <runAssignmentRulesDefault>false</runAssignmentRulesDefault>
-    <showEmailCheckbox>false</showEmailCheckbox>
+    <showEmailCheckbox>true</showEmailCheckbox>
     <showHighlightsPanel>true</showHighlightsPanel>
     <showInteractionLogPanel>true</showInteractionLogPanel>
     <showRunAssignmentRulesCheckbox>true</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
-    <summaryLayout>
-        <masterLabel>00h46000000HfJf</masterLabel>
-        <sizeX>4</sizeX>
-        <sizeY>0</sizeY>
-        <summaryLayoutStyle>Default</summaryLayoutStyle>
-    </summaryLayout>
 </Layout>

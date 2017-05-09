@@ -87,6 +87,44 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Channel__c</fullName>
+        <externalId>false</externalId>
+        <label>Channel</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Deposit</fullName>
+                    <default>false</default>
+                    <label>Deposit</label>
+                </value>
+                <value>
+                    <fullName>E-Transfer</fullName>
+                    <default>false</default>
+                    <label>E-Transfer</label>
+                </value>
+                <value>
+                    <fullName>Bill Payment</fullName>
+                    <default>false</default>
+                    <label>Bill Payment</label>
+                </value>
+                <value>
+                    <fullName>Withdrawal</fullName>
+                    <default>false</default>
+                    <label>Withdrawal</label>
+                </value>
+                <value>
+                    <fullName>Currency Exchange</fullName>
+                    <default>false</default>
+                    <label>Currency Exchange</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Credit_Debit__c</fullName>
         <externalId>false</externalId>
         <label>Credit Debit</label>
@@ -101,6 +139,33 @@
         <externalId>false</externalId>
         <label>Description</label>
         <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mock__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Mock</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status_img__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Status__c = TRUE, IMAGE(&quot;/resource/res/img/right.png&quot;, &quot;Right Transaction&quot;), IMAGE(&quot;/resource/res/img/wrong.png&quot;, &quot;Wrong Transaction&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Status</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -210,15 +275,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>mock_createddate__c</fullName>
-        <description>Since createddate field is not writeable, use this mock field to test BI functionalities</description>
-        <externalId>false</externalId>
-        <label>mock_createddate</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Date</type>
-    </fields>
-    <fields>
         <fullName>transaction_date__c</fullName>
         <externalId>false</externalId>
         <label>Transaction Date</label>
@@ -278,6 +334,11 @@
         <unique>false</unique>
     </fields>
     <label>Transaction</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <displayFormat>TR-{00000}</displayFormat>
         <label>Number</label>

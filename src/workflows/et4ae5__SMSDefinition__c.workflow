@@ -97,6 +97,42 @@ et4ae5__Scheduled_Date_Time__c+(1/288)
         <reevaluateOnChange>true</reevaluateOnChange>
     </fieldUpdates>
     <rules>
+        <fullName>BackupSmsWorkflow</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>et4ae5__SMSDefinition__c.et4ae5__BackupWorkflow__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>et4ae5__UnpopulateBackupSmsWorkflow</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>et4ae5__SMSDefinition__c.et4ae5__BackupWorkflow__c</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>ScheduledSmsSend</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>et4ae5__SMSDefinition__c.et4ae5__Scheduled_Date_Time__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>et4ae5__DelayedMobileSend</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>et4ae5__SMSDefinition__c.et4ae5__Scheduled_Date_Time__c</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
         <fullName>et4ae5__FailBackupSmsWorkflow</fullName>
         <actions>
             <name>et4ae5__FailBackupSMSWorkflowM</name>

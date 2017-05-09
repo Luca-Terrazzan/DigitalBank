@@ -14,62 +14,21 @@
         <members>FinancialAccountsSelectorTest</members>
         <members>FinancialAccountsTest</members>
         <members>MarketingCloudHandler</members>
+        <members>MarketingCloudHandlerTest</members>
         <members>OpportunitiesSelector</members>
         <members>RelatedListController</members>
+        <members>ReminderHandler</members>
         <members>TestUtils</members>
         <members>TransactionPatternDetector</members>
         <members>TransactionPatternDetectorSchedule</members>
         <members>TransactionRest</members>
         <members>TransactionsSelector</members>
-        <members>fflib_ApexMocks</members>
-        <members>fflib_ApexMocksTest</members>
-        <members>fflib_ApexMocksUtils</members>
-        <members>fflib_ApexMocksUtilsTest</members>
-        <members>fflib_Application</members>
-        <members>fflib_ApplicationTest</members>
-        <members>fflib_ArgumentCaptor</members>
-        <members>fflib_ArgumentCaptorTest</members>
-        <members>fflib_IDGenerator</members>
-        <members>fflib_IDGeneratorTest</members>
-        <members>fflib_IMatcher</members>
-        <members>fflib_ISObjectDomain</members>
-        <members>fflib_ISObjectSelector</members>
-        <members>fflib_ISObjectUnitOfWork</members>
-        <members>fflib_Inheritor</members>
-        <members>fflib_InheritorTest</members>
-        <members>fflib_Match</members>
-        <members>fflib_MatchTest</members>
-        <members>fflib_MatcherDefinitions</members>
-        <members>fflib_MatcherDefinitionsTest</members>
-        <members>fflib_MatchersReturnValue</members>
-        <members>fflib_MethodArgValues</members>
-        <members>fflib_MethodArgValuesTest</members>
-        <members>fflib_MethodCountRecorder</members>
-        <members>fflib_MethodReturnValue</members>
-        <members>fflib_MethodReturnValueRecorder</members>
-        <members>fflib_Mocks</members>
-        <members>fflib_MyList</members>
-        <members>fflib_QualifiedMethod</members>
-        <members>fflib_QualifiedMethodTest</members>
-        <members>fflib_QueryFactory</members>
-        <members>fflib_QueryFactoryTest</members>
-        <members>fflib_SObjectDescribe</members>
-        <members>fflib_SObjectDescribeTest</members>
-        <members>fflib_SObjectDomain</members>
-        <members>fflib_SObjectDomainTest</members>
-        <members>fflib_SObjectMocks</members>
-        <members>fflib_SObjectSelector</members>
-        <members>fflib_SObjectSelectorTest</members>
-        <members>fflib_SObjectUnitOfWork</members>
-        <members>fflib_SObjectUnitOfWorkTest</members>
-        <members>fflib_SecurityUtils</members>
-        <members>fflib_SecurityUtilsTest</members>
-        <members>fflib_StringBuilder</members>
-        <members>fflib_StringBuilderTest</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>*</members>
+        <members>AccountContactRelations</members>
+        <members>FinancialAccountRoles</members>
+        <members>FinancialAccounts</members>
         <name>ApexTrigger</name>
     </types>
     <types>
@@ -81,6 +40,10 @@
         <members>svg</members>
         <members>svgIcon</members>
         <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>Digital_Bank</members>
+        <name>CustomApplication</name>
     </types>
     <types>
         <members>CustomLabels</members>
@@ -97,73 +60,50 @@
         <members>AccountContactRole</members>
         <members>Activity</members>
         <members>AgencyData__c</members>
-        <members>Bank_Info__kav</members>
         <members>Campaign</members>
-        <members>Case</members>
-        <members>Collateral__c</members>
-        <members>Concession__c</members>
         <members>Contact</members>
-        <members>Contract</members>
-        <members>Eligibility__c</members>
-        <members>Entitlement_Mandate__c</members>
+        <members>Event</members>
+        <members>FinServ__ContactContactRelation__c</members>
         <members>FinServ__FinancialAccountRole__c</members>
         <members>FinServ__FinancialAccount__c</members>
         <members>FinServ__FinancialGoal__c</members>
+        <members>FinServ__LifeEvent__c</members>
+        <members>FinServ__ReciprocalRole__c</members>
         <members>FinServ__Revenue__c</members>
-        <members>High_Growth_proposal__kav</members>
-        <members>Journeys__c</members>
-        <members>Knowledge__kav</members>
         <members>Lead</members>
-        <members>News__c</members>
         <members>NextBestAction__c</members>
         <members>NextBestOffer__c</members>
         <members>Opportunity</members>
         <members>OpportunityLineItem</members>
+        <members>Order</members>
+        <members>OrderItem</members>
         <members>Pricebook2</members>
         <members>PricebookEntry</members>
         <members>Product2</members>
         <members>Referral__c</members>
-        <members>RollUpRoles__mdt</members>
-        <members>Social_Activity_and_Influence__c</members>
-        <members>Start_UP__kav</members>
+        <members>SocialPersona</members>
+        <members>SocialPost</members>
+        <members>Task</members>
         <members>Transaction__c</members>
         <members>User</members>
         <name>CustomObject</name>
     </types>
     <types>
-        <members>AccountContactRelationship__c</members>
-        <name>CustomTab</name>
-    </types>
-    <types>
-        <members>Topic_Shared_Document_Folder</members>
-        <members>Topic_Shared_Document_Folder/DLogo.png</members>
-        <members>Topic_Shared_Document_Folder/DeloitteSFDCLogo.png</members>
-        <members>Topic_Shared_Document_Folder/Deloitte_Logo.png</members>
-        <members>Topic_Shared_Document_Folder/Grey_light_png.png</members>
-        <members>Topic_Shared_Document_Folder/Houses.jpg</members>
-        <members>Topic_Shared_Document_Folder/Singapore_Best_Savings_Account_Picture_1_jpg.jpg</members>
-        <members>Topic_Shared_Document_Folder/Start_up_jpg.jpg</members>
-        <members>Topic_Shared_Document_Folder/Start_up_jpg1.jpg</members>
-        <members>Topic_Shared_Document_Folder/Tax_jpg.jpg</members>
-        <members>Topic_Shared_Document_Folder/X20170312_161222_jpg.jpg</members>
-        <members>Topic_Shared_Document_Folder/X720_View_png.png</members>
-        <members>Topic_Shared_Document_Folder/X720_png.png</members>
-        <members>Topic_Shared_Document_Folder/credit_card_png.png</members>
-        <members>Topic_Shared_Document_Folder/cs_growth_blocks22_png.png</members>
-        <members>Topic_Shared_Document_Folder/cs_growth_blocks22_png1.png</members>
-        <members>Topic_Shared_Document_Folder/cs_growth_blocks22_png2.png</members>
-        <members>Topic_Shared_Document_Folder/download_jpg.jpg</members>
-        <members>Topic_Shared_Document_Folder/sky.jpg</members>
-        <name>Document</name>
-    </types>
-    <types>
         <members>unfiled$public</members>
+        <members>unfiled$public/Article_Economic_Forecast</members>
         <members>unfiled$public/CommunityChangePasswordEmailTemplate</members>
         <members>unfiled$public/CommunityForgotPasswordEmailTemplate</members>
         <members>unfiled$public/CommunityWelcomeEmailTemplate</members>
         <members>unfiled$public/CommunityWelcomeEmailTemplateDigitalBank</members>
+        <members>unfiled$public/CustomerPortalChangePwdEmail</members>
+        <members>unfiled$public/CustomerPortalNewUserEmail</members>
+        <members>unfiled$public/CustomerPortalSelfRegUserEmail</members>
+        <members>unfiled$public/ForgotPasswordcommunityvAM</members>
         <members>unfiled$public/MarketingProductInquiryResponse</members>
+        <members>unfiled$public/MobileWelcome</members>
+        <members>unfiled$public/MobileWelcomeEducateMe</members>
         <members>unfiled$public/New_article</members>
+        <members>unfiled$public/Referral_New_assignment_notification_SAMPLE</members>
         <members>unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE</members>
         <members>unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE</members>
         <members>unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE</members>
@@ -179,17 +119,23 @@
         <members>unfiled$public/Template_test</members>
         <members>unfiled$public/Welcome_community</members>
         <members>unfiled$public/Welcome_digital_bank_community</members>
+        <members>unfiled$public/welcomecommunity</members>
+        <members>unfiled$public/welcomecommunityvAM</members>
         <name>EmailTemplate</name>
     </types>
     <types>
-        <members>BusinessPage</members>
+        <members>BranchManagerHome</members>
+        <members>ClientRecordPage2</members>
         <members>IndividualPage</members>
-        <members>WealthHome1</members>
         <name>FlexiPage</name>
     </types>
     <types>
         <members>*</members>
         <name>Flow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>FlowDefinition</name>
     </types>
     <types>
         <members>*</members>
@@ -203,39 +149,56 @@
         <members>Account-Account Layout</members>
         <members>Account-Business Layout</members>
         <members>Account-New Detail Page</members>
+        <members>Account-Retail Layout</members>
         <members>Account-Wealth Layout</members>
         <members>AccountContactRelation-Account Contact Relationship Layout</members>
         <members>AccountContactRelation-Account Contact Relationship Layout</members>
-        <members>AccountContactRelationship__c-Contact-Account Relationship Layout</members>
+        <members>AccountContactRelationship__c-Account-Contact Relationship Layout</members>
         <members>AccountContactRole-Account Contact Role Layout</members>
-        <members>AgencyData__c-Agency Data Layout</members>
-        <members>Bank_Info__kav-Bank Info Layout</members>
-        <members>Campaign-Campaign Layout</members>
-        <members>Contract-Contract Layout</members>
-        <members>Eligibility__c-Eligibility Layout</members>
-        <members>FinServ__FinancialAccountRole__c-Unmanaged Account Role Layout</members>
+        <members>Contact-Contact Layout</members>
+        <members>Event-Event Layout</members>
+        <members>Event-Wealth Events</members>
+        <members>FinServ__AccountAccountRelation__c-Account Account Relation Layout</members>
+        <members>FinServ__AccountAccountRelation__c-Account-Account Relationship Layout</members>
+        <members>FinServ__Alert__c-Alert Layout</members>
+        <members>FinServ__FinancialAccountRole__c-Account Role Layout</members>
+        <members>FinServ__FinancialAccountRole__c-Contact Role Layout</members>
+        <members>FinServ__FinancialAccount__c-Financial Account %28Banking%29 Layout</members>
+        <members>FinServ__FinancialAccount__c-Financial Account %28General%29 Layout</members>
+        <members>FinServ__FinancialAccount__c-Financial Account %28Insurance%29 Layout</members>
+        <members>FinServ__FinancialAccount__c-Financial Account %28Investment%29 Layout</members>
+        <members>FinServ__FinancialGoal__c-Financial Goal Layout</members>
+        <members>FinServ__LifeEvent__c-Life Event Layout</members>
+        <members>FinServ__ReciprocalRole__c-Reciprocal Role Layout</members>
         <members>FinServ__Revenue__c-Revenue Layout</members>
-        <members>Journeys__c-Journey Layout</members>
-        <members>Knowledge__kav-Knowledge Layout</members>
         <members>Lead-Lead Layout</members>
-        <members>News__c-News Layout</members>
-        <members>NextBestAction__c-Next Best Action Layout</members>
-        <members>NextBestOffer__c-Next Best Offer Layout</members>
+        <members>Opportunity-Opportunity %28Marketing%29 Layout</members>
+        <members>Opportunity-Opportunity %28Sales%29 Layout</members>
+        <members>Opportunity-Opportunity %28Support%29 Layout</members>
+        <members>Opportunity-Opportunity %28Wallet Share%29 Layout</members>
         <members>Opportunity-Opportunity Layout</members>
         <members>OpportunityLineItem-Opportunity Product Layout</members>
+        <members>Order-Order Layout</members>
+        <members>OrderItem-Order Product Layout</members>
         <members>Pricebook2-Price Book Layout</members>
+        <members>PricebookEntry-Price Book Entry Layout</members>
         <members>Product2-Product Layout</members>
-        <members>Referral__c-Referral Layout</members>
-        <members>RollUpRoles__mdt-Roll up roles Layout</members>
-        <members>Social_Activity_and_Influence__c-Social Activity and Influence Layout</members>
-        <members>Start_UP__kav-Start Up Layout</members>
+        <members>SocialPersona-Social Persona Layout</members>
+        <members>SocialPost-Social Post Layout</members>
         <members>Task-Task Layout</members>
+        <members>Task-Wealth Tasks</members>
+        <members>Transaction__c-Transaction Layout</members>
         <members>User-User Layout</members>
         <name>Layout</name>
     </types>
     <types>
-        <members>*</members>
+        <members>DB_Letterhead</members>
+        <members>Deloitte_Letterhead</members>
         <name>Letterhead</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Network</name>
     </types>
     <types>
         <members>Admin</members>
@@ -246,12 +209,39 @@
         <name>Profile</name>
     </types>
     <types>
-        <members>Account.My_New_Event</members>
-        <members>Account.New_Event</members>
-        <name>QuickAction</name>
-    </types>
-    <types>
-        <members>unfiled$public</members>
+        <members>Digital_Bank_Reports</members>
+        <members>Digital_Bank_Reports/Branch_Pipeline</members>
+        <members>Digital_Bank_Reports/Branch_Pipeline1</members>
+        <members>Digital_Bank_Reports/Branch_Pipeline2</members>
+        <members>Digital_Bank_Reports/Branch_Pipeline21</members>
+        <members>Digital_Bank_Reports/Branch_Pipeline22</members>
+        <members>Digital_Bank_Reports/Business_Pipeline</members>
+        <members>Digital_Bank_Reports/Case_Resolution_Performance</members>
+        <members>Digital_Bank_Reports/Case_Resolution_Performance2</members>
+        <members>Digital_Bank_Reports/Case_by_Owner</members>
+        <members>Digital_Bank_Reports/Employee_Performance</members>
+        <members>Digital_Bank_Reports/High_Priority_Case</members>
+        <members>Digital_Bank_Reports/Leads_By_owner</members>
+        <members>Digital_Bank_Reports/Leads_by_Channel</members>
+        <members>Digital_Bank_Reports/Leads_by_Channel1</members>
+        <members>Digital_Bank_Reports/Lost_Opportunities_by_Reason_Lost</members>
+        <members>Digital_Bank_Reports/My_Open_Leads_w_o_Future_Activity</members>
+        <members>Digital_Bank_Reports/My_Revenue_FYTD</members>
+        <members>Digital_Bank_Reports/My_Revenue_FYTD1</members>
+        <members>Digital_Bank_Reports/Profit_Over_Time</members>
+        <members>Digital_Bank_Reports/Profit_by_Branch</members>
+        <members>Digital_Bank_Reports/Profitability_Employee</members>
+        <members>Digital_Bank_Reports/Profitability_by_Branch_v2</members>
+        <members>Digital_Bank_Reports/Profits_Over_Time</members>
+        <members>Digital_Bank_Reports/Profits_Over_Time1</members>
+        <members>Digital_Bank_Reports/Referrals_by_LOB</members>
+        <members>Digital_Bank_Reports/Revenue_Over_Time</members>
+        <members>Digital_Bank_Reports/Revenue_Over_Time1</members>
+        <members>Digital_Bank_Reports/Revenue_by_Branch</members>
+        <members>Digital_Bank_Reports/Revenue_by_Product_Line</members>
+        <members>Digital_Bank_Reports/Revenue_by_Product_Line1</members>
+        <members>Digital_Bank_Reports/Revenue_per_Employee</members>
+        <members>Digital_Bank_Reports/Top_15_Opportunities</members>
         <members>unfiled$public/Accounts_Types</members>
         <members>unfiled$public/Commercial_FA_Loans</members>
         <members>unfiled$public/New_FA_Commercial</members>
@@ -266,7 +256,14 @@
         <name>Report</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Accounts_with_Assets_and_Liabilities</members>
+        <members>Accounts_with_Entitlements_with_Contacts</members>
+        <members>Accounts_with_Financial_Accounts</members>
+        <members>FA_Roles_and_Account</members>
+        <members>Revenue_with_Oppty_Product</members>
+        <members>Service_Contracts_with_Contract_Line_Items</members>
+        <members>Service_Contracts_with_Entitlements</members>
+        <members>Transactions</members>
         <name>ReportType</name>
     </types>
     <types>
@@ -279,6 +276,10 @@
         <name>SharingRules</name>
     </types>
     <types>
+        <members>*</members>
+        <name>SiteDotCom</name>
+    </types>
+    <types>
         <members>res</members>
         <members>slds</members>
         <name>StaticResource</name>
@@ -289,6 +290,7 @@
         <members>FinServ__FinancialAccount__c</members>
         <members>Opportunity</members>
         <members>OpportunityLineItem</members>
+        <members>Referral__c</members>
         <members>et4ae5__Automated_Send__c</members>
         <members>et4ae5__IndividualEmailResult__c</members>
         <members>et4ae5__SMSDefinition__c</members>

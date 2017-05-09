@@ -38,12 +38,12 @@ global with sharing class TransactionRest  {
             Amount__c = Decimal.valueOf(request.get('amount')),
             Transaction_date__c = System.today(),
             Account_number__r = receiver,
-            Status__c = Boolean.valueOf(request.get('status'))
+            Status__c = Boolean.valueOf(request.get('Status'))
         );
         request.remove('amount');
         request.remove('transaction_date');
         request.remove('account_number');
-        request.remove('status');
+        request.remove('Status');
 
         for (String key : request.keySet()) {
             newTransaction.put(key + '__c', String.valueOf(request.get(key)));

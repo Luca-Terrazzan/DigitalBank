@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>A relationship between any two individuals.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>WM_Client_RelatedContacts</fullName>
+        <description>Client profile&apos;s Relationships tab</description>
+        <displayedFields>
+            <field>FinServ__RelatedContact__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__Role__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__RelatedContact__r.MobilePhone</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__RelatedContact__r.Email</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__StartDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__EndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__Active__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Related Contacts</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WM_Household_RelatedContacts</fullName>
+        <description>Household profile&apos;s Relationships tab</description>
+        <displayedFields>
+            <field>FinServ__RelatedContact__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__Role__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__RelatedContact__r.MobilePhone</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__Contact__r.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__StartDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__EndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__Active__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Related Contacts</label>
+    </fieldSets>
+    <fields>
+        <fullName>FinServ__Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Related Contacts</relationshipLabel>
+        <relationshipName>RelatedFromContacts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__EndDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__ExternalId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>FinServ__InverseRelationship__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Uniquely identifies the relationship between Contact__c and RelatedContact__c so that it can be referenced by a trigger that creates the inverse relationship record.</description>
+        <externalId>false</externalId>
+        <label>InverseRelationship</label>
+        <referenceTo>FinServ__ContactContactRelation__c</referenceTo>
+        <relationshipLabel>Contact Contact Relations</relationshipLabel>
+        <relationshipName>ContactContactRelations</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__RelatedContact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Related Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>RelatedToContacts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__Role__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Related Role</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>FinServ__ReciprocalRole__c.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Contact Role</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>FinServ__ReciprocalRole__c</referenceTo>
+        <relationshipName>ContactReciprocalRole</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__SourceSystemId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Source System ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FinServ__StartDate__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Contact-Contact Relationship</label>
+    <listViews>
+        <fullName>FinServ__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>R-{000000000}</displayFormat>
+        <label>Contact Relation Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Contact Contact Relations</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>FinServ__CCRCanOnlyBeDeactivated</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(OR(ISCHANGED(FinServ__Contact__c),ISCHANGED(FinServ__RelatedContact__c),ISCHANGED(FinServ__Role__c)),NOT(ISNEW()))</errorConditionFormula>
+        <errorMessage>This record can&apos;t be edited. To update relationship information, you can deactivate this record and create a new one.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FinServ__CannotCreateInactiveRecord</fullName>
+        <active>true</active>
+        <description>Ensures that a record cannot be created as Inactive</description>
+        <errorConditionFormula>AND(ISNEW(),FinServ__Active__c == false)</errorConditionFormula>
+        <errorMessage>A Contact-Contact Relationship cannot be created as Inactive.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FinServ__ContactAndRelatedContactCannotBeSame</fullName>
+        <active>true</active>
+        <errorConditionFormula>FinServ__Contact__c = FinServ__RelatedContact__c</errorConditionFormula>
+        <errorMessage>Contact and Related Contact must be different entities.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FinServ__InactiveCCRCannotBeEdited</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(PRIORVALUE(FinServ__Active__c) == false,NOT(ISNEW()))</errorConditionFormula>
+        <errorMessage>Inactive record can&apos;t be edited. To update relationship information, you can create a new one.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

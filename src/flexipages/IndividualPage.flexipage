@@ -3,6 +3,14 @@
     <description>Lightning page template for cloning client and household record pages in Financial Services Cloud.</description>
     <flexiPageRegions>
         <componentInstances>
+            <componentInstanceProperties>
+                <name>collapsed</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>numVisibleActions</name>
+                <value>10</value>
+            </componentInstanceProperties>
             <componentName>force:highlightsPanel</componentName>
         </componentInstances>
         <componentInstances>
@@ -17,9 +25,6 @@
             <componentName>force:detailPanel</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>Opportunity_Related_List</componentName>
-        </componentInstances>
-        <componentInstances>
             <componentInstanceProperties>
                 <name>parentFieldApiName</name>
                 <value>Account.Id</value>
@@ -31,21 +36,13 @@
             <componentName>force:relatedListSingleContainer</componentName>
         </componentInstances>
         <componentInstances>
-            <componentInstanceProperties>
-                <name>category</name>
-            </componentInstanceProperties>
+            <componentName>Opportunity_Related_List</componentName>
+        </componentInstances>
+        <componentInstances>
             <componentName>TransactionRelatedList</componentName>
         </componentInstances>
         <componentInstances>
-            <componentInstanceProperties>
-                <name>parentFieldApiName</name>
-                <value>Account.Id</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>relatedListApiName</name>
-                <value>Transactions__r</value>
-            </componentInstanceProperties>
-            <componentName>force:relatedListSingleContainer</componentName>
+            <componentName>FinServ:goalDetailList</componentName>
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
@@ -59,7 +56,18 @@
             <componentName>force:relatedListSingleContainer</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>FinServ:goalDetailList</componentName>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>FinServ__ClientAssetsAndLiabilities__r</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>FinServ:relatedContact</componentName>
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
@@ -123,42 +131,23 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>relatedListApiName</name>
-                <value>Concessions__r</value>
-            </componentInstanceProperties>
-            <componentName>force:relatedListSingleContainer</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>parentFieldApiName</name>
-                <value>Account.Id</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>relatedListApiName</name>
-                <value>News__r</value>
-            </componentInstanceProperties>
-            <componentName>force:relatedListSingleContainer</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>parentFieldApiName</name>
-                <value>Account.Id</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>relatedListApiName</name>
-                <value>Eligibilities__r</value>
-            </componentInstanceProperties>
-            <componentName>force:relatedListSingleContainer</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>parentFieldApiName</name>
-                <value>Account.Id</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>relatedListApiName</name>
                 <value>Referrals__r</value>
             </componentInstanceProperties>
             <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>Cases</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>wits:newsPanel</componentName>
         </componentInstances>
         <name>facet-1721d005-c6bb-4b24-9e40-2b0956ee0b8d</name>
         <type>Facet</type>
@@ -219,17 +208,6 @@
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
-                <name>parentFieldApiName</name>
-                <value>Account.Id</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>relatedListApiName</name>
-                <value>FinServ__ClientAssetsAndLiabilities__r</value>
-            </componentInstanceProperties>
-            <componentName>force:relatedListSingleContainer</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
                 <name>category</name>
                 <value>Retail</value>
             </componentInstanceProperties>
@@ -286,7 +264,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>label</name>
-                <value>Deposit</value>
+                <value>Assets Under Management</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>reportFilter</name>
@@ -307,14 +285,14 @@
                 <name>category</name>
                 <value>Wealth</value>
             </componentInstanceProperties>
-            <componentName>Opportunity_Related_List</componentName>
+            <componentName>FinancialAccountRoles_Related_List</componentName>
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
                 <name>category</name>
                 <value>Wealth</value>
             </componentInstanceProperties>
-            <componentName>FinancialAccountRoles_Related_List</componentName>
+            <componentName>Opportunity_Related_List</componentName>
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
@@ -358,6 +336,10 @@
                 <value>1440</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
+                <name>label</name>
+                <value>Deposits</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
                 <name>reportFilter</name>
                 <value>FK_ACC_ID</value>
             </componentInstanceProperties>
@@ -375,6 +357,10 @@
             <componentInstanceProperties>
                 <name>cacheAge</name>
                 <value>1440</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>label</name>
+                <value>Loans</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>reportFilter</name>
@@ -418,17 +404,6 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>relatedListApiName</name>
-                <value>FinServ__ClientAssetsAndLiabilities__r</value>
-            </componentInstanceProperties>
-            <componentName>force:relatedListSingleContainer</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>parentFieldApiName</name>
-                <value>Account.Id</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>relatedListApiName</name>
                 <value>Campaigns__r</value>
             </componentInstanceProperties>
             <componentName>force:relatedListSingleContainer</componentName>
@@ -463,12 +438,6 @@
             <componentName>FinServ:relationshipMap</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>FinServ:relationshipGroupList</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentName>FinServ:relationshipMembers</componentName>
-        </componentInstances>
-        <componentInstances>
             <componentName>FinServ:relatedAccount</componentName>
         </componentInstances>
         <componentInstances>
@@ -492,7 +461,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>title</name>
-                <value>720</value>
+                <value>720 Overview</value>
             </componentInstanceProperties>
             <componentName>flexipage:tab</componentName>
         </componentInstances>
@@ -565,17 +534,6 @@
                 <value>facet-5a296679-559d-4144-963a-fb61b66279ea</value>
             </componentInstanceProperties>
             <componentName>flexipage:tabset</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>parentFieldApiName</name>
-                <value>Account.Id</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>relatedListApiName</name>
-                <value>Cases</value>
-            </componentInstanceProperties>
-            <componentName>force:relatedListSingleContainer</componentName>
         </componentInstances>
         <componentInstances>
             <componentName>cooper:companyInsightTeaserCard</componentName>

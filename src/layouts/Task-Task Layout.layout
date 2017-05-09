@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <emailDefault>false</emailDefault>
-    <headers>PersonalTagging</headers>
-    <headers>PublicTagging</headers>
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
@@ -29,10 +26,6 @@
                 <behavior>Required</behavior>
                 <field>Priority</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Assigned_To_Branch__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -50,6 +43,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Email</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Assigned_To_Branch__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -105,22 +102,15 @@
         <style>OneColumn</style>
     </layoutSections>
     <layoutSections>
-        <customLabel>false</customLabel>
-        <detailHeading>false</detailHeading>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
         <editHeading>false</editHeading>
+        <label>Custom Links</label>
+        <layoutColumns/>
+        <layoutColumns/>
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
-    <miniLayout>
-        <fields>OwnerId</fields>
-        <fields>Assigned_To_Branch__c</fields>
-        <fields>Subject</fields>
-        <fields>ActivityDate</fields>
-        <fields>Priority</fields>
-        <fields>Status</fields>
-        <fields>WhoId</fields>
-        <fields>WhatId</fields>
-    </miniLayout>
     <quickActionList>
         <quickActionListItems>
             <quickActionName>Task.EditDescription_0</quickActionName>
@@ -187,8 +177,13 @@
     </relatedLists>
     <relatedObjects>WhoId</relatedObjects>
     <relatedObjects>WhatId</relatedObjects>
-    <runAssignmentRulesDefault>false</runAssignmentRulesDefault>
-    <showEmailCheckbox>true</showEmailCheckbox>
-    <showRunAssignmentRulesCheckbox>true</showRunAssignmentRulesCheckbox>
+    <showEmailCheckbox>false</showEmailCheckbox>
+    <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
+    <summaryLayout>
+        <masterLabel>00h46000000HfQP</masterLabel>
+        <sizeX>4</sizeX>
+        <sizeY>0</sizeY>
+        <summaryLayoutStyle>Default</summaryLayoutStyle>
+    </summaryLayout>
 </Layout>

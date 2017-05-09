@@ -38,7 +38,11 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Opportunity_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <businessProcesses>
         <fullName>FinServ__Opportunity Process</fullName>
@@ -293,10 +297,65 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>LOB_Referring__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text (Referral__r.LOB_Referring__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>LOB Referring</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>LeadSource</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loss_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Loss Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>true</default>
+                    <label>Unknown</label>
+                </value>
+                <value>
+                    <fullName>Price</fullName>
+                    <default>false</default>
+                    <label>Price</label>
+                </value>
+                <value>
+                    <fullName>Timing</fullName>
+                    <default>false</default>
+                    <label>Timing</label>
+                </value>
+                <value>
+                    <fullName>Product</fullName>
+                    <default>false</default>
+                    <label>Product</label>
+                </value>
+                <value>
+                    <fullName>Fit</fullName>
+                    <default>false</default>
+                    <label>Fit</label>
+                </value>
+                <value>
+                    <fullName>Authority</fullName>
+                    <default>false</default>
+                    <label>Authority</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>MainCompetitors__c</fullName>
@@ -327,6 +386,17 @@
         <fullName>NextStep</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>OpportunityId__c</fullName>
+        <externalId>false</externalId>
+        <formula>Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OpportunityId</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>OrderNumber__c</fullName>
@@ -372,6 +442,299 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Product_Line__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Line</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Category__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Business Checking Account</fullName>
+                    <default>false</default>
+                    <label>Business Checking Account</label>
+                </value>
+                <value>
+                    <fullName>Business Savings Account</fullName>
+                    <default>false</default>
+                    <label>Business Savings Account</label>
+                </value>
+                <value>
+                    <fullName>Commercial Credit Card</fullName>
+                    <default>false</default>
+                    <label>Commercial Credit Card</label>
+                </value>
+                <value>
+                    <fullName>Commercial Loans</fullName>
+                    <default>false</default>
+                    <label>Commercial Loans</label>
+                </value>
+                <value>
+                    <fullName>Commercial Real Estate</fullName>
+                    <default>false</default>
+                    <label>Commercial Real Estate</label>
+                </value>
+                <value>
+                    <fullName>Construction</fullName>
+                    <default>false</default>
+                    <label>Construction</label>
+                </value>
+                <value>
+                    <fullName>Custody</fullName>
+                    <default>false</default>
+                    <label>Custody</label>
+                </value>
+                <value>
+                    <fullName>Equipment Lease</fullName>
+                    <default>false</default>
+                    <label>Equipment Lease</label>
+                </value>
+                <value>
+                    <fullName>HELOC</fullName>
+                    <default>false</default>
+                    <label>HELOC</label>
+                </value>
+                <value>
+                    <fullName>Line of Credit</fullName>
+                    <default>false</default>
+                    <label>Line of Credit</label>
+                </value>
+                <value>
+                    <fullName>Managed Wealth</fullName>
+                    <default>false</default>
+                    <label>Managed Wealth</label>
+                </value>
+                <value>
+                    <fullName>Non-Managed Wealth</fullName>
+                    <default>false</default>
+                    <label>Non-Managed Wealth</label>
+                </value>
+                <value>
+                    <fullName>Personal CD</fullName>
+                    <default>false</default>
+                    <label>Personal CD</label>
+                </value>
+                <value>
+                    <fullName>Personal Checking</fullName>
+                    <default>false</default>
+                    <label>Personal Checking</label>
+                </value>
+                <value>
+                    <fullName>Personal Credit Card</fullName>
+                    <default>false</default>
+                    <label>Personal Credit Card</label>
+                </value>
+                <value>
+                    <fullName>Personal IRA - Savings</fullName>
+                    <default>false</default>
+                    <label>Personal IRA - Savings</label>
+                </value>
+                <value>
+                    <fullName>Personal Loans / Lines</fullName>
+                    <default>false</default>
+                    <label>Personal Loans / Lines</label>
+                </value>
+                <value>
+                    <fullName>Residential Mortgage</fullName>
+                    <default>false</default>
+                    <label>Residential Mortgage</label>
+                </value>
+                <value>
+                    <fullName>Trading</fullName>
+                    <default>false</default>
+                    <label>Trading</label>
+                </value>
+                <value>
+                    <fullName>Trust</fullName>
+                    <default>false</default>
+                    <label>Trust</label>
+                </value>
+                <value>
+                    <fullName>Vehicle Loan</fullName>
+                    <default>false</default>
+                    <label>Vehicle Loan</label>
+                </value>
+                <value>
+                    <fullName>Warehouse Mortgage</fullName>
+                    <default>false</default>
+                    <label>Warehouse Mortgage</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Retail</controllingFieldValue>
+                <valueName>HELOC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail</controllingFieldValue>
+                <valueName>Line of Credit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail</controllingFieldValue>
+                <valueName>Personal CD</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail</controllingFieldValue>
+                <valueName>Personal Checking</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail</controllingFieldValue>
+                <valueName>Personal Credit Card</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail</controllingFieldValue>
+                <valueName>Personal IRA - Savings</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail</controllingFieldValue>
+                <valueName>Personal Loans / Lines</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail</controllingFieldValue>
+                <valueName>Residential Mortgage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Retail</controllingFieldValue>
+                <valueName>Vehicle Loan</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Wealth</controllingFieldValue>
+                <valueName>Custody</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Wealth</controllingFieldValue>
+                <valueName>Managed Wealth</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Wealth</controllingFieldValue>
+                <valueName>Non-Managed Wealth</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Wealth</controllingFieldValue>
+                <valueName>Trading</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Wealth</controllingFieldValue>
+                <valueName>Trust</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commercial</controllingFieldValue>
+                <valueName>Business Checking Account</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commercial</controllingFieldValue>
+                <valueName>Business Savings Account</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commercial</controllingFieldValue>
+                <valueName>Commercial Credit Card</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commercial</controllingFieldValue>
+                <valueName>Commercial Loans</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commercial</controllingFieldValue>
+                <valueName>Commercial Real Estate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commercial</controllingFieldValue>
+                <valueName>Construction</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commercial</controllingFieldValue>
+                <valueName>Equipment Lease</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Commercial</controllingFieldValue>
+                <valueName>Warehouse Mortgage</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PushNotificationRead__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Push Notification Read</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PushNotificationSent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Push Notification Sent</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Referral__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This is the referral that is linked to the opportunity</description>
+        <externalId>false</externalId>
+        <label>Referral</label>
+        <referenceTo>Referral__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Referred_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Opportunities1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Referring_Branch__c</fullName>
+        <externalId>false</externalId>
+        <label>Outside Referral</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Referring_Customer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Referring Customer</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Referring_Employee_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Referring Employee ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Revenue__c</fullName>
         <externalId>false</externalId>
         <formula>IF(ISPICKVAL(Category__c, &quot;Retail&quot;), Sum_of_Total_Prices__c * 0.2,
@@ -383,6 +746,19 @@
         <scale>2</scale>
         <trackTrending>false</trackTrending>
         <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SocialAccountContact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Social Account Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunities (Social Account Contact)</relationshipLabel>
+        <relationshipName>SocialOpportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>StageName</fullName>
@@ -463,6 +839,9 @@
     </fields>
     <listViews>
         <fullName>AllOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>OpportunityId__c</columns>
+        <columns>PushNotificationRead__c</columns>
         <filterScope>Everything</filterScope>
         <label>All Opportunities</label>
     </listViews>
@@ -523,6 +902,11 @@
     </listViews>
     <listViews>
         <fullName>NewThisWeek</fullName>
+        <columns>PushNotificationRead__c</columns>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <columns>CORE.USERS.FIRST_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -654,6 +1038,124 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Loss_Reason__c</picklist>
+            <values>
+                <fullName>Authority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Line__c</picklist>
+            <values>
+                <fullName>Business Checking Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Savings Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custody</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HELOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Wealth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Managed Wealth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal CD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Checking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal IRA - Savings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loans %2F Lines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warehouse Mortgage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Type</picklist>
             <values>
                 <fullName>Existing Customer - Downgrade</fullName>
@@ -766,6 +1268,124 @@
             </values>
             <values>
                 <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loss_Reason__c</picklist>
+            <values>
+                <fullName>Authority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Line__c</picklist>
+            <values>
+                <fullName>Business Checking Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Savings Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custody</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HELOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Wealth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Managed Wealth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal CD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Checking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal IRA - Savings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loans %2F Lines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warehouse Mortgage</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -886,6 +1506,124 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Loss_Reason__c</picklist>
+            <values>
+                <fullName>Authority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Line__c</picklist>
+            <values>
+                <fullName>Business Checking Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Savings Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custody</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HELOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Wealth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Managed Wealth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal CD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Checking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal IRA - Savings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loans %2F Lines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warehouse Mortgage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Type</picklist>
             <values>
                 <fullName>Existing Customer - Downgrade</fullName>
@@ -1002,6 +1740,124 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Loss_Reason__c</picklist>
+            <values>
+                <fullName>Authority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Line__c</picklist>
+            <values>
+                <fullName>Business Checking Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Savings Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custody</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equipment Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HELOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Wealth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Managed Wealth</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal CD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Checking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Credit Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal IRA - Savings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loans %2F Lines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Mortgage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trading</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trust</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warehouse Mortgage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Type</picklist>
             <values>
                 <fullName>Existing Customer - Downgrade</fullName>
@@ -1040,6 +1896,81 @@
     </searchLayouts>
     <sharingModel>Private</sharingModel>
     <webLinks>
+        <fullName>APXTConga4__Conga_Composer_OAuth</fullName>
+        <availability>online</availability>
+        <description>*** DO NOT USE THIS BUTTON ON A PAGE LAYOUT *** 
+
+OAuth buttons require additional setup. Please see the Composer Installation Guide for more details.
+
+COPY THE URL FROM THIS BUTTON and paste it into your own custom button or link. Then add optional parameters to finely tune the button&apos;s behavior. See the Composer Configuration Guide for details.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conga Composer (OAuth)</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/APXTConga4__Conga_Composer
+?id={!Opportunity.Id}</url>
+        <width>900</width>
+    </webLinks>
+    <webLinks>
+        <fullName>APXTConga4__Conga_Mail_Merge</fullName>
+        <availability>online</availability>
+        <description>*** DO NOT USE THIS BUTTON ON A PAGE LAYOUT *** 
+
+COPY THE URL FROM THIS BUTTON and paste it into your own custom button or link. Then add optional parameters to finely tune the button&apos;s behavior. See the Conga Configuration Guide for details.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>false</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>false</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conga Composer</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Opportunity.Id}</url>
+        <width>900</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Conga_Composer_Create_Document</fullName>
+        <availability>online</availability>
+        <description>Originally created by Conga Solution Manager. Date of last use of Update Button from Conga Solution record: https://digitalbanktest-dev-ed--apxtconga4.na40.visual.force.com/a1546000000x56ZAAQ
+10-Apr-2017 06:38:26 AM</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>false</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>false</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Create Document</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/APXTConga4__Conga_Composer
+?Id={!Opportunity.Id}</url>
+        <width>900</width>
+    </webLinks>
+    <webLinks>
         <fullName>DeliveryStatus</fullName>
         <availability>online</availability>
         <displayType>link</displayType>
@@ -1077,5 +2008,73 @@
         <showsLocation>false</showsLocation>
         <showsStatus>false</showsStatus>
         <url>/apex/booking__popup_booking?opportunity={!Opportunity.Id}&amp;company_id={!$Setup.booking__bb__c.booking__CompanyId__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__Send_with_DocuSign</fullName>
+        <availability>online</availability>
+        <description>This button will initiate a DocuSign Envelope that is linked to the Opportunity</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send with DocuSign</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/apex/dsfs__DocuSign_JavaScript&quot;)}
+DocuSign_CreateEnvelope();</url>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__Verify_with_DNB</fullName>
+        <availability>online</availability>
+        <description>This button will initiate DnBs Pre-Contract Risk Screening linked to the Opportunity</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Verify with D&amp;B</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/apex/dsfs__DocuSign_JavaScript&quot;)}
+        
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js&apos;)} 
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js&apos;)} 
+
+var html = &apos;&lt;div id=&quot;dialog&quot; style=&quot;display: none;&quot;&gt;&lt;/div&gt;&apos;;
+
+var $g = jQuery.noConflict();
+
+var address = &apos;&lt;iframe id=&quot;dnbContent&quot; width=&quot;700&quot; height=&quot;730&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; frameborder=&quot;0&quot; src=&quot;&apos;+DocuSign_GetVerifyWithDnb(&apos;opportunity&apos;)+&apos;&quot;&gt;&lt;/iframe&gt;&apos;;
+		
+$g(function() { 
+
+	$g(&apos;head&apos;).append(&apos;&lt;link rel=&quot;stylesheet&quot; href=&quot;https://code.jquery.com/ui/1.11.4/themes/redmond/jquery-ui.css&quot;/&gt;&apos;);
+
+	if($g(&apos;#dialog&apos;).length == 0) {
+		$g(&apos;body&apos;).append(html); 
+	}
+	$g(&quot;#dialog&quot;).dialog({ 
+		autoOpen: true, 
+		modal: true, 
+		width: 700,
+		height: 783,
+		open: function(event, ui) {
+		  if($g(&apos;#myNewImage&apos;).length == 0) {
+		     $g(&quot;.ui-dialog-titlebar&quot;).append(&quot;&lt;img src=&apos;&quot;+getDnbLogo()+&quot;&apos; id=&apos;myNewImage&apos; /&gt;&quot;);
+		  }
+		  $g(&apos;.ui-widget-overlay&apos;).bind(&apos;click&apos;,function(){
+    			$g(&apos;#dialog&apos;).dialog(&quot;close&quot;);
+		  });
+		}
+	})
+	if($g(&apos;#dnbContent&apos;).length == 0) {
+		$g(&apos;#dialog&apos;).append(address); 
+	}
+
+
+	$g(&quot;.ui-dialog-title&quot;).hide();
+	$g(&quot;#dialog&quot;).css(&apos;padding&apos;, &apos;0px&apos;);
+	$g(&quot;.ui-widget-header&quot;).attr(&apos;style&apos;, &apos;padding-top:5px; padding-right:5px; padding-left:10px;padding-bottom:5px; border-radius:0px; background: #005172;border:0px;margin:auto;&apos;);
+	$g(&quot;.ui-button-text&quot;).css(&apos;padding&apos;, &apos;0&apos;);
+	$g(&quot;.ui-icon-closethick&quot;).attr(&apos;style&apos;, &apos;background-color:#005172; width:19px; height:19px; margin-top:-10px; margin-left:-10px;&apos;);
+	$g(&quot;.ui-dialog-titlebar-close&quot;).attr(&apos;style&apos;, &apos;border-radius:0px; padding:0px; width:18px; height:18px; border:0px;&apos;);
+	$g(&quot;.ui-dialog&quot;).css(&apos;z-index&apos;, &apos;10000&apos;);
+	$g(&quot;.ui-dialog&quot;).css(&apos;border-radius&apos;, &apos;0px&apos;);
+});</url>
     </webLinks>
 </CustomObject>

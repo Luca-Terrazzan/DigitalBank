@@ -21,7 +21,8 @@
             Opportunity.Amount,
             Opportunity.StageName,
             Opportunity.CloseDate,
-            Opportunity.Category__c
+            Opportunity.Category__c,
+            Opportunity.CreatedDate
         };
     }
     /**
@@ -78,6 +79,7 @@
         if(!String.isBlank(category)) {
             query += 'AND Category__c =: category';
         }
+        query += ' ORDER BY CreatedDate DESC';
         query = String.format(
             query,
             new List<String> {

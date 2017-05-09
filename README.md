@@ -10,6 +10,17 @@ Official repository documentation for the Digital Bank Global Initiative.
 
 ## Change Log
 
+##### V3.0.0 - Back to the future
+###### 09/05/2017
+* Switched repository to TEST environment ORG
+* New metadata clean + fetch
+* Several weeks worth of developments, including (in no particular order):
+    * [FEATURE] Social Studio custom interaction, you can now create opportunities directly through social studio, progressing through an email process
+    * [FEATURE] Push Notification management, ability to send push notification to the mobile app based on a contact's device
+    * [ENHANCEMENT] New dashboards and homepage with many different new reports
+    * [ENHANCEMENT] New communities along with new article and knowledge management
+    * [ENHANCEMENT] Updated data generation to allow for Revenues and data ownership randomization
+
 ##### V2.1.4_r2 - Gender Issues
 ###### 13/04/2017
 * Renamed Gender__c custom field to avoid conflicts with FSC (really?)
