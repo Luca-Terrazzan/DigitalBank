@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When an opportunity gets closed from the mobile app, send a welcoming email to the new user</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Mobile Welcome</name>
+    <style>none</style>
+    <subject>Thanks for your purchase!</subject>
+    <textOnly>Dear Paul,
+
+Thank you for purchasing Digital Bank Silver Credit Card. Please find any relevant information regarding terms and conditions about your new product here.
+
+Thanks,
+{!Organization.Name}
+
+
+Visit our website
+
+Digital Bank is an initiative by Deloitte Digital</textOnly>
+    <type>custom</type>
+</EmailTemplate>

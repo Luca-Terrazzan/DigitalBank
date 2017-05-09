@@ -12,6 +12,18 @@
         <senderType>DefaultWorkflowUser</senderType>
         <template>unfiled$public/MobileWelcome</template>
     </alerts>
+    <alerts>
+        <fullName>Mobile_Welcome_Educate_Me</fullName>
+        <ccEmails>digitalbank.deloitte@gmail.com</ccEmails>
+        <description>Mobile Welcome Educate Me</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SocialAccountContact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>unfiled$public/MobileWelcomeEducateMe</template>
+    </alerts>
     <rules>
         <fullName>Marloes Opportunity</fullName>
         <active>false</active>

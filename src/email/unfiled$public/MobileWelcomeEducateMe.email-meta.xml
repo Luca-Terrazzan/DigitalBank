@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When an opportunity created in marketing cloud gets closed, send a email to the user</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Mobile Welcome Educate Me</name>
+    <style>none</style>
+    <subject>Thanks for your subscribe!</subject>
+    <textOnly>Dear Angela,
+
+Thank you for subscribing Digital Bank Retirement Account. Please find any relevant information regarding terms &amp; conditions and how to manage your monthly rate here.
+
+Thanks,
+{!Organization.Name}
+
+
+Visit our website
+
+Digital Bank is an initiative by Deloitte Digital</textOnly>
+    <type>custom</type>
+</EmailTemplate>

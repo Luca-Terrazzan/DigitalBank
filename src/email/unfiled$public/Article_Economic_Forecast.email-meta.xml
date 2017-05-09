@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When an article of type Bank Info is created this template is sent to the community users of Start Up Community</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Article Economic Forecast</name>
+    <style>none</style>
+    <subject>Annual economic forecast on commodity pricing</subject>
+    <textOnly>Dear Commnuity User,
+
+Annual Digital Bank economic forecast on commodity pricing is now available on the community. Please, click the link below to access to the community: https://fcscommunity-developer-edition.na40.force.com/StartUP
+
+Thanks,
+{!Organization.Name}
+
+
+Visit our website
+
+Digital Bank is an initiative by Deloitte Digital</textOnly>
+    <type>custom</type>
+</EmailTemplate>

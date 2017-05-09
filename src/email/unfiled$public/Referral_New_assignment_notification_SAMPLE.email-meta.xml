@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Internal notification to referral owner when new referral is assigned.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Referral: New assignment notification (SAMPLE)</name>
+    <style>none</style>
+    <subject>New Referral assigned to you: {!Referral__c.Name} from {!Referral__c.Account__c}</subject>
+    <type>text</type>
+</EmailTemplate>

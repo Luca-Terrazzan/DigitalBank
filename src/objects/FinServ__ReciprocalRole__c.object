@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Represents the other entity’s corresponding role in a one-to-one relationship between entities.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>FinServ__CreateInverseRole__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When checked, a new inverse role is created for the role.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, a corresponding inverse role is automatically created.</inlineHelpText>
+        <label>Create Inverse Role</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__InverseRelationship__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Uniquely identifies the relationship between Role and InverseRole__c so that it can be referenced by a trigger that creates the inverse relationship record.</description>
+        <externalId>false</externalId>
+        <label>InverseRelationship</label>
+        <referenceTo>FinServ__ReciprocalRole__c</referenceTo>
+        <relationshipLabel>Inverse Relationship</relationshipLabel>
+        <relationshipName>InverseRelationship</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__InverseRole__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Inverse Role</label>
+        <length>80</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FinServ__RelationshipType__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Relationship Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>All</fullName>
+                    <default>true</default>
+                    <label>All</label>
+                </value>
+                <value>
+                    <fullName>Contact Contact Relation</fullName>
+                    <default>false</default>
+                    <label>Contact Contact Relation</label>
+                </value>
+                <value>
+                    <fullName>Account Account Relation</fullName>
+                    <default>false</default>
+                    <label>Account Account Relation</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FinServ__SourceSystemId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Source System ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Reciprocal Role</label>
+    <listViews>
+        <fullName>FinServ__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Role</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Reciprocal Roles</pluralLabel>
+    <recordTypes>
+        <fullName>FinServ__AccountRole</fullName>
+        <active>true</active>
+        <description>Roles associated with Account-Account Relationships</description>
+        <label>Account Role</label>
+        <picklistValues>
+            <picklist>FinServ__RelationshipType__c</picklist>
+            <values>
+                <fullName>Account Account Relation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>FinServ__ContactRole</fullName>
+        <active>true</active>
+        <description>Roles associated with Contact-Contact Relationships</description>
+        <label>Contact Role</label>
+        <picklistValues>
+            <picklist>FinServ__RelationshipType__c</picklist>
+            <values>
+                <fullName>Contact Contact Relation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>FinServ__InverseRole__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>FinServ__InverseRole__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>FinServ__InverseRole__c</searchFilterFields>
+        <searchResultsAdditionalFields>FinServ__InverseRole__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>FinServ__ProhibitUpdates</fullName>
+        <active>true</active>
+        <description>Enforces that updates to reciprocal roles are prohibited</description>
+        <errorConditionFormula>ISCHANGED( FinServ__CreateInverseRole__c) ||
+            ISCHANGED(Name) || ISCHANGED( FinServ__InverseRole__c ) || ISCHANGED(RecordTypeId)</errorConditionFormula>
+        <errorMessage>Reciprocal Role cannot be modified</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

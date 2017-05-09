@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <branding>
+        <primaryColor>#1797C0</primaryColor>
+        <primaryComplementColor>#FFFFFF</primaryComplementColor>
+        <quaternaryColor>#B1BAC1</quaternaryColor>
+        <quaternaryComplementColor>#222222</quaternaryComplementColor>
+        <secondaryColor>#51606E</secondaryColor>
+        <tertiaryColor>#DDE4E9</tertiaryColor>
+        <tertiaryComplementColor>#222222</tertiaryComplementColor>
+        <zeronaryColor>#51606E</zeronaryColor>
+        <zeronaryComplementColor>#FFFFFF</zeronaryComplementColor>
+    </branding>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <emailSenderAddress>dorsignola@deloitte.it</emailSenderAddress>
+    <emailSenderName>High Growth</emailSenderName>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <navigationLinkSet>
+        <navigationMenuItem>
+            <label>Topics</label>
+            <position>1</position>
+            <publiclyAvailable>true</publiclyAvailable>
+            <target>ShowMoreTopics</target>
+            <type>NavigationalTopic</type>
+        </navigationMenuItem>
+    </navigationLinkSet>
+    <networkMemberGroups>
+        <profile>Admin</profile>
+        <profile>standardaul</profile>
+        <profile>force.com - free user</profile>
+        <profile>company communities user</profile>
+        <profile>chatter only user</profile>
+        <profile>cross org data proxy user</profile>
+        <profile>work.com only user</profile>
+        <profile>analytics cloud security user</profile>
+        <profile>analytics cloud integration user</profile>
+        <profile>solutionmanager</profile>
+        <profile>community high growth</profile>
+        <profile>custom: sales profile</profile>
+        <profile>custom: marketing profile</profile>
+        <profile>custom: support profile</profile>
+        <profile>marketingprofile</profile>
+        <profile>contractmanager</profile>
+        <profile>Standard</profile>
+        <profile>advisor</profile>
+        <profile>customer associate</profile>
+        <profile>sales associate</profile>
+        <profile>manager</profile>
+        <profile>servicecloud</profile>
+        <profile>readonly</profile>
+    </networkMemberGroups>
+    <picassoSite>High_Growth1</picassoSite>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>High_Growth</site>
+    <status>Live</status>
+    <tabs>
+        <defaultTab>home</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>HighGrowth</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/welcomecommunityvAM</welcomeTemplate>
+</Network>
