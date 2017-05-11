@@ -135,6 +135,26 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>DGTB_TransactionBeneficiary__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Beneficiary</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DGTB_TransactionPlace__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Place</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Description__c</fullName>
         <externalId>false</externalId>
         <label>Description</label>

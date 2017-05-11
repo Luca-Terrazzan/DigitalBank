@@ -64,8 +64,19 @@
                 <behavior>Edit</behavior>
                 <field>Loss_Reason__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>CurrencyIsoCode</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
+            <layoutItems>
+                <height>35</height>
+                <page>G4S__GlanceFromOpportunity</page>
+                <showLabel>false</showLabel>
+                <showScrollbars>false</showScrollbars>
+                <width>100%</width>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Amount</field>
@@ -376,6 +387,10 @@
         <fields>dsfs__Hrs_Sent_to_Sign__c</fields>
         <fields>dsfs__Sent_Date_Time__c</fields>
         <relatedList>dsfs__DocuSign_Status__c.dsfs__Opportunity__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>Suitability_Test__c.Opportunity__c</relatedList>
     </relatedLists>
     <relatedObjects>AccountId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>

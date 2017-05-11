@@ -15,6 +15,10 @@
                 <behavior>Edit</behavior>
                 <field>Retail_Cross_selling_campaign__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>CurrencyIsoCode</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -287,6 +291,10 @@
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>Collateral__c.Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>Suitability_Test__c.Individual__c</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>

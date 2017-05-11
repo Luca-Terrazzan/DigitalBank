@@ -1155,6 +1155,7 @@
     <tab>FinServ__LifeEvent__c</tab>
     <tab>FinServ__Revenue__c</tab>
     <tab>Transaction__c</tab>
+    <tab>Suitability_Test__c</tab>
     <uiType>Lightning</uiType>
     <utilityBar>Digital_Bank_UtilityBar</utilityBar>
 </CustomApplication>

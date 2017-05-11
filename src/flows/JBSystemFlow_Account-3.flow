@@ -10,7 +10,13 @@
         <inputParameters>
             <name>ContactKey</name>
             <value>
-                <stringValue>{&quot;relationshipIdName&quot;:&quot;OwnerId&quot;,&quot;relationshipName&quot;:&quot;Owner&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;User&quot;,&quot;fieldName&quot;:&quot;Id&quot;}</stringValue>
+                <stringValue>{
+  &quot;relationshipIdName&quot;: &quot;OwnerId&quot;,
+  &quot;relationshipName&quot;: &quot;Owner&quot;,
+  &quot;isPolymorphic&quot;: false,
+  &quot;referenceObjectName&quot;: &quot;User&quot;,
+  &quot;fieldName&quot;: &quot;Id&quot;
+}</stringValue>
             </value>
         </inputParameters>
         <inputParameters>

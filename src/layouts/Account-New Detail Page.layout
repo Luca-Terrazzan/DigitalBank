@@ -139,6 +139,10 @@
                 <behavior>Edit</behavior>
                 <field>Retail_Cross_selling_campaign__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>CurrencyIsoCode</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

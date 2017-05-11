@@ -8,12 +8,13 @@
             <axisBinding>y</axisBinding>
             <column>RowCount</column>
         </chartSummaries>
-        <chartType>Donut</chartType>
+        <chartType>VerticalColumnStacked</chartType>
         <enableHoverLabels>false</enableHoverLabels>
-        <expandOthers>false</expandOthers>
-        <groupingColumn>LEAD_SOURCE</groupingColumn>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>DUE_DATE</groupingColumn>
         <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>Account.Customer_Tier__c</secondaryGroupingColumn>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
@@ -26,26 +27,20 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
-        <field>OWNER</field>
+        <field>ACCOUNT.NAME</field>
     </columns>
     <columns>
-        <field>FIRST_NAME</field>
+        <field>RECORDTYPE</field>
     </columns>
     <columns>
-        <field>LAST_NAME</field>
+        <field>LAST_UPDATE</field>
     </columns>
     <columns>
-        <field>TITLE</field>
-    </columns>
-    <columns>
-        <field>COMPANY</field>
-    </columns>
-    <columns>
-        <field>EMAIL</field>
+        <field>ADDRESS1_STATE</field>
     </columns>
     <filter>
         <criteriaItems>
-            <column>LEAD_SOURCE</column>
+            <column>DUE_DATE</column>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>
@@ -53,17 +48,27 @@
     </filter>
     <format>Summary</format>
     <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>LEAD_SOURCE</field>
+        <dateGranularity>Month</dateGranularity>
+        <field>DUE_DATE</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Leads by Channel</name>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Customer_Tier__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>USERS.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Account Last Touch Date</name>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>LeadList</reportType>
-    <scope>org</scope>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>
         <dateColumn>CREATED_DATE</dateColumn>

@@ -4,7 +4,6 @@
         <calculatedFormula>FinServ__Revenue__c.FinServ__Amount__c:SUM</calculatedFormula>
         <datatype>number</datatype>
         <developerName>FORMULA1</developerName>
-        <downGroupingContext>FinServ__Revenue__c.Branch__c</downGroupingContext>
         <isActive>true</isActive>
         <isCrossBlock>false</isCrossBlock>
         <masterLabel>Revenue</masterLabel>
@@ -18,15 +17,17 @@
             <axisBinding>y</axisBinding>
             <column>FORMULA1</column>
         </chartSummaries>
-        <chartType>VerticalColumn</chartType>
-        <enableHoverLabels>false</enableHoverLabels>
+        <chartType>VerticalColumnGrouped</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
         <expandOthers>true</expandOthers>
         <groupingColumn>FinServ__Revenue__c.Branch__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
         <location>CHART_TOP</location>
+        <secondaryGroupingColumn>FinServ__Revenue__c.Category__c</secondaryGroupingColumn>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
-        <showValues>false</showValues>
+        <showValues>true</showValues>
         <size>Medium</size>
         <summaryAxisRange>Auto</summaryAxisRange>
         <textColor>#000000</textColor>
@@ -47,11 +48,22 @@
             <operator>notEqual</operator>
             <value></value>
         </criteriaItems>
+        <criteriaItems>
+            <column>FinServ__Revenue__c.Category__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>FinServ__Revenue__c.Branch__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FinServ__Revenue__c.Category__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Revenue by Branch</name>
