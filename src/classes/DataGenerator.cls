@@ -153,12 +153,17 @@ public with sharing class DataGenerator {
         }
         return this;
     }
-    public DataGenerator closeOpportunities(Decimal chance) {
+    public DataGenerator closeOpportunities(Decimal chanceToBeClosed, Decimal winChance) {
         if (opportunities.isEmpty()) {
-            opportunities = [SELECT StageName FROM Opportunity WHERE Mock__c = true LIMIT 50000];
+            opportunities = [SELECT StageName FROM Opportunity
+                WHERE Mock__c = true AND IsClosed = false
+                LIMIT 10000 FOR UPDATE];
         }
         for(Opportunity opp: opportunities) {
-            if (Math.random() <= chance) opp.StageName = 'Closed Won';
+            Decimal roll = Math.random();
+            if (roll <= chanceToBeClosed) {
+                opp.StageName = roll >= winChance ? 'Closed Won' : 'Closed Lost';
+            }
         }
         update opportunities;
         return this;
@@ -202,7 +207,7 @@ public with sharing class DataGenerator {
         Boolean isDeposit = Math.random() >= 0.2 ? true : false;
         Boolean bigTransaction = Math.random() >= 0.9 ? true : false;
         Decimal amount = Math.random();
-        amount = bigTransaction ? amount * 100000 + 25000 : amount * 1000 + 5; 
+        amount = bigTransaction ? amount * 100000 + 25000 : amount * 1000 + 5;
         amount = isDeposit ? amount : -amount;
         FinServ__FinancialAccount__c finAccount = pickRandomFinAccount();
         Transaction__c newTransaction = new Transaction__c(
