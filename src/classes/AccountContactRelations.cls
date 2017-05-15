@@ -49,7 +49,8 @@ public class AccountContactRelations extends fflib_SObjectDomain
                 PrimaryGroup__c   = record.FinServ__PrimaryGroup__c,
                 Primary__c        = record.FinServ__Primary__c,
                 Rollups__c        = record.FinServ__Rollups__c,
-                SourceSystemId__c = record.FinServ__SourceSystemId__c
+                SourceSystemId__c = record.FinServ__SourceSystemId__c,
+                DGTB_AccountContactReference__c = record.Id
                 )
             );
         }
