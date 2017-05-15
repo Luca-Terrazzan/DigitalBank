@@ -3,17 +3,6 @@
  */
 public class AccountService
 {
-    public class Row{
-        @AuraEnabled
-        public String label1 {get;set;}
-        @AuraEnabled
-        public String value1 {get;set;}
-        @AuraEnabled
-        public String label2 {get;set;}
-        @AuraEnabled
-        public String value2 {get;set;}
-    }
-
     /**
      * Select products only based on a specific Account - mostly individual accounts
      * @param      accountId  The account identifier
@@ -49,10 +38,8 @@ public class AccountService
 
     /**
      * Gets the account fields.
-     *
      * @param      accountId  The account identifier
      * @param      fieldList  The field list
-     *
      * @return     The account fields.
      */
     @AuraEnabled

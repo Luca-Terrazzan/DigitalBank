@@ -8,12 +8,13 @@
             <axisBinding>y</axisBinding>
             <column>RowCount</column>
         </chartSummaries>
-        <chartType>Donut</chartType>
-        <enableHoverLabels>false</enableHoverLabels>
-        <expandOthers>false</expandOthers>
-        <groupingColumn>LEAD_SOURCE</groupingColumn>
+        <chartType>VerticalColumnStacked</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>OWNER</groupingColumn>
         <legendPosition>Right</legendPosition>
-        <location>CHART_BOTTOM</location>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>STATUS</secondaryGroupingColumn>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
@@ -25,9 +26,6 @@
         <titleColor>#000000</titleColor>
         <titleSize>18</titleSize>
     </chart>
-    <columns>
-        <field>OWNER</field>
-    </columns>
     <columns>
         <field>FIRST_NAME</field>
     </columns>
@@ -41,23 +39,37 @@
         <field>COMPANY</field>
     </columns>
     <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>RATING</field>
+    </columns>
+    <columns>
+        <field>STREET</field>
+    </columns>
+    <columns>
         <field>EMAIL</field>
     </columns>
     <filter>
         <criteriaItems>
-            <column>LEAD_SOURCE</column>
+            <column>CONVERTED</column>
             <isUnlocked>true</isUnlocked>
-            <operator>notEqual</operator>
-            <value></value>
+            <operator>equals</operator>
+            <value>0</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>LEAD_SOURCE</field>
+        <field>OWNER</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Leads by Channel</name>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Open Leads by Owner</name>
     <params>
         <name>co</name>
         <value>1</value>
@@ -67,6 +79,6 @@
     <showDetails>true</showDetails>
     <timeFrameFilter>
         <dateColumn>CREATED_DATE</dateColumn>
-        <interval>INTERVAL_CUSTOM</interval>
+        <interval>INTERVAL_THISWEEK</interval>
     </timeFrameFilter>
 </Report>

@@ -8,12 +8,13 @@
             <axisBinding>y</axisBinding>
             <column>RowCount</column>
         </chartSummaries>
-        <chartType>Donut</chartType>
+        <chartType>HorizontalBarStacked</chartType>
         <enableHoverLabels>false</enableHoverLabels>
-        <expandOthers>false</expandOthers>
-        <groupingColumn>LEAD_SOURCE</groupingColumn>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>OWNER</groupingColumn>
         <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>STATUS</secondaryGroupingColumn>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
@@ -26,47 +27,52 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
-        <field>OWNER</field>
+        <field>SUBJECT</field>
     </columns>
     <columns>
-        <field>FIRST_NAME</field>
+        <field>CREATED_DATE</field>
     </columns>
     <columns>
-        <field>LAST_NAME</field>
+        <field>AGE</field>
     </columns>
     <columns>
-        <field>TITLE</field>
-    </columns>
-    <columns>
-        <field>COMPANY</field>
-    </columns>
-    <columns>
-        <field>EMAIL</field>
+        <field>ACCOUNT.NAME</field>
     </columns>
     <filter>
         <criteriaItems>
-            <column>LEAD_SOURCE</column>
+            <column>STATUS</column>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
-            <value></value>
+            <value>Closed</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>LEAD_SOURCE</field>
+        <field>OWNER</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Leads by Channel</name>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Open Branch Cases</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>LeadList</reportType>
-    <scope>org</scope>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
     <showDetails>true</showDetails>
+    <sortColumn>AGE</sortColumn>
+    <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
-        <dateColumn>CREATED_DATE</dateColumn>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>
     </timeFrameFilter>
 </Report>

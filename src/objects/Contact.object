@@ -133,6 +133,10 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
         <fullName>Deceased_Date__c</fullName>
         <externalId>false</externalId>
         <label>Deceased Date</label>
@@ -889,6 +893,18 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Customer_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Customer ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>true</unique>
     </fields>
     <fields>
         <fullName>Gender__c</fullName>

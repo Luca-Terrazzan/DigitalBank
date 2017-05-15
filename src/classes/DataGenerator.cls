@@ -1,3 +1,7 @@
+/**
+ * Class for data generator.
+ * TODO: refactoring using randomPicklistValue(); refactor using SOBject[]
+ */
 public with sharing class DataGenerator {
     private static DataGenerator instance = null;
     private static Integer randomizer = 0;
@@ -18,6 +22,9 @@ public with sharing class DataGenerator {
     private FinServ__Revenue__c[] revenues;
 
     private User[] teamMembers;
+
+    // TODO: replace single lists with general one to bulkify dml transactions
+    private SObject[] items;
 
     /**
      * Singleton
@@ -89,11 +96,11 @@ public with sharing class DataGenerator {
             Linkedin_Profile__c = 'linkedin.com/' + lastname,
             FinServ__InvestmentObjectives__c = randomPick(CustomConstants.investment_objectives),
             FinServ__RiskTolerance__c = randomPick(CustomConstants.risk_tolerance),
-            Branch__c = randomPick(CustomConstants.branches),
+            Branch__c = randomPicklistValue(Account.Branch__c),
             FinServ__InvestmentExperience__c = randomPick(CustomConstants.investment_experience),
             FinServ__ServiceModel__c = randomPick(CustomConstants.service_model),
             FinServ__TimeHorizon__c = randomPick(CustomConstants.time_horizon),
-            Industry = randomPick(CustomConstants.industry),
+            Industry = randomPicklistValue(Account.Industry),
             Website = 'www.DigitalBank.com'
         );
     }
@@ -153,6 +160,13 @@ public with sharing class DataGenerator {
         }
         return this;
     }
+    /**
+     * Closes opportunities. Uses loaded opportunities if called while creating some, otherwise selects up to
+     * 10k mock opportunities at random from the db.
+     * @param      chanceToBeClosed  The chance to be closed
+     * @param      winChance         The chance to be closed as won
+     * @return     reference to the current instance
+     */
     public DataGenerator closeOpportunities(Decimal chanceToBeClosed, Decimal winChance) {
         if (opportunities.isEmpty()) {
             opportunities = [SELECT StageName FROM Opportunity
@@ -247,6 +261,10 @@ public with sharing class DataGenerator {
         if (stringlist == null || stringlist.isEmpty()) return null;
         return stringlist[(Integer) Math.floor(Math.random()*stringlist.size())];
     }
+    public static String randomPicklistValue(Schema.SObjectField field) {
+        Schema.PicklistEntry[] ples = field.getDescribe().getPicklistValues();
+        return ples[(Integer) Math.floor(Math.random()*ples.size())].getLabel();
+    }
     public Account pickRandomAccount() {
         if (!individuals.isEmpty()) {
             return (Account) randomPickSObject(individuals);
@@ -270,6 +288,14 @@ public with sharing class DataGenerator {
             }
             return (FinServ__FinancialAccount__c) randomPickSObject(finAccounts);
         }
+    }
+    public static void randomizeOpportunitiesOwnerships() {
+        Opportunity[] opps = [SELECT Id FROM Opportunity WHERE Mock__c = true LIMIT 50000];
+        User[] teamMembers = [SELECT Id FROM User WHERE IsActive = true AND UserRole.DeveloperName = 'Opportunity_mail_receiver'];
+        for (Opportunity opp : opps) {
+            opp.OwnerId = randomPickSObject(teamMembers).Id;
+        }
+        update opps;
     }
 
     public static void demoTransactions() {
@@ -298,14 +324,5 @@ public with sharing class DataGenerator {
         };
         TransactionRest.create(map1);
         TransactionRest.create(map2);
-    }
-
-    public static void randomizeOpportunitiesOwnerships() {
-        Opportunity[] opps = [SELECT Id FROM Opportunity WHERE Mock__c = true LIMIT 50000];
-        User[] teamMembers = [SELECT Id FROM User WHERE IsActive = true AND UserRole.DeveloperName = 'Opportunity_mail_receiver'];
-        for (Opportunity opp : opps) {
-            opp.OwnerId = randomPickSObject(teamMembers).Id;
-        }
-        update opps;
     }
 }

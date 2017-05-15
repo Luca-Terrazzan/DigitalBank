@@ -441,4 +441,21 @@
         </picklistValues>
     </recordTypes>
     <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>G4S__Schedule_Glance_Session</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Schedule Glance Meeting</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>var objectId = top.location.pathname.substr(1);
+
+if (top.location.href.indexOf(&apos;?id=&apos;) != -1) {
+    objectId = top.location.href.substr(top.location.href.indexOf(&apos;?id=&apos;) + 4);
+}
+
+top.location.href = &apos;/apex/g4s__ScheduleSession?objectId=&apos;  + objectId;</url>
+    </webLinks>
 </CustomObject>
