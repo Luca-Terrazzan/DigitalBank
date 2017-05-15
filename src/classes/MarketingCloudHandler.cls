@@ -422,9 +422,12 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
     }
 
     /**
-     * Stub function to just insert some demo stuff for the indian team demo. Might be removed when needed.
+     * Stub functions to just insert some demo stuff for the indian team demo. Might be removed when needed.
      */
-    public static void demoPushNotification() {
+     public static void demoPushNotification() {
+         demoPushNotification(null, null);
+     }
+    public static void demoPushNotification(String notificationText, String notificationId) {
         Contact socialContact = [SELECT AccountId, Device_Id__c, Name FROM Contact WHERE Id = '0034600000SaJHV'];
         Opportunity opp = new Opportunity(
             SocialAccountContact__c = socialContact.Id,
@@ -436,7 +439,9 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
             Description = 'Opportunity source: ' + 'DEMO TEST'
         );
         insert opp;
-        System.enqueueJob(new PushNotificationHandler(opp, socialContact));
+        PushNotificationHandler pnh = new PushNotificationHandler(opp, socialContact);
+        pnh.customizeNotification(notificationText, notificationId);
+        System.enqueueJob(pnh);
         String schedId = System.schedule(ReminderHandler.getJobName(), ReminderHandler.getTimeOut(), new ReminderHandler(opp, socialContact));
     }
 }
