@@ -853,14 +853,6 @@
         <unique>false</unique>
     </fields>
     <listViews>
-        <fullName>AllOpportunities</fullName>
-        <columns>OPPORTUNITY.NAME</columns>
-        <columns>OpportunityId__c</columns>
-        <columns>PushNotificationRead__c</columns>
-        <filterScope>Everything</filterScope>
-        <label>All Opportunities</label>
-    </listViews>
-    <listViews>
         <fullName>ClosingNextMonth</fullName>
         <filterScope>Everything</filterScope>
         <filters>
@@ -899,6 +891,20 @@
             <value>LAST_N_MONTHS:3</value>
         </filters>
         <label>Opportunity Pipeline</label>
+    </listViews>
+    <listViews>
+        <fullName>JuliaOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>OpportunityId__c</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <columns>Sum_of_Total_Prices__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.FULL_NAME</field>
+            <operation>contains</operation>
+            <value>Julia</value>
+        </filters>
+        <label>Julia Opportunities</label>
     </listViews>
     <listViews>
         <fullName>MyOpportunities</fullName>
