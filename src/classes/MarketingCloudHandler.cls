@@ -2,12 +2,12 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
 
     final static Integer CONTENT_MAX_LENGTH = 32000;
     Boolean isNewCaseCreated = false;
-    
+
     // Reopen case if it has not been closed for more than this number
     global virtual Integer getMaxNumberOfDaysClosedToReopenCase() {
         return 5;
     }
-    
+
     // Create a case if one of these post tags are on the SocialPost, regardless of the skipCreateCase indicator.
     global virtual Set<String> getPostTagsThatCreateCase(){
         return new Set<String>();
@@ -37,33 +37,33 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         Case parentCase = buildParentCase(post, persona, rawData);
         setRelationshipsOnPost(post, persona, parentCase);
         setModeration(post, rawData);
-        
+
         upsert post;
-        
+
         if(isNewCaseCreated){
             updateCaseSource(post, parentCase);
         }
-        
+
         setOpportunity(post, persona, rawData);
 
         return result;
     }
-    
+
     private void setModeration(SocialPost post, Map<String, Object> rawData){
         //if we don't automatically create a case, we should flag the post as requiring moderator review.
         if(post.parentId == null && !isUnsentParent(rawData))
             post.reviewedStatus = 'Needed';
     }
-    
+
     private void updateCaseSource(SocialPost post, Case parentCase){
         if(parentCase != null) {
             parentCase.SourceId = post.Id;
             //update as a new sobject to prevent undoing any changes done by insert triggers
             update new Case(Id = parentCase.Id, SourceId = parentCase.SourceId);
         }
-    
+
     }
-    
+
     private void handleExistingPost(SocialPost post, SocialPersona persona) {
         update post;
         if (persona.id != null)
@@ -83,10 +83,10 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
             createPersona(persona);
         else
             updatePersona(persona);
-            
+
         return persona;
     }
-    
+
     private void updatePersona(SocialPersona persona) {
         try{
             update persona;
@@ -94,7 +94,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
             System.debug('Error updating social persona: ' + e.getMessage());
         }
     }
-    
+
     private Case buildParentCase(SocialPost post, SocialPersona persona, Map<String, Object> rawData){
         if(!isUnsentParent(rawData)) {
             Case parentCase = findParentCase(post, persona);
@@ -112,10 +112,10 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
                 return createCase(post, persona);
             }
         }
-        
+
         return null;
     }
-    
+
     private boolean caseShouldBeReopened(Case c){
         return c.id != null && c.isClosed && System.now() < c.closedDate.addDays(getMaxNumberOfDaysClosedToReopenCase());
     }
@@ -123,7 +123,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
     private void setRelationshipsOnPost(SocialPost postToUpdate, SocialPersona persona, Case parentCase) {
         if (persona.Id != null) {
             postToUpdate.PersonaId = persona.Id;
-            
+
             if(persona.ParentId.getSObjectType() != SocialPost.sObjectType) {
                 postToUpdate.WhoId = persona.ParentId;
             }
@@ -132,7 +132,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
             postToUpdate.ParentId = parentCase.Id;
         }
     }
-    
+
     private Case createCase(SocialPost post, SocialPersona persona) {
         Case newCase = new Case(subject = post.Name);
         if (persona != null && persona.ParentId != null) {
@@ -159,11 +159,11 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         }
         return parentCase;
     }
-    
+
     private boolean isReplyingToAnotherCustomer(SocialPost post, SocialPersona persona){
         return !post.ReplyTo.IsOutbound && post.ReplyTo.PersonaId != persona.Id;
     }
-    
+
     private boolean isChat(SocialPost post){
         return post.messageType == 'Private' || post.messageType == 'Direct';
     }
@@ -177,7 +177,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         }
         return null;
     }
-    
+
     private Case findParentCaseFromPersona(SocialPost post, SocialPersona persona) {
         SocialPost lastestInboundPostWithSamePersonaAndRecipient = findLatestInboundPostBasedOnPersonaAndRecipient(post, persona);
         if (lastestInboundPostWithSamePersonaAndRecipient != null) {
@@ -197,15 +197,15 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
 
     private void matchPost(SocialPost post) {
             if (post.Id != null) return;
-        
+
         performR6PostIdCheck(post);
-        
+
         if (post.Id == null){
             performExternalPostIdCheck(post);
         }
     }
-    
-    
+
+
     private void performR6PostIdCheck(SocialPost post){
         if(post.R6PostId == null) return;
         List<SocialPost> postList = [SELECT Id FROM SocialPost WHERE R6PostId = :post.R6PostId LIMIT 1];
@@ -213,8 +213,8 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
             post.Id = postList[0].Id;
         }
     }
-    
-    
+
+
     private void performExternalPostIdCheck(SocialPost post) {
         if (post.provider == 'Facebook' && post.messageType == 'Private') return;
         if (post.provider == null || post.externalPostId == null) return;
@@ -223,15 +223,15 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
             post.Id = postList[0].Id;
         }
     }
-    
-    
+
+
     private SocialPost findReplyTo(SocialPost post, SocialPersona persona) {
         if(post.replyToId != null && post.replyTo == null)
             return findReplyToBasedOnReplyToId(post);
         if(post.responseContextExternalId != null){
             if((post.provider == 'Facebook' && post.messageType == 'Private') || (post.provider == 'Twitter' && post.messageType == 'Direct')){
                 SocialPost replyTo = findReplyToBasedOnResponseContextExternalPostIdAndProvider(post);
-                if(replyTo.id != null) 
+                if(replyTo.id != null)
                     return replyTo;
             }
             return findReplyToBasedOnExternalPostIdAndProvider(post);
@@ -252,7 +252,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
             return new SocialPost();
         return posts[0];
     }
-    
+
     private SocialPost findReplyToBasedOnResponseContextExternalPostIdAndProvider(SocialPost post){
         List<SocialPost> posts = [SELECT Id, ParentId, IsOutbound, PersonaId FROM SocialPost WHERE Provider = :post.provider AND responseContextExternalId = :post.responseContextExternalId ORDER BY posted DESC NULLS LAST LIMIT 1];
         if(posts.isEmpty())
@@ -286,7 +286,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
                     MediaProvider = :persona.MediaProvider AND
                     Name = :persona.Name LIMIT 1];
             }
-                    
+
             if (!personaList.isEmpty()) {
                 persona.Id = personaList[0].Id;
                 persona.ParentId = personaList[0].ParentId;
@@ -304,15 +304,15 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
     }
 
     private boolean isThereEnoughInformationToCreatePersona(SocialPersona persona) {
-        return String.isNotBlank(persona.Name) && 
-               String.isNotBlank(persona.Provider) && 
+        return String.isNotBlank(persona.Name) &&
+               String.isNotBlank(persona.Provider) &&
                String.isNotBlank(persona.MediaProvider);
     }
-    
+
     private boolean shouldCreateCase(SocialPost post, Map<String, Object> rawData) {
         return !isUnsentParent(rawData) && (!hasSkipCreateCaseIndicator(rawData) || hasPostTagsThatCreateCase(post));
     }
-    
+
     private boolean isUnsentParent(Map<String, Object> rawData) {
         Object unsentParent = rawData.get('unsentParent');
         return unsentParent != null && 'true'.equalsIgnoreCase(String.valueOf(unsentParent));
@@ -322,13 +322,13 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         Object skipCreateCase = rawData.get('skipCreateCase');
         return skipCreateCase != null && 'true'.equalsIgnoreCase(String.valueOf(skipCreateCase));
     }
-    
+
     private boolean hasPostTagsThatCreateCase(SocialPost post){
         Set<String> postTags = getPostTags(post);
         postTags.retainAll(getPostTagsThatCreateCase());
         return !postTags.isEmpty();
     }
-    
+
     private Set<String> getPostTags(SocialPost post){
         Set<String> postTags = new Set<String>();
         if(post.postTags != null)
@@ -337,7 +337,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
     }
 
     global String getPersonaFirstName(SocialPersona persona) {
-        String name = getPersonaName(persona);      
+        String name = getPersonaName(persona);
         String firstName = '';
         if (name.contains(' ')) {
             firstName = name.substringBeforeLast(' ');
@@ -345,9 +345,9 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         firstName = firstName.abbreviate(40);
         return firstName;
     }
-    
-    global String getPersonaLastName(SocialPersona persona) {   
-        String name = getPersonaName(persona);   
+
+    global String getPersonaLastName(SocialPersona persona) {
+        String name = getPersonaName(persona);
         String lastName = name;
         if (name.contains(' ')) {
             lastName = name.substringAfterLast(' ');
@@ -355,7 +355,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         lastName = lastName.abbreviate(80);
         return lastName;
     }
-    
+
     private String getPersonaName(SocialPersona persona) {
         String name = persona.Name.trim();
         if (String.isNotBlank(persona.RealName)) {
@@ -363,7 +363,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         }
         return name;
     }
-    
+
     global virtual SObject createPersonaParent(SocialPersona persona) {
 
         Contact[] existingParent = [SELECT Id FROM Contact WHERE Name =: persona.Name];
@@ -374,7 +374,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
 
         String firstName = getPersonaFirstName(persona);
         String lastName = getPersonaLastName(persona);
-        
+
         Contact contact = new Contact(LastName = lastName, FirstName = firstName);
         String defaultAccountId = getDefaultAccountId();
         if (defaultAccountId != null)
@@ -421,6 +421,9 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         }
     }
 
+    /**
+     * Stub function to just insert some demo stuff for the indian team demo. Might be removed when needed.
+     */
     public static void demoPushNotification() {
         Contact socialContact = [SELECT AccountId, Device_Id__c, Name FROM Contact WHERE Id = '0034600000SaJHV'];
         Opportunity opp = new Opportunity(
