@@ -153,6 +153,13 @@ public with sharing class DataGenerator {
         }
         return this;
     }
+    /**
+     * Closes opportunities. Uses loaded opportunities if called while creating some, otherwise selects up to
+     * 10k mock opportunities at random from the db.
+     * @param      chanceToBeClosed  The chance to be closed
+     * @param      winChance         The chance to be closed as won
+     * @return     reference to the current instance
+     */
     public DataGenerator closeOpportunities(Decimal chanceToBeClosed, Decimal winChance) {
         if (opportunities.isEmpty()) {
             opportunities = [SELECT StageName FROM Opportunity
