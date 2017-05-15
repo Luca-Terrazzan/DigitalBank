@@ -26,7 +26,10 @@ public class PushNotificationHandler implements Queueable, Database.AllowsCallou
         String deviceId = String.isNotBlank(socialContact.Device_Id__c) ?
             socialContact.Device_Id__c :
             'testId' + String.valueOf((Integer)(Math.random() * 1000));
-        String payload = '[{"notification_Id": "' + opp.Id + suffix + '", "device_Id": "' + deviceId + '", "notification_text": "' + opp.Name + '"}]';
+        String notificationText = String.isNotBlank(customText) ? customText : opp.Name;
+        String notificationId = String.isNotBlank(customId) ? customId : opp.Id + suffix;
+        String payload = '[{"notification_Id": "' + notificationId + '", "device_Id": "' + deviceId +
+            '", "notification_text": "' + notificationText + '"}]';
         HttpRequest req = new HttpRequest();
             req.setEndpoint('http://devesb.digitalbank.us:8101/notification-api/pushNotifications');
             req.setMethod('POST');
