@@ -20,8 +20,8 @@ global class ReminderHandler implements Schedulable, Database.AllowsCallouts {
     }
 
     public static String getTimeOut() {
-        String[] temp = new String[]{'*', '*', '*', '*', '*', '*', '*'};
-        DateTime now = System.now();
+        String[] temp    = new String[]{'*', '*', '*', '*', '*', '*', '*'};
+        DateTime now     = System.now();
         DateTime timeout = now.addMinutes(2);
         temp[0] = String.valueOf(timeout.second());
         temp[1] = String.valueOf(timeout.minute());
@@ -30,7 +30,6 @@ global class ReminderHandler implements Schedulable, Database.AllowsCallouts {
         temp[4] = String.valueOf(timeout.month());
         temp[5] = '?';
         temp[6] = String.valueOf(timeout.year());
-        System.debug('scheduled time: ' + String.join(temp, ' '));
         return String.join(temp, ' ');
     }
 
@@ -40,6 +39,6 @@ global class ReminderHandler implements Schedulable, Database.AllowsCallouts {
 
     public void customizeNotification(String notificationText, String notificationId) {
         this.customText = notificationText;
-        this.customId = notificationId;
+        this.customId   = notificationId;
     }
 }

@@ -48,7 +48,8 @@ public class PushNotificationHandler implements Queueable, Database.AllowsCallou
             req.setHeader('Content-Type', 'application/json');
             req.setHeader('Cache-Control', 'no-cache');
         Http http = new Http();
-        if (DEBUG) System.debug('DEBUG -- push notification envelope: ' + req);
+        if (DEBUG) System.debug('DEBUG MODE -- push notification endpoint: ' + req);
+        if (DEBUG) System.debug('DEBUG MODE -- push notification payload: ' + req.getBody());
         HTTPResponse res = http.send(req);
         if (res.getStatusCode() == 200) {
             opp.PushNotificationSent__c = true;

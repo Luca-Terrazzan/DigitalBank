@@ -442,6 +442,8 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         PushNotificationHandler pnh = new PushNotificationHandler(opp, socialContact);
         pnh.customizeNotification(notificationText, notificationId);
         System.enqueueJob(pnh);
-        String schedId = System.schedule(ReminderHandler.getJobName(), ReminderHandler.getTimeOut(), new ReminderHandler(opp, socialContact));
+        ReminderHandler rh = new ReminderHandler(opp, socialContact);
+        rh.customizeNotification(notificationText, notificationId);
+        String schedId = System.schedule(ReminderHandler.getJobName(), ReminderHandler.getTimeOut(), rh);
     }
 }
