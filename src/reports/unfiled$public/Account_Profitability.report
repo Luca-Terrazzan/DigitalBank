@@ -11,7 +11,7 @@
         <chartType>Donut</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>false</expandOthers>
-        <groupingColumn>LEAD_SOURCE</groupingColumn>
+        <groupingColumn>Account.Profitability__c</groupingColumn>
         <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
         <showAxisLabels>true</showAxisLabels>
@@ -26,26 +26,23 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
-        <field>OWNER</field>
+        <field>USERS.NAME</field>
     </columns>
     <columns>
-        <field>FIRST_NAME</field>
+        <field>ACCOUNT.NAME</field>
     </columns>
     <columns>
-        <field>LAST_NAME</field>
+        <field>TYPE</field>
     </columns>
     <columns>
-        <field>TITLE</field>
+        <field>LAST_UPDATE</field>
     </columns>
     <columns>
-        <field>COMPANY</field>
-    </columns>
-    <columns>
-        <field>EMAIL</field>
+        <field>DUE_DATE</field>
     </columns>
     <filter>
         <criteriaItems>
-            <column>LEAD_SOURCE</column>
+            <column>Account.Profitability__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
             <value></value>
@@ -54,16 +51,16 @@
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>LEAD_SOURCE</field>
-        <sortOrder>Asc</sortOrder>
+        <field>Account.Profitability__c</field>
+        <sortOrder>Desc</sortOrder>
     </groupingsDown>
-    <name>Leads by Channel</name>
+    <name>Account Profitability</name>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>LeadList</reportType>
-    <scope>org</scope>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>
         <dateColumn>CREATED_DATE</dateColumn>

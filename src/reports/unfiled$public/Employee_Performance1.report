@@ -1,33 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
-    <aggregates>
-        <calculatedFormula>AMOUNT:SUM</calculatedFormula>
-        <datatype>currency</datatype>
-        <developerName>FORMULA1</developerName>
-        <isActive>true</isActive>
-        <isCrossBlock>false</isCrossBlock>
-        <masterLabel>Amount</masterLabel>
-        <scale>2</scale>
-    </aggregates>
     <chart>
         <backgroundColor1>#FFFFFF</backgroundColor1>
         <backgroundColor2>#FFFFFF</backgroundColor2>
         <backgroundFadeDir>Diagonal</backgroundFadeDir>
         <chartSummaries>
             <axisBinding>y</axisBinding>
-            <column>FORMULA1</column>
+            <column>RowCount</column>
         </chartSummaries>
-        <chartType>HorizontalBarGrouped</chartType>
+        <chartType>HorizontalBarStacked</chartType>
         <enableHoverLabels>true</enableHoverLabels>
         <expandOthers>true</expandOthers>
-        <groupingColumn>Opportunity.Branch__c</groupingColumn>
+        <groupingColumn>FULL_NAME</groupingColumn>
         <legendPosition>Right</legendPosition>
         <location>CHART_TOP</location>
-        <secondaryGroupingColumn>Opportunity.Category__c</secondaryGroupingColumn>
+        <secondaryGroupingColumn>CREATED_DATE</secondaryGroupingColumn>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
-        <showValues>true</showValues>
+        <showValues>false</showValues>
         <size>Medium</size>
         <summaryAxisRange>Auto</summaryAxisRange>
         <textColor>#000000</textColor>
@@ -54,7 +45,7 @@
         <field>ACCOUNT_NAME</field>
     </columns>
     <columns>
-        <field>FULL_NAME</field>
+        <field>STAGE_NAME</field>
     </columns>
     <filter>
         <criteriaItems>
@@ -63,33 +54,22 @@
             <operator>notEqual</operator>
             <value></value>
         </criteriaItems>
-        <criteriaItems>
-            <column>CLOSED</column>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>0</value>
-        </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Opportunity.Branch__c</field>
+        <field>FULL_NAME</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>Opportunity.Category__c</field>
+        <dateGranularity>Month</dateGranularity>
+        <field>CREATED_DATE</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>STAGE_NAME</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
-    <name>Business Pipeline</name>
+    <name>Open Opportunity Aging</name>
     <params>
         <name>open</name>
-        <value>all</value>
+        <value>open</value>
     </params>
     <params>
         <name>probability</name>

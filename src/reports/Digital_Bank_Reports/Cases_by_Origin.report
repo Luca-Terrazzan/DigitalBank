@@ -9,15 +9,15 @@
             <column>RowCount</column>
         </chartSummaries>
         <chartType>Donut</chartType>
-        <enableHoverLabels>false</enableHoverLabels>
+        <enableHoverLabels>true</enableHoverLabels>
         <expandOthers>false</expandOthers>
-        <groupingColumn>LEAD_SOURCE</groupingColumn>
+        <groupingColumn>ORIGIN</groupingColumn>
         <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
-        <showTotal>false</showTotal>
-        <showValues>false</showValues>
+        <showTotal>true</showTotal>
+        <showValues>true</showValues>
         <size>Medium</size>
         <summaryAxisRange>Auto</summaryAxisRange>
         <textColor>#000000</textColor>
@@ -26,47 +26,39 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
-        <field>OWNER</field>
+        <field>CASE_NUMBER</field>
     </columns>
     <columns>
-        <field>FIRST_NAME</field>
-    </columns>
-    <columns>
-        <field>LAST_NAME</field>
-    </columns>
-    <columns>
-        <field>TITLE</field>
-    </columns>
-    <columns>
-        <field>COMPANY</field>
-    </columns>
-    <columns>
-        <field>EMAIL</field>
+        <field>SUBJECT</field>
     </columns>
     <filter>
         <criteriaItems>
-            <column>LEAD_SOURCE</column>
+            <column>CLOSED</column>
             <isUnlocked>true</isUnlocked>
-            <operator>notEqual</operator>
-            <value></value>
+            <operator>equals</operator>
+            <value>0</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>LEAD_SOURCE</field>
+        <field>ORIGIN</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Leads by Channel</name>
+    <name>Cases by Origin</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>LeadList</reportType>
-    <scope>org</scope>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>
-        <dateColumn>CREATED_DATE</dateColumn>
-        <interval>INTERVAL_CUSTOM</interval>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
     </timeFrameFilter>
 </Report>

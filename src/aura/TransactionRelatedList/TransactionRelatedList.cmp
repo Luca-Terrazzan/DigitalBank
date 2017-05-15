@@ -1,5 +1,6 @@
 <aura:component controller="RelatedListController"
-    implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId">
+    implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,forceCommunity:availableForAllPageTypes"
+    access="global" >
 <!-- CONTROLLER INIT -->
     <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
 <!-- ATTRIBUTES -->

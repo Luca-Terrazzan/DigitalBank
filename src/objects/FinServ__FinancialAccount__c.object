@@ -281,6 +281,51 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>DGTB_AvailableWithdrawal__c</fullName>
+        <externalId>false</externalId>
+        <formula>DGTB_MonthlyLimit__c - DGTB_CurrentMonthWithdrawals__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Available Withdrawal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>DGTB_CurrentMonthWithdrawals__c</fullName>
+        <externalId>false</externalId>
+        <label>Current month withdrawals</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>DGTB_MobilePrimaryAccount__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Mobile Primary Account</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DGTB_MonthlyLimit__c</fullName>
+        <description>AMELIA</description>
+        <externalId>false</externalId>
+        <label>Monthly Limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>FinServ__Address1__c</fullName>
         <deprecated>false</deprecated>
         <description>Street address line 1 for mailing address.</description>

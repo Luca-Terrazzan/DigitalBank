@@ -191,6 +191,11 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
         <fullName>CurrentGenerators__c</fullName>
         <externalId>false</externalId>
         <label>Current Generator(s)</label>
@@ -199,6 +204,16 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
         <unique>false</unique>
     </fields>
     <fields>

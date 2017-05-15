@@ -18,12 +18,21 @@
         <description>Mobile Welcome Educate Me</description>
         <protected>false</protected>
         <recipients>
-            <field>SocialAccountContact__c</field>
-            <type>contactLookup</type>
+            <field>Customer_Email__c</field>
+            <type>email</type>
         </recipients>
         <senderType>DefaultWorkflowUser</senderType>
         <template>unfiled$public/MobileWelcomeEducateMe</template>
     </alerts>
+    <fieldUpdates>
+        <fullName>Populate_Customer_Email</fullName>
+        <field>Customer_Email__c</field>
+        <formula>Account.Email_Personal__c</formula>
+        <name>Populate Customer Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
     <rules>
         <fullName>Marloes Opportunity</fullName>
         <active>false</active>
@@ -33,10 +42,14 @@
     <rules>
         <fullName>New Opportunity</fullName>
         <actions>
+            <name>Populate_Customer_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
             <name>New_Opportunity</name>
             <type>Task</type>
         </actions>
-        <active>false</active>
+        <active>true</active>
         <formula>OwnerId != null</formula>
         <triggerType>onCreateOnly</triggerType>
     </rules>
