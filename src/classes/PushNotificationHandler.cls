@@ -1,8 +1,14 @@
 public class PushNotificationHandler implements Queueable, Database.AllowsCallouts {
+    private static final Boolean DEBUG = true;
+
     private Opportunity opp;
     private Contact socialContact;
     private String suffix = '';
     private String jobId;
+
+    // customized parameters
+    private String customText;
+    private String customId;
 
     public PushNotificationHandler(Opportunity opp, Contact socialContact) {
         this.opp = opp;
@@ -15,14 +21,17 @@ public class PushNotificationHandler implements Queueable, Database.AllowsCallou
         this.jobId = jobid;
     }
 
-	public void execute(QueueableContext context) {
+    public void execute(QueueableContext context) {
         if (opp == null || socialContact == null) {
             return;
         }
-        String deviceId = String.isNotBlank(socialContact.Device_Id__c) ? 
-            socialContact.Device_Id__c : 
-            'testId' + String.valueOf((Integer)(Math.random() * 1000)); 
-        String payload = '[{"notification_Id": "' + opp.Id + suffix + '", "device_Id": "' + deviceId + '", "notification_text": "' + opp.Name + '"}]';
+        String deviceId = String.isNotBlank(socialContact.Device_Id__c) ?
+            socialContact.Device_Id__c :
+            'testId' + String.valueOf((Integer)(Math.random() * 1000));
+        String notificationText = String.isNotBlank(customText) ? customText : opp.Name;
+        String notificationId = String.isNotBlank(customId) ? customId : opp.Id + suffix;
+        String payload = '[{"notification_Id": "' + notificationId + '", "device_Id": "' + deviceId +
+            '", "notification_text": "' + notificationText + '"}]';
         HttpRequest req = new HttpRequest();
             req.setEndpoint('http://devesb.digitalbank.us:8101/notification-api/pushNotifications');
             req.setMethod('POST');
@@ -39,16 +48,20 @@ public class PushNotificationHandler implements Queueable, Database.AllowsCallou
             req.setHeader('Content-Type', 'application/json');
             req.setHeader('Cache-Control', 'no-cache');
         Http http = new Http();
+        if (DEBUG) System.debug('DEBUG MODE -- push notification endpoint: ' + req);
+        if (DEBUG) System.debug('DEBUG MODE -- push notification payload: ' + req.getBody());
         HTTPResponse res = http.send(req);
-        System.debug('PUSH NOTIFICATION SENT WITH PAYLOAD: ' + payload);
-        System.debug('REQUEST: ' + req);
-        System.debug('RESPONSE: ' + res.getBody());
         if (res.getStatusCode() == 200) {
             opp.PushNotificationSent__c = true;
             update opp;
         }
         deleteCronJob();
-	}
+    }
+
+    public void customizeNotification(String notificationText, String notificationId) {
+        this.customText = notificationText;
+        this.customId = notificationId;
+    }
 
     private void deleteCronJob() {
         if (String.isNotBlank(jobId)) {
