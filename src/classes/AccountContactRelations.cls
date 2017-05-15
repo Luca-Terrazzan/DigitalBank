@@ -33,6 +33,10 @@ public class AccountContactRelations extends fflib_SObjectDomain
         }
     }
 
+    /**
+     * Create shadows junction objects to couple with the standard object
+     * DGTB_AccountContactReference__c keeps the fake lookup to the original one
+     */
     public override void onAfterInsert()
     {
         AccountContactRelationship__c[] shadows = new AccountContactRelationship__c[]{};
@@ -55,6 +59,14 @@ public class AccountContactRelations extends fflib_SObjectDomain
             );
         }
         insert shadows;
+    }
+
+    /**
+     * TODO: manage shadows updating (and deletion)
+     */
+    public override void onAfterUpdate(Map<Id, SObject> existingRecords)
+    {
+
     }
 
     public class Constructor implements fflib_SObjectDomain.IConstructable2
