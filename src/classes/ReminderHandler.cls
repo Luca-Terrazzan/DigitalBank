@@ -1,9 +1,12 @@
 global class ReminderHandler implements Schedulable, Database.AllowsCallouts {
-    private static final String jobName = 'PushNotificationReminder';
+    private static final String JOB_NAME = 'PushNotificationReminder';
     private static Integer jobSuffix = 0;
 
     private Opportunity opp;
     private Contact socialContact;
+
+    private String customText;
+    private String customId;
 
     public ReminderHandler(Opportunity opp, Contact socialContact) {
         this.opp = opp;
@@ -11,7 +14,9 @@ global class ReminderHandler implements Schedulable, Database.AllowsCallouts {
     }
 
     global void execute(SchedulableContext sc) {
-        System.enqueueJob(new PushNotificationHandler(opp, socialContact, '_2', sc.getTriggerId()));
+        PushNotificationHandler pnh = new PushNotificationHandler(opp, socialContact, '_2', sc.getTriggerId());
+        pnh.customizeNotification(customText, customId);
+        System.enqueueJob(pnh);
     }
 
     public static String getTimeOut() {
@@ -30,6 +35,11 @@ global class ReminderHandler implements Schedulable, Database.AllowsCallouts {
     }
 
     public static String getJobName() {
-        return jobName + '_' + String.valueOf(jobSuffix++);
+        return JOB_NAME + '_' + String.valueOf(jobSuffix++);
+    }
+
+    public void customizeNotification(String notificationText, String notificationId) {
+        this.customText = notificationText;
+        this.customId = notificationId;
     }
 }
