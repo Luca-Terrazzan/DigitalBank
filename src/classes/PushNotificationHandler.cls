@@ -1,5 +1,5 @@
 public class PushNotificationHandler implements Queueable, Database.AllowsCallouts {
-    private static Boolean DEBUG = true;
+    private static final Boolean DEBUG = true;
 
     private Opportunity opp;
     private Contact socialContact;
