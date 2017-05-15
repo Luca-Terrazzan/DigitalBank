@@ -56,13 +56,6 @@ public class AccountContactRelations extends fflib_SObjectDomain
         insert shadows;
     }
 
-    public void someMethod()
-    {
-        for(AccountContactRelation record : (List<AccountContactRelation>) Records)
-        {
-        }
-    }
-
     public class Constructor implements fflib_SObjectDomain.IConstructable2
     {
         public fflib_SObjectDomain construct(List<SObject> sObjectList)
