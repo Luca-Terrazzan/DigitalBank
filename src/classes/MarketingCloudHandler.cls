@@ -44,6 +44,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
             updateCaseSource(post, parentCase);
         }
 
+        // Create an opportunity and sends notification where needed
         setOpportunity(post, persona, rawData);
 
         return result;
@@ -383,6 +384,14 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         return contact;
     }
 
+    /**
+     * Sets the opportunity based on the social action, persona and post. Then sends a push notification immediately
+     * and another one after two minutes
+     * @param      post     The post
+     * @param      persona  The persona
+     * @param      rawData  The raw data
+     * @return     Opportunity
+     */
     private Opportunity setOpportunity(SocialPost post, SocialPersona persona, Map<String, Object> rawData) {
         if (shouldCreateOpportunity(rawData)) {
             Contact socialContact = [SELECT AccountId, Device_Id__c FROM Contact WHERE Id =: persona.parentId];
@@ -414,9 +423,17 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         if (rawData.get('postPriority') == 'High') {
             return true;
         } else {
-            return true;
+            return true; // always create an opportunity
         }
     }
+    /**
+     * Gets the notification type based on the raw data priority attribute:
+     * 0 -> DOCUSIGN
+     * 1 -> MORTGAGE
+     * 2 -> BOOKING
+     * @param      rawData  The raw data
+     * @return     The notification type Integer.
+     */
     private Integer getNotificationType(Map<String, Object> rawData) {
         if (rawData.get('postPriority') == 'High') {
             return 0;
@@ -429,6 +446,12 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         }
     }
 
+    /**
+     * Sends a push notification.
+     * @param      opp               The opportunity
+     * @param      socialContact     The social contact
+     * @param      notificationType  The notification type code
+     */
     private void sendPushNotification(Opportunity opp, Contact socialContact, Integer notificationType) {
         if (opp != null && opp.Id != null && String.isNotBlank(opp.Name)) {
             System.enqueueJob(new PushNotificationHandler(opp, socialContact, notificationType));
