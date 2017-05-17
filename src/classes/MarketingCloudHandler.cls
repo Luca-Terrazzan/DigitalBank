@@ -467,7 +467,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
          demoPushNotification(null, null, 0);
      }
     public static void demoPushNotification(String notificationText, String notificationId, Integer notificationType) {
-        Contact socialContact = [SELECT AccountId, Device_Id__c, Name FROM Contact WHERE Id = '0034600000SaJHV'];
+        Contact socialContact = [SELECT AccountId, Device_Id__c, Name FROM Contact WHERE Id = '0034600000f31YY'];
         Opportunity opp = new Opportunity(
             SocialAccountContact__c = socialContact.Id,
             AccountId = socialContact.AccountId,
