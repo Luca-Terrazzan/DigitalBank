@@ -1,6 +1,7 @@
 public class PushNotificationHandler implements Queueable, Database.AllowsCallouts {
     private static final Boolean DEBUG_MODE = true;
-    private static final String DEFAULT_TEXT = 'New Product Offer: Travel Credit Card';
+    private static final String[] DEFAULT_TEXT =
+        new String[]{'New Product Offer: Travel Credit Card', 'Digital Bank: Are you interested in buying a new home?', 'Appoitment request'};
     private static final String[] NOTIFICATION_TYPES = new String[]{'DOCUSIGN', 'MORTGAGE', 'BOOKING'};
 
     private Opportunity opp;
@@ -32,8 +33,8 @@ public class PushNotificationHandler implements Queueable, Database.AllowsCallou
         }
         String deviceId = String.isNotBlank(socialContact.Device_Id__c) ?
             socialContact.Device_Id__c :
-            'testId' + String.valueOf((Integer)(Math.random() * 1000));
-        String notificationText = String.isNotBlank(customText) ? customText : DEFAULT_TEXT;
+            '790f24f79512cc137a273c87af8e7b8a4275681dbbb7c89acda51936a4cf8028';
+        String notificationText = String.isNotBlank(customText) ? customText : DEFAULT_TEXT[notificationType];
         String notificationId = String.isNotBlank(customId) ? customId : opp.Id + suffix;
         String payload = '[{"notification_Id": "' + notificationId + '", "device_Id": "' + deviceId +
             '", "notification_text": "' + notificationText +
