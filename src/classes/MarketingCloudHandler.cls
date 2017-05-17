@@ -406,11 +406,15 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         }
     }
 
+    /**
+     * Check for raw data content in order to determine the creation of the opportunity or not
+     * TODO
+     */
     private Boolean shouldCreateOpportunity(Map<String, Object> rawData) {
         if (rawData.get('postPriority') == 'High') {
             return true;
         } else {
-            return false;
+            return true;
         }
     }
     private Integer getNotificationType(Map<String, Object> rawData) {
