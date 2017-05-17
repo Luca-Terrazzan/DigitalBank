@@ -396,8 +396,9 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
                 Description = 'Opportunity source: ' + rawData.get('postUrl')
             );
             insert opp;
-            sendPushNotification(opp, socialContact);
-            String schedId = System.schedule(ReminderHandler.getJobName(), ReminderHandler.getTimeOut(), new ReminderHandler(opp, socialContact));
+            Integer notificationType = getNotificationType(rawData);
+            sendPushNotification(opp, socialContact, notificationType);
+            String schedId = System.schedule(ReminderHandler.getJobName(), ReminderHandler.getTimeOut(), new ReminderHandler(opp, socialContact, notificationType));
             System.debug('scheduled with id: ' + schedId);
             return opp;
         } else {
@@ -412,10 +413,21 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
             return false;
         }
     }
+    private Integer getNotificationType(Map<String, Object> rawData) {
+        if (rawData.get('postPriority') == 'High') {
+            return 0;
+        } else if (rawData.get('postPriority') == 'Medium') {
+            return 1;
+        } else if (rawData.get('postPriority') == 'Low'){
+            return 2;
+        } else {
+            return 0;
+        }
+    }
 
-    private void sendPushNotification(Opportunity opp, Contact socialContact) {
+    private void sendPushNotification(Opportunity opp, Contact socialContact, Integer notificationType) {
         if (opp != null && opp.Id != null && String.isNotBlank(opp.Name)) {
-            System.enqueueJob(new PushNotificationHandler(opp, socialContact));
+            System.enqueueJob(new PushNotificationHandler(opp, socialContact, notificationType));
         } else {
             return;
         }
@@ -425,9 +437,9 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
      * Stub functions to just insert some demo stuff for the indian team demo. Might be removed when needed.
      */
      public static void demoPushNotification() {
-         demoPushNotification(null, null);
+         demoPushNotification(null, null, 0);
      }
-    public static void demoPushNotification(String notificationText, String notificationId) {
+    public static void demoPushNotification(String notificationText, String notificationId, Integer notificationType) {
         Contact socialContact = [SELECT AccountId, Device_Id__c, Name FROM Contact WHERE Id = '0034600000SaJHV'];
         Opportunity opp = new Opportunity(
             SocialAccountContact__c = socialContact.Id,
@@ -439,10 +451,10 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
             Description = 'Opportunity source: ' + 'DEMO TEST'
         );
         insert opp;
-        PushNotificationHandler pnh = new PushNotificationHandler(opp, socialContact);
+        PushNotificationHandler pnh = new PushNotificationHandler(opp, socialContact, notificationType);
         pnh.customizeNotification(notificationText, notificationId);
         System.enqueueJob(pnh);
-        ReminderHandler rh = new ReminderHandler(opp, socialContact);
+        ReminderHandler rh = new ReminderHandler(opp, socialContact, notificationType);
         rh.customizeNotification(notificationText, notificationId);
         String schedId = System.schedule(ReminderHandler.getJobName(), ReminderHandler.getTimeOut(), rh);
     }

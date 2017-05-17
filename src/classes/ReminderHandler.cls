@@ -4,17 +4,19 @@ global class ReminderHandler implements Schedulable, Database.AllowsCallouts {
 
     private Opportunity opp;
     private Contact socialContact;
+    private Integer notificationType;
 
     private String customText;
     private String customId;
 
-    public ReminderHandler(Opportunity opp, Contact socialContact) {
+    public ReminderHandler(Opportunity opp, Contact socialContact, Integer notificationType) {
         this.opp = opp;
         this.socialContact = socialContact;
+        this.notificationType = notificationType;
     }
 
     global void execute(SchedulableContext sc) {
-        PushNotificationHandler pnh = new PushNotificationHandler(opp, socialContact, '_2', sc.getTriggerId());
+        PushNotificationHandler pnh = new PushNotificationHandler(opp, socialContact, notificationType, '_2', sc.getTriggerId());
         pnh.customizeNotification(customText, customId);
         System.enqueueJob(pnh);
     }
