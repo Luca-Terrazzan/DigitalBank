@@ -1,5 +1,6 @@
 /**
  * Static utilities method for record insertion while testing
+ * ***DEPRECATED*** --> See DataGenerator.cls instead
  */
 public with sharing class TestUtils {
     private static final String[] CATEGORIES = new String[]
