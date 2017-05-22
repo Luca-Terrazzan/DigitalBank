@@ -1,24 +1,30 @@
 public class PushNotificationHandler implements Queueable, Database.AllowsCallouts {
-    private static final Boolean DEBUG = true;
+    private static final Boolean DEBUG_MODE = true;
+    private static final String[] DEFAULT_TEXT =
+        new String[]{'New Product Offer: Travel Credit Card', 'Digital Bank: Are you interested in buying a new home?', 'Appoitment request'};
+    private static final String[] NOTIFICATION_TYPES = new String[]{'DOCUSIGN', 'MORTGAGE', 'BOOKING'};
 
     private Opportunity opp;
     private Contact socialContact;
     private String suffix = '';
     private String jobId;
+    private Integer notificationType = 0;
 
     // customized parameters
     private String customText;
     private String customId;
 
-    public PushNotificationHandler(Opportunity opp, Contact socialContact) {
+    public PushNotificationHandler(Opportunity opp, Contact socialContact, Integer notificationType) {
         this.opp = opp;
         this.socialContact = socialContact;
+        this.notificationType = notificationType;
     }
-    public PushNotificationHandler(Opportunity opp, Contact socialContact, String suffix, String jobid) {
+    public PushNotificationHandler(Opportunity opp, Contact socialContact, Integer notificationType, String suffix, String jobid) {
         this.opp = opp;
         this.socialContact = socialContact;
         this.suffix = suffix;
         this.jobId = jobid;
+        this.notificationType = notificationType != null ? notificationType : 0;
     }
 
     public void execute(QueueableContext context) {
@@ -27,11 +33,12 @@ public class PushNotificationHandler implements Queueable, Database.AllowsCallou
         }
         String deviceId = String.isNotBlank(socialContact.Device_Id__c) ?
             socialContact.Device_Id__c :
-            'testId' + String.valueOf((Integer)(Math.random() * 1000));
-        String notificationText = String.isNotBlank(customText) ? customText : opp.Name;
+            '790f24f79512cc137a273c87af8e7b8a4275681dbbb7c89acda51936a4cf8028';
+        String notificationText = String.isNotBlank(customText) ? customText : DEFAULT_TEXT[notificationType];
         String notificationId = String.isNotBlank(customId) ? customId : opp.Id + suffix;
         String payload = '[{"notification_Id": "' + notificationId + '", "device_Id": "' + deviceId +
-            '", "notification_text": "' + notificationText + '"}]';
+            '", "notification_text": "' + notificationText +
+            '", "notificationType": "' + NOTIFICATION_TYPES[notificationType] + '"}]';
         HttpRequest req = new HttpRequest();
             req.setEndpoint('http://devesb.digitalbank.us:8101/notification-api/pushNotifications');
             req.setMethod('POST');
@@ -48,8 +55,8 @@ public class PushNotificationHandler implements Queueable, Database.AllowsCallou
             req.setHeader('Content-Type', 'application/json');
             req.setHeader('Cache-Control', 'no-cache');
         Http http = new Http();
-        if (DEBUG) System.debug('DEBUG MODE -- push notification endpoint: ' + req);
-        if (DEBUG) System.debug('DEBUG MODE -- push notification payload: ' + req.getBody());
+        if (DEBUG_MODE) System.debug('DEBUG MODE -- push notification endpoint: ' + req);
+        if (DEBUG_MODE) System.debug('DEBUG MODE -- push notification payload: ' + req.getBody());
         HTTPResponse res = http.send(req);
         if (res.getStatusCode() == 200) {
             opp.PushNotificationSent__c = true;

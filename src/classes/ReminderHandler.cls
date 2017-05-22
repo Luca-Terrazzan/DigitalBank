@@ -1,20 +1,21 @@
 global class ReminderHandler implements Schedulable, Database.AllowsCallouts {
     private static final String JOB_NAME = 'PushNotificationReminder';
-    private static Integer jobSuffix = 0;
 
     private Opportunity opp;
     private Contact socialContact;
+    private Integer notificationType;
 
     private String customText;
     private String customId;
 
-    public ReminderHandler(Opportunity opp, Contact socialContact) {
+    public ReminderHandler(Opportunity opp, Contact socialContact, Integer notificationType) {
         this.opp = opp;
         this.socialContact = socialContact;
+        this.notificationType = notificationType;
     }
 
     global void execute(SchedulableContext sc) {
-        PushNotificationHandler pnh = new PushNotificationHandler(opp, socialContact, '_2', sc.getTriggerId());
+        PushNotificationHandler pnh = new PushNotificationHandler(opp, socialContact, notificationType, '_2', sc.getTriggerId());
         pnh.customizeNotification(customText, customId);
         System.enqueueJob(pnh);
     }
@@ -34,7 +35,8 @@ global class ReminderHandler implements Schedulable, Database.AllowsCallouts {
     }
 
     public static String getJobName() {
-        return JOB_NAME + '_' + String.valueOf(jobSuffix++);
+
+        return JOB_NAME + '_' + String.valueOf(System.now());
     }
 
     public void customizeNotification(String notificationText, String notificationId) {
