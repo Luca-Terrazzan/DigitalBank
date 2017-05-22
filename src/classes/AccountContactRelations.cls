@@ -19,41 +19,39 @@ public class AccountContactRelations extends fflib_SObjectDomain
         super(records);
     }
 
-    public override void onValidate()
-    {
-        for(AccountContactRelation record : (List<AccountContactRelation>) Records)
-        {
-        }
-    }
-
-    public override void onValidate(Map<Id,SObject> existingRecords)
-    {
-        for(AccountContactRelation record : (List<AccountContactRelation>) Records)
-        {
-        }
-    }
-
+    /**
+     * Create shadows junction objects to couple with the standard object
+     * DGTB_AccountContactReference__c keeps the fake lookup to the original one
+     */
     public override void onAfterInsert()
     {
         AccountContactRelationship__c[] shadows = new AccountContactRelationship__c[]{};
-        for(AccountContactRelation record : (List<AccountContactRelation>) Records)
+        for(AccountContactRelation acr : (List<AccountContactRelation>) records)
         {
-            shadows.add(new AccountContactRelationship__c(
-                Account__c        = record.AccountId,
-                IsActive__c       = record.IsActive,
-                Contact__c        = record.ContactId,
-                IsDirect__c       = record.IsDirect,
-                EndDate__c        = record.EndDate,
-                Roles__c          = record.Roles,
-                IncludeInGroup__c = record.FinServ__IncludeInGroup__c,
-                PrimaryGroup__c   = record.FinServ__PrimaryGroup__c,
-                Primary__c        = record.FinServ__Primary__c,
-                Rollups__c        = record.FinServ__Rollups__c,
-                SourceSystemId__c = record.FinServ__SourceSystemId__c
-                )
-            );
+            shadows.add(copyJunction(acr));
         }
         insert shadows;
+    }
+
+    /**
+     * Update shadows junction objects to couple with the standard object
+     * DGTB_AccountContactReference__c keeps the fake lookup to the original one
+     */
+    public override void onAfterUpdate(Map<Id, SObject> existingRecords)
+    {
+        AccountContactRelationship__c[] shadows = new AccountContactRelationship__c[]{};
+        for(AccountContactRelation acr: (AccountContactRelation[]) existingRecords.values()) {
+            shadows.add(copyJunction(acr));
+        }
+        //update shadows;
+    }
+
+    /**
+     * TODO
+     */
+    public override void onAfterDelete()
+    {
+
     }
 
     public class Constructor implements fflib_SObjectDomain.IConstructable2
@@ -67,5 +65,28 @@ public class AccountContactRelations extends fflib_SObjectDomain
         {
             return new AccountContactRelations(sObjectList);
         }
+    }
+
+    /**
+     * Copy an AccountContactRelation record into a shadow object
+     * @param      acr   The AccountContactRelation record
+     * @return     AccountContactRelationship__c record
+     */
+    private AccountContactRelationship__c copyJunction(AccountContactRelation acr)
+    {
+        return new AccountContactRelationship__c(
+            Account__c        = acr.AccountId,
+            IsActive__c       = acr.IsActive,
+            Contact__c        = acr.ContactId,
+            IsDirect__c       = acr.IsDirect,
+            EndDate__c        = acr.EndDate,
+            Roles__c          = acr.Roles,
+            IncludeInGroup__c = acr.FinServ__IncludeInGroup__c,
+            PrimaryGroup__c   = acr.FinServ__PrimaryGroup__c,
+            Primary__c        = acr.FinServ__Primary__c,
+            Rollups__c        = acr.FinServ__Rollups__c,
+            SourceSystemId__c = acr.FinServ__SourceSystemId__c,
+            DGTB_AccountContactReference__c = acr.Id
+        );
     }
 }
