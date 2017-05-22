@@ -27,7 +27,7 @@ public with sharing class DataGenerator {
     private SObject[] items;
 
     /**
-     * Singleton
+     * Singleton, avoids memory waste
      */
     private DataGenerator() {
         individuals = new Account[]{};
@@ -50,6 +50,10 @@ public with sharing class DataGenerator {
         return instance;
     }
 
+    /**
+     * Commit current work, similar to unit of work pattern
+     * TODO : refator in generic containers
+     */
     public DataGenerator commitWork() {
         insert this.individuals;
         insert this.finAccounts;
@@ -62,12 +66,19 @@ public with sharing class DataGenerator {
         return this;
     }
 
+    /**
+     * Creates n accounts with 'individual' record type
+     * @param      n     the number of individuals
+     */
     public DataGenerator createIndividuals(Integer n) {
         for(Integer i = 0; i < n; i++) {
             this.individuals.add(createIndividual());
         }
         return this;
     }
+    /**
+     * Private method for single individual set up
+     */
     private Account createIndividual() {
         String firstname = randomPick(CustomConstants.names);
         String lastname = randomPick(CustomConstants.last_names);
@@ -105,6 +116,12 @@ public with sharing class DataGenerator {
         );
     }
 
+    /**
+     * Create a random distribution of financial accounts between the current individuals population
+     * @param      retails      Numbero of retail products
+     * @param      wealths      Number of wealth products
+     * @param      commercials  Number of commercial products
+     */
     public DataGenerator randomizeFinancialAccounts(Integer retails, Integer wealths, Integer commercials) {
         for(Integer i = retails; i > 0; i--) {
             Account rand = (Account)randomPickSObject(individuals);
@@ -121,9 +138,16 @@ public with sharing class DataGenerator {
         }
         return this;
     }
-
+    /**
+     * Creates a financial account.
+     *
+     * @param      cat              The category
+     * @param      ownerExtId       The owner external id
+     * @param      ownerName        The owner name
+     * @param      comm_ownerExtId  The commerical owner external id (optional)
+     * @param      comm_ownerName   The commerical owner name (optional)
+     */
     private FinServ__FinancialAccount__c createFinancialAccount(String cat, String ownerExtId, String ownerName, String comm_ownerExtId, String comm_ownerName) {
-        // only retail and wealth for now!
         Account owner = new Account(Party_Id__c = ownerExtId);
         Account comm_owner = String.isNotBlank(comm_ownerExtId) ? new Account(Party_Id__c = comm_ownerExtId) : null;
         String category = String.isBlank(cat) ? randomPick(CustomConstants.categories) : cat;
@@ -147,6 +171,10 @@ public with sharing class DataGenerator {
         );
     }
 
+    /**
+     * Creates opportunities between the current accounts populations
+     * @param      opps  Number of opportunities to generate
+     */
     public DataGenerator createOpportunities(Integer opps) {
         Account[] individualsPool = individuals.isEmpty() ? [SELECT Id, Name, FinServ__PrimaryContact__c
                 FROM Account WHERE RecordType.DeveloperName = 'IndustriesIndividual' LIMIT : opps] : individuals;
@@ -182,6 +210,9 @@ public with sharing class DataGenerator {
         update opportunities;
         return this;
     }
+    /**
+     * Creates an opportunity.
+     */
     private Opportunity createOpportunity() {
         PricebookEntry randPrice = (PricebookEntry) randomPickSObject(prices);
         String randomId = randPrice.Id + String.valueOf(randomizer) + System.currentTimeMillis();
@@ -209,6 +240,10 @@ public with sharing class DataGenerator {
         return opp;
     }
 
+    /**
+     * Creates transactions between the current financial accounts population
+     * @param      transactionsNumber  The number of transactions to create
+     */
     public DataGenerator createTransactions(Integer transactionsNumber) {
         for(Integer i = 0; i < transactionsNumber; i++) {
             transactions.add(createTransaction());
@@ -236,6 +271,10 @@ public with sharing class DataGenerator {
         return newTransaction;
     }
 
+    /**
+     * Creates revenues between the current financial account population
+     * @param      revenuesNumber  The number of revenues to generate
+     */
     public DataGenerator createRevenues(Integer revenuesNumber) {
         for(Integer i = 0; i < revenuesNumber; i++) {
             revenues.add(createRevenue());
@@ -254,17 +293,30 @@ public with sharing class DataGenerator {
         return revenue;
     }
 
+    /**
+     * Pick a random element in a string[]
+     */
     public static String randomPick(String[] stringlist) {
         return stringlist[(Integer) Math.floor(Math.random()*stringlist.size())];
     }
+    /**
+     * Pick a random element in a SObject[]
+     */
     public static SObject randomPickSObject(SObject[] stringlist) {
         if (stringlist == null || stringlist.isEmpty()) return null;
         return stringlist[(Integer) Math.floor(Math.random()*stringlist.size())];
     }
+    /**
+     * Pick a random element in a SObject picklist field
+     */
     public static String randomPicklistValue(Schema.SObjectField field) {
         Schema.PicklistEntry[] ples = field.getDescribe().getPicklistValues();
         return ples[(Integer) Math.floor(Math.random()*ples.size())].getLabel();
     }
+    /**
+     * Picks a random account between the current population loaded in the class. If no accounts have been loaded,
+     * picks from existing population instead.
+     */
     public Account pickRandomAccount() {
         if (!individuals.isEmpty()) {
             return (Account) randomPickSObject(individuals);
@@ -277,6 +329,10 @@ public with sharing class DataGenerator {
             return (Account) randomPickSObject(individuals);
         }
     }
+    /**
+     * Picks a random financial account between the current population loaded in the class. If no financial accounts have been loaded,
+     * picks from existing population instead.
+     */
     public FinServ__FinancialAccount__c pickRandomFinAccount() {
         if (!finAccounts.isEmpty()) {
             return (FinServ__FinancialAccount__c) randomPickSObject(finAccounts);
@@ -289,6 +345,10 @@ public with sharing class DataGenerator {
             return (FinServ__FinancialAccount__c) randomPickSObject(finAccounts);
         }
     }
+    /**
+     * Randomizes owners for the current opportunity population
+     * WARNING!!!!! MIGHT GENERATES EMAIL ALERTS!!!
+     */
     public static void randomizeOpportunitiesOwnerships() {
         Opportunity[] opps = [SELECT Id FROM Opportunity WHERE Mock__c = true LIMIT 50000];
         User[] teamMembers = [SELECT Id FROM User WHERE IsActive = true AND UserRole.DeveloperName = 'Opportunity_mail_receiver'];
@@ -298,6 +358,9 @@ public with sharing class DataGenerator {
         update opps;
     }
 
+    /**
+     * Demo purposes only
+     */
     public static void demoTransactions() {
         delete [SELECT Id FROM Transaction__c WHERE Transaction_Id__c IN ('103242323', '111042323')];
         Map<String, String> map1 = new Map<String, String>{
