@@ -407,7 +407,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
             insert opp;
             Integer notificationType = getNotificationType(rawData);
             sendPushNotification(opp, socialContact, notificationType);
-            if (DGTB_Settings__c.getValues('DGTB_Settings__c').DGTB_DelayedNotification__c) {
+            if (DGTB_Settings__c.getValues('DGTB_Settings').DGTB_DelayedNotification__c) {
                 String schedId = System.schedule(ReminderHandler.getJobName(), ReminderHandler.getTimeOut(), new ReminderHandler(opp, socialContact, notificationType));
                 System.debug('scheduled with id: ' + schedId);
             }
@@ -483,7 +483,7 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
         PushNotificationHandler pnh = new PushNotificationHandler(opp, socialContact, notificationType);
         pnh.customizeNotification(notificationText, notificationId);
         System.enqueueJob(pnh);
-        if (DGTB_Settings__c.getValues('DGTB_Settings__c').DGTB_DelayedNotification__c) {
+        if (DGTB_Settings__c.getValues('DGTB_Settings').DGTB_DelayedNotification__c) {
             ReminderHandler rh = new ReminderHandler(opp, socialContact, notificationType);
             rh.customizeNotification(notificationText, notificationId);
             String schedId = System.schedule(ReminderHandler.getJobName(), ReminderHandler.getTimeOut(), rh);

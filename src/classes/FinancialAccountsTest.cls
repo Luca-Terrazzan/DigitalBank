@@ -16,7 +16,7 @@ private class FinancialAccountsTest {
             GROUP BY Finserv__PrimaryOwner__r.Name, Category__c
         ][0].get('balance');
         Account acc = [SELECT RetailBalance__c FROM Account WHERE Name = 'testAccount0'];
-        // Rounding necessary due to differneces between SOQL float result and actual field decimal digits (only two)
+        // Rounding necessary due to differences between SOQL float result and actual field decimal digits (only two)
         System.assertEquals(Math.round(balance), Math.round(acc.RetailBalance__c));
     }
 
@@ -37,7 +37,7 @@ private class FinancialAccountsTest {
             GROUP BY Finserv__PrimaryOwner__r.Name, Category__c
         ][0].get('balance');
         Account acc = [SELECT RetailBalance__c FROM Account WHERE Name = 'testAccount0'];
-        // Rounding necessary due to differneces between SOQL float result and actual field decimal digits (only two)
+        // Rounding necessary due to differences between SOQL float result and actual field decimal digits (only two)
         System.assertEquals(Math.round(balance), Math.round(acc.RetailBalance__c));
     }
 
