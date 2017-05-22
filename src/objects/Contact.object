@@ -895,6 +895,14 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <type>Date</type>
     </fields>
     <fields>
+        <fullName>Full_Privacy__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( AND(Marketing_and_promotional_purposes__c = TRUE, Third_parties_access_personal_data__c = TRUE, Profiling__c = TRUE), true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Full Privacy</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>G4S__Customer_ID__c</fullName>
         <deprecated>false</deprecated>
         <externalId>true</externalId>
@@ -1023,6 +1031,14 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
     <fields>
         <fullName>MailingAddress</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Marketing_and_promotional_purposes__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Marketing and promotional purposes</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Method_of_Contact__c</fullName>
@@ -1165,6 +1181,14 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Profiling__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Profiling</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>ReportsToId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
@@ -1212,6 +1236,24 @@ If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</f
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status_img__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( AND(Marketing_and_promotional_purposes__c = TRUE, Third_parties_access_personal_data__c = TRUE, Profiling__c = TRUE), IMAGE(&quot;/resource/res/img/right.png&quot;, &quot;Right Transaction&quot;), IMAGE(&quot;/resource/res/img/wrong.png&quot;, &quot;Wrong Transaction&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Privacy Status</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Third_parties_access_personal_data__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Third parties access personal data</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Title</fullName>

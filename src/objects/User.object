@@ -93,17 +93,17 @@
                 <value>
                     <fullName>Branch 1</fullName>
                     <default>false</default>
-                    <label>Branch 1</label>
+                    <label>Oxford Branch</label>
                 </value>
                 <value>
                     <fullName>Branch 2</fullName>
                     <default>false</default>
-                    <label>Branch 2</label>
+                    <label>Waterloo Branch</label>
                 </value>
                 <value>
                     <fullName>Branch 3</fullName>
                     <default>false</default>
-                    <label>Branch 3</label>
+                    <label>Paddington Branch</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

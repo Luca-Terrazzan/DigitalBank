@@ -356,6 +356,10 @@
     <label>Transaction</label>
     <listViews>
         <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Amount__c</columns>
+        <columns>Channel__c</columns>
+        <columns>account_number__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

@@ -37,8 +37,15 @@
         <values>
             <sourceValues>
                 <from>10</from>
+                <to>20</to>
             </sourceValues>
-            <value>10+ Days Old</value>
+            <value>10 - 20 Days Old</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>20</from>
+            </sourceValues>
+            <value>20 Plus Days Old</value>
         </values>
     </buckets>
     <chart>
@@ -86,6 +93,7 @@
     <columns>
         <field>FULL_NAME</field>
     </columns>
+    <currency>USD</currency>
     <filter>
         <criteriaItems>
             <column>Opportunity.Branch__c</column>

@@ -48,6 +48,10 @@
     <columns>
         <field>ACCOUNT.NAME</field>
     </columns>
+    <columns>
+        <field>Case.Branch__c</field>
+    </columns>
+    <currency>USD</currency>
     <filter>
         <criteriaItems>
             <column>CLOSED</column>

@@ -217,6 +217,50 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>DGTB_LossReason__c</fullName>
+        <externalId>false</externalId>
+        <label>Loss Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>true</default>
+                    <label>Unknown</label>
+                </value>
+                <value>
+                    <fullName>Price</fullName>
+                    <default>false</default>
+                    <label>Price</label>
+                </value>
+                <value>
+                    <fullName>Timing</fullName>
+                    <default>false</default>
+                    <label>Timing</label>
+                </value>
+                <value>
+                    <fullName>Product</fullName>
+                    <default>false</default>
+                    <label>Product</label>
+                </value>
+                <value>
+                    <fullName>Fit</fullName>
+                    <default>false</default>
+                    <label>Fit</label>
+                </value>
+                <value>
+                    <fullName>Authority</fullName>
+                    <default>false</default>
+                    <label>Authority</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>DeliveryInstallationStatus__c</fullName>
         <externalId>false</externalId>
         <label>Delivery/Installation Status</label>
@@ -327,50 +371,6 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>Loss_Reason__c</fullName>
-        <externalId>false</externalId>
-        <label>Loss Reason</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Unknown</fullName>
-                    <default>true</default>
-                    <label>Unknown</label>
-                </value>
-                <value>
-                    <fullName>Price</fullName>
-                    <default>false</default>
-                    <label>Price</label>
-                </value>
-                <value>
-                    <fullName>Timing</fullName>
-                    <default>false</default>
-                    <label>Timing</label>
-                </value>
-                <value>
-                    <fullName>Product</fullName>
-                    <default>false</default>
-                    <label>Product</label>
-                </value>
-                <value>
-                    <fullName>Fit</fullName>
-                    <default>false</default>
-                    <label>Fit</label>
-                </value>
-                <value>
-                    <fullName>Authority</fullName>
-                    <default>false</default>
-                    <label>Authority</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>MainCompetitors__c</fullName>
@@ -928,6 +928,7 @@
         <columns>OPPORTUNITY.CREATED_DATE</columns>
         <columns>CORE.USERS.FIRST_NAME</columns>
         <columns>CORE.USERS.ALIAS</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>OPPORTUNITY.CREATED_DATE</field>
@@ -998,6 +999,33 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>DGTB_LossReason__c</picklist>
+            <values>
+                <fullName>Authority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>DeliveryInstallationStatus__c</picklist>
             <values>
                 <fullName>Completed</fullName>
@@ -1056,33 +1084,6 @@
             <values>
                 <fullName>Web</fullName>
                 <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Loss_Reason__c</picklist>
-            <values>
-                <fullName>Authority</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Price</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Product</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Timing</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unknown</fullName>
-                <default>true</default>
             </values>
         </picklistValues>
         <picklistValues>
@@ -1232,6 +1233,33 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>DGTB_LossReason__c</picklist>
+            <values>
+                <fullName>Authority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>DeliveryInstallationStatus__c</picklist>
             <values>
                 <fullName>Completed</fullName>
@@ -1290,33 +1318,6 @@
             <values>
                 <fullName>Web</fullName>
                 <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Loss_Reason__c</picklist>
-            <values>
-                <fullName>Authority</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Price</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Product</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Timing</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unknown</fullName>
-                <default>true</default>
             </values>
         </picklistValues>
         <picklistValues>
@@ -1466,6 +1467,33 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>DGTB_LossReason__c</picklist>
+            <values>
+                <fullName>Authority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>DeliveryInstallationStatus__c</picklist>
             <values>
                 <fullName>Completed</fullName>
@@ -1524,33 +1552,6 @@
             <values>
                 <fullName>Web</fullName>
                 <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Loss_Reason__c</picklist>
-            <values>
-                <fullName>Authority</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Price</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Product</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Timing</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unknown</fullName>
-                <default>true</default>
             </values>
         </picklistValues>
         <picklistValues>
@@ -1700,6 +1701,33 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>DGTB_LossReason__c</picklist>
+            <values>
+                <fullName>Authority</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>DeliveryInstallationStatus__c</picklist>
             <values>
                 <fullName>Completed</fullName>
@@ -1758,33 +1786,6 @@
             <values>
                 <fullName>Web</fullName>
                 <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Loss_Reason__c</picklist>
-            <values>
-                <fullName>Authority</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Fit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Price</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Product</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Timing</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unknown</fullName>
-                <default>true</default>
             </values>
         </picklistValues>
         <picklistValues>

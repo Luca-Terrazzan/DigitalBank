@@ -46,12 +46,19 @@
     <columns>
         <field>ACCOUNT.NAME</field>
     </columns>
+    <currency>USD</currency>
     <filter>
         <criteriaItems>
             <column>CLOSED</column>
             <isUnlocked>false</isUnlocked>
             <operator>equals</operator>
             <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Tito</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>

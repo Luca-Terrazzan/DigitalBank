@@ -16,7 +16,6 @@
         <members>MarketingCloudHandler</members>
         <members>MarketingCloudHandlerTest</members>
         <members>OpportunitiesSelector</members>
-        <members>PushNotificationHandler</members>
         <members>RelatedListController</members>
         <members>ReminderHandler</members>
         <members>TestUtils</members>
@@ -63,6 +62,7 @@
         <members>AgencyData__c</members>
         <members>Campaign</members>
         <members>Contact</members>
+        <members>DGTB_Settings__c</members>
         <members>Event</members>
         <members>FinServ__ContactContactRelation__c</members>
         <members>FinServ__FinancialAccountRole__c</members>
@@ -210,7 +210,6 @@
         <name>Profile</name>
     </types>
     <types>
-        <members>Digital_Bank_Reports</members>
         <members>Digital_Bank_Reports/Branch_Pipeline</members>
         <members>Digital_Bank_Reports/Branch_Pipeline1</members>
         <members>Digital_Bank_Reports/Branch_Pipeline2</members>
@@ -220,7 +219,6 @@
         <members>Digital_Bank_Reports/Case_Resolution_Performance</members>
         <members>Digital_Bank_Reports/Case_Resolution_Performance2</members>
         <members>Digital_Bank_Reports/Case_by_Owner</members>
-        <members>Digital_Bank_Reports/Cases_by_Origin</members>
         <members>Digital_Bank_Reports/Employee_Performance</members>
         <members>Digital_Bank_Reports/High_Priority_Case</members>
         <members>Digital_Bank_Reports/Leads_By_owner</members>
@@ -240,37 +238,20 @@
         <members>Digital_Bank_Reports/Revenue_Over_Time</members>
         <members>Digital_Bank_Reports/Revenue_Over_Time1</members>
         <members>Digital_Bank_Reports/Revenue_by_Branch</members>
-        <members>Digital_Bank_Reports/Revenue_by_Category</members>
         <members>Digital_Bank_Reports/Revenue_by_Product_Line</members>
         <members>Digital_Bank_Reports/Revenue_by_Product_Line1</members>
         <members>Digital_Bank_Reports/Revenue_per_Employee</members>
         <members>Digital_Bank_Reports/Top_15_Opportunities</members>
-        <members>unfiled$public</members>
-        <members>unfiled$public/AUM_Report</members>
-        <members>unfiled$public/Account_Last_Touch_Date</members>
-        <members>unfiled$public/Account_Profitability</members>
-        <members>unfiled$public/Account_Report</members>
         <members>unfiled$public/Accounts_Types</members>
-        <members>unfiled$public/Case_Product</members>
-        <members>unfiled$public/Case_Report</members>
         <members>unfiled$public/Commercial_FA_Loans</members>
-        <members>unfiled$public/Employee_Performance1</members>
         <members>unfiled$public/New_FA_Commercial</members>
         <members>unfiled$public/New_FA_Loan_Commercial</members>
-        <members>unfiled$public/Open_Branch_Cases</members>
-        <members>unfiled$public/Open_Leads_by_Owner</members>
-        <members>unfiled$public/Open_Leads_by_Owner_and_Rating</members>
-        <members>unfiled$public/Opportunity_Stage</members>
-        <members>unfiled$public/Opportunity_Stage_Amount</members>
-        <members>unfiled$public/Opportunity_User</members>
-        <members>unfiled$public/Pipeline_by_Type</members>
         <members>unfiled$public/Retail_FA_Loans</members>
         <members>unfiled$public/Retail_Financial_Account</members>
         <members>unfiled$public/Retail_Financial_Account_v2</members>
         <members>unfiled$public/Retail_Financial_Account_v21</members>
         <members>unfiled$public/Retail_Financial_Account_v211</members>
         <members>unfiled$public/Test_Report_Commercial</members>
-        <members>unfiled$public/VIP_Accounts</members>
         <members>unfiled$public/Wealth_FA_Loan</members>
         <name>Report</name>
     </types>

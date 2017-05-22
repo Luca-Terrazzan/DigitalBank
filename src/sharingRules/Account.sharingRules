@@ -15,7 +15,7 @@
         <criteriaItems>
             <field>Branch__c</field>
             <operation>equals</operation>
-            <value>Branch 1</value>
+            <value>Oxford Branch</value>
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
@@ -33,7 +33,7 @@
         <criteriaItems>
             <field>Branch__c</field>
             <operation>equals</operation>
-            <value>Branch 2</value>
+            <value>Waterloo Branch</value>
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
@@ -51,7 +51,7 @@
         <criteriaItems>
             <field>Branch__c</field>
             <operation>equals</operation>
-            <value>Branch 3</value>
+            <value>Paddington Branch</value>
         </criteriaItems>
     </sharingCriteriaRules>
 </SharingRules>

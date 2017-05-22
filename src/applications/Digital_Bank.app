@@ -1098,64 +1098,42 @@
     <tab>standard-home</tab>
     <tab>standard-Account</tab>
     <tab>AccountContactRelationship__c</tab>
-    <tab>standard-Contract</tab>
-    <tab>FinServ__Alert__c</tab>
-    <tab>standard-AppLauncher</tab>
-    <tab>standard-Asset</tab>
+    <tab>standard-Contact</tab>
+    <tab>standard-Opportunity</tab>
+    <tab>FinServ__FinancialAccount__c</tab>
+    <tab>standard-Event</tab>
     <tab>FinServ__AssetsAndLiabilities__c</tab>
     <tab>standard-Campaign</tab>
     <tab>standard-Case</tab>
-    <tab>FinServ__WMClients</tab>
-    <tab>standard-Contact</tab>
+    <tab>FinServ__Securities__c</tab>
     <tab>standard-Dashboard</tab>
+    <tab>FinServ__Alert__c</tab>
     <tab>standard-File</tab>
-    <tab>FinServ__FinancialAccount__c</tab>
     <tab>FinServ__FinancialGoal__c</tab>
     <tab>FinServ__FinancialHolding__c</tab>
     <tab>standard-CollaborationGroup</tab>
-    <tab>FinServ__WMHouseholds</tab>
-    <tab>booking__Calendar</tab>
     <tab>standard-Lead</tab>
-    <tab>standard-Opportunity</tab>
-    <tab>standard-Order</tab>
-    <tab>standard-OtherUserProfile</tab>
-    <tab>standard-Pricebook2</tab>
-    <tab>standard-Product2</tab>
+    <tab>Suitability_Test__c</tab>
     <tab>FinServ__ReciprocalRole__c</tab>
-    <tab>standard-report</tab>
-    <tab>FinServ__Securities__c</tab>
-    <tab>standard-UserProvisioningRequest</tab>
-    <tab>standard-ProcessInstanceWorkitem</tab>
-    <tab>booking__BBBookings__c</tab>
-    <tab>booking__BBMember__c</tab>
-    <tab>booking__BBQuestions__c</tab>
     <tab>booking__Booking_Calendar</tab>
+    <tab>standard-report</tab>
+    <tab>booking__BBBookings__c</tab>
+    <tab>booking__Calendar</tab>
+    <tab>booking__BBMember__c</tab>
+    <tab>Referral__c</tab>
     <tab>booking__BB_Config</tab>
     <tab>booking__Branch__c</tab>
-    <tab>standard-Event</tab>
     <tab>booking__Call_Centre</tab>
     <tab>standard-Feed</tab>
     <tab>booking__ChatterOption__c</tab>
     <tab>booking__Config__c</tab>
-    <tab>dsfs__DocuSign_Admin</tab>
-    <tab>dsfs__DocuSign_Partner_Demo</tab>
-    <tab>dsfs__DocuSign_Envelope_Document__c</tab>
-    <tab>dsfs__DocuSign_Envelope_Recipient__c</tab>
+    <tab>Transaction__c</tab>
     <tab>dsfs__DocuSign_Envelope__c</tab>
-    <tab>dsfs__DocuSign_Status__c</tab>
-    <tab>standard-Forecasting3</tab>
-    <tab>standard-ForecastingLightning</tab>
     <tab>booking__New_Booking</tab>
-    <tab>standard-News</tab>
-    <tab>standard-ContentNote</tab>
-    <tab>Referral__c</tab>
-    <tab>booking__SetLGNT</tab>
     <tab>booking__BookingBug_Setup</tab>
     <tab>standard-Task</tab>
     <tab>FinServ__LifeEvent__c</tab>
     <tab>FinServ__Revenue__c</tab>
-    <tab>Transaction__c</tab>
-    <tab>Suitability_Test__c</tab>
     <uiType>Lightning</uiType>
     <utilityBar>Digital_Bank_UtilityBar</utilityBar>
 </CustomApplication>
