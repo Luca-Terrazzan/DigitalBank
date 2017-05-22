@@ -4,7 +4,6 @@
         <calculatedFormula>FinServ__FinancialAccount__c.FinServ__Balance__c:SUM</calculatedFormula>
         <datatype>number</datatype>
         <developerName>FORMULA1</developerName>
-        <downGroupingContext>FinServ__FinancialAccount__c.FinServ__FinancialAccountType__c</downGroupingContext>
         <isActive>true</isActive>
         <isCrossBlock>false</isCrossBlock>
         <masterLabel>Balance</masterLabel>
@@ -19,15 +18,15 @@
             <column>FORMULA1</column>
         </chartSummaries>
         <chartType>Donut</chartType>
-        <enableHoverLabels>false</enableHoverLabels>
+        <enableHoverLabels>true</enableHoverLabels>
         <expandOthers>false</expandOthers>
         <groupingColumn>FinServ__FinancialAccount__c.FinServ__FinancialAccountType__c</groupingColumn>
         <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
-        <showTotal>false</showTotal>
-        <showValues>false</showValues>
+        <showTotal>true</showTotal>
+        <showValues>true</showValues>
         <size>Medium</size>
         <summaryAxisRange>Auto</summaryAxisRange>
         <textColor>#000000</textColor>
@@ -41,6 +40,7 @@
     <columns>
         <field>FinServ__FinancialAccount__c.FinServ__Balance__c</field>
     </columns>
+    <currency>USD</currency>
     <filter>
         <criteriaItems>
             <column>FinServ__FinancialAccount__c.Category__c</column>
@@ -76,7 +76,7 @@
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>
-        <dateColumn>FinServ__FinancialAccount__c.FinServ__ApplicationDate__c</dateColumn>
+        <dateColumn>FinServ__FinancialAccount__c.FinServ__OpenDate__c</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>
     </timeFrameFilter>
 </Report>

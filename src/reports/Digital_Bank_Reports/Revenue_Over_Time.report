@@ -17,7 +17,7 @@
             <axisBinding>y</axisBinding>
             <column>FORMULA1</column>
         </chartSummaries>
-        <chartType>Line</chartType>
+        <chartType>LineCumulative</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>true</expandOthers>
         <groupingColumn>FinServ__Revenue__c.FinServ__Date__c</groupingColumn>
@@ -39,6 +39,7 @@
     <columns>
         <field>FK_NAME</field>
     </columns>
+    <currency>USD</currency>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>

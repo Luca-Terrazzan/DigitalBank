@@ -78,7 +78,7 @@
     <fields>
         <fullName>DGTB_AccountContactReference__c</fullName>
         <description>Id of the standard junction object from which the record originated from</description>
-        <externalId>false</externalId>
+        <externalId>true</externalId>
         <label>White Account Contact Id</label>
         <length>18</length>
         <required>true</required>

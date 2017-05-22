@@ -47,6 +47,15 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>FinServ__Revenue__c.Profit__c</field>
     </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>FK_OPP_STAGE_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+    </filter>
     <format>Summary</format>
     <groupingsDown>
         <aggregateType>Sum</aggregateType>

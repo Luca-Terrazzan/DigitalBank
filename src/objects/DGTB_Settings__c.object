@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Digital bank settings options</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>DGTB_DelayedNotification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Send a second push notificaiton after the first one comes out of social studio interactions</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Send a second push notificaiton after the first one comes out of social studio interactions</inlineHelpText>
+        <label>Delayed Push Notification</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Digital Bank Settings</label>
+    <visibility>Protected</visibility>
+</CustomObject>

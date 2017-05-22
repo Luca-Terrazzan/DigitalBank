@@ -64,7 +64,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Loss_Reason__c</field>
+                <field>DGTB_LossReason__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>

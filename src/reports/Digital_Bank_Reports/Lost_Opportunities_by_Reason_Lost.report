@@ -11,7 +11,7 @@
         <chartType>Donut</chartType>
         <enableHoverLabels>true</enableHoverLabels>
         <expandOthers>false</expandOthers>
-        <groupingColumn>Opportunity.Loss_Reason__c</groupingColumn>
+        <groupingColumn>Opportunity.DGTB_LossReason__c</groupingColumn>
         <legendPosition>Right</legendPosition>
         <location>CHART_TOP</location>
         <showAxisLabels>true</showAxisLabels>
@@ -42,7 +42,7 @@
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Opportunity.Loss_Reason__c</field>
+        <field>Opportunity.DGTB_LossReason__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Lost Opportunities by Reason Lost</name>

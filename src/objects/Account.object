@@ -85,12 +85,11 @@
     <compactLayouts>
         <fullName>FinServ__IndividualCompactLayout</fullName>
         <fields>Name</fields>
-        <fields>Customer_Tier__c</fields>
-        <fields>RetailBalance__c</fields>
-        <fields>RetailLoan__c</fields>
-        <fields>WealthBalance__c</fields>
-        <fields>CommercialBalance__c</fields>
-        <fields>CommercialLoan__c</fields>
+        <fields>FinServ__TotalFinancialAccounts__c</fields>
+        <fields>FinServ__AUM__c</fields>
+        <fields>FinServ__ClientCategory__c</fields>
+        <fields>FinServ__NextInteraction__c</fields>
+        <fields>FinServ__LastInteraction__c</fields>
         <label>Individual Compact Layout</label>
     </compactLayouts>
     <compactLayouts>
@@ -1392,9 +1391,19 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>VIP Gold</fullName>
+                    <fullName>Gold</fullName>
                     <default>false</default>
-                    <label>VIP Gold</label>
+                    <label>Gold</label>
+                </value>
+                <value>
+                    <fullName>Silver</fullName>
+                    <default>false</default>
+                    <label>Silver</label>
+                </value>
+                <value>
+                    <fullName>Bronze</fullName>
+                    <default>false</default>
+                    <label>Bronze</label>
                 </value>
                 <value>
                     <fullName>Standard Customer</fullName>
@@ -1419,6 +1428,18 @@ IF(WealthBalance__c&gt;0, IMAGE(&apos;/resource/WealthON&apos;,&apos;Wealth Cust
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DGTB_BusinessAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Business Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>DandbCompanyId</fullName>
@@ -2874,7 +2895,7 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
         <fullName>Salary__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <label>Salary</label>
+        <label>Direct Deposit Account</label>
         <referenceTo>FinServ__FinancialAccount__c</referenceTo>
         <relationshipLabel>Salary Owner</relationshipLabel>
         <relationshipName>SalaryOwner</relationshipName>
@@ -3278,11 +3299,11 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
         <picklistValues>
             <picklist>Customer_Tier__c</picklist>
             <values>
-                <fullName>Standard Customer</fullName>
+                <fullName>Gold</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>VIP Gold</fullName>
+                <fullName>Standard Customer</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -3971,11 +3992,11 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
         <picklistValues>
             <picklist>Customer_Tier__c</picklist>
             <values>
-                <fullName>Standard Customer</fullName>
+                <fullName>Gold</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>VIP Gold</fullName>
+                <fullName>Standard Customer</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -4664,11 +4685,11 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
         <picklistValues>
             <picklist>Customer_Tier__c</picklist>
             <values>
-                <fullName>Standard Customer</fullName>
+                <fullName>Gold</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>VIP Gold</fullName>
+                <fullName>Standard Customer</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -5356,11 +5377,11 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
         <picklistValues>
             <picklist>Customer_Tier__c</picklist>
             <values>
-                <fullName>Standard Customer</fullName>
+                <fullName>Gold</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>VIP Gold</fullName>
+                <fullName>Standard Customer</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -6039,11 +6060,11 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
         <picklistValues>
             <picklist>Customer_Tier__c</picklist>
             <values>
-                <fullName>Standard Customer</fullName>
+                <fullName>Gold</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>VIP Gold</fullName>
+                <fullName>Standard Customer</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

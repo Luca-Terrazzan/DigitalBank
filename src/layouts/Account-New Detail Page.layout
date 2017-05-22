@@ -395,6 +395,7 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>RECORDTYPE</fields>
         <fields>Category__c</fields>
         <fields>FinServ__Description__c</fields>
         <fields>FinServ__AssetsAndLiabilitiesType__c</fields>

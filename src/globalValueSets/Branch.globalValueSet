@@ -3,17 +3,17 @@
     <customValue>
         <fullName>Branch 1</fullName>
         <default>false</default>
-        <label>Branch 1</label>
+        <label>Oxford Branch</label>
     </customValue>
     <customValue>
         <fullName>Branch 2</fullName>
         <default>false</default>
-        <label>Branch 2</label>
+        <label>Waterloo Branch</label>
     </customValue>
     <customValue>
         <fullName>Branch 3</fullName>
         <default>false</default>
-        <label>Branch 3</label>
+        <label>Paddington Branch</label>
     </customValue>
     <masterLabel>Branch</masterLabel>
     <sorted>false</sorted>
