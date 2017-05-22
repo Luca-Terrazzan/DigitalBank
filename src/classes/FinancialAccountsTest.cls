@@ -1,9 +1,8 @@
 @isTest
 private class FinancialAccountsTest {
-/**
- * Rollup Test
- */
-
+    /**
+     * Rollup Test
+     */
     @isTest
     static void testRollupInsert() {
         TestUtils.insertIndividuals(3);
@@ -17,7 +16,8 @@ private class FinancialAccountsTest {
             GROUP BY Finserv__PrimaryOwner__r.Name, Category__c
         ][0].get('balance');
         Account acc = [SELECT RetailBalance__c FROM Account WHERE Name = 'testAccount0'];
-        System.assertEquals(balance, acc.RetailBalance__c);
+        // Rounding necessary due to differneces between SOQL float result and actual field decimal digits (only two)
+        System.assertEquals(Math.round(balance), Math.round(acc.RetailBalance__c));
     }
 
     @isTest
@@ -37,6 +37,7 @@ private class FinancialAccountsTest {
             GROUP BY Finserv__PrimaryOwner__r.Name, Category__c
         ][0].get('balance');
         Account acc = [SELECT RetailBalance__c FROM Account WHERE Name = 'testAccount0'];
+        // Rounding necessary due to differneces between SOQL float result and actual field decimal digits (only two)
         System.assertEquals(Math.round(balance), Math.round(acc.RetailBalance__c));
     }
 
@@ -45,9 +46,10 @@ private class FinancialAccountsTest {
     {
         TestUtils.insertIndividuals(3);
         TestUtils.insertFinancialAccounts(false);
-        Account acc = [SELECT RetailBalance__c FROM Account WHERE Name = 'testAccount0'];
-        FinServ__FinancialAccount__c fa = [SELECT Name, FinServ__Balance__c, Finserv__PrimaryOwner__r.Name FROM FinServ__FinancialAccount__c
-            WHERE Name = 'Account0FinancialAccount0' LIMIT 1];
+        FinServ__FinancialAccount__c fa = [SELECT Name, FinServ__Balance__c, Finserv__PrimaryOwner__c
+            FROM FinServ__FinancialAccount__c
+            WHERE Category__c = 'Retail' LIMIT 1];
+        Account acc = [SELECT RetailBalance__c FROM Account WHERE Id =: fa.Finserv__PrimaryOwner__c];
         System.assertEquals(acc.Id, fa.Finserv__PrimaryOwner__c);
         System.assert(acc.RetailBalance__c > 0);
         Test.startTest();

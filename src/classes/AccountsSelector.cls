@@ -20,6 +20,13 @@ public class AccountsSelector extends fflib_SObjectSelector
         return (List<Account>) selectSObjectsById(idSet);
     }
 
+    /**
+     * Gets standard fields for a specific account and field list.
+     * The result is serialized for a more conveniente usage in custom lightning components
+     * @param      accountId        The account identifier
+     * @param      fieldListString  The field list string
+     * @return     JSON serialized list of results
+     */
     public String getAccountFields(Id accountId, String fieldListString)
     {
         assertIsAccessible();
@@ -47,6 +54,7 @@ public class AccountsSelector extends fflib_SObjectSelector
                 }
             )
         );
+        // Result serialization
         String jsonAccount = JSON.serialize(result).toLowerCase();
         for(String field: cleanApiNames) {
             jsonAccount = jsonAccount.replace(field, labelMap.get(field));

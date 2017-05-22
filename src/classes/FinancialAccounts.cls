@@ -29,25 +29,31 @@ public class FinancialAccounts extends fflib_SObjectDomain
 
     public override void onAfterInsert()
     {
+        // Custom 720 roll-up
         accountsMap = this.getAccountsMap();
         rollUp((FinServ__FinancialAccount__c[]) Records, false);
         update accountsMap.values();
+        /////////////////////
     }
 
     public override void onAfterUpdate(Map<Id,SObject> existingRecords)
     {
+        // Custom 720 roll-up
         accountsMap = this.getAccountsMap(existingRecords.values());
         rollUp((FinServ__FinancialAccount__c[]) existingRecords.values(), true);
         rollUp((FinServ__FinancialAccount__c[]) Records, false);
         update accountsMap.values();
+        /////////////////////
     }
 
     public override void onAfterDelete()
     {
+        // Custom 720 roll-up
         // fflib doesn't execute validation while deleting, accountmap needs to be manually invoked
         accountsMap = this.getAccountsMap();
         rollUp((FinServ__FinancialAccount__c[]) Records, true);
         update accountsMap.values();
+        /////////////////////
     }
 
     private Map<Id, Account> getAccountsMap()
@@ -70,11 +76,16 @@ public class FinancialAccounts extends fflib_SObjectDomain
             [SELECT RetailBalance__c, WealthBalance__c, CommercialBalance__c,
                     RetailLoan__c, CommercialLoan__c
                 FROM Account
-                WHERE Id IN: accounts FOR UPDATE]
+                WHERE Id IN: accounts FOR UPDATE] // FOR UPDATE!
         );
         return accountsMap;
     }
 
+    /**
+     * Calculates the 720 roll-up
+     * @param      roles     FinancialAccount[]
+     * @param      subtract  If true, the sum is subtracted to the roll-up
+     */
     private void rollUp(FinServ__FinancialAccount__c[] faccounts, Boolean subtract)
     {
         for(FinServ__FinancialAccount__c fa: faccounts) {

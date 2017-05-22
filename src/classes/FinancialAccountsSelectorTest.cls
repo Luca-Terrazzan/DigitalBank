@@ -26,7 +26,7 @@ private class FinancialAccountsSelectorTest {
     }
 
 	@isTest
-    static void test_method_one() {
+    static void testDML() {
         FinServ__FinancialAccount__c tempFinAcc = [SELECT Id, FinServ__PrimaryOwner__c FROM FinServ__FinancialAccount__c][0];
         Account tempOwner = [SELECT Id FROM Account WHERE Name = 'testAccount1'];
 		System.assertEquals(tempFinAcc.FinServ__PrimaryOwner__c, tempOwner.Id);

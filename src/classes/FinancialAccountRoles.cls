@@ -6,7 +6,8 @@
  */
 
 /**
- * Encapsulates all behaviour logic relating to the FinServ__FinancialAccountRole__c object
+ * Encapsulates all behaviour logic relating to the FinServ__FinancialAccountRole__c object.
+ * Manages the custom roll-up to keep balances updated in the different 720 overviews
  *
  * For more guidelines and details see
  *   https://developer.salesforce.com/page/Apex_Enterprise_Patterns_-_Domain_Layer
@@ -33,13 +34,16 @@ public class FinancialAccountRoles extends fflib_SObjectDomain
 
     public override void onAfterInsert()
     {
+        // Custom 720 roll-up
         FinServ__FinancialAccountRole__c[] roles = filterRolesByCategory(Records, 'Commercial');
         accountsMap = this.getAccountsMap(roles);
         rollUp((FinServ__FinancialAccountRole__c[]) roles, false);
         update accountsMap.values();
+        /////////////////////
     }
     public override void onAfterUpdate(Map<Id, SObject> existingRecords)
     {
+        // Custom 720 roll-up
         FinServ__FinancialAccountRole__c[] newRoles = filterRolesByCategory(Records, 'Commercial');
         FinServ__FinancialAccountRole__c[] oldRoles = filterRolesByCategory(existingRecords.values(), 'Commercial');
         FinServ__FinancialAccountRole__c[] roles    = newRoles.clone();
@@ -48,13 +52,16 @@ public class FinancialAccountRoles extends fflib_SObjectDomain
         rollUp(newRoles, false);
         rollUp(oldRoles, true);
         update accountsMap.values();
+        /////////////////////
     }
     public override void onAfterDelete()
     {
+        // Custom 720 roll-up
         FinServ__FinancialAccountRole__c[] roles = filterRolesByCategory(Records, 'Commercial');
         accountsMap = this.getAccountsMap(roles);
         rollUp((FinServ__FinancialAccountRole__c[]) roles, true);
         update accountsMap.values();
+        /////////////////////
     }
 
     private Map<Id, Account> getAccountsMap()
@@ -70,11 +77,16 @@ public class FinancialAccountRoles extends fflib_SObjectDomain
         Map<Id, Account> accountsMap = new Map<Id, Account>(
             [SELECT CommercialBalance__c, CommercialLoan__c
                 FROM Account
-                WHERE Id IN: accounts FOR UPDATE]
+                WHERE Id IN: accounts FOR UPDATE] // FOR UPDATE!
         );
         return accountsMap;
     }
 
+    /**
+     * Calculates the 720 roll-up
+     * @param      roles     FinancialAccountRole[]
+     * @param      subtract  If true, the sum is subtracted to the roll-up
+     */
     private void rollUp(FinServ__FinancialAccountRole__c[] roles, Boolean subtract) {
         for(FinServ__FinancialAccountRole__c far: roles) {
             Account accToUpdate = accountsMap.get(far.Finserv__RelatedAccount__c);
@@ -88,6 +100,11 @@ public class FinancialAccountRoles extends fflib_SObjectDomain
         }
     }
 
+    /**
+     * Helper method used to filter current context records (in triggers) for certain categories
+     * @param      roles     The financialAccountRole[]
+     * @param      category  The category
+     */
     private FinServ__FinancialAccountRole__c[] filterRolesByCategory(FinServ__FinancialAccountRole__c[] roles, String category) {
         FinServ__FinancialAccountRole__c[] filteredRecords = new FinServ__FinancialAccountRole__c[]{};
         for(FinServ__FinancialAccountRole__c record : roles) {
