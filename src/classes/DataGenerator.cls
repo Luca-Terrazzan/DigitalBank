@@ -28,6 +28,7 @@ public with sharing class DataGenerator {
 
     /**
      * Singleton, avoids memory waste
+     * @type    !CONSTRUCT
      */
     private DataGenerator() {
         individuals = new Account[]{};
@@ -52,7 +53,7 @@ public with sharing class DataGenerator {
 
     /**
      * Commit current work, similar to unit of work pattern
-     * TODO : refator in generic containers
+     * TODO: refator in generic containers
      */
     public DataGenerator commitWork() {
         insert this.individuals;
@@ -295,12 +296,14 @@ public with sharing class DataGenerator {
 
     /**
      * Pick a random element in a string[]
+     * @type    !HELPER
      */
     public static String randomPick(String[] stringlist) {
         return stringlist[(Integer) Math.floor(Math.random()*stringlist.size())];
     }
     /**
      * Pick a random element in a SObject[]
+     * @type    !HELPER
      */
     public static SObject randomPickSObject(SObject[] stringlist) {
         if (stringlist == null || stringlist.isEmpty()) return null;
@@ -308,6 +311,7 @@ public with sharing class DataGenerator {
     }
     /**
      * Pick a random element in a SObject picklist field
+     * @type    !HELPER
      */
     public static String randomPicklistValue(Schema.SObjectField field) {
         Schema.PicklistEntry[] ples = field.getDescribe().getPicklistValues();
