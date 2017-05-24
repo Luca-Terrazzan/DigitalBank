@@ -139,7 +139,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.FinServ__IndustriesIndividual</recordType>
         <type>Flexipage</type>
-        <profile>Custom Standard User</profile>
+        <profile>Demo Profile</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>

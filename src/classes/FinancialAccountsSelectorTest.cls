@@ -18,7 +18,9 @@ private class FinancialAccountsSelectorTest {
                 new Account(Name = 'testAccount2', RecordTypeId = individualAccount.Id),
                 new Account(Name = 'testAccount3', RecordTypeId = individualAccount.Id)
             };
-            insert testAccounts;
+            if (!testAccounts.isEmpty()) {
+                insert testAccounts;
+            }
 
             // Insert test financial accounts + roles
             FinServ__FinancialAccount__c[] testFinAccounts = new FinServ__FinancialAccount__c[]{
@@ -26,7 +28,9 @@ private class FinancialAccountsSelectorTest {
                     FinServ__PrimaryOwner__c = testAccounts[0].Id,
                     Category__c = 'Retail')
             };
-            insert testFinAccounts;
+            if (!testFinAccounts.isEmpty()) {
+                insert testFinAccounts;
+            }
         Test.stopTest();
 
         FinServ__FinancialAccount__c tempFinAcc = [SELECT Id, FinServ__PrimaryOwner__c

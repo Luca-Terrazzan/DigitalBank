@@ -66,6 +66,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>PushNotificationHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>RelatedListController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
