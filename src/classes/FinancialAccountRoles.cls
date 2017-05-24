@@ -17,8 +17,6 @@ public class FinancialAccountRoles extends fflib_SObjectDomain
 {
     private final Set<String> ROLL_UP_ROLES = new Set<String>();
     private Map<Id, Account> accountsMap = new Map<Id, Account>();
-    private Map<Id, Account> oldAccountsMap = new Map<Id, Account>();
-
 
     public FinancialAccountRoles(List<FinServ__FinancialAccountRole__c> records)
     {
@@ -28,17 +26,15 @@ public class FinancialAccountRoles extends fflib_SObjectDomain
         }
     }
 
-    public override void onValidate() {}
-
-    public override void onValidate(Map<Id,SObject> existingRecords) {}
-
     public override void onAfterInsert()
     {
         // Custom 720 roll-up
         FinServ__FinancialAccountRole__c[] roles = filterRolesByCategory(Records, 'Commercial');
         accountsMap = this.getAccountsMap(roles);
-        rollUp((FinServ__FinancialAccountRole__c[]) roles, false);
-        update accountsMap.values();
+        if (!accountsMap.isEmpty() && accountsMap.size() < 10000) {
+            rollUp((FinServ__FinancialAccountRole__c[]) roles, false);
+            update accountsMap.values();
+        }
         /////////////////////
     }
     public override void onAfterUpdate(Map<Id, SObject> existingRecords)
@@ -49,9 +45,11 @@ public class FinancialAccountRoles extends fflib_SObjectDomain
         FinServ__FinancialAccountRole__c[] roles    = newRoles.clone();
         roles.addAll(oldRoles);
         accountsMap = this.getAccountsMap(roles);
-        rollUp(newRoles, false);
-        rollUp(oldRoles, true);
-        update accountsMap.values();
+        if (!accountsMap.isEmpty() && accountsMap.size() < 10000) {
+            rollUp(newRoles, false);
+            rollUp(oldRoles, true);
+            update accountsMap.values();
+        }
         /////////////////////
     }
     public override void onAfterDelete()
@@ -59,8 +57,10 @@ public class FinancialAccountRoles extends fflib_SObjectDomain
         // Custom 720 roll-up
         FinServ__FinancialAccountRole__c[] roles = filterRolesByCategory(Records, 'Commercial');
         accountsMap = this.getAccountsMap(roles);
-        rollUp((FinServ__FinancialAccountRole__c[]) roles, true);
-        update accountsMap.values();
+        if (!accountsMap.isEmpty() && accountsMap.size() < 10000) {
+            rollUp((FinServ__FinancialAccountRole__c[]) roles, true);
+            update accountsMap.values();
+        }
         /////////////////////
     }
 

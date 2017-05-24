@@ -16,16 +16,12 @@ public class FinancialAccounts extends fflib_SObjectDomain
 {
 
 
-    private Map<Id, Account> accountsMap = new Map<Id, Account>();
+    private Map<Id, Account> accountsMap;
 
     public FinancialAccounts(List<FinServ__FinancialAccount__c> records)
     {
         super(records);
     }
-
-    public override void onValidate(){}
-
-    public override void onValidate(Map<Id,SObject> existingRecords){}
 
     public override void onAfterInsert()
     {

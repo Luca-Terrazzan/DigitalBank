@@ -90,8 +90,7 @@
                 getSObjectName()
             }
             );
-        System.debug('query: ' + query);
-        return (List<Transaction__c>) Database.query(query);
+        return (List<Transaction__c>) Database.query(String.escapeSingleQuotes(query));
     }
 
 }

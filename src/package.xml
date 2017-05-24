@@ -16,6 +16,7 @@
         <members>MarketingCloudHandler</members>
         <members>MarketingCloudHandlerTest</members>
         <members>OpportunitiesSelector</members>
+        <members>PushNotificationHandler</members>
         <members>RelatedListController</members>
         <members>ReminderHandler</members>
         <members>TestUtils</members>

@@ -20,10 +20,10 @@ public class MarketingCloudHandlerTest {
         handler.handleInboundSocialPost(post, persona, sampleSocialData);
         test.stopTest();
 
-        SocialPost createdPost = [SELECT Id, PersonaId, ParentId, WhoId FROM SocialPost];
-        SocialPersona createdPersona = [SELECT Id, ParentId FROM SocialPersona];
-        Contact createdContact = [SELECT Id FROM Contact];
-        Case createdCase = [SELECT Id, ContactId FROM Case];
+        SocialPost createdPost = [SELECT Id, PersonaId, ParentId, WhoId FROM SocialPost LIMIT 50000];
+        SocialPersona createdPersona = [SELECT Id, ParentId FROM SocialPersona LIMIT 50000];
+        Contact createdContact = [SELECT Id FROM Contact LIMIT 50000];
+        Case createdCase = [SELECT Id, ContactId FROM Case LIMIT 50000];
 
         System.assertEquals(createdPost.PersonaId, createdPersona.Id, 'Post is not linked to the Persona.');
         System.assertEquals(createdPost.WhoId, createdPersona.ParentId, 'Post is not linked to the Contact');
@@ -61,10 +61,10 @@ public class MarketingCloudHandlerTest {
         handler.handleInboundSocialPost(post, persona, sampleSocialData);
         test.stopTest();
 
-        SocialPost createdPost = [SELECT Id, PersonaId, ParentId, WhoId FROM SocialPost];
-        SocialPersona createdPersona = [SELECT Id, ParentId FROM SocialPersona];
-        Contact createdContact = [SELECT Id FROM Contact];
-        Case createdCase = [SELECT Id, ContactId FROM Case];
+        SocialPost createdPost = [SELECT Id, PersonaId, ParentId, WhoId FROM SocialPost LIMIT 50000];
+        SocialPersona createdPersona = [SELECT Id, ParentId FROM SocialPersona LIMIT 50000];
+        Contact createdContact = [SELECT Id FROM Contact LIMIT 50000];
+        Case createdCase = [SELECT Id, ContactId FROM Case LIMIT 50000];
 
         System.assertEquals(createdPost.PersonaId, createdPersona.Id, 'Post is not linked to the Persona.');
         System.assertEquals(createdPost.WhoId, createdPersona.ParentId, 'Post is not linked to the Contact');

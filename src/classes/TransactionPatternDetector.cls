@@ -1,18 +1,20 @@
 global class TransactionPatternDetector implements Database.Batchable<SObject> {
-    private static final String query = 'SELECT id, name, finserv__primaryowner__c,' +
+    private static final String QUERY = 'SELECT id, name, finserv__primaryowner__c,' +
         '(SELECT name, transaction_date__c, created_date__c, amount__c FROM transactions__r WHERE category__c = \'retail\' '+
         'ORDER BY transaction_date__c desc) FROM finserv__financialaccount__c ' +
         'WHERE category__c = \'retail\' AND isloan__c = false';
 
-    global TransactionPatternDetector() {
+    /**
+     * Standard Constructor
+     * @type    !CONSTRUCT
+     */
+    global TransactionPatternDetector() {}
 
+    global Database.QueryLocator start(Database.BatchableContext bc) {
+        return Database.getQueryLocator(QUERY);
     }
 
-    global Database.QueryLocator start(Database.BatchableContext BC) {
-        return Database.getQueryLocator(query);
-    }
-
-    global void execute(Database.BatchableContext BC, List<FinServ__FinancialAccount__c> scope) {
+    global void execute(Database.BatchableContext bc, List<FinServ__FinancialAccount__c> scope) {
         FinServ__FinancialAccount__c[] salaries = new FinServ__FinancialAccount__c[]{};
         Map<Id, Id> clientSalaryMap = new Map<Id, Id>();
         for (Integer i = 0; i < scope.size(); i++) {
@@ -47,8 +49,6 @@ global class TransactionPatternDetector implements Database.Batchable<SObject> {
         insert salaryWarnings;
     }
 
-    global void finish(Database.BatchableContext BC) {
-
-    }
+    global void finish(Database.BatchableContext bc) {}
 
 }

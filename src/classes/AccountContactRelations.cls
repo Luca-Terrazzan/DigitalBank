@@ -30,7 +30,9 @@ public class AccountContactRelations extends fflib_SObjectDomain
         {
             shadows.add(copyJunction(acr));
         }
-        insert shadows;
+        if (!shadows.isEmpty()) {
+            insert shadows;
+        }
     }
 
     /**
@@ -47,12 +49,10 @@ public class AccountContactRelations extends fflib_SObjectDomain
     }
 
     /**
-     * TODO
+     * TODO:
      */
     public override void onAfterDelete()
-    {
-
-    }
+    {}
 
     public class Constructor implements fflib_SObjectDomain.IConstructable2
     {
@@ -74,6 +74,7 @@ public class AccountContactRelations extends fflib_SObjectDomain
      */
     private AccountContactRelationship__c copyJunction(AccountContactRelation acr)
     {
+        if (acr == null) return null;
         return new AccountContactRelationship__c(
             Account__c        = acr.AccountId,
             IsActive__c       = acr.IsActive,

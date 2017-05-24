@@ -67,7 +67,7 @@ public class FinancialAccountRolesSelector extends fflib_SObjectSelector
                 getSObjectName()
             }
         );
-        FinServ__FinancialAccountRole__c[] roles = (List<FinServ__FinancialAccountRole__c>) Database.query(query);
+        FinServ__FinancialAccountRole__c[] roles = (List<FinServ__FinancialAccountRole__c>) Database.query(String.escapeSingleQuotes(query));
         return roles;
     }
 

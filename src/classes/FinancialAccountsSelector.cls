@@ -76,6 +76,6 @@ public class FinancialAccountsSelector extends fflib_SObjectSelector
                     getSObjectName()
                 }
             );
-        return (List<FinServ__FinancialAccount__c>) Database.query(query);
+        return (List<FinServ__FinancialAccount__c>) Database.query(String.escapeSingleQuotes(query));
     }
 }
