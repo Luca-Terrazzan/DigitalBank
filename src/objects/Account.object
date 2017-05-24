@@ -85,11 +85,12 @@
     <compactLayouts>
         <fullName>FinServ__IndividualCompactLayout</fullName>
         <fields>Name</fields>
-        <fields>FinServ__TotalFinancialAccounts__c</fields>
-        <fields>FinServ__AUM__c</fields>
-        <fields>FinServ__ClientCategory__c</fields>
-        <fields>FinServ__NextInteraction__c</fields>
-        <fields>FinServ__LastInteraction__c</fields>
+        <fields>Customer_Tier__c</fields>
+        <fields>RetailBalance__c</fields>
+        <fields>RetailLoan__c</fields>
+        <fields>WealthBalance__c</fields>
+        <fields>CommercialBalance__c</fields>
+        <fields>CommercialLoan__c</fields>
         <label>Individual Compact Layout</label>
     </compactLayouts>
     <compactLayouts>

@@ -130,6 +130,24 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.FinServ__IndustriesIndividual</recordType>
         <type>Flexipage</type>
+        <profile>Custom Read Only</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>IndividualPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.FinServ__IndustriesIndividual</recordType>
+        <type>Flexipage</type>
+        <profile>Custom Standard User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>IndividualPage</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.FinServ__IndustriesIndividual</recordType>
+        <type>Flexipage</type>
         <profile>Advisor</profile>
     </profileActionOverrides>
     <profileActionOverrides>
