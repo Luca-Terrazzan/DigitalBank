@@ -204,6 +204,8 @@
     <types>
         <members>Admin</members>
         <members>Branch Manager</members>
+        <members>Custom Read Only</members>
+        <members>Custom Standard User</members>
         <members>Relationship Manager</members>
         <members>Service Agent</members>
         <members>Standard</members>
