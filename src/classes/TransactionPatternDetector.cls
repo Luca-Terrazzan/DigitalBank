@@ -1,7 +1,8 @@
 global class TransactionPatternDetector implements Database.Batchable<SObject> {
     private static final String query = 'SELECT id, name, finserv__primaryowner__c,' +
         '(SELECT name, transaction_date__c, created_date__c, amount__c FROM transactions__r WHERE category__c = \'retail\' '+
-        'ORDER BY transaction_date__c desc) FROM finserv__financialaccount__c WHERE category__c = \'retail\' and isloan__c = false';
+        'ORDER BY transaction_date__c desc) FROM finserv__financialaccount__c ' +
+        'WHERE category__c = \'retail\' AND isloan__c = false';
 
     global TransactionPatternDetector() {
 
@@ -30,7 +31,7 @@ global class TransactionPatternDetector implements Database.Batchable<SObject> {
             }
         }
 
-        Account[] clientsWithSalaryToAdd = [SELECT Id, Salary__c FROM Account WHERE Id IN: clientSalaryMap.keySet()];
+        Account[] clientsWithSalaryToAdd = [SELECT Id, Salary__c FROM Account WHERE Id IN: clientSalaryMap.keySet() AND Salary__c = null];
         FinServ__Alert__c[] salaryWarnings = new FinServ__Alert__c[]{};
         for (Account client: clientsWithSalaryToAdd) {
             client.Salary__c = clientSalaryMap.get(client.Id);
