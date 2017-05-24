@@ -88,7 +88,7 @@
             }
             );
         System.debug('query: ' + query);
-        return (List<Opportunity>) Database.query(query);
+        return (List<Opportunity>) Database.query(String.escapeSingleQuotes(query));
     }
 
     public static Id getDefaultRecordType()
