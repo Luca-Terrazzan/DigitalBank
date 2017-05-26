@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>AccountContactRelations</members>
-        <members>AccountService</members>
-        <members>AccountsSelector</members>
-        <members>CustomConstants</members>
-        <members>DataGenerator</members>
-        <members>DetailComponentController</members>
-        <members>FinancialAccountRoles</members>
-        <members>FinancialAccountRolesSelector</members>
-        <members>FinancialAccounts</members>
-        <members>FinancialAccountsSelector</members>
-        <members>FinancialAccountsSelectorTest</members>
-        <members>FinancialAccountsTest</members>
-        <members>MarketingCloudHandler</members>
-        <members>MarketingCloudHandlerTest</members>
-        <members>OpportunitiesSelector</members>
-        <members>PushNotificationHandler</members>
-        <members>RelatedListController</members>
-        <members>ReminderHandler</members>
-        <members>TestUtils</members>
-        <members>TransactionPatternDetector</members>
-        <members>TransactionPatternDetectorSchedule</members>
-        <members>TransactionRest</members>
-        <members>TransactionsSelector</members>
+        <members>*</members>
         <name>ApexClass</name>
     </types>
     <types>
