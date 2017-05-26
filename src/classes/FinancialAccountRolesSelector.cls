@@ -3,14 +3,15 @@
  **/
 public class FinancialAccountRolesSelector extends fflib_SObjectSelector
 {
-	public List<Schema.SObjectField> getSObjectFieldList()
-	{
-		return new List<Schema.SObjectField> {
-                FinServ__FinancialAccountRole__c.Id,
-                FinServ__FinancialAccountRole__c.FinServ__FinancialAccount__c,
-                FinServ__FinancialAccountRole__c.FinServ__Role__c
-			};
-	}
+
+    public List<Schema.SObjectField> getSObjectFieldList()
+    {
+        return new List<Schema.SObjectField> {
+            FinServ__FinancialAccountRole__c.Id,
+            FinServ__FinancialAccountRole__c.FinServ__FinancialAccount__c,
+            FinServ__FinancialAccountRole__c.FinServ__Role__c
+        };
+    }
 
     /**
      * Gets a list of strings representing the fields returned by getSObjectFieldList()
@@ -32,15 +33,15 @@ public class FinancialAccountRolesSelector extends fflib_SObjectSelector
         return fieldList;
     }
 
-	public Schema.SObjectType getSObjectType()
-	{
-		return FinServ__FinancialAccountRole__c.sObjectType;
-	}
+    public Schema.SObjectType getSObjectType()
+    {
+        return FinServ__FinancialAccountRole__c.sObjectType;
+    }
 
-	public List<FinServ__FinancialAccountRole__c> selectById(Set<ID> idSet)
-	{
-		return (List<FinServ__FinancialAccountRole__c>) selectSObjectsById(idSet);
-	}
+    public List<FinServ__FinancialAccountRole__c> selectById(Set<ID> idSet)
+    {
+        return (List<FinServ__FinancialAccountRole__c>) selectSObjectsById(idSet);
+    }
 
     public FinServ__FinancialAccountRole__c[] selectByAccount(Set<Id> accountIds)
     {
@@ -71,6 +72,11 @@ public class FinancialAccountRolesSelector extends fflib_SObjectSelector
         return roles;
     }
 
+    /**
+     * Gets the default record type. Used in lightning components to fetch the default record type in the 'new' button
+     * on the custom related lists
+     * @return     The default record type's Id.
+     */
     public static Id getDefaultRecordType()
     {
         Id result;
