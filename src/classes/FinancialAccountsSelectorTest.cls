@@ -1,10 +1,6 @@
 @isTest
 private class FinancialAccountsSelectorTest {
 
-    @testSetup
-    public static void testDataSetup()
-    {}
-
 	@isTest
     static void testDML() {
         Test.startTest();

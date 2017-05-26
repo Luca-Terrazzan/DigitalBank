@@ -7,7 +7,7 @@ private class AccountsSelectorTest {
         dg.createTestEnvironment();
     }
 
-	@isTest static void testInterface() {
+    @isTest static void testInterface() {
         Test.startTest();
             // given
             AccountsSelector accSelector = new AccountsSelector();
@@ -21,7 +21,6 @@ private class AccountsSelectorTest {
         System.assert(!fieldList.isEmpty(), 'No fields provided to fflib interface.');
         System.assertEquals(accType, Account.SObjectType);
         System.assertEquals(accIds.size(), accs.size(), 'Query mismatch.');
-
     }
 
     @isTest static void testSelection() {
@@ -41,12 +40,12 @@ private class AccountsSelectorTest {
             '"Account ID":"' + lowerId + '",'+
             '"Account Name":"' + lowerName + '"}';
         Test.startTest();
-    		AccountsSelector accSelector = new AccountsSelector();
+            AccountsSelector accSelector = new AccountsSelector();
             // when
             String stringAccount = accSelector.getAccountFields(ctrlAccount[0].Id, 'Id, Name');
         Test.stopTest();
         // then
         System.assertEquals(stringAccount, ctrlResult, 'Unexpected query results.');
-	}
+    }
 
 }

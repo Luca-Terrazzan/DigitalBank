@@ -6,7 +6,7 @@
  */
 
 /**
- * Class encapsulates query logic for Opportunity
+ * Class encapsulates query logic for Transactions
  *
  * https://developer.salesforce.com/page/Apex_Enterprise_Patterns_-_Selector_Layer
  **/
