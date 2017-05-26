@@ -6,8 +6,8 @@ public class AccountsSelector extends fflib_SObjectSelector
     public List<Schema.SObjectField> getSObjectFieldList()
     {
         return new List<Schema.SObjectField> {
-                Account.Id
-            };
+            Account.Id
+        };
     }
 
     public Schema.SObjectType getSObjectType()
@@ -23,6 +23,8 @@ public class AccountsSelector extends fflib_SObjectSelector
     /**
      * Gets standard fields for a specific account and field list.
      * The result is serialized for a more conveniente usage in custom lightning components
+     * NOTE: Result provides field labels instead of api names.
+     * TODO: Refactor + bulkify in lists
      * @param      accountId        The account identifier
      * @param      fieldListString  The field list string
      * @return     JSON serialized list of results
@@ -35,7 +37,7 @@ public class AccountsSelector extends fflib_SObjectSelector
         for(String fieldName: apiNames) {
             String cleanField = fieldName.toLowerCase();
             cleanField = cleanField.trim();
-            cleanApiNames.add(cleanField);
+            cleanApiNames.add(String.escapeSingleQuotes(cleanField));
         }
         Map<String, Schema.SObjectField> fieldMap = Schema.SObjectType.Account.fields.getMap();
         Map<String, String> labelMap = new Map<String, String>();
