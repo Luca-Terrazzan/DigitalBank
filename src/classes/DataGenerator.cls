@@ -245,7 +245,7 @@ public with sharing class DataGenerator {
     private Opportunity createOpportunity() {
         PricebookEntry randPrice = (PricebookEntry) randomPickSObject(prices);
         if (randPrice == null) {
-            System.debug(LoggingLevel.ERROR, 'Error while creating opportunity, no pricebook entries!');
+            //System.debug(LoggingLevel.ERROR, 'Error while creating opportunity, no pricebook entries!');
             return null;
         }
         String randomId = randPrice.Id + String.valueOf(randomizer) + System.currentTimeMillis();
