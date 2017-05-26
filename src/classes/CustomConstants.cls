@@ -40,4 +40,16 @@ public with sharing class CustomConstants {
     public static final String[] depositChannels = new String[]{'Deposit','E-Transfer','Currency Exchange'};
     public static final String[] retrieveChannels = new String[]{'Bill Payment','Withdrawal','Currency Exchange'};
 
+    // DataGenerator, these are the parameters used to create a default test data environment.
+    // See DataGenerator.createTestEnvironment()
+    public static final Integer DEFAULT_ACCOUNTS = 20;
+    public static final Integer DEFAULT_RETAIL_ACCOUNTS = 20;
+    public static final Integer DEFAULT_WEALTH_ACCOUNTS = 4;
+    public static final Integer DEFAULT_COMMERCIAL_ACCOUNTS = 6;
+    public static final Integer DEFAULT_TRANSACTIONS = 51;
+    public static final Integer DEFAULT_REVENUES = 23;
+    public static final Integer DEFAULT_OPPS = 25;
+    public static final Decimal DEFAULT_OPPS_CLOSED = 0.5;
+    public static final Decimal DEFAULT_OPPS_WINCHANCE = 0.9;
+
 }
