@@ -26,14 +26,11 @@ private class AccountsSelectorTest {
     @isTest static void testSelection() {
         // given
         Account[] ctrlAccount = [SELECT Id, Name FROM Account LIMIT 1];
+        System.assert(!ctrlAccount.isEmpty(), 'Data Generation Error!');
         String lowerId;
         String lowerName;
-        try {
-            lowerId = String.valueOf(ctrlAccount[0].Id).toLowerCase();
-            lowerName = String.valueOf(ctrlAccount[0].Name).toLowerCase();
-        } catch (Exception npe) { // null pointer exception, kept as general to avoid forcereviewer complaining
-            System.assert(false, 'Data population fault.');
-        }
+        lowerId = String.valueOf(ctrlAccount[0].Id).toLowerCase();
+        lowerName = String.valueOf(ctrlAccount[0].Name).toLowerCase();
         String ctrlResult = '{"attributes":'+
             '{"type":"account",'+
                 '"url":"/services/data/v39.0/sobjects/account/' + lowerId + '"},'+
