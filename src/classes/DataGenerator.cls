@@ -51,19 +51,40 @@ public with sharing class DataGenerator {
     }
 
     /**
+     * Fill up DB with some test data, especially used in testSetup methods or when regenerating an org's db
+     */
+    public void createTestEnvironment() {
+        DataGenerator dg = DataGenerator.getInstance();
+        dg
+            .createIndividuals(CustomConstants.DEFAULT_ACCOUNTS)
+            .randomizeFinancialAccounts(CustomConstants.DEFAULT_RETAIL_ACCOUNTS,
+                    CustomConstants.DEFAULT_WEALTH_ACCOUNTS,
+                    CustomConstants.DEFAULT_COMMERCIAL_ACCOUNTS)
+            .createOpportunities(CustomConstants.DEFAULT_OPPS)
+            .closeOpportunities(CustomConstants.DEFAULT_OPPS_CLOSED, CustomConstants.DEFAULT_OPPS_WINCHANCE)
+        .commitWork();
+        //.createRevenues(CustomConstants.DEFAULT_REVENUES)
+        //.createTransactions(CustomConstants.DEFAULT_TRANSACTIONS);
+    }
+
+    /**
      * Commit current work, similar to unit of work pattern
-     * TODO : refator in generic containers
+     * TODO: refactor in generic containers
      */
     public DataGenerator commitWork() {
-        insert this.individuals;
-        insert this.finAccounts;
-        insert this.opportunities;
-        insert this.olis;
-        this.individuals.clear();
-        this.finAccounts.clear();
-        this.opportunities.clear();
-        this.olis.clear();
+        singleCommit(individuals);
+        singleCommit(finAccounts);
+        singleCommit(opportunities);
+        singleCommit(olis);
         return this;
+    }
+    private void singleCommit(SObject[] sobjects) {
+        if (!sobjects.isEmpty()) {
+            insert sobjects;
+            sobjects.clear();
+        } else {
+            System.debug(LoggingLevel.WARN, 'Trying to insert an empty list, skipping');
+        }
     }
 
     /**
@@ -107,7 +128,8 @@ public with sharing class DataGenerator {
             Linkedin_Profile__c = 'linkedin.com/' + lastname,
             FinServ__InvestmentObjectives__c = randomPick(CustomConstants.investment_objectives),
             FinServ__RiskTolerance__c = randomPick(CustomConstants.risk_tolerance),
-            Branch__c = randomPicklistValue(Account.Branch__c),
+            //Branch__c = randomPicklistValue(Account.Branch__c),
+            Branch__c = randomPick(CustomConstants.branches),
             FinServ__InvestmentExperience__c = randomPick(CustomConstants.investment_experience),
             FinServ__ServiceModel__c = randomPick(CustomConstants.service_model),
             FinServ__TimeHorizon__c = randomPick(CustomConstants.time_horizon),
@@ -134,6 +156,9 @@ public with sharing class DataGenerator {
         for(Integer i = commercials; i > 0; i--) {
             Account rand = (Account)randomPickSObject(individuals);
             Account comm_rand = (Account)randomPickSObject(individuals);
+            while (rand.Party_ID__c == comm_rand.Party_ID__c) {
+                comm_rand = (Account)randomPickSObject(individuals);
+            }
             finAccounts.add(createFinancialAccount('Commercial', rand.Party_ID__c, rand.Name, comm_rand.Party_ID__c, comm_rand.Name));
         }
         return this;
@@ -181,10 +206,14 @@ public with sharing class DataGenerator {
         for(Integer i = opps; i > 0; i--) {
             Account rand = (Account)randomPickSObject(individualsPool);
             Opportunity opp = createOpportunity();
-            opp.AccountId = rand.Id;
-            opp.Referring_Customer__c = rand.FinServ__PrimaryContact__c;
-            opp.Name += ' ' + rand.Name + ' Opportunity';
-            opportunities.add(opp);
+            if (opp != null) {
+                opp.AccountId = rand.Id;
+                opp.Referring_Customer__c = rand.FinServ__PrimaryContact__c;
+                opp.Name += ' ' + rand.Name + ' Opportunity';
+                opportunities.add(opp);
+            } else {
+                continue;
+            }
         }
         return this;
     }
@@ -215,6 +244,10 @@ public with sharing class DataGenerator {
      */
     private Opportunity createOpportunity() {
         PricebookEntry randPrice = (PricebookEntry) randomPickSObject(prices);
+        if (randPrice == null) {
+            //System.debug(LoggingLevel.ERROR, 'Error while creating opportunity, no pricebook entries!');
+            return null;
+        }
         String randomId = randPrice.Id + String.valueOf(randomizer) + System.currentTimeMillis();
         randomizer++;
         OpportunityLineItem oli = new OpportunityLineItem(
@@ -238,59 +271,6 @@ public with sharing class DataGenerator {
         oli.Opportunity = new Opportunity(ExternalId__c = randomId);
         olis.add(oli);
         return opp;
-    }
-
-    /**
-     * Creates transactions between the current financial accounts population
-     * @param      transactionsNumber  The number of transactions to create
-     */
-    public DataGenerator createTransactions(Integer transactionsNumber) {
-        for(Integer i = 0; i < transactionsNumber; i++) {
-            transactions.add(createTransaction());
-        }
-        insert transactions;
-        transactions.clear();
-        return this;
-    }
-    private Transaction__c createTransaction() {
-        Boolean isDeposit = Math.random() >= 0.2 ? true : false;
-        Boolean bigTransaction = Math.random() >= 0.9 ? true : false;
-        Decimal amount = Math.random();
-        amount = bigTransaction ? amount * 100000 + 25000 : amount * 1000 + 5;
-        amount = isDeposit ? amount : -amount;
-        FinServ__FinancialAccount__c finAccount = pickRandomFinAccount();
-        Transaction__c newTransaction = new Transaction__c(
-            Amount__c = amount,
-            account_number__c = finAccount.Id,
-            Mock__c = true,
-            Channel__c = isDeposit ? randomPick(CustomConstants.depositChannels) : randomPick(CustomConstants.retrieveChannels),
-            Status__c = true,
-            transaction_date__c = System.today() - (Integer) (Math.random() * 180),
-            transaction_id__c = String.valueOf(Math.random()) + String.valueOf(Math.random())
-        );
-        return newTransaction;
-    }
-
-    /**
-     * Creates revenues between the current financial account population
-     * @param      revenuesNumber  The number of revenues to generate
-     */
-    public DataGenerator createRevenues(Integer revenuesNumber) {
-        for(Integer i = 0; i < revenuesNumber; i++) {
-            revenues.add(createRevenue());
-        }
-        insert revenues;
-        revenues.clear();
-        return this;
-    }
-    public FinServ__Revenue__c createRevenue() {
-        FinServ__FinancialAccount__c randomFinAccount = pickRandomFinAccount();
-        FinServ__Revenue__c revenue = new FinServ__Revenue__c(
-            Mock__c = true,
-            FinServ__Date__c = System.today() - (Integer) (Math.random() * 90),
-            Branch__c = randomFinAccount.Branch__c
-        );
-        return revenue;
     }
 
     /**
@@ -337,7 +317,7 @@ public with sharing class DataGenerator {
         if (!finAccounts.isEmpty()) {
             return (FinServ__FinancialAccount__c) randomPickSObject(finAccounts);
         } else {
-            finAccounts = [SELECT Name, Category__c, Branch__c FROM FinServ__FinancialAccount__c
+            finAccounts = [SELECT Name, Category__c, Branch__c, FinServ__Balance__c FROM FinServ__FinancialAccount__c
                 WHERE Mock__c = true LIMIT : 10000];
             if (finAccounts.isEmpty()) {
                 return null;
@@ -357,6 +337,62 @@ public with sharing class DataGenerator {
         }
         update opps;
     }
+
+    /**
+     * Creates transactions between the current financial accounts population
+     * FIXME: check on process builders
+     * @param      transactionsNumber  The number of transactions to create
+     */
+    /*public DataGenerator createTransactions(Integer transactionsNumber) {
+        for(Integer i = 0; i < transactionsNumber; i++) {
+            transactions.add(createTransaction());
+        }
+        insert transactions;
+        transactions.clear();
+        return this;
+    }
+    private Transaction__c createTransaction() {
+        Boolean isDeposit = Math.random() >= 0.2 ? true : false;
+        Boolean bigTransaction = Math.random() >= 0.9 ? true : false;
+        Decimal amount = Math.random();
+        amount = bigTransaction ? amount * 100000 + 25000 : amount * 1000 + 5;
+        amount = isDeposit ? amount : -amount;
+        FinServ__FinancialAccount__c finAccount = pickRandomFinAccount();
+        Transaction__c newTransaction = new Transaction__c(
+            Amount__c = amount,
+            account_number__c = finAccount.Id,
+            Mock__c = true,
+            Channel__c = isDeposit ? randomPick(CustomConstants.depositChannels) : randomPick(CustomConstants.retrieveChannels),
+            Status__c = true,
+            transaction_date__c = System.today() - (Integer) (Math.random() * 180),
+            transaction_id__c = String.valueOf(Math.random()) + String.valueOf(Math.random())
+        );
+        return newTransaction;
+    }*/
+
+    /**
+     * Creates revenues between the current financial account population
+     * FIXME: check on process builders
+     * @param      revenuesNumber  The number of revenues to generate
+     */
+    /*public DataGenerator createRevenues(Integer revenuesNumber) {
+        for(Integer i = 0; i < revenuesNumber; i++) {
+            revenues.add(createRevenue());
+        }
+        insert revenues;
+        revenues.clear();
+        return this;
+    }
+    public FinServ__Revenue__c createRevenue() {
+        FinServ__FinancialAccount__c randomFinAccount = pickRandomFinAccount();
+        FinServ__Revenue__c revenue = new FinServ__Revenue__c(
+            Mock__c = true,
+            FinServ__Date__c = System.today() - (Integer) (Math.random() * 90),
+            FinServ__Amount__c = randomFinAccount.FinServ__Balance__c,
+            Branch__c = randomFinAccount.Branch__c
+        );
+        return revenue;
+    }*/
 
     /**
      * Demo purposes only
