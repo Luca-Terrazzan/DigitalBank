@@ -40,7 +40,7 @@ public class PushNotificationHandler implements Queueable, Database.AllowsCallou
             '", "notification_text": "' + notificationText +
             '", "notificationType": "' + NOTIFICATION_TYPES[notificationType] + '"}]';
         HttpRequest req = new HttpRequest();
-            req.setEndpoint('http://devesb.digitalbank.us:8101/notification-api/pushNotifications');
+            req.setEndpoint('http://notify.digitalbank.us/notification-api/pushNotifications');
             req.setMethod('POST');
             req.setBody(payload);
             req.setHeader('api-cache-key', 'c672b8d1ef56ed28ab87c3622c5114069bdd3ad7b8f9737498d0c01ecef0967a');

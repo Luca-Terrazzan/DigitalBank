@@ -64,7 +64,7 @@
         <actionName>WebsiteHighlightAction</actionName>
         <type>Default</type>
     </actionOverrides>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>X720_Compact_Layout</compactLayoutAssignment>
     <compactLayouts>
         <fullName>Business_Compact_Layout</fullName>
         <fields>Name</fields>
@@ -85,21 +85,22 @@
     <compactLayouts>
         <fullName>FinServ__IndividualCompactLayout</fullName>
         <fields>Name</fields>
+        <fields>FinServ__TotalFinancialAccounts__c</fields>
+        <fields>FinServ__AUM__c</fields>
+        <fields>FinServ__ClientCategory__c</fields>
+        <fields>FinServ__NextInteraction__c</fields>
+        <fields>FinServ__LastInteraction__c</fields>
+        <label>Individual Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>X720_Compact_Layout</fullName>
+        <fields>Name</fields>
         <fields>Customer_Tier__c</fields>
         <fields>RetailBalance__c</fields>
         <fields>RetailLoan__c</fields>
         <fields>WealthBalance__c</fields>
         <fields>CommercialBalance__c</fields>
         <fields>CommercialLoan__c</fields>
-        <label>Individual Compact Layout</label>
-    </compactLayouts>
-    <compactLayouts>
-        <fullName>X720_Compact_Layout</fullName>
-        <fields>Name</fields>
-        <fields>FinServ__TotalFinancialAccounts__c</fields>
-        <fields>RetailBalance__c</fields>
-        <fields>CommercialBalance__c</fields>
-        <fields>FinServ__ClientCategory__c</fields>
         <label>720 Compact Layout</label>
     </compactLayouts>
     <enableFeeds>true</enableFeeds>
@@ -3232,7 +3233,7 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
     <recordTypes>
         <fullName>FinServ__IndustriesBusiness</fullName>
         <active>true</active>
-        <compactLayoutAssignment>Business_Compact_Layout</compactLayoutAssignment>
+        <compactLayoutAssignment>X720_Compact_Layout</compactLayoutAssignment>
         <description>A business or an organization</description>
         <label>Business</label>
         <picklistValues>
@@ -3925,7 +3926,7 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
     <recordTypes>
         <fullName>FinServ__IndustriesHousehold</fullName>
         <active>true</active>
-        <compactLayoutAssignment>FinServ__HouseholdCompactLayout</compactLayoutAssignment>
+        <compactLayoutAssignment>X720_Compact_Layout</compactLayoutAssignment>
         <description>A grouping of related people and institutions</description>
         <label>Household</label>
         <picklistValues>
@@ -4618,7 +4619,7 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
     <recordTypes>
         <fullName>FinServ__IndustriesIndividual</fullName>
         <active>true</active>
-        <compactLayoutAssignment>FinServ__IndividualCompactLayout</compactLayoutAssignment>
+        <compactLayoutAssignment>X720_Compact_Layout</compactLayoutAssignment>
         <description>A person who is a prospect or a client</description>
         <label>Individual</label>
         <picklistValues>
@@ -5311,6 +5312,7 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
     <recordTypes>
         <fullName>FinServ__IndustriesInstitution</fullName>
         <active>true</active>
+        <compactLayoutAssignment>X720_Compact_Layout</compactLayoutAssignment>
         <description>An institution that is a prospect or a client</description>
         <label>Institution</label>
         <picklistValues>
@@ -5995,6 +5997,7 @@ IF(RiskIndex__c &gt; 26, &apos;Aggressive&apos;,
     <recordTypes>
         <fullName>booking__BBAccount</fullName>
         <active>false</active>
+        <compactLayoutAssignment>X720_Compact_Layout</compactLayoutAssignment>
         <label>BBAccount</label>
         <picklistValues>
             <picklist>AccountSource</picklist>

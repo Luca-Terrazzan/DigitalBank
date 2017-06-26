@@ -7,6 +7,12 @@
         <locationY>0</locationY>
         <actionName>et4ae5__JBintFireBulkEvent</actionName>
         <actionType>apex</actionType>
+        <connector>
+            <targetReference>JB_Decision_Null_Check_SalesforceObj2c55da5b3c822af5e9cbc151a517cac0</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>JB_Decision_Null_Check_SalesforceObj2c55da5b3c822af5e9cbc151a517cac0</targetReference>
+        </faultConnector>
         <inputParameters>
             <name>ContactKey</name>
             <value>
@@ -63,16 +69,16 @@
         <locationY>0</locationY>
         <actionName>et4ae5__JBintFireBulkEvent</actionName>
         <actionType>apex</actionType>
-        <connector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj207f0601f6bf170e788dff2ad01a3573</targetReference>
-        </connector>
-        <faultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj207f0601f6bf170e788dff2ad01a3573</targetReference>
-        </faultConnector>
         <inputParameters>
             <name>ContactKey</name>
             <value>
-                <stringValue>{&quot;relationshipIdName&quot;:&quot;OwnerId&quot;,&quot;relationshipName&quot;:&quot;Owner&quot;,&quot;isPolymorphic&quot;:false,&quot;referenceObjectName&quot;:&quot;User&quot;,&quot;fieldName&quot;:&quot;Id&quot;}</stringValue>
+                <stringValue>{
+  &quot;relationshipIdName&quot;: &quot;OwnerId&quot;,
+  &quot;relationshipName&quot;: &quot;Owner&quot;,
+  &quot;isPolymorphic&quot;: false,
+  &quot;referenceObjectName&quot;: &quot;User&quot;,
+  &quot;fieldName&quot;: &quot;Id&quot;
+}</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -123,6 +129,9 @@
         <label>JB_Decision_Null_Check_SalesforceObj207f0601f6bf170e788dff2ad01a3573</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>JB_Decision_Null_Check_SalesforceObj2c55da5b3c822af5e9cbc151a517cac0</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>JB_SalesforceObj207f0601f6bf170e788dff2ad01a3573_Parameters_ContactKey_Null</name>
@@ -141,6 +150,9 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <connector>
+                <targetReference>JB_Decision_Null_Check_SalesforceObj2c55da5b3c822af5e9cbc151a517cac0</targetReference>
+            </connector>
             <label>JB_SalesforceObj207f0601f6bf170e788dff2ad01a3573_Parameters_ContactKey_Null</label>
         </rules>
         <rules>
@@ -179,9 +191,6 @@
         <label>JB_Decision_Null_Check_SalesforceObj2c55da5b3c822af5e9cbc151a517cac0</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj207f0601f6bf170e788dff2ad01a3573</targetReference>
-        </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>JB_SalesforceObj2c55da5b3c822af5e9cbc151a517cac0_Parameters_ContactKey_Null</name>
@@ -200,9 +209,6 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
-            <connector>
-                <targetReference>JB_Decision_Null_Check_SalesforceObj207f0601f6bf170e788dff2ad01a3573</targetReference>
-            </connector>
             <label>JB_SalesforceObj2c55da5b3c822af5e9cbc151a517cac0_Parameters_ContactKey_Null</label>
         </rules>
         <rules>
@@ -241,6 +247,9 @@
         <label>JB_SalesforceObj207f0601f6bf170e788dff2ad01a3573_Decision</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>JB_Decision_Null_Check_SalesforceObj2c55da5b3c822af5e9cbc151a517cac0</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>SalesforceObj207f0601f6bf170e788dff2ad01a3573</name>
@@ -263,6 +272,9 @@
         <label>JB_SalesforceObj207f0601f6bf170e788dff2ad01a3573_State_change_Decision</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>JB_Decision_Null_Check_SalesforceObj2c55da5b3c822af5e9cbc151a517cac0</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>State_Change_SalesforceObj207f0601f6bf170e788dff2ad01a3573</name>
@@ -285,9 +297,6 @@
         <label>JB_SalesforceObj2c55da5b3c822af5e9cbc151a517cac0_Decision</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj207f0601f6bf170e788dff2ad01a3573</targetReference>
-        </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>SalesforceObj2c55da5b3c822af5e9cbc151a517cac0</name>
@@ -317,9 +326,6 @@
         <label>JB_SalesforceObj2c55da5b3c822af5e9cbc151a517cac0_State_change_Decision</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <defaultConnector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj207f0601f6bf170e788dff2ad01a3573</targetReference>
-        </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>State_Change_SalesforceObj2c55da5b3c822af5e9cbc151a517cac0</name>
@@ -353,7 +359,7 @@
         <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>JB_Decision_Null_Check_SalesforceObj2c55da5b3c822af5e9cbc151a517cac0</targetReference>
+            <targetReference>JB_Decision_Null_Check_SalesforceObj207f0601f6bf170e788dff2ad01a3573</targetReference>
         </connector>
         <filters>
             <field>Id</field>

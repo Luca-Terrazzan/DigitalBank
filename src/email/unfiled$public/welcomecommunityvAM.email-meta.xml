@@ -4,12 +4,14 @@
     <encodingKey>ISO-8859-1</encodingKey>
     <name>welcomecommunityvAM</name>
     <style>none</style>
-    <subject>Welcome in the Community</subject>
+    <subject>Are you interested in joining the Community?</subject>
     <textOnly>Thank you for choosing Digital Bank
 
 Hi {!Receiving_User.FirstName},
 
-Welcome to {!Community_Name} Community! To get started click here!
+Would you like to joing the {!Community_Name} Community? To get started click here!
+
+Username: {!Receiving_User.Username}
 
 Thanks,
 {!Organization.Name}

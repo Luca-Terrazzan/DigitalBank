@@ -128,8 +128,8 @@
                                   <div class="end" data-type="slot" data-key="pt7lnaathjqvxndvyt7rv0a4i">
 
 <p class="ebody">Dear Commnuity User, </p>
-<p class="ebody">Annual Digital Bank economic forecast on commodity pricing is now available on the community. Please, click the link below to access to the community:
-https://fcscommunity-developer-edition.na40.force.com/StartUP  </p>
+<p class="ebody">Annual Digital Bank economic forecast on commodity pricing is now available on the community. Please, click the link below to access it:
+https://fcscommunity-developer-edition.na40.force.com/StartUP/s/article/ka146000000lA4TAAU/Economic-Forecast-4  </p>
 <p class="ebody">
 Thanks, <br />
 {!Organization.Name}</p>

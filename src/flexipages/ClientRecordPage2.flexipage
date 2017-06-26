@@ -23,6 +23,10 @@
                 <value>Deposits</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
+                <name>reportFilter</name>
+                <value>FK_ACC_ID</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
                 <name>reportName</name>
                 <value>Retail_Financial_Account_v21</value>
             </componentInstanceProperties>
@@ -40,6 +44,10 @@
             <componentInstanceProperties>
                 <name>label</name>
                 <value>Loans</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>reportFilter</name>
+                <value>FK_ACC_ID</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>reportName</name>
