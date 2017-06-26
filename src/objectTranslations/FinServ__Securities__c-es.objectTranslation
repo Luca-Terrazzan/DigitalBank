@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Valores</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Valores</value>
+    </caseValues>
+    <fields>
+        <label><!-- Asset Category Name --></label>
+        <name>FinServ__AssetCategoryName__c</name>
+        <picklistValues>
+            <masterLabel>Large Blend</masterLabel>
+            <translation>Mezcla de grande</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Large Growth</masterLabel>
+            <translation>Crecimiento grande</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Large Value</masterLabel>
+            <translation>Valor grande</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mid-Cap Blend</masterLabel>
+            <translation>Mezcla de mediano</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mid-Cap Growth</masterLabel>
+            <translation>Crecimiento mediano</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mid-Cap Value</masterLabel>
+            <translation>Valor mediano</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small Blend</masterLabel>
+            <translation>Mezcla de pequeño</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small Growth</masterLabel>
+            <translation>Crecimiento pequeño</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small Value</masterLabel>
+            <translation>Valor pequeño</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Asset Category --></label>
+        <name>FinServ__AssetCategory__c</name>
+        <picklistValues>
+            <masterLabel>Allocation</masterLabel>
+            <translation>Asignación</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alternative</masterLabel>
+            <translation>Alternativo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commodities</masterLabel>
+            <translation>Materias primas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International Equity</masterLabel>
+            <translation>Renta variable internacional</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Municipal Bond</masterLabel>
+            <translation>Bono municipal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sector Equity</masterLabel>
+            <translation>Renta variable de sector</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxable Bond</masterLabel>
+            <translation>Bono gravable</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>U.S. Equity</masterLabel>
+            <translation>Renta variable de EE.UU.</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Asset Class --></label>
+        <name>FinServ__AssetClass__c</name>
+        <picklistValues>
+            <masterLabel>Alternative Investments</masterLabel>
+            <translation>Inversiones alternativas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash Equivalents</masterLabel>
+            <translation>Equivalentes en efectivo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equities</masterLabel>
+            <translation>Valores de renta variable</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed Income</masterLabel>
+            <translation>Renta fija</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CUSIP --></label>
+        <name>FinServ__CUSIP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exchange --></label>
+        <name>FinServ__Exchange__c</name>
+        <picklistValues>
+            <masterLabel>NASDAQ</masterLabel>
+            <translation>NASDAQ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NYSE</masterLabel>
+            <translation>NYSE</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Last Updated --></label>
+        <name>FinServ__LastUpdated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price --></label>
+        <name>FinServ__Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Securities Name --></label>
+        <name>FinServ__SecuritiesName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Security ID --></label>
+        <name>FinServ__SecurityId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>FinServ__SourceSystemId__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Símbolo</nameFieldLabel>
+</CustomObjectTranslation>

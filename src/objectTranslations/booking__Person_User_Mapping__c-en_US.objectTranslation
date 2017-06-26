@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Branch Default User --></label>
+        <name>booking__Branch_Default_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Branch --></label>
+        <name>booking__Branch__c</name>
+        <relationshipLabel><!-- Person User Mappings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Person Id --></label>
+        <name>booking__Person_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>booking__User__c</name>
+        <relationshipLabel><!-- Person User Mappings --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

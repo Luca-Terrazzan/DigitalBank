@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Resultado del correo electrónico individual</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Resultados de correos electrónicos individuales</value>
+    </caseValues>
+    <fields>
+        <label><!-- Clicked --></label>
+        <name>et4ae5__Clicked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact ID --></label>
+        <name>et4ae5__Contact_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>et4ae5__Contact__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>La fecha y la hora en que se realizó la devolución desde la dirección de correo electrónico de este suscriptor</help>
+        <label><!-- Date Bounced --></label>
+        <name>et4ae5__DateBounced__c</name>
+    </fields>
+    <fields>
+        <help>La fecha y la hora en que el suscriptor abrió el correo electrónico</help>
+        <label><!-- Date Opened --></label>
+        <name>et4ae5__DateOpened__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Sent --></label>
+        <name>et4ae5__DateSent__c</name>
+    </fields>
+    <fields>
+        <help>La fecha y la hora en que el suscriptor canceló su suscripción</help>
+        <label><!-- Date Unsubscribed --></label>
+        <name>et4ae5__DateUnsubscribed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>et4ae5__Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Address --></label>
+        <name>et4ae5__FromAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Name --></label>
+        <name>et4ae5__FromName__c</name>
+    </fields>
+    <fields>
+        <help>El correo electrónico enviado a este suscriptor se rechazó debido a anomalías de carácter permanente (esto sucede normalmente cuando se produce un error de tipo &quot;usuario desconocido&quot; o &quot;dominio no encontrado&quot;).</help>
+        <label><!-- Hard Bounce --></label>
+        <name>et4ae5__HardBounce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead ID --></label>
+        <name>et4ae5__Lead_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>et4ae5__Lead__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Merge Id --></label>
+        <name>et4ae5__MergeId__c</name>
+    </fields>
+    <fields>
+        <help>El número total de veces que este suscriptor hizo clic en los vínculos de este correo electrónico</help>
+        <label><!-- Number of Total Clicks --></label>
+        <name>et4ae5__NumberOfTotalClicks__c</name>
+    </fields>
+    <fields>
+        <help>El número de clics únicos de este suscriptor de los vínculos de este correo electrónico (único significa un clic por vínculo)</help>
+        <label><!-- Number of Unique Clicks --></label>
+        <name>et4ae5__NumberOfUniqueClicks__c</name>
+    </fields>
+    <fields>
+        <help>Indica si el suscriptor abrió o no el correo electrónico</help>
+        <label><!-- Opened --></label>
+        <name>et4ae5__Opened__c</name>
+    </fields>
+    <fields>
+        <help>El identificador único del envío de correo electrónico. Es posible que se le solicite este número cuando llave al servicio de asistencia de Marketing Cloud si se presenta la necesidad.</help>
+        <label><!-- Send Definition --></label>
+        <name>et4ae5__SendDefinition__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>El correo electrónico enviado se rechazó debido a una anomalía aparentemente temporal, por ejemplo, porque el buzón de entrada está lleno, después de que el sistema haya reintentado enviar el correo electrónico sin éxito cada 15 minutos durante 72 horas.</help>
+        <label><!-- Soft Bounce --></label>
+        <name>et4ae5__SoftBounce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subject Line --></label>
+        <name>et4ae5__SubjectLine__c</name>
+    </fields>
+    <fields>
+        <help>La fecha y la hora de recepción de la última actualización de seguimiento por parte de Salesforce</help>
+        <label><!-- Tracking As Of --></label>
+        <name>et4ae5__Tracking_As_Of__c</name>
+    </fields>
+    <fields>
+        <label><!-- Triggered Send --></label>
+        <name>et4ae5__TriggeredSendDefinition__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nombre de correo electrónico</nameFieldLabel>
+    <webLinks>
+        <label><!-- Request_Tracking_Immediately --></label>
+        <name>et4ae5__Request_Tracking_Immediately</name>
+    </webLinks>
+</CustomObjectTranslation>

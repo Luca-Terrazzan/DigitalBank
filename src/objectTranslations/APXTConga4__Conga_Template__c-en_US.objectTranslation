@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Description --></label>
+        <name>APXTConga4__Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- For Conga Mail Merge Label Templates Only.  This setting indicates to use ReportData (or QueryData) as the data source for Labels --></help>
+        <label><!-- Label Template: Use Detail Data --></label>
+        <name>APXTConga4__Label_Template_Use_Detail_Data__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the API field name, an equals sign, and the value to set (with spaces replaced with plus signs). 
+
+Examples: 
+Status__c=Completed 
+Status_Date__c=Today 
+Stage__c=In Progress --></help>
+        <label><!-- Master Field to Set 1 --></label>
+        <name>APXTConga4__Master_Field_to_Set_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Field to Set 2 --></label>
+        <name>APXTConga4__Master_Field_to_Set_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Field to Set 3 --></label>
+        <name>APXTConga4__Master_Field_to_Set_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>APXTConga4__Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identify the group name to which this template belongs. Used in conjunction with the &quot;&amp;TemplateGroup=&quot; parameter in PointMerge. --></help>
+        <label><!-- Template Group --></label>
+        <name>APXTConga4__Template_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Template Type --></label>
+        <name>APXTConga4__Template_Type__c</name>
+        <picklistValues>
+            <masterLabel>Document</masterLabel>
+            <translation><!-- Document --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Envelope</masterLabel>
+            <translation><!-- Envelope --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Label</masterLabel>
+            <translation><!-- Label --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

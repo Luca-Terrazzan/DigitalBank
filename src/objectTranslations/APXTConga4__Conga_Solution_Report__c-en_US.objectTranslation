@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Alias --></label>
+        <name>APXTConga4__Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>APXTConga4__Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conga Solution --></label>
+        <name>APXTConga4__Conga_Solution__c</name>
+        <relationshipLabel><!-- Conga Solution Reports --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Report Id --></label>
+        <name>APXTConga4__Report_Id_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Id --></label>
+        <name>APXTConga4__Report_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Name --></label>
+        <name>APXTConga4__Report_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Automatically populated according to the field selected. This value will be dynamically passed to the first filter of the report. Using a plus sign (+) specifies that a blank value should be used. --></help>
+        <label><!-- pv0 --></label>
+        <name>APXTConga4__pv0__c</name>
+    </fields>
+    <fields>
+        <help><!-- Automatically populated according to the field selected. This value will be dynamically passed to the second filter of the report. Using a plus sign (+) specifies that a blank value should be used. --></help>
+        <label><!-- pv1 --></label>
+        <name>APXTConga4__pv1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Automatically populated according to the field selected. This value will be dynamically passed to the third filter of the report. Using a plus sign (+) specifies that a blank value should be used. --></help>
+        <label><!-- pv2 --></label>
+        <name>APXTConga4__pv2__c</name>
+    </fields>
+</CustomObjectTranslation>

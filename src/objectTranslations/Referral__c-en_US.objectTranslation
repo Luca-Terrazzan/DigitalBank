@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Referral</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Referrals</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Referrals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Commercial</masterLabel>
+            <translation><!-- Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wealth</masterLabel>
+            <translation><!-- Wealth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Referrals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This is the line of business receiving the referral --></help>
+        <label><!-- LOB Receiving --></label>
+        <name>LOB_Receiving__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the line of business sending the referral --></help>
+        <label><!-- LOB Referring --></label>
+        <name>LOB_Referring__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <relationshipLabel><!-- Referrals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- A reason needs to be set if the referral status is updated to &quot;No Opportunity&quot; --></help>
+        <label><!-- Reason Lost --></label>
+        <name>Reason_Lost__c</name>
+        <picklistValues>
+            <masterLabel>Can&apos;t Meet Need</masterLabel>
+            <translation><!-- Can&apos;t Meet Need --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost to Competition</masterLabel>
+            <translation><!-- Lost to Competition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Interested</masterLabel>
+            <translation><!-- Not Interested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Qualified</masterLabel>
+            <translation><!-- Not Qualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Referral Status --></label>
+        <name>Referral_Status__c</name>
+        <picklistValues>
+            <masterLabel>Create Opportunity</masterLabel>
+            <translation><!-- Create Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Decision Pending</masterLabel>
+            <translation><!-- Decision Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Opportunity</masterLabel>
+            <translation><!-- No Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Receiving</masterLabel>
+            <translation><!-- Receiving --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Referred To Party --></label>
+        <name>User_Receiving_Referral__c</name>
+        <relationshipLabel><!-- Referrals (Referred To Party) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referred from Party --></label>
+        <name>User_Sending_Referral__c</name>
+        <relationshipLabel><!-- Referrals (Referred from Party) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- WAVEAccountName --></label>
+        <name>WAVEAccountName__c</name>
+    </fields>
+    <layouts>
+        <layout>Referral Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Closed Retail --></label>
+        <name>Closed_Retail</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Commercial --></label>
+        <name>Commercial</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Retail --></label>
+        <name>Retail</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- If the Referral Status is Create Opportunity or No Opportunity, the Referral and Account Name fields cannot be changed. --></errorMessage>
+        <name>Closed_Referral_read_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Reason Lost field needs to be populated if the Referral Status is &quot;No Opportunity&quot; --></errorMessage>
+        <name>Reason_Lost_if_Status_equals_No_Oppty</name>
+    </validationRules>
+</CustomObjectTranslation>

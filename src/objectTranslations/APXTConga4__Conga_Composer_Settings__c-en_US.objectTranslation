@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Comments --></label>
+        <name>APXTConga4__Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable C7 Triggers --></label>
+        <name>APXTConga4__Disable_C7_Triggers__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Org ID of the company&apos;s production instance of Salesforce.  This is used when Sandbox editions are created from the production. Conga applies organizational settings to sandbox accounts. --></help>
+        <label><!-- Production Org Id --></label>
+        <name>APXTConga4__Production_Org_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Overrides the ServerURL parameter in Composer and Mail Merge interactions with Salesforce.
+https://na14.salesforce.com/services/Soap/u/8.0/00Dd0000000dy26
+The override value would replace na14.salesforce.com --></help>
+        <label><!-- Server Endpoint URL --></label>
+        <name>APXTConga4__Server_Override__c</name>
+    </fields>
+</CustomObjectTranslation>

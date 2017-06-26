@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Excluded Fields --></label>
+        <name>FinServ__ExcludedFields__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Set Label --></label>
+        <name>FinServ__FieldSetLabel__c</name>
+    </fields>
+    <fields>
+        <label><!-- SObject Name --></label>
+        <name>FinServ__SObjectName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Two Column Layout --></label>
+        <name>FinServ__TwoColumnLayout__c</name>
+    </fields>
+</CustomObjectTranslation>

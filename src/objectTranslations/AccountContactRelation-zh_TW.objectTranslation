@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Include in Primary Group --></label>
+        <name>FinServ__IncludeInGroup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Group --></label>
+        <name>FinServ__PrimaryGroup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Member --></label>
+        <name>FinServ__Primary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Roll-Ups --></label>
+        <name>FinServ__Rollups__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation>全部</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assets and Liabilities</masterLabel>
+            <translation><!-- Assets and Liabilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Events</masterLabel>
+            <translation>事件</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Accounts</masterLabel>
+            <translation><!-- Financial Accounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Goals</masterLabel>
+            <translation><!-- Financial Goals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tasks</masterLabel>
+            <translation>工作</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>FinServ__SourceSystemId__c</name>
+    </fields>
+</CustomObjectTranslation>

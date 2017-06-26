@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- BookingBug Id --></label>
+        <name>booking__BookingBug_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent --></label>
+        <name>booking__Parent__c</name>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Create Event --></label>
+        <name>FinServ__CreateEvent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create Label --></label>
+        <name>FinServ__CreateLabel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dialog Name --></label>
+        <name>FinServ__DialogName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>FinServ__FieldName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Name --></label>
+        <name>FinServ__ObjectName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>FinServ__Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Type Name --></label>
+        <name>FinServ__RecordTypeName__c</name>
+    </fields>
+</CustomObjectTranslation>

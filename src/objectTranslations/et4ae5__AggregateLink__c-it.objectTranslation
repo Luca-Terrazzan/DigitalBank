@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Dettaglio a livello di collegamenti aggregati</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Dettagli a livello di collegamenti aggregati</value>
+    </caseValues>
+    <fields>
+        <label><!-- Marketing Cloud Link ID --></label>
+        <name>et4ae5__ExactTargetLinkID__c</name>
+    </fields>
+    <fields>
+        <help>La data e l&apos;ora dell&apos;ultimo clic su questo collegamento</help>
+        <label><!-- Last Clicked --></label>
+        <name>et4ae5__Last_Clicked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link URL --></label>
+        <name>et4ae5__LinkURL__c</name>
+    </fields>
+    <fields>
+        <help>Il numero aggregato di volte in cui è stato fatto clic su questo collegamento</help>
+        <label><!-- Number of Total Clicks --></label>
+        <name>et4ae5__NumberOfTotalClicks__c</name>
+    </fields>
+    <fields>
+        <help>Il numero aggregato unico di volte in cui è stato fatto clic su questo collegamento (unico significa un clic per abbonato)</help>
+        <label><!-- Number of Unique Clicks --></label>
+        <name>et4ae5__NumberOfUniqueClicks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Definition --></label>
+        <name>et4ae5__Send_Definition__c</name>
+        <relationshipLabel><!-- Aggregate Link Level Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Triggered Send --></label>
+        <name>et4ae5__TriggeredSendDefinition__c</name>
+        <relationshipLabel><!-- Aggregate Link Level Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unique Link ID --></label>
+        <name>et4ae5__Unique_Link_ID__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nome collegamento</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>A/B-Test</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>A/B-Tests</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>A/B-Test</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>A/B-Tests</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>A/B-Tests</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>A/B-Tests</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>A/B-Test</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>A/B-Tests</value>
+    </caseValues>
+    <fields>
+        <label><!-- Create Payload --></label>
+        <name>et4ae5__Create_Payload__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Object --></label>
+        <name>et4ae5__Custom_Object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Determine Winner By --></label>
+        <name>et4ae5__Determine_Winner_By__c</name>
+        <picklistValues>
+            <masterLabel>Higher unique click-through rate (CTR)</masterLabel>
+            <translation>Höhere eindeutige Klickrate (CTR)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Higher unique open rate</masterLabel>
+            <translation>Höhere eindeutige Öffnungsrate</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Type --></label>
+        <name>et4ae5__Test_Type__c</name>
+        <picklistValues>
+            <masterLabel>Content areas</masterLabel>
+            <translation>Inhaltsbereiche</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Emails</masterLabel>
+            <translation>E-Mails</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>From names</masterLabel>
+            <translation>Absendernamen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preheaders</masterLabel>
+            <translation>Preheader</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Send dates/times</masterLabel>
+            <translation>Versand-Daten/-Uhrzeiten</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subject lines</masterLabel>
+            <translation>Betreffzeilen</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- AB Instance Id --></label>
+        <name>et4ae5__abInstanceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- mid --></label>
+        <name>et4ae5__mid__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>A/B-Testname</nameFieldLabel>
+</CustomObjectTranslation>

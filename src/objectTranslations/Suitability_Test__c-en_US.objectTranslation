@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Suitability Test</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Suitability Tests</value>
+    </caseValues>
+    <fields>
+        <help><!-- What level or risk are you prepared to accept? --></help>
+        <label><!-- Accepted Risk Level --></label>
+        <name>Accepted_Risk_Level__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Low</masterLabel>
+            <translation><!-- Very Low --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Amount to Invest --></label>
+        <name>Amount_to_Invest__c</name>
+    </fields>
+    <fields>
+        <label><!-- Classification --></label>
+        <name>Classification__c</name>
+        <picklistValues>
+            <masterLabel>Fixed Yield</masterLabel>
+            <translation><!-- Fixed Yield --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Variable Yield</masterLabel>
+            <translation><!-- Variable Yield --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comment --></label>
+        <name>Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Horizon --></label>
+        <name>Horizon__c</name>
+        <picklistValues>
+            <masterLabel>Month</masterLabel>
+            <translation><!-- Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Year</masterLabel>
+            <translation><!-- Year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Income Sources --></label>
+        <name>Income_Sources__c</name>
+        <picklistValues>
+            <masterLabel>Capital Income</masterLabel>
+            <translation><!-- Capital Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rental Income</masterLabel>
+            <translation><!-- Rental Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salary</masterLabel>
+            <translation><!-- Salary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Individual --></label>
+        <name>Individual__c</name>
+        <relationshipLabel><!-- Suitability Tests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Investment Goal --></label>
+        <name>Investment_Goal__c</name>
+        <picklistValues>
+            <masterLabel>Long Term Savings</masterLabel>
+            <translation><!-- Long Term Savings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Making High Profit</masterLabel>
+            <translation><!-- Making High Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short Term Cash Flow</masterLabel>
+            <translation><!-- Short Term Cash Flow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Investment Product --></label>
+        <name>Investment_Product__c</name>
+        <picklistValues>
+            <masterLabel>Emerging Markets Fund</masterLabel>
+            <translation><!-- Emerging Markets Fund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global Equities</masterLabel>
+            <translation><!-- Global Equities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mutual Fund</masterLabel>
+            <translation><!-- Mutual Fund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Property Fund</masterLabel>
+            <translation><!-- Property Fund --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Investment Type --></label>
+        <name>Investment_Type__c</name>
+        <picklistValues>
+            <masterLabel>Long-term Investment</masterLabel>
+            <translation><!-- Long-term Investment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium-term Investment</masterLabel>
+            <translation><!-- Medium-term Investment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short-term Investment</masterLabel>
+            <translation><!-- Short-term Investment --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- How well does the customer/prospect understand the product/market? 1 = very little ... 10 = very knowledgeable --></help>
+        <label><!-- Knowledge --></label>
+        <name>Knowledge__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Suitability Tests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Regular Disposable Income --></label>
+        <name>Regular_Disposable_Income__c</name>
+        <picklistValues>
+            <masterLabel>5k - 10k / month</masterLabel>
+            <translation><!-- 5k - 10k / month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below 5k / month</masterLabel>
+            <translation><!-- Below 5k / month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Over 10k / month</masterLabel>
+            <translation><!-- Over 10k / month --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Source of Investment --></label>
+        <name>Source_of_Investment__c</name>
+        <picklistValues>
+            <masterLabel>Cash</masterLabel>
+            <translation><!-- Cash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inheritance</masterLabel>
+            <translation><!-- Inheritance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Property Sale</masterLabel>
+            <translation><!-- Property Sale --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expired</masterLabel>
+            <translation><!-- Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Term --></label>
+        <name>Term__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

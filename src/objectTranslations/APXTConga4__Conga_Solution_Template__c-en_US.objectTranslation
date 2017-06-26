@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Description --></label>
+        <name>APXTConga4__Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conga Solution --></label>
+        <name>APXTConga4__Conga_Solution__c</name>
+        <relationshipLabel><!-- Conga Solution Templates --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Conga Template --></label>
+        <name>APXTConga4__Conga_Template__c</name>
+        <relationshipLabel><!-- Conga Solution Templates --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Output File Name (OFN) --></label>
+        <name>APXTConga4__Output_File_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>APXTConga4__Sort_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Template Group --></label>
+        <name>APXTConga4__Template_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Template Name --></label>
+        <name>APXTConga4__Template_Name__c</name>
+    </fields>
+</CustomObjectTranslation>

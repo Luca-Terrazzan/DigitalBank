@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Resultado de email individual</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Resultados de email individual</value>
+    </caseValues>
+    <fields>
+        <label><!-- Clicked --></label>
+        <name>et4ae5__Clicked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact ID --></label>
+        <name>et4ae5__Contact_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>et4ae5__Contact__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>A data e a hora em que esse endereço de email do assinante foi rejeitado</help>
+        <label><!-- Date Bounced --></label>
+        <name>et4ae5__DateBounced__c</name>
+    </fields>
+    <fields>
+        <help>A data e a hora em que o assinante abriu o email</help>
+        <label><!-- Date Opened --></label>
+        <name>et4ae5__DateOpened__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Sent --></label>
+        <name>et4ae5__DateSent__c</name>
+    </fields>
+    <fields>
+        <help>A data e a hora em que o assinante cancelou a assinatura</help>
+        <label><!-- Date Unsubscribed --></label>
+        <name>et4ae5__DateUnsubscribed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>et4ae5__Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Address --></label>
+        <name>et4ae5__FromAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Name --></label>
+        <name>et4ae5__FromName__c</name>
+    </fields>
+    <fields>
+        <help>O email enviado para este assinante foi rejeitado devido a condições permanentes (isso normalmente resulta da ocorrência de erros de &quot;usuário desconhecido&quot; ou &quot;domínio não encontrado&quot;)</help>
+        <label><!-- Hard Bounce --></label>
+        <name>et4ae5__HardBounce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead ID --></label>
+        <name>et4ae5__Lead_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>et4ae5__Lead__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Merge Id --></label>
+        <name>et4ae5__MergeId__c</name>
+    </fields>
+    <fields>
+        <help>O número total de vezes que esse assinante clicou nos links desse email</help>
+        <label><!-- Number of Total Clicks --></label>
+        <name>et4ae5__NumberOfTotalClicks__c</name>
+    </fields>
+    <fields>
+        <help>O número exclusivo de vezes que esse assinante clicou nos links desse email (exclusivo significa um clique por link)</help>
+        <label><!-- Number of Unique Clicks --></label>
+        <name>et4ae5__NumberOfUniqueClicks__c</name>
+    </fields>
+    <fields>
+        <help>Indica se o assinante abriu ou não o email</help>
+        <label><!-- Opened --></label>
+        <name>et4ae5__Opened__c</name>
+    </fields>
+    <fields>
+        <help>O identificador exclusivo do envio do email. Você pode precisar solicitar esse número quando ligar para o suporte do Marketing Cloud em caso de necessidade.</help>
+        <label><!-- Send Definition --></label>
+        <name>et4ae5__SendDefinition__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>O email enviado foi rejeitado devido a uma condição aparentemente temporária, como caixa de entrada cheia, após o sistema fazer tentativas para enviar o email sem sucesso a cada 15 minutos durante 72 horas. Um assinante será definido para o status Em espera após três soft bounces</help>
+        <label><!-- Soft Bounce --></label>
+        <name>et4ae5__SoftBounce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subject Line --></label>
+        <name>et4ae5__SubjectLine__c</name>
+    </fields>
+    <fields>
+        <help>A data e a hora que a última atualização de rastreamento foi recebida pelo Salesforce</help>
+        <label><!-- Tracking As Of --></label>
+        <name>et4ae5__Tracking_As_Of__c</name>
+    </fields>
+    <fields>
+        <label><!-- Triggered Send --></label>
+        <name>et4ae5__TriggeredSendDefinition__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nome do email</nameFieldLabel>
+    <webLinks>
+        <label><!-- Request_Tracking_Immediately --></label>
+        <name>et4ae5__Request_Tracking_Immediately</name>
+    </webLinks>
+</CustomObjectTranslation>

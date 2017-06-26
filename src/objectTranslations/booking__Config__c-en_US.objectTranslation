@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account Record Type name --></label>
+        <name>booking__Account_Record_Type_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>booking__Account__c</name>
+        <relationshipLabel><!-- Configs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Accounts Integration --></label>
+        <name>booking__Accounts_Integration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activities Integration --></label>
+        <name>booking__Activities_Integration__c</name>
+    </fields>
+    <fields>
+        <help><!-- The name for the record type that will be used to store Appointments from BookingBug. --></help>
+        <label><!-- Appointment Record Type Name --></label>
+        <name>booking__Appointment_Custom_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug App Id --></label>
+        <name>booking__BookingBug_App_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug App Key --></label>
+        <name>booking__BookingBug_App_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug Code1 --></label>
+        <name>booking__BookingBug_Code1__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug Code2 --></label>
+        <name>booking__BookingBug_Code2__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug Company Id --></label>
+        <name>booking__BookingBug_Company_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug Domain --></label>
+        <name>booking__BookingBug_Domain__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booking Question Map --></label>
+        <name>booking__Booking_Question_Map__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug Access Code --></label>
+        <name>booking__Bookingbug_Access_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Record Type --></label>
+        <name>booking__Case_Record_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cases Integration --></label>
+        <name>booking__Cases_Integration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Question Map --></label>
+        <name>booking__Client_Question_Map__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Id --></label>
+        <name>booking__Company_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Config Value --></label>
+        <name>booking__Config_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Record Type name --></label>
+        <name>booking__Contact_Record_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacts Integration --></label>
+        <name>booking__Contacts_Integration__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check if you want to DELETE the corresponding objects in Salesforce when syncing with BookingBug. --></help>
+        <label><!-- Delete ojects in Salesforce --></label>
+        <name>booking__Delete_SF_Objects__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable Chatter Feed for selected integrations. --></help>
+        <label><!-- Enable Chatter --></label>
+        <name>booking__Enable_Chatter_del__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable this in order to clean BookingBug&apos;s redundant records in order to free space on your organization. --></help>
+        <label><!-- Enable object cleanup --></label>
+        <name>booking__Enable_object_cleanup__c</name>
+    </fields>
+    <fields>
+        <help><!-- The name for the standard record type in case you have modified the standard Event object. --></help>
+        <label><!-- Event Record Type name --></label>
+        <name>booking__Event_Custom_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Status --></label>
+        <name>booking__Import_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Record Type Name --></label>
+        <name>booking__Lead_Record_Type_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Leads Integration --></label>
+        <name>booking__Leads_Integration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunities Integration --></label>
+        <name>booking__Opportunities_Integration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opprtunity Record Type --></label>
+        <name>booking__Opprtunity_Record_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Person Accounts Integration --></label>
+        <name>booking__Person_Accounts_Integration__c</name>
+    </fields>
+    <fields>
+        <help><!-- How many redundant records to be deleted from BookingBug&apos;s custom objects. --></help>
+        <label><!-- Record no. to be deleted --></label>
+        <name>booking__Record_no_to_be_deleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Update Record Owners --></label>
+        <name>booking__Update_Record_Owners__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Partial URL --></label>
+        <name>booking__custom_partials__c</name>
+    </fields>
+</CustomObjectTranslation>

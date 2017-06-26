@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Meta financeira</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Metas financeiras</value>
+    </caseValues>
+    <fields>
+        <label><!-- Branch --></label>
+        <name>Branch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Value --></label>
+        <name>FinServ__ActualValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completion Date --></label>
+        <name>FinServ__CompletionDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>FinServ__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Household --></label>
+        <name>FinServ__Household__c</name>
+        <relationshipLabel><!-- Household Financial Goals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Initial Value --></label>
+        <name>FinServ__InitialValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Owner --></label>
+        <name>FinServ__PrimaryOwner__c</name>
+        <relationshipLabel><!-- Client Financial Goals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>FinServ__SourceSystemId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>FinServ__Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation>Concluído</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation>Em andamento</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation>Não iniciado</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Target Date --></label>
+        <name>FinServ__TargetDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Value --></label>
+        <name>FinServ__TargetValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>FinServ__Type__c</name>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation>Educação</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Purchase</masterLabel>
+            <translation>Compra de casa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Outro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retirement</masterLabel>
+            <translation>Aposentadoria</translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nome da meta financeira</nameFieldLabel>
+</CustomObjectTranslation>

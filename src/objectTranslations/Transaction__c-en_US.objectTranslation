@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Transaction</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transactions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>Channel__c</name>
+        <picklistValues>
+            <masterLabel>Bill Payment</masterLabel>
+            <translation><!-- Bill Payment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Currency Exchange</masterLabel>
+            <translation><!-- Currency Exchange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deposit</masterLabel>
+            <translation><!-- Deposit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>E-Transfer</masterLabel>
+            <translation><!-- E-Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Withdrawal</masterLabel>
+            <translation><!-- Withdrawal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Credit Debit --></label>
+        <name>Credit_Debit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction Beneficiary --></label>
+        <name>DGTB_TransactionBeneficiary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction Place --></label>
+        <name>DGTB_TransactionPlace__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mock --></label>
+        <name>Mock__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status_img__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account --></label>
+        <name>account_number__c</name>
+        <relationshipLabel><!-- Receiving Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Bank Reference Number --></label>
+        <name>bank_reference_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created By --></label>
+        <name>created_by__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>created_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Currency Code --></label>
+        <name>currency_code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Currency Desc --></label>
+        <name>currency_desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Reference Number --></label>
+        <name>customer_reference_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Reference --></label>
+        <name>external_reference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funds Available Date --></label>
+        <name>funds_available_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Institution Id --></label>
+        <name>institution_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction Date --></label>
+        <name>transaction_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction id --></label>
+        <name>transaction_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction Type Code --></label>
+        <name>transaction_type_code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction Type Desc --></label>
+        <name>transaction_type_desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Updated By --></label>
+        <name>updated_by__c</name>
+    </fields>
+    <fields>
+        <label><!-- Updated Date --></label>
+        <name>updated_date__c</name>
+    </fields>
+    <layouts>
+        <layout>Transaction Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

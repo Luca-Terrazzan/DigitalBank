@@ -2,7 +2,27 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>*</members>
+        <name>ActionLinkGroupTemplate</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AnalyticSnapshot</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTestSuite</name>
     </types>
     <types>
         <members>*</members>
@@ -10,7 +30,45 @@
     </types>
     <types>
         <members>*</members>
+        <name>AppMenu</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApprovalProcess</name>
+    </types>
+    <types>
+        <members>Case</members>
+        <members>Lead</members>
+        <name>AssignmentRules</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AuthProvider</name>
+    </types>
+    <types>
+        <members>Case</members>
+        <members>Lead</members>
+        <name>AutoResponseRules</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CallCenter</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Certificate</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ChannelLayout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CleanDataService</name>
     </types>
     <types>
         <members>*</members>
@@ -18,7 +76,39 @@
     </types>
     <types>
         <members>*</members>
+        <name>CommunityTemplateDefinition</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CommunityThemeDefinition</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ConnectedApp</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CorsWhitelistOrigin</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CspTrustedSite</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomApplicationComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomFeedFilter</name>
     </types>
     <types>
         <members>CustomLabels</members>
@@ -197,11 +287,81 @@
     </types>
     <types>
         <members>*</members>
+        <name>CustomObjectTranslation</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomPageWebLink</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomPermission</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>CustomSite</name>
     </types>
     <types>
         <members>*</members>
         <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Digital_Bank_Dashboards</members>
+        <members>Digital_Bank_Dashboards/Bank_Executive_Level_1</members>
+        <members>Digital_Bank_Dashboards/NFKZlykSyWmVqlbxoAmZAeexqACqtU</members>
+        <members>Digital_Bank_Dashboards/Relationship_manager_Level_3</members>
+        <members>Digital_Bank_Dashboards/Service_Agent_Level_3</members>
+        <members>FinServ__Public_Dashboards</members>
+        <members>FinServ__Public_Dashboards/FinServ__EngageOpportunities</members>
+        <members>FinServ__Public_Dashboards/FinServ__Overview</members>
+        <members>FinServ__Public_Dashboards/FinServ__SalesOpportunities</members>
+        <members>FinServ__Public_Dashboards/Marketing_Dashboard</members>
+        <members>FinServ__Public_Dashboards/NFKZlykSyWmVqlbxoAmZAeexqACqtU1</members>
+        <members>FinServ__Public_Dashboards/edRHRVieTMFtNnNbJKPPSwTABPXwIC</members>
+        <members>FinServ__Public_Dashboards/jquebkSyIawZTNWXPLXMrHqLFQUgga</members>
+        <members>G4S__Glance_for_Salesforce_Dashboards</members>
+        <members>G4S__Glance_for_Salesforce_Dashboards/G4S__Glance_Sales_Dashboard</members>
+        <members>G4S__Glance_for_Salesforce_Dashboards/G4S__Glance_Support_Dashboard</members>
+        <members>G4S__Glance_for_Salesforce_Dashboards/G4S__Glance_for_Support_2</members>
+        <members>ca_collab_2_0__Chatter_Dashboards</members>
+        <members>ca_collab_2_0__Chatter_Dashboards/ca_collab_2_0__ChatterFiles_1_0</members>
+        <members>ca_collab_2_0__Chatter_Dashboards/ca_collab_2_0__Chatter_Adoption_By_Department_1_0</members>
+        <members>ca_collab_2_0__Chatter_Dashboards/ca_collab_2_0__Chatter_Groups_1_0</members>
+        <members>ca_collab_2_0__Chatter_Dashboards/ca_collab_2_0__Chatter_Moderation_1_0</members>
+        <members>ca_collab_2_0__Chatter_Dashboards/ca_collab_2_0__Chatter_Overview_1_0</members>
+        <members>ca_collab_2_0__Chatter_Dashboards/ca_collab_2_0__Chatter_Q_A_1_0</members>
+        <members>ca_collab_2_0__Chatter_Dashboards/ca_collab_2_0__Topics_1_0</members>
+        <members>ca_collab_2_0__Chatter_Dashboards/ca_collab_2_0__User_Profiles_1_0</members>
+        <members>ca_collab_2_0__Communities_Dashboards</members>
+        <members>ca_collab_2_0__Communities_Dashboards/ca_collab_2_0__License_Usage_1_0</members>
+        <members>ca_collab_2_0__Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefaultSearch_updated</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefaultActivity_1_0</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefaultContent_1_0</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefaultCustomRec_1_0</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefaultGroups_1_0</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefaultHome</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefaultMembers_1_0</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefaultModeration_1_0</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefaultOverview_1_0</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefaultQA_1_0</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefaultSelfService_1_0</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefaultTopics_1_0</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefault_Home_Chatter_12M_2_0</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefault_Home_Chatter_L90D_1_0</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefault_Home_SelfService_12M_2_0</members>
+        <members>ca_collab_2_0__Lightning_Communities_Dashboards/ca_collab_2_0__SfdcCommunitiesAnalyticsDefault_Home_SelfService_L90D_1_0</members>
+        <members>dsfs__DocuSign_Dashboard</members>
+        <members>dsfs__DocuSign_Dashboard/dsfs__DocuSign_Connect_for_Salesforce</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>DataCategoryGroup</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>DelegateGroup</name>
     </types>
     <types>
         <members>APXTConga4__Conga</members>
@@ -279,6 +439,10 @@
         <name>Document</name>
     </types>
     <types>
+        <members>*</members>
+        <name>DuplicateRule</name>
+    </types>
+    <types>
         <members>APXTConga4__Conga_Email_Staging_Templates</members>
         <members>APXTConga4__Conga_Email_Staging_Templates/APXTConga4__Conga_Email_Staging_Template</members>
         <members>et4ae5__ExactTarget</members>
@@ -321,6 +485,34 @@
     </types>
     <types>
         <members>*</members>
+        <name>EmbeddedServiceBranding</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>EmbeddedServiceConfig</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>EmbeddedServiceLiveAgent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>EntitlementProcess</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>EntitlementTemplate</name>
+    </types>
+    <types>
+        <members>Case</members>
+        <name>EscalationRules</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ExternalDataSource</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>FlexiPage</name>
     </types>
     <types>
@@ -337,7 +529,27 @@
     </types>
     <types>
         <members>*</members>
+        <name>GlobalValueSetTranslation</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>Group</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>HomePageComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>HomePageLayout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>InstalledPackage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>KeywordList</name>
     </types>
     <types>
         <members>*</members>
@@ -345,7 +557,51 @@
     </types>
     <types>
         <members>*</members>
+        <name>LeadConvertSettings</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>Letterhead</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>LiveChatAgentConfig</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>LiveChatButton</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>LiveChatDeployment</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>LiveChatSensitiveDataRule</name>
+    </types>
+    <types>
+        <members>Digital Bank</members>
+        <members>High Growth</members>
+        <members>Start UP</members>
+        <name>ManagedTopics</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <members>Contact</members>
+        <members>Lead</members>
+        <name>MatchingRules</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>MilestoneType</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ModerationRule</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>NamedCredential</name>
     </types>
     <types>
         <members>*</members>
@@ -353,11 +609,39 @@
     </types>
     <types>
         <members>*</members>
+        <name>PathAssistant</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>PlatformCachePartition</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Portal</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>PostTemplate</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>Profile</name>
     </types>
     <types>
         <members>*</members>
+        <name>Queue</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>QuickAction</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>RemoteSiteSetting</name>
     </types>
     <types>
         <members>APXTConga4__Conga_PointMerge_Reports</members>
@@ -947,6 +1231,18 @@
         <name>ReportType</name>
     </types>
     <types>
+        <members>*</members>
+        <name>Role</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>SamlSsoConfig</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Scontrol</name>
+    </types>
+    <types>
         <members>APXTConga4__Composer_QuickMerge__c</members>
         <members>APXTConga4__Conga_Composer_Settings__c</members>
         <members>APXTConga4__Conga_Email_Staging__c</members>
@@ -1059,11 +1355,39 @@
     </types>
     <types>
         <members>*</members>
+        <name>SharingSet</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>SiteDotCom</name>
     </types>
     <types>
         <members>*</members>
+        <name>Skill</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StandardValueSet</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StandardValueSetTranslation</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>StaticResource</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>SynonymDictionary</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>TransactionSecurityPolicy</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>UserCriteria</name>
     </types>
     <types>
         <members>APXTConga4__Composer_QuickMerge__c</members>
@@ -1220,6 +1544,10 @@
         <members>et4ae5__UEBU__c</members>
         <members>et4ae5__abTest__c</members>
         <name>Workflow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Settings</name>
     </types>
     <version>39.0</version>
 </Package>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Clicked --></label>
+        <name>et4ae5__Clicked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact ID --></label>
+        <name>et4ae5__Contact_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>et4ae5__Contact__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The date and time when this subscriber’s email address bounced --></help>
+        <label><!-- Date Bounced --></label>
+        <name>et4ae5__DateBounced__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date and time when the subscriber opened the email --></help>
+        <label><!-- Date Opened --></label>
+        <name>et4ae5__DateOpened__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Sent --></label>
+        <name>et4ae5__DateSent__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date and time when the subscriber unsubscribed --></help>
+        <label><!-- Date Unsubscribed --></label>
+        <name>et4ae5__DateUnsubscribed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>et4ae5__Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Address --></label>
+        <name>et4ae5__FromAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Name --></label>
+        <name>et4ae5__FromName__c</name>
+    </fields>
+    <fields>
+        <help><!-- The email sent to this subscriber  was rejected due to permanent conditions (this typically results when &quot;user unknown&quot; or &quot;domain not found&quot; errors occur) --></help>
+        <label><!-- Hard Bounce --></label>
+        <name>et4ae5__HardBounce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead ID --></label>
+        <name>et4ae5__Lead_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>et4ae5__Lead__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Merge Id --></label>
+        <name>et4ae5__MergeId__c</name>
+    </fields>
+    <fields>
+        <help><!-- The total number of times this subscriber clicked on the links on this email --></help>
+        <label><!-- Number of Total Clicks --></label>
+        <name>et4ae5__NumberOfTotalClicks__c</name>
+    </fields>
+    <fields>
+        <help><!-- The unique number of times this subscriber clicked on the links on this email (unique means one click per link) --></help>
+        <label><!-- Number of Unique Clicks --></label>
+        <name>et4ae5__NumberOfUniqueClicks__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the subscriber opened the email or not --></help>
+        <label><!-- Opened --></label>
+        <name>et4ae5__Opened__c</name>
+    </fields>
+    <fields>
+        <help><!-- The unique identifier of the email send. You may be asked to reference this number when calling Marketing Cloud support if the need arises. --></help>
+        <label><!-- Send Definition --></label>
+        <name>et4ae5__SendDefinition__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The email sent was rejected due to a seemingly temporary condition, such as a full inbox, after the system retries unsuccessfully to send the email every 15 minutes for 72 hours. A subscriber will be set to Held status after three soft bounces --></help>
+        <label><!-- Soft Bounce --></label>
+        <name>et4ae5__SoftBounce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subject Line --></label>
+        <name>et4ae5__SubjectLine__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date and time the last tracking update was received by Salesforce --></help>
+        <label><!-- Tracking As Of --></label>
+        <name>et4ae5__Tracking_As_Of__c</name>
+    </fields>
+    <fields>
+        <label><!-- Triggered Send --></label>
+        <name>et4ae5__TriggeredSendDefinition__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <webLinks>
+        <label><!-- Request_Tracking_Immediately --></label>
+        <name>et4ae5__Request_Tracking_Immediately</name>
+    </webLinks>
+</CustomObjectTranslation>

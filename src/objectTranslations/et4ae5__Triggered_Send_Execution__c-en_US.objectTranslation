@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Business Unit ID --></label>
+        <name>et4ae5__Business_Unit_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Name --></label>
+        <name>et4ae5__FromName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message --></label>
+        <name>et4ae5__Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- RecipientId --></label>
+        <name>et4ae5__RecipientId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retry Count --></label>
+        <name>et4ae5__Retry_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Date/Time --></label>
+        <name>et4ae5__Scheduled_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>et4ae5__Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requeued</masterLabel>
+            <translation><!-- Requeued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled</masterLabel>
+            <translation><!-- Scheduled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Triggered Send --></label>
+        <lookupFilter>
+            <errorMessage><!-- Trggered Send must be active in order to be selected. --></errorMessage>
+        </lookupFilter>
+        <name>et4ae5__Triggered_Send__c</name>
+        <relationshipLabel><!-- Triggered Send Executions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Triggering Object --></label>
+        <name>et4ae5__Triggering_Object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Triggering Record Id --></label>
+        <name>et4ae5__Triggering_Record_Id__c</name>
+    </fields>
+</CustomObjectTranslation>

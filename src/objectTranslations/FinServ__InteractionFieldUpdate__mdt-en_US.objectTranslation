@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Record Type Name --></label>
+        <name>FinServ__RecordTypeName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Name --></label>
+        <name>FinServ__SObject__c</name>
+    </fields>
+</CustomObjectTranslation>

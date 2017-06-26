@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Asignación de candidato a oportunidad B2C --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Asignaciones de candidatos a oportunidades B2C --></value>
+    </caseValues>
+    <fields>
+        <label><!-- IsActive --></label>
+        <name>FinServ__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Record Type Namespace --></label>
+        <name>FinServ__LeadRecordTypeNamespace__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Record Type --></label>
+        <name>FinServ__LeadRecordType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Record Type Namespace --></label>
+        <name>FinServ__OpportunityRecordTypeNamespace__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Record Type --></label>
+        <name>FinServ__OpportunityRecordType__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+</CustomObjectTranslation>

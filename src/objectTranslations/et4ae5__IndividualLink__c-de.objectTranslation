@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Individuelles Linkleveldetail</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Individuelle Linkleveldetails</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Individuelles Linkleveldetail</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Individuelle Linkleveldetails</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Individuellen Linkleveldetails</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Individueller Linkleveldetails</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Individuellem Linkleveldetail</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Individuellen Linkleveldetails</value>
+    </caseValues>
+    <fields>
+        <label><!-- Marketing Cloud Link ID --></label>
+        <name>et4ae5__ExactTargetLinkID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Individual Email Result --></label>
+        <name>et4ae5__Individual_Email_Result__c</name>
+        <relationshipLabel><!-- Individual Link Level Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Das Datum und die Uhrzeit, zu denen zuletzt von diesem Abonnenten auf diesen Link geklickt wurde.</help>
+        <label><!-- Last Clicked --></label>
+        <name>et4ae5__Last_Clicked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link URL --></label>
+        <name>et4ae5__LinkURL__c</name>
+    </fields>
+    <fields>
+        <help>Die Häufigkeit, mit der von diesem Abonnenten auf diesen Link geklickt wurde.</help>
+        <label><!-- Number of Total Clicks --></label>
+        <name>et4ae5__NumberOfTotalClicks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Link ID --></label>
+        <name>et4ae5__Unique_Link_ID__c</name>
+    </fields>
+    <gender>Neuter</gender>
+    <nameFieldLabel>Linkname</nameFieldLabel>
+</CustomObjectTranslation>

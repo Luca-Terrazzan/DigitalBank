@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>相互角色</value>
+    </caseValues>
+    <fields>
+        <help>若核取此選項，則會自動建立對應的反向角色。</help>
+        <label><!-- Create Inverse Role --></label>
+        <name>FinServ__CreateInverseRole__c</name>
+    </fields>
+    <fields>
+        <label><!-- InverseRelationship --></label>
+        <name>FinServ__InverseRelationship__c</name>
+        <relationshipLabel><!-- Inverse Relationship --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Inverse Role --></label>
+        <name>FinServ__InverseRole__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relationship Type --></label>
+        <name>FinServ__RelationshipType__c</name>
+        <picklistValues>
+            <masterLabel>Account Account Relation</masterLabel>
+            <translation>帳戶對帳戶關係</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation>全部</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Contact Relation</masterLabel>
+            <translation>連絡人對連絡人關係</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>FinServ__SourceSystemId__c</name>
+    </fields>
+    <nameFieldLabel>角色</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Account Role --></label>
+        <name>AccountRole</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contact Role --></label>
+        <name>ContactRole</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Reciprocal Role cannot be modified --></errorMessage>
+        <name>FinServ__ProhibitUpdates</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- LookupSearchConf --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value><!-- LookupSearchConfs --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- LookupSearchConf --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- LookupSearchConfs --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- LookupSearchConf --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- LookupSearchConfs --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- LookupSearchConf --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- LookupSearchConfs --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Implementation Class --></label>
+        <name>FinServ__ImplementationClass__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Name --></label>
+        <name>FinServ__ObjectName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Placeholder Text --></label>
+        <name>FinServ__PlaceholderText__c</name>
+    </fields>
+    <fields>
+        <label><!-- View Name --></label>
+        <name>FinServ__ViewName__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+</CustomObjectTranslation>

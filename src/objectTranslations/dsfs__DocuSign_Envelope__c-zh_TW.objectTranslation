@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- DocuSign 信封 --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Envelope Completed Chatter Text --></label>
+        <name>dsfs__ChatterEnvCompletedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Completed Chatter --></label>
+        <name>dsfs__ChatterEnvCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Declined Chatter Text --></label>
+        <name>dsfs__ChatterEnvDeclinedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Declined Chatter --></label>
+        <name>dsfs__ChatterEnvDeclined__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Delivered Chatter Text --></label>
+        <name>dsfs__ChatterEnvDeliveredText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Delivered Chatter --></label>
+        <name>dsfs__ChatterEnvDelivered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Sent Chatter Text --></label>
+        <name>dsfs__ChatterEnvSentText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Sent Chatter --></label>
+        <name>dsfs__ChatterEnvSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Voided Chatter Text --></label>
+        <name>dsfs__ChatterEnvVoidedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Voided Chatter --></label>
+        <name>dsfs__ChatterEnvVoided__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Completed Chatter Text --></label>
+        <name>dsfs__ChatterRecipCompletedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Completed Chatter --></label>
+        <name>dsfs__ChatterRecipCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Declined Chatter Text --></label>
+        <name>dsfs__ChatterRecipDeclinedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Declined Chatter --></label>
+        <name>dsfs__ChatterRecipDeclined__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Delivered Chatter Text --></label>
+        <name>dsfs__ChatterRecipDeliveredText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Delivered Chatter --></label>
+        <name>dsfs__ChatterRecipDelivered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Sent Chatter Text --></label>
+        <name>dsfs__ChatterRecipSentText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Sent Chatter --></label>
+        <name>dsfs__ChatterRecipSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Signed Chatter Text --></label>
+        <name>dsfs__ChatterRecipSignedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Signed Chatter --></label>
+        <name>dsfs__ChatterRecipSigned__c</name>
+    </fields>
+    <fields>
+        <help>勾選以於 DocuSign 簽署工作流程中顯示 Chatter。</help>
+        <label><!-- Enable Chatter Status Updates --></label>
+        <name>dsfs__ChatterUpdatesEnabled__c</name>
+    </fields>
+    <fields>
+        <help>從 Salesforce 選取聯絡人作為 DocuSign 收件人/簽署人。僅可使用具備有效電子郵件地址的聯絡人作為 DocuSign 收件人。</help>
+        <label><!-- Contact to eSign Document --></label>
+        <name>dsfs__Contact2eSignDoc01__c</name>
+        <relationshipLabel><!-- DocuSign Envelope01 --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Custom Field 1 Name --></label>
+        <name>dsfs__Custom_Field_1_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Field 1 Value --></label>
+        <name>dsfs__Custom_Field_1_Value__c</name>
+    </fields>
+    <fields>
+        <help>自訂透過信封傳送資料的欄位</help>
+        <label><!-- Custom Field 1 --></label>
+        <name>dsfs__Custom_Field_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Field 2 Name --></label>
+        <name>dsfs__Custom_Field_2_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Field 2 Value --></label>
+        <name>dsfs__Custom_Field_2_Value__c</name>
+    </fields>
+    <fields>
+        <help>自訂透過信封傳送資料的欄位</help>
+        <label><!-- Custom Field 2 --></label>
+        <name>dsfs__Custom_Field_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Field 3 Name --></label>
+        <name>dsfs__Custom_Field_3_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Field 3 Value --></label>
+        <name>dsfs__Custom_Field_3_Value__c</name>
+    </fields>
+    <fields>
+        <help>自訂透過信封傳送資料的欄位</help>
+        <label><!-- Custom Field 3 --></label>
+        <name>dsfs__Custom_Field_3__c</name>
+    </fields>
+    <fields>
+        <help>指定您要在到期日前多少天，傳送電子郵件提醒收件人盡快完成文件。此通知將僅傳送給尚未完成交易的收件人。</help>
+        <label><!-- Warn of expiration in N day(s) prior --></label>
+        <name>dsfs__Day_Prior_to_Warn_of_expiration__c</name>
+    </fields>
+    <fields>
+        <help>指定交易到期前的剩餘天數。</help>
+        <label><!-- Expire/Void Envelope in N day(s) --></label>
+        <name>dsfs__Days_before_Envelope_is_Expired_Voided__c</name>
+    </fields>
+    <fields>
+        <help>編輯此電子郵件訊息文字 (最多 2,000 個字元)，這些文字將會顯示在 DocuSign 收件人的簽署通知中。</help>
+        <label><!-- DocuSign Email Message --></label>
+        <name>dsfs__DocuSign_Email_Message__c</name>
+    </fields>
+    <fields>
+        <help>變更此預設的電子郵件主旨文字，這些文字將會顯示在 DocuSign 收件人簽署通知的主旨行中。</help>
+        <label><!-- DocuSign Email Subject --></label>
+        <name>dsfs__DocuSign_Email_Subject__c</name>
+    </fields>
+    <fields>
+        <help>DocuSign 信封 ID</help>
+        <label><!-- DocuSign Envelope ID --></label>
+        <name>dsfs__DocuSign_Envelope_ID__c</name>
+    </fields>
+    <fields>
+        <help>DocuSign 信封已傳送</help>
+        <label><!-- DocuSign Envelope Sent --></label>
+        <name>dsfs__DocuSign_Envelope_Sent__c</name>
+    </fields>
+    <fields>
+        <help>文件 ID</help>
+        <label><!-- DocumentID --></label>
+        <name>dsfs__DocumentID__c</name>
+    </fields>
+    <fields>
+        <help>此為顯示在貴組織的 Salesforce「文件」索引標籤中的 PDF 文件清單。若要使用 DocuSign 傳送，您必須新增一個 PDF 檔案到 Salesforce「文件」索引標籤的任一資料夾中。若要使用其他格式傳送，請按一下「進一步瞭解」。</help>
+        <label><!-- Document Name --></label>
+        <name>dsfs__Document_Name__c</name>
+    </fields>
+    <fields>
+        <help>您應不定期提醒收件人儘早處理信封。一旦信封到期，DocuSign for Salesforce 將會作廢信封，並傳送通知給寄件人和收件人。</help>
+        <label><!-- Expire/Void Envelope --></label>
+        <name>dsfs__Expire_Void_Envelope__c</name>
+    </fields>
+    <fields>
+        <help>我同意所列條款</help>
+        <label><!-- I agree to Terms --></label>
+        <name>dsfs__I_agree_to_Terms__c</name>
+    </fields>
+    <fields>
+        <help>如果您想新增為此文件的額外收件人/簽署人，請按一下此核取方塊。如果未勾選此核取方塊，您將會收到聯絡人已透過 DocuSign 完成簽署的通知，但您本人將無法簽署。</help>
+        <label><!-- I will also Sign --></label>
+        <name>dsfs__I_will_Sign__c</name>
+    </fields>
+    <fields>
+        <help>快速導向電子簽署文件</help>
+        <label><!-- Lead to eSign Document --></label>
+        <name>dsfs__Lead2eSignDoc01__c</name>
+        <relationshipLabel><!-- DocuSign Envelopes --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>指定傳送第一次提醒之前經過的天數</help>
+        <label><!-- Send Reminder in N day(s) --></label>
+        <name>dsfs__Reminder_Interval__c</name>
+    </fields>
+    <fields>
+        <help>指定交易完成前，傳送提醒的間隔頻率 (以天為單位)</help>
+        <label><!-- Repeat every N day(s) until complete --></label>
+        <name>dsfs__Reminder_Repeat_Interval_in_Days__c</name>
+    </fields>
+    <fields>
+        <help>勾選此核取方塊，即可傳送電子郵件提醒給尚未完成工作的信封收件人。</help>
+        <label><!-- Remind signers via email --></label>
+        <name>dsfs__Send_Reminder__c</name>
+    </fields>
+    <fields>
+        <help>此為建立此 DocuSign 交易的 Salesforce 使用者名稱。</help>
+        <label><!-- Sender --></label>
+        <name>dsfs__Sender__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source_Object_Parent --></label>
+        <name>dsfs__Source_Object_Parent__c</name>
+    </fields>
+    <fields>
+        <help>來源物件</help>
+        <label><!-- Source Object --></label>
+        <name>dsfs__Source_Object__c</name>
+    </fields>
+    <nameFieldLabel><!-- DocuSign Envelope --></nameFieldLabel>
+    <webLinks>
+        <label><!-- Learn_More --></label>
+        <name>dsfs__Learn_More</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Resend_This_Envelope --></label>
+        <name>dsfs__Resend_This_Envelope</name>
+    </webLinks>
+</CustomObjectTranslation>

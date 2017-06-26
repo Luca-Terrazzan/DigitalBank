@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Attended --></label>
+        <name>booking__Attended__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug ID --></label>
+        <name>booking__BookingBug_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cancellation_date --></label>
+        <name>booking__Cancellation_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>booking__Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company_id --></label>
+        <name>booking__Company_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Coupon_code --></label>
+        <name>booking__Coupon_code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created at --></label>
+        <name>booking__Created_at__c</name>
+    </fields>
+    <fields>
+        <label><!-- Day_of_week --></label>
+        <name>booking__Day_of_week__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration --></label>
+        <name>booking__Duration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feedback --></label>
+        <name>booking__Feedback__c</name>
+    </fields>
+    <fields>
+        <label><!-- Just_date --></label>
+        <name>booking__Just_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Just_time --></label>
+        <name>booking__Just_time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Late_cancel --></label>
+        <name>booking__Late_cancel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Member_id --></label>
+        <name>booking__Member_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month --></label>
+        <name>booking__Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>booking__Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Paid --></label>
+        <name>booking__Paid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Person_id --></label>
+        <name>booking__Person_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pretty_print_multi_status --></label>
+        <name>booking__Pretty_print_multi_status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price --></label>
+        <name>booking__Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purchase ID --></label>
+        <name>booking__Purchase_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purchase_item_id --></label>
+        <name>booking__Purchase_item_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Questions --></label>
+        <name>booking__Questions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Readable_current_multi_stat --></label>
+        <name>booking__Readable_current_multi_stat__c</name>
+    </fields>
+    <fields>
+        <label><!-- Repeat_booking_id --></label>
+        <name>booking__Repeat_booking_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resource_id --></label>
+        <name>booking__Resource_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- SF reference --></label>
+        <name>booking__SF_reference__c</name>
+    </fields>
+    <fields>
+        <label><!-- S_status --></label>
+        <name>booking__S_status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Session ID --></label>
+        <name>booking__Session_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Session --></label>
+        <name>booking__Session__c</name>
+    </fields>
+    <fields>
+        <label><!-- Slot ID --></label>
+        <name>booking__Slot_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- long_id --></label>
+        <name>booking__long_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service_id --></label>
+        <name>booking__service_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Settings --></label>
+        <name>booking__settings__c</name>
+    </fields>
+</CustomObjectTranslation>

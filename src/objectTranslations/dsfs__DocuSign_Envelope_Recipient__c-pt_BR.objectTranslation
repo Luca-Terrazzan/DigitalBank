@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Destinatário de envelope do DocYouSign --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Destinatário de envelope do DocYouSign --></value>
+    </caseValues>
+    <fields>
+        <help>CÓDIGO DE ACESSO</help>
+        <label><!-- Access Code --></label>
+        <name>dsfs__Access_Code__c</name>
+    </fields>
+    <fields>
+        <help>ID DE CONTATO DE DESTINATÁRIO DE ENVELOPE DO DOCYOUSIGN </help>
+        <label><!-- Contact --></label>
+        <name>dsfs__DSER_ContactID__c</name>
+        <relationshipLabel><!-- DocuSign Envelope Recipient --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- CustomFeaturesEx --></label>
+        <name>dsfs__DSER_CustomFeaturesEx__c</name>
+    </fields>
+    <fields>
+        <label><!-- CustomFeatures --></label>
+        <name>dsfs__DSER_CustomFeatures__c</name>
+    </fields>
+    <fields>
+        <label><!-- CustomId --></label>
+        <name>dsfs__DSER_CustomId__c</name>
+    </fields>
+    <fields>
+        <label><!-- CustomName --></label>
+        <name>dsfs__DSER_CustomName__c</name>
+    </fields>
+    <fields>
+        <help>ID PRINCIPAL DO DESTINATÁRIO DE ENVELOPE DO DOCYOUSIGN</help>
+        <label><!-- Lead --></label>
+        <name>dsfs__DSER_LeadID__c</name>
+        <relationshipLabel><!-- DocuSign Envelope Recipient --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>ID DE USUÁRIO DO DESTINATÁRIO DE ENVELOPE DO DOCYOUSIGN</help>
+        <label><!-- User --></label>
+        <name>dsfs__DSER_UserID__c</name>
+        <relationshipLabel><!-- DocuSign Envelope Recipient --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>ID DE ENVELOPE DO DOCYOUSIGN</help>
+        <label><!-- DocuSign Envelope --></label>
+        <name>dsfs__DocuSign_EnvelopeID__c</name>
+        <relationshipLabel><!-- DocuSign Envelope Recipient --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>FUNÇÃO DE DESTINATÁRIO DO DOCYOUSIGN</help>
+        <label><!-- DocuSign Signer Role --></label>
+        <name>dsfs__DocuSign_Recipient_Role__c</name>
+        <picklistValues>
+            <masterLabel>Company 1</masterLabel>
+            <translation>EMPRESA 1</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Company 2</masterLabel>
+            <translation>EMPRESA 2</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer 1</masterLabel>
+            <translation>CLIENTE 1</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer 2</masterLabel>
+            <translation>CLIENTE 2</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>NOME DE ASSINATURA DO DOCYOUSIGN</help>
+        <label><!-- DocuSign Signature Name --></label>
+        <name>dsfs__DocuSign_Signature_Name__c</name>
+    </fields>
+    <fields>
+        <help>TIPO DE SIGNATÁRIO DO DOCYOUSIGN</help>
+        <label><!-- DocuSign Signer Type --></label>
+        <name>dsfs__DocuSign_Signer_Type__c</name>
+        <picklistValues>
+            <masterLabel>Address recipients</masterLabel>
+            <translation>ENDEREÇAR DESTINATÁRIOS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carbon Copy</masterLabel>
+            <translation>CÓPIA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Certified Delivery</masterLabel>
+            <translation>ENTREGA CERTIFICADA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manage envelope</masterLabel>
+            <translation>GERENCIAR ENVELOPE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sign in person</masterLabel>
+            <translation>ASSINAR PESSOALMENTE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Signer</masterLabel>
+            <translation>SIGNATÁRIO</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Email Body --></label>
+        <name>dsfs__Email_Body__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Subject --></label>
+        <name>dsfs__Email_Subject__c</name>
+    </fields>
+    <fields>
+        <help>VERIFICAÇÃO DE $ID</help>
+        <label><!-- ID Check --></label>
+        <name>dsfs__ID_Check__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language Code --></label>
+        <name>dsfs__LanguageCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language --></label>
+        <name>dsfs__Language__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Email --></label>
+        <name>dsfs__Recipient_Email__c</name>
+    </fields>
+    <fields>
+        <help>Observação ao Destinatário</help>
+        <label><!-- Recipient Note --></label>
+        <name>dsfs__Recipient_Note_Long__c</name>
+    </fields>
+    <fields>
+        <help>OBSERVAÇÃO PARA O DESTINATÁRIO</help>
+        <label><!-- Recipient Note --></label>
+        <name>dsfs__Recipient_Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- RoleName --></label>
+        <name>dsfs__RoleName__c</name>
+    </fields>
+    <fields>
+        <help>VALOR ASSOCIADO À FUNÇÃO DE DESTINATÁRIO DO DOCYOUSIGN. ESTE VALOR É USADO PARA MAPEAR OS LINKS EM DOCUMENTOS.</help>
+        <label><!-- RoleValue --></label>
+        <name>dsfs__RoleValue__c</name>
+    </fields>
+    <fields>
+        <help>ORDEM DE ENCAMINHAMENTO</help>
+        <label><!-- Routing Order --></label>
+        <name>dsfs__Routing_Order__c</name>
+    </fields>
+    <fields>
+        <help>DESTINATÁRIO TIPO SALESFORCE</help>
+        <label><!-- Salesforce Recipient Type --></label>
+        <name>dsfs__Salesforce_Recipient_Type__c</name>
+        <picklistValues>
+            <masterLabel>Contact</masterLabel>
+            <translation>CONTATO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation>PRINCIPAL</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User</masterLabel>
+            <translation>USUÁRIO</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sign In Person Email --></label>
+        <name>dsfs__SignInPersonEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sign In Person Name --></label>
+        <name>dsfs__SignInPersonName__c</name>
+    </fields>
+    <fields>
+        <label><!-- SignNow --></label>
+        <name>dsfs__SignNow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Signing Group Id --></label>
+        <name>dsfs__SigningGroupId__c</name>
+    </fields>
+    <fields>
+        <help>MENSAGEM DE VALIDAÇÃO</help>
+        <label><!-- Validation Message --></label>
+        <name>dsfs__Validation_Message__c</name>
+    </fields>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- DocuSign Envelope Recipient Name --></nameFieldLabel>
+</CustomObjectTranslation>

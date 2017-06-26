@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- The prefix that is displayed before the Booking Subject.
+&lt;New&gt; Mortgage Appointment for John Smith on 15 Feb 8 am. --></help>
+        <label><!-- Booking prefix --></label>
+        <name>booking__Booking_prefix__c</name>
+    </fields>
+    <fields>
+        <help><!-- The suffix that is displayed after the Booking Subject.
+New Mortgage Appointment &lt;for&gt; John Smith on 15 Feb 8 am. --></help>
+        <label><!-- Booking suffix --></label>
+        <name>booking__Booking_suffix__c</name>
+    </fields>
+    <fields>
+        <help><!-- The suffix that is displayed after the time for a Booking.
+New Mortgage Appointment for John Smith on15 Feb 8 am&lt;your text here&gt; --></help>
+        <label><!-- Booking time suffix --></label>
+        <name>booking__Booking_time_suffix__c</name>
+    </fields>
+    <fields>
+        <help><!-- The suffix that is displayed after the customer&apos;s name.
+New Mortgage Appointment for John Smith &lt;on&gt; 15 Feb 8 am. --></help>
+        <label><!-- Customer suffix --></label>
+        <name>booking__Customer_suffix__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable Chatter feed for new Bookings and Customers.
+It is enabled by default. --></help>
+        <label><!-- Enable Chatter --></label>
+        <name>booking__Enable_Chatter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post to Booking --></label>
+        <name>booking__Post_to_Booking__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post to Customer --></label>
+        <name>booking__Post_to_Customer__c</name>
+    </fields>
+</CustomObjectTranslation>

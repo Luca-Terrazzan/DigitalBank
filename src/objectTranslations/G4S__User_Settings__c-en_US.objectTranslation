@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Allows users to post Scheduled Glance Meetings in their Chatter feeds. --></help>
+        <label><!-- Chatter When Scheduling Glance Meeting --></label>
+        <name>G4S__Chatter_When_Scheduling_Glance_Meeting__c</name>
+    </fields>
+    <fields>
+        <help><!-- Allows users to post Started Glance Sessions in their Chatter feeds. --></help>
+        <label><!-- Chatter When Starting Glance Session --></label>
+        <name>G4S__Chatter_When_Starting_Glance_Session__c</name>
+    </fields>
+    <fields>
+        <help><!-- Glance can ask guests for contact info when they join your sessions and use it to create new Leads when appropriate. --></help>
+        <label><!-- Create Leads for Session Guests --></label>
+        <name>G4S__Create_Leads_From_Session_Guests__c</name>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Who Provide a New Email</masterLabel>
+            <translation><!-- Who Provide a New Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Who Provide a New Email and Name</masterLabel>
+            <translation><!-- Who Provide a New Email and Name --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Enter your own service’s info or click the button for your “Free Glance Phone Conferencing”. --></help>
+        <label><!-- Conference Phone for Meeting Requests --></label>
+        <name>G4S__Default_Conference_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Session Key Type --></label>
+        <name>G4S__Default_Session_Key_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- This applies to each session started inside Salesforce --></help>
+        <label><!-- Default Session Key --></label>
+        <name>G4S__Default_Session_Key__c</name>
+    </fields>
+    <fields>
+        <help><!-- Need a Glance Account? Click the &quot;Get Free Glance Trial&quot; button. --></help>
+        <label><!-- Your Glance Address (Ex: pam.glance.net) --></label>
+        <name>G4S__Glance_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Glance Admin --></label>
+        <name>G4S__Glance_Admin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Glance Credentials --></label>
+        <name>G4S__Glance_Credentials__c</name>
+    </fields>
+    <fields>
+        <help><!-- ID for Glance customer account this user is associated with. --></help>
+        <label><!-- Group ID --></label>
+        <name>G4S__Group_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Glance customer account this user is associated with. --></help>
+        <label><!-- Group Name --></label>
+        <name>G4S__Group_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used by your guests to enter the phone conference. --></help>
+        <label><!-- Guest Passcode --></label>
+        <name>G4S__Guest_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used to enter the phone conference as one of the leaders. --></help>
+        <label><!-- Host Passcode --></label>
+        <name>G4S__Host_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- How do you use Salesforce? --></label>
+        <name>G4S__How_Do_You_Use_Salesforce__c</name>
+        <picklistValues>
+            <masterLabel>Mostly for Sales</masterLabel>
+            <translation><!-- Mostly for Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mostly for Support</masterLabel>
+            <translation><!-- Mostly for Support --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ignore Unmatched Glance Sessions --></label>
+        <name>G4S__Ignore_Unmatched_Glance_Sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Rate structure associated with this user&apos;s Glance Address. --></help>
+        <label><!-- Plan Name --></label>
+        <name>G4S__Plan_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Glance tries to automatically relate a Contact&apos;s most relevant Case or Opportunity to each Session Event created from that Contact.  (Choose &quot;nothing&quot; to avoid creating a relation.) --></help>
+        <label><!-- xxxPrimary Match --></label>
+        <name>G4S__Primary_Match__c</name>
+        <picklistValues>
+            <masterLabel>Cases</masterLabel>
+            <translation><!-- Cases --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunities</masterLabel>
+            <translation><!-- Opportunities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Choose the second most likely object --></help>
+        <label><!-- xxxSecondary Match --></label>
+        <name>G4S__Secondary_Match__c</name>
+        <picklistValues>
+            <masterLabel>Cases</masterLabel>
+            <translation><!-- Cases --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunities</masterLabel>
+            <translation><!-- Opportunities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Your Glance subscription expires on this date. --></help>
+        <label><!-- Subscription End Date --></label>
+        <name>G4S__Trial_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used for display purposes on the Company Settings page, Primary Glance Admin picklist values. --></help>
+        <label><!-- User Name --></label>
+        <name>G4S__User_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>G4S__User__c</name>
+        <relationshipLabel><!-- Glance User Settings --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

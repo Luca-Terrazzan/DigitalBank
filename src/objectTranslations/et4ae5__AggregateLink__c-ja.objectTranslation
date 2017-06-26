@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>リンクレベルの集計の詳細</value>
+    </caseValues>
+    <fields>
+        <label><!-- Marketing Cloud Link ID --></label>
+        <name>et4ae5__ExactTargetLinkID__c</name>
+    </fields>
+    <fields>
+        <help>このリンクを最後にクリックした日時</help>
+        <label><!-- Last Clicked --></label>
+        <name>et4ae5__Last_Clicked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link URL --></label>
+        <name>et4ae5__LinkURL__c</name>
+    </fields>
+    <fields>
+        <help>このリンクをクリックした回数の集計</help>
+        <label><!-- Number of Total Clicks --></label>
+        <name>et4ae5__NumberOfTotalClicks__c</name>
+    </fields>
+    <fields>
+        <help>このリンクをクリックした一意の回数の集計 (一意のとは、1 つのリンクにつき 1 回のクリックのみという意味)</help>
+        <label><!-- Number of Unique Clicks --></label>
+        <name>et4ae5__NumberOfUniqueClicks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Definition --></label>
+        <name>et4ae5__Send_Definition__c</name>
+        <relationshipLabel><!-- Aggregate Link Level Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Triggered Send --></label>
+        <name>et4ae5__TriggeredSendDefinition__c</name>
+        <relationshipLabel><!-- Aggregate Link Level Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unique Link ID --></label>
+        <name>et4ae5__Unique_Link_ID__c</name>
+    </fields>
+    <nameFieldLabel>リンク名</nameFieldLabel>
+</CustomObjectTranslation>

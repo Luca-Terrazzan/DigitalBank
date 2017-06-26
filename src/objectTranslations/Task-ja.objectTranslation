@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Assigned To Branch --></label>
+        <name>Assigned_To_Branch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expectations --></label>
+        <name>FinServ__Expectations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Household --></label>
+        <name>FinServ__Household__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Next Steps --></label>
+        <name>FinServ__NextSteps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objectives --></label>
+        <name>FinServ__Objectives__c</name>
+    </fields>
+    <fields>
+        <label><!-- Regarding --></label>
+        <name>FinServ__Regarding__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration (min) --></label>
+        <name>G4S__Glance_Duration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ended --></label>
+        <name>G4S__Glance_End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Guests --></label>
+        <name>G4S__Glance_Guests__c</name>
+    </fields>
+    <fields>
+        <help><!-- Estimated from guest&apos;s Internet address --></help>
+        <label><!-- First Guest&apos;s Location --></label>
+        <name>G4S__Glance_Location__c</name>
+    </fields>
+    <fields>
+        <help><!-- 4-digit key used by guests to join the session --></help>
+        <label><!-- Session Key --></label>
+        <name>G4S__Glance_Session_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Session Type --></label>
+        <name>G4S__Glance_Session_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Started --></label>
+        <name>G4S__Glance_Start_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug Branch Id --></label>
+        <name>booking__BookingBug_Branch_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug Id --></label>
+        <name>booking__BookingBug_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug Person Id --></label>
+        <name>booking__BookingBug_Person_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug Session Id --></label>
+        <name>booking__BookingBug_Session_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booking Date/Time --></label>
+        <name>booking__Booking_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bookingbug Purchase Id --></label>
+        <name>booking__Bookingbug_Purchase_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date/Time --></label>
+        <name>booking__Created_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Long_Id --></label>
+        <name>booking__Long_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Updated Date/Time --></label>
+        <name>booking__Updated_Date_Time__c</name>
+    </fields>
+    <layouts>
+        <layout>Demo Call Task Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Task Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Defer --></label>
+        <name>Defer</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Defer_0 --></label>
+        <name>Defer_0</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- EditDescription --></label>
+        <name>EditDescription</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- EditDescription_0 --></label>
+        <name>EditDescription_0</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdatePriority --></label>
+        <name>UpdatePriority</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdatePriority_0 --></label>
+        <name>UpdatePriority_0</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdateStatus --></label>
+        <name>UpdateStatus</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- UpdateStatus_0 --></label>
+        <name>UpdateStatus_0</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Advisor Task --></label>
+        <name>AdvisorTask</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Client Associate Task --></label>
+        <name>ClientAssociateTask</name>
+    </recordTypes>
+</CustomObjectTranslation>

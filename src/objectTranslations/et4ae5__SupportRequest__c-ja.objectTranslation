@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>サポート要求</value>
+    </caseValues>
+    <fields>
+        <label><!-- Comment --></label>
+        <name>et4ae5__Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- RequestEmail --></label>
+        <name>et4ae5__RequestEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- RequestPhone --></label>
+        <name>et4ae5__RequestPhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Definition --></label>
+        <name>et4ae5__Send_Definition__c</name>
+        <relationshipLabel><!-- Support Requests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Support Ticket Recipient --></label>
+        <name>et4ae5__Support_Ticket_Recipient__c</name>
+    </fields>
+    <nameFieldLabel>サポート要求</nameFieldLabel>
+</CustomObjectTranslation>

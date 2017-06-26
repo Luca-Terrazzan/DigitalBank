@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>Start UP.Featured:Accelerate Your Idea</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Accelerate Your Idea</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Start UP.Featured:Market Overview</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Market Overview</name>
+        <parentName></parentName>
+        <position>3</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Start UP.Featured:Public Founds Accessibility</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Public Founds Accessibility</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+</ManagedTopics>

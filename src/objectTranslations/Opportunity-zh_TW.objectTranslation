@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Branch --></label>
+        <name>Branch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Commercial</masterLabel>
+            <translation><!-- Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wealth</masterLabel>
+            <translation><!-- Wealth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Current Generator(s) --></label>
+        <name>CurrentGenerators__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Email --></label>
+        <name>Customer_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created from app --></label>
+        <name>DGTB_CreatedFromApp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loss Reason --></label>
+        <name>DGTB_LossReason__c</name>
+        <picklistValues>
+            <masterLabel>Authority</masterLabel>
+            <translation><!-- Authority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fit</masterLabel>
+            <translation><!-- Fit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price</masterLabel>
+            <translation><!-- Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Timing</masterLabel>
+            <translation><!-- Timing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Delivery/Installation Status --></label>
+        <name>DeliveryInstallationStatus__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In progress</masterLabel>
+            <translation><!-- In progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yet to begin</masterLabel>
+            <translation><!-- Yet to begin --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Expected Margin --></label>
+        <name>Expected_Margin__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExternalId --></label>
+        <name>ExternalId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account --></label>
+        <name>FinServ__FinancialAccount__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Financial Account Role --></label>
+        <name>Financial_Account_Role__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- LOB Referring --></label>
+        <name>LOB_Referring__c</name>
+    </fields>
+    <fields>
+        <label><!-- Main Competitor(s) --></label>
+        <name>MainCompetitors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mock --></label>
+        <name>Mock__c</name>
+    </fields>
+    <fields>
+        <label><!-- OpportunityId --></label>
+        <name>OpportunityId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>OrderNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- ProductId --></label>
+        <name>ProductId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Line --></label>
+        <name>Product_Line__c</name>
+        <picklistValues>
+            <masterLabel>Business Checking Account</masterLabel>
+            <translation><!-- Business Checking Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Savings Account</masterLabel>
+            <translation><!-- Business Savings Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commercial Credit Card</masterLabel>
+            <translation><!-- Commercial Credit Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commercial Loans</masterLabel>
+            <translation><!-- Commercial Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commercial Real Estate</masterLabel>
+            <translation><!-- Commercial Real Estate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custody</masterLabel>
+            <translation><!-- Custody --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equipment Lease</masterLabel>
+            <translation><!-- Equipment Lease --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HELOC</masterLabel>
+            <translation><!-- HELOC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Line of Credit</masterLabel>
+            <translation><!-- Line of Credit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Managed Wealth</masterLabel>
+            <translation><!-- Managed Wealth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Managed Wealth</masterLabel>
+            <translation><!-- Non-Managed Wealth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal CD</masterLabel>
+            <translation><!-- Personal CD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Checking</masterLabel>
+            <translation><!-- Personal Checking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Credit Card</masterLabel>
+            <translation><!-- Personal Credit Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal IRA - Savings</masterLabel>
+            <translation><!-- Personal IRA - Savings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Loans / Lines</masterLabel>
+            <translation><!-- Personal Loans / Lines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Residential Mortgage</masterLabel>
+            <translation><!-- Residential Mortgage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trading</masterLabel>
+            <translation><!-- Trading --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trust</masterLabel>
+            <translation><!-- Trust --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vehicle Loan</masterLabel>
+            <translation><!-- Vehicle Loan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warehouse Mortgage</masterLabel>
+            <translation><!-- Warehouse Mortgage --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Push Notification Read --></label>
+        <name>PushNotificationRead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Push Notification Sent --></label>
+        <name>PushNotificationSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referral --></label>
+        <name>Referral__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Assigned To --></label>
+        <name>Referred_To__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Outside Referral --></label>
+        <name>Referring_Branch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referring Customer --></label>
+        <name>Referring_Customer__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Referring Employee ID --></label>
+        <name>Referring_Employee_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profit --></label>
+        <name>Revenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Account Contact --></label>
+        <name>SocialAccountContact__c</name>
+        <relationshipLabel><!-- Opportunities (Social Account Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revenue --></label>
+        <name>Sum_of_Total_Prices__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tracking Number --></label>
+        <name>TrackingNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug Branch --></label>
+        <name>booking__BookingBug_Branch__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- BookingBug Id --></label>
+        <name>booking__BookingBug_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Long Id --></label>
+        <name>booking__Long_id__c</name>
+    </fields>
+    <layouts>
+        <layout>Opportunity Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- General --></label>
+        <name>General</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- OppRecType --></label>
+        <name>OppRecType</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Retirement Planning --></label>
+        <name>RetirementPlanning</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Opportunity (Wallet Share) --></label>
+        <name>WalletShareOpportunity</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Conga_Composer_OAuth --></label>
+        <name>APXTConga4__Conga_Composer_OAuth</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Mail_Merge --></label>
+        <name>APXTConga4__Conga_Mail_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Composer_Create_Document --></label>
+        <name>Conga_Composer_Create_Document</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- DeliveryStatus --></label>
+        <name>DeliveryStatus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Booking --></label>
+        <name>booking__New_Booking</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Verify_with_DNB --></label>
+        <name>dsfs__Verify_with_DNB</name>
+    </webLinks>
+    <workflowTasks>
+        <description><!-- Please call up to confim your metting --></description>
+        <name>New_Opportunity</name>
+        <subject><!-- Follow up on new opportunity! --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

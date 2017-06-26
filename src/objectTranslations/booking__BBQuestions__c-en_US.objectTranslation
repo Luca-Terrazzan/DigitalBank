@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Answer_ID --></label>
+        <name>booking__Answer_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Answer --></label>
+        <name>booking__Answer__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug ID --></label>
+        <name>booking__BookingBug_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booking --></label>
+        <name>booking__Booking__c</name>
+        <relationshipLabel><!-- BBQuestions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Foreign ID --></label>
+        <name>booking__Foreign_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- BBMember --></label>
+        <name>booking__Member__c</name>
+        <relationshipLabel><!-- BBQuestions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Question ID --></label>
+        <name>booking__Question_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question Type --></label>
+        <name>booking__Question_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question --></label>
+        <name>booking__Question__c</name>
+    </fields>
+</CustomObjectTranslation>

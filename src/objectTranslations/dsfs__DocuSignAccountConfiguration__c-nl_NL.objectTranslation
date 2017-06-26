@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>DocuSign-accountconfiguratie</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>DocuSign-accountconfiguraties</value>
+    </caseValues>
+    <fields>
+        <label><!-- AccountId --></label>
+        <name>dsfs__AccountId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action Links Undo And Send --></label>
+        <name>dsfs__ChatterActionsUndoAndSend__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Completed Chatter Text --></label>
+        <name>dsfs__ChatterEnvCompletedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Completed Chatter --></label>
+        <name>dsfs__ChatterEnvCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Declined Chatter Text --></label>
+        <name>dsfs__ChatterEnvDeclinedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Declined Chatter --></label>
+        <name>dsfs__ChatterEnvDeclined__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Delivered Chatter Text --></label>
+        <name>dsfs__ChatterEnvDeliveredText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Delivered Chatter --></label>
+        <name>dsfs__ChatterEnvDelivered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Sent Chatter Text --></label>
+        <name>dsfs__ChatterEnvSentText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Sent Chatter --></label>
+        <name>dsfs__ChatterEnvSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Voided Chatter Text --></label>
+        <name>dsfs__ChatterEnvVoidedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Voided Chatter --></label>
+        <name>dsfs__ChatterEnvVoided__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action Links Envelope Signing --></label>
+        <name>dsfs__ChatterEnvelopeSigning__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Completed Chatter Text --></label>
+        <name>dsfs__ChatterRecipCompletedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Completed Chatter --></label>
+        <name>dsfs__ChatterRecipCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient  Declined Chatter Text --></label>
+        <name>dsfs__ChatterRecipDeclinedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Declined Chatter --></label>
+        <name>dsfs__ChatterRecipDeclined__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Delivered Chatter Text --></label>
+        <name>dsfs__ChatterRecipDeliveredText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Delivered Chatter --></label>
+        <name>dsfs__ChatterRecipDelivered__c</name>
+    </fields>
+    <fields>
+        <help>t</help>
+        <label><!-- Recipient Sent Chatter Text --></label>
+        <name>dsfs__ChatterRecipSentText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Sent Chatter --></label>
+        <name>dsfs__ChatterRecipSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Signed Chatter Text --></label>
+        <name>dsfs__ChatterRecipSignedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Signed Chatter --></label>
+        <name>dsfs__ChatterRecipSigned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chatter Setting --></label>
+        <name>dsfs__ChatterSetting__c</name>
+    </fields>
+    <fields>
+        <label><!-- DSProSFPassword --></label>
+        <name>dsfs__DSProSFPassword__c</name>
+    </fields>
+    <fields>
+        <label><!-- DSProSFUsername --></label>
+        <name>dsfs__DSProSFUsername__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Expire Days --></label>
+        <name>dsfs__DefaultExpireNDays__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Reminder Days --></label>
+        <name>dsfs__DefaultReminderNDays__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Repeat Reminder Days --></label>
+        <name>dsfs__DefaultRepeatReminderNDays__c</name>
+    </fields>
+    <fields>
+        <help>Rolnamen van ontvangers die overeenkomen met de rolwaarden van ontvangers bij verzending via DocuSign.</help>
+        <label><!-- DefaultRoleNames --></label>
+        <name>dsfs__DefaultRoleNames__c</name>
+    </fields>
+    <fields>
+        <help>Rolwaarden van ontvangers die overeenkomen met de rolnamen van ontvangers bij verzending via DocuSign</help>
+        <label><!-- DefaultRoleValues --></label>
+        <name>dsfs__DefaultRoleValues__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default warn of expiration days --></label>
+        <name>dsfs__DefaultWarnOfExpireNDays__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Apex Timeout --></label>
+        <name>dsfs__Default_Apex_Timeout__c</name>
+    </fields>
+    <fields>
+        <help>Stel de DocuSign InPerson ondertekenpagina zo in dat deze wordt weergegeven in een apart venster, en niet meer ingesloten in de Salesfore-header en/of -zijbalk.</help>
+        <label><!-- Display InPerson Signing In Own Window --></label>
+        <name>dsfs__DisplayInPersonSigningInOwnWindow__c</name>
+    </fields>
+    <fields>
+        <help>Stel de DocuSign-tagger zo in dat deze wordt weergegeven in een eigen venster en niet in de Salesforce-header en/of -zijbalk.</help>
+        <label><!-- Display Tagger In Own Window --></label>
+        <name>dsfs__DisplayTaggerInOwnWindow__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSignBaseURL --></label>
+        <name>dsfs__DocuSignBaseURL__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSignEnvironment --></label>
+        <name>dsfs__DocuSignEnvironment__c</name>
+        <picklistValues>
+            <masterLabel>demo</masterLabel>
+            <translation>demo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>preview</masterLabel>
+            <translation>voorbeeld</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>production</masterLabel>
+            <translation>productie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>stage</masterLabel>
+            <translation>fase</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>test</masterLabel>
+            <translation>test</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Bewerk de tekst voor dit e-mailbericht (maximaal 2000 tekens). Het bericht wordt weergegeven in de melding voor ondertekening voor uw DocuSign-ontvanger.</help>
+        <label><!-- EmailBody --></label>
+        <name>dsfs__EmailBody__c</name>
+    </fields>
+    <fields>
+        <help>Bewerk de tekst voor dit e-mailbericht (maximaal 2000 tekens). Het bericht wordt weergegeven in de melding voor ondertekening voor uw DocuSign-ontvanger.</help>
+        <label><!-- EmailBody_de --></label>
+        <name>dsfs__EmailBody_de__c</name>
+    </fields>
+    <fields>
+        <help>Bewerk de tekst voor dit e-mailbericht (maximaal 2000 tekens). Het bericht wordt weergegeven in de melding voor ondertekening voor uw DocuSign-ontvanger.</help>
+        <label><!-- EmailBody_es --></label>
+        <name>dsfs__EmailBody_es__c</name>
+    </fields>
+    <fields>
+        <help>Bewerk de tekst voor dit e-mailbericht (maximaal 2000 tekens). Het bericht wordt weergegeven in de melding voor ondertekening voor uw DocuSign-ontvanger.</help>
+        <label><!-- EmailBody_fr --></label>
+        <name>dsfs__EmailBody_fr__c</name>
+    </fields>
+    <fields>
+        <help>Bewerk de tekst voor dit e-mailbericht (maximaal 2000 tekens). Het bericht wordt weergegeven in de melding voor ondertekening voor uw DocuSign-ontvanger.</help>
+        <label><!-- EmailBody_it --></label>
+        <name>dsfs__EmailBody_it__c</name>
+    </fields>
+    <fields>
+        <help>Bewerk de tekst voor dit e-mailbericht (maximaal 2000 tekens). Het bericht wordt weergegeven in de melding voor ondertekening voor uw DocuSign-ontvanger.</help>
+        <label><!-- EmailBody_ja --></label>
+        <name>dsfs__EmailBody_ja__c</name>
+    </fields>
+    <fields>
+        <help>Bewerk de tekst voor dit e-mailbericht (maximaal 2000 tekens). Het bericht wordt weergegeven in de melding voor ondertekening voor uw DocuSign-ontvanger.</help>
+        <label><!-- EmailBody_ko --></label>
+        <name>dsfs__EmailBody_ko__c</name>
+    </fields>
+    <fields>
+        <help>Bewerk de tekst voor dit e-mailbericht (maximaal 2000 tekens). Het bericht wordt weergegeven in de melding voor ondertekening voor uw DocuSign-ontvanger.</help>
+        <label><!-- EmailBody_nl --></label>
+        <name>dsfs__EmailBody_nl__c</name>
+    </fields>
+    <fields>
+        <help>Bewerk de tekst voor dit e-mailbericht (maximaal 2000 tekens). Het bericht wordt weergegeven in de melding voor ondertekening voor uw DocuSign-ontvanger.</help>
+        <label><!-- EmailBody_pt_BR --></label>
+        <name>dsfs__EmailBody_pt_BR__c</name>
+    </fields>
+    <fields>
+        <help>Bewerk de tekst voor dit e-mailbericht (maximaal 2000 tekens). Het bericht wordt weergegeven in de melding voor ondertekening voor uw DocuSign-ontvanger.</help>
+        <label><!-- EmailBody_ru --></label>
+        <name>dsfs__EmailBody_ru__c</name>
+    </fields>
+    <fields>
+        <help>Bewerk de tekst voor dit e-mailbericht (maximaal 2000 tekens). Het bericht wordt weergegeven in de melding voor ondertekening voor uw DocuSign-ontvanger.</help>
+        <label><!-- EmailBody_zh_CN --></label>
+        <name>dsfs__EmailBody_zh_CN__c</name>
+    </fields>
+    <fields>
+        <help>Wijzig deze standaardtekst voor het e-mailonderwerp. De tekst wordt weergegeven als onderwerpregel in de melding voor ondertekening voor uw DocuSign-ontvangers.</help>
+        <label><!-- EmailSubject --></label>
+        <name>dsfs__EmailSubject__c</name>
+    </fields>
+    <fields>
+        <help>Wijzig deze standaardtekst voor het e-mailonderwerp. De tekst wordt weergegeven als onderwerpregel in de melding voor ondertekening voor uw DocuSign-ontvangers.</help>
+        <label><!-- EmailSubject_de --></label>
+        <name>dsfs__EmailSubject_de__c</name>
+    </fields>
+    <fields>
+        <help>Wijzig deze standaardtekst voor het e-mailonderwerp. De tekst wordt weergegeven als onderwerpregel in de melding voor ondertekening voor uw DocuSign-ontvangers.</help>
+        <label><!-- EmailSubject_es --></label>
+        <name>dsfs__EmailSubject_es__c</name>
+    </fields>
+    <fields>
+        <help>Wijzig deze standaardtekst voor het e-mailonderwerp. De tekst wordt weergegeven als onderwerpregel in de melding voor ondertekening voor uw DocuSign-ontvangers.</help>
+        <label><!-- EmailSubject_fr --></label>
+        <name>dsfs__EmailSubject_fr__c</name>
+    </fields>
+    <fields>
+        <help>Wijzig deze standaardtekst voor het e-mailonderwerp. De tekst wordt weergegeven als onderwerpregel in de melding voor ondertekening voor uw DocuSign-ontvangers.</help>
+        <label><!-- EmailSubject_it --></label>
+        <name>dsfs__EmailSubject_it__c</name>
+    </fields>
+    <fields>
+        <help>Wijzig deze standaardtekst voor het e-mailonderwerp. De tekst wordt weergegeven als onderwerpregel in de melding voor ondertekening voor uw DocuSign-ontvangers.</help>
+        <label><!-- EmailSubject_ja --></label>
+        <name>dsfs__EmailSubject_ja__c</name>
+    </fields>
+    <fields>
+        <help>Wijzig deze standaardtekst voor het e-mailonderwerp. De tekst wordt weergegeven als onderwerpregel in de melding voor ondertekening voor uw DocuSign-ontvangers.</help>
+        <label><!-- EmailSubject_ko --></label>
+        <name>dsfs__EmailSubject_ko__c</name>
+    </fields>
+    <fields>
+        <help>Wijzig deze standaardtekst voor het e-mailonderwerp. De tekst wordt weergegeven als onderwerpregel in de melding voor ondertekening voor uw DocuSign-ontvangers.</help>
+        <label><!-- EmailSubject_nl --></label>
+        <name>dsfs__EmailSubject_nl__c</name>
+    </fields>
+    <fields>
+        <help>Wijzig deze standaardtekst voor het e-mailonderwerp. De tekst wordt weergegeven als onderwerpregel in de melding voor ondertekening voor uw DocuSign-ontvangers.</help>
+        <label><!-- EmailSubject_pt_BR --></label>
+        <name>dsfs__EmailSubject_pt_BR__c</name>
+    </fields>
+    <fields>
+        <help>Wijzig deze standaardtekst voor het e-mailonderwerp. De tekst wordt weergegeven als onderwerpregel in de melding voor ondertekening voor uw DocuSign-ontvangers.</help>
+        <label><!-- EmailSubject_ru --></label>
+        <name>dsfs__EmailSubject_ru__c</name>
+    </fields>
+    <fields>
+        <help>Wijzig deze standaardtekst voor het e-mailonderwerp. De tekst wordt weergegeven als onderwerpregel in de melding voor ondertekening voor uw DocuSign-ontvangers.</help>
+        <label><!-- EmailSubject_zh_CN --></label>
+        <name>dsfs__EmailSubject_zh_CN__c</name>
+    </fields>
+    <fields>
+        <label><!-- EnableNewMobileTaggingUI --></label>
+        <name>dsfs__EnableNewMobileTaggingUI__c</name>
+    </fields>
+    <fields>
+        <help>Ondersteunt grote DocuSign-enveloppen door enveloppen zonder documentgegevens naar DocuSign te sturen en DocuSign toe te staan documentgegevens zonodig op te halen. Alleen inschakelen als het verzenden van enveloppen de verzendlimieten van Saleforce overschrijdt.</help>
+        <label><!-- Fetch Documents --></label>
+        <name>dsfs__FetchDocuments__c</name>
+    </fields>
+    <fields>
+        <label><!-- HideChatter --></label>
+        <name>dsfs__HideChatter__c</name>
+    </fields>
+    <fields>
+        <label><!-- HideEmailMessage --></label>
+        <name>dsfs__HideEmailMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- HideEmailSubject --></label>
+        <name>dsfs__HideEmailSubject__c</name>
+    </fields>
+    <fields>
+        <label><!-- HideRemindExpire --></label>
+        <name>dsfs__HideRemindExpire__c</name>
+    </fields>
+    <fields>
+        <label><!-- HideSendNowButton --></label>
+        <name>dsfs__HideSendNowButton__c</name>
+    </fields>
+    <fields>
+        <label><!-- HideTagButton --></label>
+        <name>dsfs__HideTagButton__c</name>
+    </fields>
+    <fields>
+        <label><!-- IncludeDefaultAnchorTabs --></label>
+        <name>dsfs__IncludeDefaultAnchorTabs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client side logging --></label>
+        <name>dsfs__Lightning_Component_Logging__c</name>
+    </fields>
+    <fields>
+        <label><!-- Add attached Files to envelopes --></label>
+        <name>dsfs__LoadFiles__c</name>
+    </fields>
+    <fields>
+        <label><!-- LookupUser --></label>
+        <name>dsfs__LookupUser__c</name>
+        <relationshipLabel><!-- DocuSign Account Configurations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Manage Users Fields --></label>
+        <name>dsfs__ManageUsersFields__c</name>
+    </fields>
+    <fields>
+        <label><!-- OrgId --></label>
+        <name>dsfs__OrganizationId__c</name>
+    </fields>
+    <fields>
+        <label><!-- SetupDone --></label>
+        <name>dsfs__SetupDone__c</name>
+    </fields>
+    <fields>
+        <label><!-- UpgradeHelper --></label>
+        <name>dsfs__UpgradeHelper__c</name>
+    </fields>
+    <fields>
+        <help>Als u instellingen voor Herinneren en Verlopen inschakelt, kunt u standaarden instellen voor herinneren en verlopen in DocuSign for Salesforce. Deze instellingen hebben voorrang op de standaardinstellingen voor Herinneren en Verlopen die zijn ingesteld in uw DocuSign-account.</help>
+        <label><!-- Use Account Notification Defaults --></label>
+        <name>dsfs__UseAccountNotificationDefaults__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use Send On Behalf Of --></label>
+        <name>dsfs__UseSendOnBehalfOf__c</name>
+    </fields>
+    <gender>Neuter</gender>
+    <nameFieldLabel>DocuSign-accountconfiguratie</nameFieldLabel>
+</CustomObjectTranslation>

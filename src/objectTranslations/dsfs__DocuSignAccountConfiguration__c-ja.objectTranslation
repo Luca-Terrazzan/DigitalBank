@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>DocuSign アカウント設定</value>
+    </caseValues>
+    <fields>
+        <label><!-- AccountId --></label>
+        <name>dsfs__AccountId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action Links Undo And Send --></label>
+        <name>dsfs__ChatterActionsUndoAndSend__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Completed Chatter Text --></label>
+        <name>dsfs__ChatterEnvCompletedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Completed Chatter --></label>
+        <name>dsfs__ChatterEnvCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Declined Chatter Text --></label>
+        <name>dsfs__ChatterEnvDeclinedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Declined Chatter --></label>
+        <name>dsfs__ChatterEnvDeclined__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Delivered Chatter Text --></label>
+        <name>dsfs__ChatterEnvDeliveredText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Delivered Chatter --></label>
+        <name>dsfs__ChatterEnvDelivered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Sent Chatter Text --></label>
+        <name>dsfs__ChatterEnvSentText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Sent Chatter --></label>
+        <name>dsfs__ChatterEnvSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Voided Chatter Text --></label>
+        <name>dsfs__ChatterEnvVoidedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Voided Chatter --></label>
+        <name>dsfs__ChatterEnvVoided__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action Links Envelope Signing --></label>
+        <name>dsfs__ChatterEnvelopeSigning__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Completed Chatter Text --></label>
+        <name>dsfs__ChatterRecipCompletedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Completed Chatter --></label>
+        <name>dsfs__ChatterRecipCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient  Declined Chatter Text --></label>
+        <name>dsfs__ChatterRecipDeclinedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Declined Chatter --></label>
+        <name>dsfs__ChatterRecipDeclined__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Delivered Chatter Text --></label>
+        <name>dsfs__ChatterRecipDeliveredText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Delivered Chatter --></label>
+        <name>dsfs__ChatterRecipDelivered__c</name>
+    </fields>
+    <fields>
+        <help>t</help>
+        <label><!-- Recipient Sent Chatter Text --></label>
+        <name>dsfs__ChatterRecipSentText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Sent Chatter --></label>
+        <name>dsfs__ChatterRecipSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Signed Chatter Text --></label>
+        <name>dsfs__ChatterRecipSignedText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Signed Chatter --></label>
+        <name>dsfs__ChatterRecipSigned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chatter Setting --></label>
+        <name>dsfs__ChatterSetting__c</name>
+    </fields>
+    <fields>
+        <label><!-- DSProSFPassword --></label>
+        <name>dsfs__DSProSFPassword__c</name>
+    </fields>
+    <fields>
+        <label><!-- DSProSFUsername --></label>
+        <name>dsfs__DSProSFUsername__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Expire Days --></label>
+        <name>dsfs__DefaultExpireNDays__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Reminder Days --></label>
+        <name>dsfs__DefaultReminderNDays__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Repeat Reminder Days --></label>
+        <name>dsfs__DefaultRepeatReminderNDays__c</name>
+    </fields>
+    <fields>
+        <help>DocuSign での送信時に受信者の役割値と一致する受信者の役割名。</help>
+        <label><!-- DefaultRoleNames --></label>
+        <name>dsfs__DefaultRoleNames__c</name>
+    </fields>
+    <fields>
+        <help>DocuSign での送信時に受信者の役割名と一致する受信者の役割値</help>
+        <label><!-- DefaultRoleValues --></label>
+        <name>dsfs__DefaultRoleValues__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default warn of expiration days --></label>
+        <name>dsfs__DefaultWarnOfExpireNDays__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Apex Timeout --></label>
+        <name>dsfs__Default_Apex_Timeout__c</name>
+    </fields>
+    <fields>
+        <help>Salesforce のヘッダーまたはサイドバーに組み込まれるのではなく、独自のウィンドウに表示されるように DocuSign 直接署名ページを設定します。</help>
+        <label><!-- Display InPerson Signing In Own Window --></label>
+        <name>dsfs__DisplayInPersonSigningInOwnWindow__c</name>
+    </fields>
+    <fields>
+        <help>Salesforce のヘッダーまたはサイドバーに組み込まれるのではなく、独自のウィンドウに表示されるように DocuSign タグ付けを設定します。</help>
+        <label><!-- Display Tagger In Own Window --></label>
+        <name>dsfs__DisplayTaggerInOwnWindow__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSignBaseURL --></label>
+        <name>dsfs__DocuSignBaseURL__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSignEnvironment --></label>
+        <name>dsfs__DocuSignEnvironment__c</name>
+        <picklistValues>
+            <masterLabel>demo</masterLabel>
+            <translation>デモ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>preview</masterLabel>
+            <translation>プレビュー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>production</masterLabel>
+            <translation>本番</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>stage</masterLabel>
+            <translation>ステージ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>test</masterLabel>
+            <translation>テスト</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>この電子メールメッセージのテキストを編集すると（最大 2000 文字）、そのテキストが DocuSign 受信者が署名する通知に表示されます。</help>
+        <label><!-- EmailBody --></label>
+        <name>dsfs__EmailBody__c</name>
+    </fields>
+    <fields>
+        <help>この電子メールメッセージのテキストを編集すると（最大 2000 文字）、そのテキストが DocuSign 受信者が署名する通知に表示されます。</help>
+        <label><!-- EmailBody_de --></label>
+        <name>dsfs__EmailBody_de__c</name>
+    </fields>
+    <fields>
+        <help>この電子メールメッセージのテキストを編集すると（最大 2000 文字）、そのテキストが DocuSign 受信者が署名する通知に表示されます。</help>
+        <label><!-- EmailBody_es --></label>
+        <name>dsfs__EmailBody_es__c</name>
+    </fields>
+    <fields>
+        <help>この電子メールメッセージのテキストを編集すると（最大 2000 文字）、そのテキストが DocuSign 受信者が署名する通知に表示されます。</help>
+        <label><!-- EmailBody_fr --></label>
+        <name>dsfs__EmailBody_fr__c</name>
+    </fields>
+    <fields>
+        <help>この電子メールメッセージのテキストを編集すると（最大 2000 文字）、そのテキストが DocuSign 受信者が署名する通知に表示されます。</help>
+        <label><!-- EmailBody_it --></label>
+        <name>dsfs__EmailBody_it__c</name>
+    </fields>
+    <fields>
+        <help>この電子メールメッセージのテキストを編集すると（最大 2000 文字）、そのテキストが DocuSign 受信者が署名する通知に表示されます。</help>
+        <label><!-- EmailBody_ja --></label>
+        <name>dsfs__EmailBody_ja__c</name>
+    </fields>
+    <fields>
+        <help>この電子メールメッセージのテキストを編集すると（最大 2000 文字）、そのテキストが DocuSign 受信者が署名する通知に表示されます。</help>
+        <label><!-- EmailBody_ko --></label>
+        <name>dsfs__EmailBody_ko__c</name>
+    </fields>
+    <fields>
+        <help>この電子メールメッセージのテキストを編集すると（最大 2000 文字）、そのテキストが DocuSign 受信者が署名する通知に表示されます。</help>
+        <label><!-- EmailBody_nl --></label>
+        <name>dsfs__EmailBody_nl__c</name>
+    </fields>
+    <fields>
+        <help>この電子メールメッセージのテキストを編集すると（最大 2000 文字）、そのテキストが DocuSign 受信者が署名する通知に表示されます。</help>
+        <label><!-- EmailBody_pt_BR --></label>
+        <name>dsfs__EmailBody_pt_BR__c</name>
+    </fields>
+    <fields>
+        <help>この電子メールメッセージのテキストを編集すると（最大 2000 文字）、そのテキストが DocuSign 受信者が署名する通知に表示されます。</help>
+        <label><!-- EmailBody_ru --></label>
+        <name>dsfs__EmailBody_ru__c</name>
+    </fields>
+    <fields>
+        <help>この電子メールメッセージのテキストを編集すると（最大 2000 文字）、そのテキストが DocuSign 受信者が署名する通知に表示されます。</help>
+        <label><!-- EmailBody_zh_CN --></label>
+        <name>dsfs__EmailBody_zh_CN__c</name>
+    </fields>
+    <fields>
+        <help>このデフォルトの電子メールの件名テキストを変更すると、そのテキストが DocuSign 受信者が署名する通知に件名として表示されます。</help>
+        <label><!-- EmailSubject --></label>
+        <name>dsfs__EmailSubject__c</name>
+    </fields>
+    <fields>
+        <help>このデフォルトの電子メールの件名テキストを変更すると、そのテキストが DocuSign 受信者が署名する通知に件名として表示されます。</help>
+        <label><!-- EmailSubject_de --></label>
+        <name>dsfs__EmailSubject_de__c</name>
+    </fields>
+    <fields>
+        <help>このデフォルトの電子メールの件名テキストを変更すると、そのテキストが DocuSign 受信者が署名する通知に件名として表示されます。</help>
+        <label><!-- EmailSubject_es --></label>
+        <name>dsfs__EmailSubject_es__c</name>
+    </fields>
+    <fields>
+        <help>このデフォルトの電子メールの件名テキストを変更すると、そのテキストが DocuSign 受信者が署名する通知に件名として表示されます。</help>
+        <label><!-- EmailSubject_fr --></label>
+        <name>dsfs__EmailSubject_fr__c</name>
+    </fields>
+    <fields>
+        <help>このデフォルトの電子メールの件名テキストを変更すると、そのテキストが DocuSign 受信者が署名する通知に件名として表示されます。</help>
+        <label><!-- EmailSubject_it --></label>
+        <name>dsfs__EmailSubject_it__c</name>
+    </fields>
+    <fields>
+        <help>このデフォルトの電子メールの件名テキストを変更すると、そのテキストが DocuSign 受信者が署名する通知に件名として表示されます。</help>
+        <label><!-- EmailSubject_ja --></label>
+        <name>dsfs__EmailSubject_ja__c</name>
+    </fields>
+    <fields>
+        <help>このデフォルトの電子メールの件名テキストを変更すると、そのテキストが DocuSign 受信者が署名する通知に件名として表示されます。</help>
+        <label><!-- EmailSubject_ko --></label>
+        <name>dsfs__EmailSubject_ko__c</name>
+    </fields>
+    <fields>
+        <help>このデフォルトの電子メールの件名テキストを変更すると、そのテキストが DocuSign 受信者が署名する通知に件名として表示されます。</help>
+        <label><!-- EmailSubject_nl --></label>
+        <name>dsfs__EmailSubject_nl__c</name>
+    </fields>
+    <fields>
+        <help>このデフォルトの電子メールの件名テキストを変更すると、そのテキストが DocuSign 受信者が署名する通知に件名として表示されます。</help>
+        <label><!-- EmailSubject_pt_BR --></label>
+        <name>dsfs__EmailSubject_pt_BR__c</name>
+    </fields>
+    <fields>
+        <help>このデフォルトの電子メールの件名テキストを変更すると、そのテキストが DocuSign 受信者が署名する通知に件名として表示されます。</help>
+        <label><!-- EmailSubject_ru --></label>
+        <name>dsfs__EmailSubject_ru__c</name>
+    </fields>
+    <fields>
+        <help>このデフォルトの電子メールの件名テキストを変更すると、そのテキストが DocuSign 受信者が署名する通知に件名として表示されます。</help>
+        <label><!-- EmailSubject_zh_CN --></label>
+        <name>dsfs__EmailSubject_zh_CN__c</name>
+    </fields>
+    <fields>
+        <label><!-- EnableNewMobileTaggingUI --></label>
+        <name>dsfs__EnableNewMobileTaggingUI__c</name>
+    </fields>
+    <fields>
+        <help>文書データなしで DocuSign にエンベロープを送信し、DocuSign で必要に応じて文書データを取得できるようにすることで、大容量の DocuSign エンベロープをサポートします。エンベロープの送信が Salesforce コールアウト制限を超えた場合にのみオンにします。</help>
+        <label><!-- Fetch Documents --></label>
+        <name>dsfs__FetchDocuments__c</name>
+    </fields>
+    <fields>
+        <label><!-- HideChatter --></label>
+        <name>dsfs__HideChatter__c</name>
+    </fields>
+    <fields>
+        <label><!-- HideEmailMessage --></label>
+        <name>dsfs__HideEmailMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- HideEmailSubject --></label>
+        <name>dsfs__HideEmailSubject__c</name>
+    </fields>
+    <fields>
+        <label><!-- HideRemindExpire --></label>
+        <name>dsfs__HideRemindExpire__c</name>
+    </fields>
+    <fields>
+        <label><!-- HideSendNowButton --></label>
+        <name>dsfs__HideSendNowButton__c</name>
+    </fields>
+    <fields>
+        <label><!-- HideTagButton --></label>
+        <name>dsfs__HideTagButton__c</name>
+    </fields>
+    <fields>
+        <label><!-- IncludeDefaultAnchorTabs --></label>
+        <name>dsfs__IncludeDefaultAnchorTabs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client side logging --></label>
+        <name>dsfs__Lightning_Component_Logging__c</name>
+    </fields>
+    <fields>
+        <label><!-- Add attached Files to envelopes --></label>
+        <name>dsfs__LoadFiles__c</name>
+    </fields>
+    <fields>
+        <label><!-- LookupUser --></label>
+        <name>dsfs__LookupUser__c</name>
+        <relationshipLabel><!-- DocuSign Account Configurations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Manage Users Fields --></label>
+        <name>dsfs__ManageUsersFields__c</name>
+    </fields>
+    <fields>
+        <label><!-- OrgId --></label>
+        <name>dsfs__OrganizationId__c</name>
+    </fields>
+    <fields>
+        <label><!-- SetupDone --></label>
+        <name>dsfs__SetupDone__c</name>
+    </fields>
+    <fields>
+        <label><!-- UpgradeHelper --></label>
+        <name>dsfs__UpgradeHelper__c</name>
+    </fields>
+    <fields>
+        <help>リマインダ送信と期限切れの設定を有効にすると、DocuSign For Salesforce のリマインダ送信と期限切れのデフォルト設定を指定できます。これらの設定は、お使いの DocuSign アカウントのリマインダと期限切れのデフォルト設定を上書きします。</help>
+        <label><!-- Use Account Notification Defaults --></label>
+        <name>dsfs__UseAccountNotificationDefaults__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use Send On Behalf Of --></label>
+        <name>dsfs__UseSendOnBehalfOf__c</name>
+    </fields>
+    <nameFieldLabel>DocuSign アカウント設定</nameFieldLabel>
+</CustomObjectTranslation>

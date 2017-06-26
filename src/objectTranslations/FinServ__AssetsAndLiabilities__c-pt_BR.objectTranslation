@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ativo e passivo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ativos e passivos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Commercial</masterLabel>
+            <translation><!-- Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wealth</masterLabel>
+            <translation><!-- Wealth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>FinServ__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>FinServ__AssetsAndLiabilitiesSource__c</name>
+        <picklistValues>
+            <masterLabel>Manual Entry</masterLabel>
+            <translation>Inserção manual</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yodlee</masterLabel>
+            <translation>Yodlee</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>FinServ__AssetsAndLiabilitiesType__c</name>
+        <picklistValues>
+            <masterLabel>Auto Loan</masterLabel>
+            <translation>Financiamento de veículos</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automobile</masterLabel>
+            <translation>Automóvel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash</masterLabel>
+            <translation>Dinheiro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Collection</masterLabel>
+            <translation>Arrecadação</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equipment</masterLabel>
+            <translation>Equipamento</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation>Gold</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jewelry</masterLabel>
+            <translation>Joalheria</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mortgage</masterLabel>
+            <translation>Hipoteca</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Outro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Loan</masterLabel>
+            <translation>Empréstimo pessoal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Real Estate</masterLabel>
+            <translation>Mercado imobiliário</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>FinServ__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account --></label>
+        <name>FinServ__FinancialAccount__c</name>
+        <relationshipLabel><!-- Assets and Liabilities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Household --></label>
+        <name>FinServ__Household__c</name>
+        <relationshipLabel><!-- Household Assets and Liabilities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Joint Owner --></label>
+        <name>FinServ__JointOwner__c</name>
+        <relationshipLabel><!-- Joint Owner --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Owner Type --></label>
+        <name>FinServ__OwnerType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ownership --></label>
+        <name>FinServ__Ownership__c</name>
+        <picklistValues>
+            <masterLabel>Individual</masterLabel>
+            <translation>Individual</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joint</masterLabel>
+            <translation>Conjunto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trust</masterLabel>
+            <translation>Fideicomisso</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Primary Owner --></label>
+        <name>FinServ__PrimaryOwner__c</name>
+        <relationshipLabel><!-- Client Assets and Liabilities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>FinServ__SourceSystemId__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nome do ativo ou do passivo</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Liability --></label>
+        <name>Liability</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Asset --></label>
+        <name>NonfinancialAsset</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Individually owned accounts can&apos;t have a joint owner. --></errorMessage>
+        <name>FinServ__NoJointOwnerForIndividualAccounts</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The primary and joint owner must be different. --></errorMessage>
+        <name>FinServ__PrimaryAndJointOwnerCannotBeSame</name>
+    </validationRules>
+</CustomObjectTranslation>

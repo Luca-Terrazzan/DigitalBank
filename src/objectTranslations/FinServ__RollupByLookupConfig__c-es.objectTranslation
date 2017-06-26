@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Configuración de acumulación por búsqueda</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Configuraciones de acumulaciones por búsquedas</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>FinServ__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field to Roll Up from --></label>
+        <name>FinServ__FromField__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Object --></label>
+        <name>FinServ__FromObject__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Record Type --></label>
+        <name>FinServ__FromRecordType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lookup Field --></label>
+        <name>FinServ__LookupField__c</name>
+    </fields>
+    <fields>
+        <label><!-- Namespace --></label>
+        <name>FinServ__Namespace__c</name>
+        <picklistValues>
+            <masterLabel>Industries</masterLabel>
+            <translation>Sectores</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Process Type --></label>
+        <name>FinServ__ProcessType__c</name>
+        <picklistValues>
+            <masterLabel>Async</masterLabel>
+            <translation>Asíncrono</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Batch</masterLabel>
+            <translation>Lote</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Realtime</masterLabel>
+            <translation>Tiempo real</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Roll-Up Operation --></label>
+        <name>FinServ__RollupOperation__c</name>
+        <picklistValues>
+            <masterLabel>Avg</masterLabel>
+            <translation>Media</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Count</masterLabel>
+            <translation>Recuento</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Max</masterLabel>
+            <translation>Máximo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Min</masterLabel>
+            <translation>Mínimo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sum</masterLabel>
+            <translation>Suma</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Field to Roll Up to --></label>
+        <name>FinServ__ToField__c</name>
+    </fields>
+    <fields>
+        <label><!-- To Object --></label>
+        <name>FinServ__ToObject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fields Triggering Update --></label>
+        <name>FinServ__UpdateOnChange__c</name>
+    </fields>
+    <fields>
+        <help>Una expresión de ejemplo para la cláusula Where es: (1 OR 2) AND 3.
+Aquí los números corresponden a los criterios de filtros definidos en el objeto secundario RollUpByLookupFilterCriteria.</help>
+        <label><!-- Where Clause --></label>
+        <name>FinServ__WhereClause__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nombre de objeto</nameFieldLabel>
+</CustomObjectTranslation>

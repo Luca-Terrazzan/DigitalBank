@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Mobile Sendung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Mobile Sendungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Mobile Sendung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Mobile Sendungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Mobiler Sendung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Mobiler Sendungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Mobiler Sendung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Mobilen Sendungen</value>
+    </caseValues>
+    <fields>
+        <label><!-- AllSources --></label>
+        <name>et4ae5__AllSources__c</name>
+    </fields>
+    <fields>
+        <label><!-- Backup Workflow Date/Time --></label>
+        <name>et4ae5__BackupWorkflow__c</name>
+    </fields>
+    <fields>
+        <help>Der Prozentsatz der Bounces im Vergleich zu dem der gesendeten E-Mails</help>
+        <label><!-- Bounce Rate --></label>
+        <name>et4ae5__Bounce_Rate_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Unit --></label>
+        <name>et4ae5__Business_Unit__c</name>
+        <relationshipLabel><!-- Mobile Sends --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Business Unit saved --></label>
+        <name>et4ae5__Business_Unit_saved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>et4ae5__Campaign__c</name>
+        <relationshipLabel><!-- Mobile Sends (Campaign) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Campaigns --></label>
+        <name>et4ae5__Campaigns__c</name>
+    </fields>
+    <fields>
+        <help>Der Prozentsatz einmaliger Klicks im Vergleich zu dem der gesendeten E-Mails (ohne Bounces)</help>
+        <label><!-- Click Through Rate --></label>
+        <name>et4ae5__Click_Through_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>et4ae5__Contact__c</name>
+        <relationshipLabel><!-- Mobile Sends --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Conversation Id --></label>
+        <name>et4ae5__ConversationId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conversation Id --></label>
+        <name>et4ae5__ConversationId_old__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country Code --></label>
+        <name>et4ae5__Country_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date/Time --></label>
+        <name>et4ae5__Created_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- DataExtensionId --></label>
+        <name>et4ae5__DataExtensionId__c</name>
+    </fields>
+    <fields>
+        <help>Das Datum und die Uhrzeit, zu denen die Sendung tatsächlich von Marketing Cloud gesendet wurde.</help>
+        <label><!-- Date Sent --></label>
+        <name>et4ae5__DateSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dedupe Subscribers --></label>
+        <name>et4ae5__DedupeSubscribers__c</name>
+    </fields>
+    <fields>
+        <help>Der Prozentsatz der erfolgreich zugestellten E-Mails im Vergleich zu dem der E-Mails mit Bounces</help>
+        <label><!-- Deliverability Rate --></label>
+        <name>et4ae5__Deliverability_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- sendDef --></label>
+        <name>et4ae5__ETSendDef__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExclusionCampaign --></label>
+        <name>et4ae5__ExclusionCampaign__c</name>
+        <relationshipLabel><!-- Mobile Sends (ExclusionCampaign) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Exclusion Lists --></label>
+        <name>et4ae5__ExclusionLists__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclusion Campaigns --></label>
+        <name>et4ae5__Exclusion_Campaigns__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclusion Reports --></label>
+        <name>et4ae5__Exclusion_Reports__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Address --></label>
+        <name>et4ae5__FromAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Email --></label>
+        <name>et4ae5__FromEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Name --></label>
+        <name>et4ae5__FromName__c</name>
+    </fields>
+    <fields>
+        <label><!-- HasBeenQueued --></label>
+        <name>et4ae5__HasBeenQueued__c</name>
+    </fields>
+    <fields>
+        <help>Dieser Job wurde an einer Stelle im Prozess wiederholt. Ein Job wird hauptsächlich aufgrund von Konnektivitätsproblemen wiederholt.</help>
+        <label><!-- Retried --></label>
+        <name>et4ae5__HasEnteredRetry__c</name>
+    </fields>
+    <fields>
+        <label><!-- InitiatedDate --></label>
+        <name>et4ae5__InitiatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- JobId --></label>
+        <name>et4ae5__JobId__c</name>
+    </fields>
+    <fields>
+        <label><!-- JobStarted --></label>
+        <name>et4ae5__JobStarted__c</name>
+    </fields>
+    <fields>
+        <label><!-- JobStatus --></label>
+        <name>et4ae5__JobStatus__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation>Abgeschlossen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation>Fehler</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Keyword --></label>
+        <name>et4ae5__Keyword__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>et4ae5__Lead__c</name>
+        <relationshipLabel><!-- Mobile Sends --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- MemberID --></label>
+        <name>et4ae5__MemberID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message Text --></label>
+        <name>et4ae5__Message_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Messages --></label>
+        <name>et4ae5__Messages__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der Abonnenten, die keine Aktion in der E-Mail ausgeführt haben (d. h., die nicht auf einen Link geklickt haben).</help>
+        <label><!-- Number Not Clicked --></label>
+        <name>et4ae5__NumberNotClicked__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der gesendeten E-Mails. Dieser Wert stellt die Anzahl der Abonnenten dar, die Ziel der Sendung waren, minus ausgeschlossener Abonnenten.</help>
+        <label><!-- Number Sent --></label>
+        <name>et4ae5__NumberSent__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der Abonnenten, die das Abonnement der Sendung abbestellt haben.</help>
+        <label><!-- Number Unsubscribed --></label>
+        <name>et4ae5__NumberUnsubscribed__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der E-Mails mit Bounces unabhängig davon, ob es ein Soft oder Hard Bounce war.</help>
+        <label><!-- Number Bounced --></label>
+        <name>et4ae5__Number_Bounced__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der E-Mails ohne Bounces.</help>
+        <label><!-- Number Delivered --></label>
+        <name>et4ae5__Number_Delivered__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der Abonnenten, die die E-Mail nicht geöffnet haben.</help>
+        <label><!-- Number Not Opened --></label>
+        <name>et4ae5__Number_Not_Opened__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der Abonnenten, denen die Mitteilung nicht zugestellt werden konnte.</help>
+        <label><!-- Number of Existing Undeliverables --></label>
+        <name>et4ae5__NumberofExistingUndeliverables__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der Abonnenten, die das Abonnement abbestellt oder sich abgemeldet haben, bevor die E-Mail gesendet wurde.</help>
+        <label><!-- Number of Existing Unsubscribes --></label>
+        <name>et4ae5__NumberofExistingUnsubscribes__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der E-Mails, die aufgrund dauerhafter Fehler nicht zugestellt wurden.</help>
+        <label><!-- Number of Hard Bounces --></label>
+        <name>et4ae5__NumberofHardBounces__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der E-Mails, die aufgrund nicht dauerhafter Fehler nicht zugestellt wurden.</help>
+        <label><!-- Number of Soft Bounces --></label>
+        <name>et4ae5__NumberofSoftBounces__c</name>
+    </fields>
+    <fields>
+        <help>Die Gesamtanzahl der Abonnenten, die auf den Link &quot;Weiterleiten&quot; geklickt haben.</help>
+        <label><!-- Number of Subscribers Forwarding --></label>
+        <name>et4ae5__NumberofSubscribersForwardingEmail__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der in einer E-Mail (d. h. durch Klicken auf einen Link) ausgeführten Aktionen. Dieser Wert enthält mehrere Aktionen desselben Abonnenten.</help>
+        <label><!-- Number of Total Clicks --></label>
+        <name>et4ae5__NumberofTotalClicks__c</name>
+    </fields>
+    <fields>
+        <help>Die Häufigkeit, mit der die Mitteilung geöffnet wurde. Dieser Wert enthält mehrere Öffnungen desselben Abonnenten.</help>
+        <label><!-- Number of Total Opens --></label>
+        <name>et4ae5__NumberofTotalOpens__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der Abonnenten, die eine Aktion in der E-Mail ausgeführt haben (d. h. durch Klicken auf einen Link).</help>
+        <label><!-- Number of Unique Clicks --></label>
+        <name>et4ae5__NumberofUniqueClicks__c</name>
+    </fields>
+    <fields>
+        <help>Die Anzahl der E-Mails, die einmalig geöffnet wurden. Dieser Wert enthält nur eine Öffnung pro Abonnent.</help>
+        <label><!-- Number of Unique Opens --></label>
+        <name>et4ae5__NumberofUniqueOpens__c</name>
+    </fields>
+    <fields>
+        <help>Der Prozentsatz der geöffneten E-Mails im Vergleich zu dem der gesendeten E-Mails (ohne Bounces).</help>
+        <label><!-- Open Rate --></label>
+        <name>et4ae5__Open_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opt-in Certification Date/Time --></label>
+        <name>et4ae5__Opt_in_Certification_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opt-in Certification User --></label>
+        <name>et4ae5__Opt_in_Certification_User__c</name>
+        <relationshipLabel><!-- Mobile Sends --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Recipients Opted In --></label>
+        <name>et4ae5__RecipientsOptedIn__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Id --></label>
+        <name>et4ae5__ReportId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Name --></label>
+        <name>et4ae5__ReportName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reports --></label>
+        <name>et4ae5__Reports__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Date/Time --></label>
+        <name>et4ae5__Scheduled_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Classification Id --></label>
+        <name>et4ae5__SendClassificationId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Status --></label>
+        <name>et4ae5__SendStatus__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation>Fertig</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation>Fehlgeschlagen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation>Neu</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Processing</masterLabel>
+            <translation>Wird bearbeitet</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation>Vorgelegt</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Send Time --></label>
+        <name>et4ae5__SendTime__c</name>
+    </fields>
+    <fields>
+        <help>Der Sendungsstatus gibt an, an welcher Stelle im Prozess sich die Sendung befindet.</help>
+        <label><!-- Send Status --></label>
+        <name>et4ae5__Send_Status_View__c</name>
+    </fields>
+    <fields>
+        <label><!-- SenderProfileId --></label>
+        <name>et4ae5__SenderProfileId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Date/Time --></label>
+        <name>et4ae5__Status_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subject --></label>
+        <name>et4ae5__Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscriber List Id --></label>
+        <name>et4ae5__SubscriberListId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subscriber List Name --></label>
+        <name>et4ae5__SubscriberListName__c</name>
+    </fields>
+    <fields>
+        <label><!-- SyncComplete --></label>
+        <name>et4ae5__SyncComplete__c</name>
+    </fields>
+    <fields>
+        <label><!-- SyncId --></label>
+        <name>et4ae5__SyncId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Thumbnail --></label>
+        <name>et4ae5__Thumbnail__c</name>
+    </fields>
+    <fields>
+        <label><!-- TimeSinceRequest --></label>
+        <name>et4ae5__TimeSinceRequest__c</name>
+    </fields>
+    <fields>
+        <label><!-- TrackingLastRequested --></label>
+        <name>et4ae5__TrackingLastRequested__c</name>
+    </fields>
+    <fields>
+        <label><!-- TrackingOnly --></label>
+        <name>et4ae5__TrackingOnly__c</name>
+    </fields>
+    <fields>
+        <help>Das Datum und die Uhrzeit, zu denen die letzte Tracking-Aktualisierung empfangen wurde.</help>
+        <label><!-- Tracking As Of --></label>
+        <name>et4ae5__Tracking_As_Of__c</name>
+    </fields>
+    <fields>
+        <label><!-- TriggerDelayedSend --></label>
+        <name>et4ae5__TriggerDelayedSend__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Enabled Business Unit --></label>
+        <name>et4ae5__UEBU__c</name>
+        <relationshipLabel><!-- Mobile Sends --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Der Prozentsatz der Benutzer, die das Abonnement abbestellt haben, im Vergleich zu dem der gesendeten E-Mails (ohne Bounces).</help>
+        <label><!-- Unsubscribe Rate --></label>
+        <name>et4ae5__Unsubscribe_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Unit --></label>
+        <name>et4ae5__fBusiness_Unit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message Text (Deprecated 5.31) --></label>
+        <name>et4ae5__message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Code --></label>
+        <name>et4ae5__shortCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message Id --></label>
+        <name>et4ae5__smsId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message Name --></label>
+        <name>et4ae5__smsName__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nummer der Definition für mobile Sendung</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Queued SMS Definition --></label>
+        <name>Queued_SMS_Definition</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- SMS Definition --></label>
+        <name>SMS_Definition</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Cancel_Mobile_Send --></label>
+        <name>et4ae5__Cancel_Mobile_Send</name>
+    </webLinks>
+</CustomObjectTranslation>

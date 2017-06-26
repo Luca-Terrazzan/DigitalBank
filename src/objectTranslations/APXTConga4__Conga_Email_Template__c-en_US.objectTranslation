@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Description --></label>
+        <name>APXTConga4__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- HTML Body --></label>
+        <name>APXTConga4__HTMLBody__c</name>
+    </fields>
+    <fields>
+        <help><!-- When enabled, Conga Composer stores the body of the HTML template as an attachment, rather than in the Rich Text field. --></help>
+        <label><!-- Use attachment for template body --></label>
+        <name>APXTConga4__Is_Body_Attachment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>APXTConga4__Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subject --></label>
+        <name>APXTConga4__Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Template Group --></label>
+        <name>APXTConga4__Template_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Text Body --></label>
+        <name>APXTConga4__TextBody__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Advanced_Editor --></label>
+        <name>APXTConga4__Advanced_Editor</name>
+    </webLinks>
+</CustomObjectTranslation>

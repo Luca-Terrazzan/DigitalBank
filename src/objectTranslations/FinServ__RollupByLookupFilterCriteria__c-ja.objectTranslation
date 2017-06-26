@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ルックアップによる積み上げ検索条件</value>
+    </caseValues>
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>FinServ__FieldName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Value --></label>
+        <name>FinServ__FieldValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operator --></label>
+        <name>FinServ__Operator__c</name>
+        <picklistValues>
+            <masterLabel>contains</masterLabel>
+            <translation>次の値を含む</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ends with</masterLabel>
+            <translation>次の文字列で終わる</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>equals</masterLabel>
+            <translation>次の文字列と一致する</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater than</masterLabel>
+            <translation>＞</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater than or equal to</masterLabel>
+            <translation>＞＝</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation>＜</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than or equal to</masterLabel>
+            <translation>＜＝</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not contains</masterLabel>
+            <translation>次の値を含まない</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not equal to</masterLabel>
+            <translation>次の文字列と一致しない</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not like</masterLabel>
+            <translation>次に部分一致しない</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>starts with</masterLabel>
+            <translation>次の文字列で始まる</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RollupByLookupConfig --></label>
+        <name>FinServ__RollupByLookupConfig__c</name>
+        <relationshipLabel><!-- Rollup By Lookup Filter Criterias --></relationshipLabel>
+    </fields>
+    <nameFieldLabel>オブジェクト名</nameFieldLabel>
+</CustomObjectTranslation>

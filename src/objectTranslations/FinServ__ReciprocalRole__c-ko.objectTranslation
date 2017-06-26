@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>상호 역할</value>
+    </caseValues>
+    <fields>
+        <help>선택한 경우 해당 역할 반전이 자동으로 만들어집니다.</help>
+        <label><!-- Create Inverse Role --></label>
+        <name>FinServ__CreateInverseRole__c</name>
+    </fields>
+    <fields>
+        <label><!-- InverseRelationship --></label>
+        <name>FinServ__InverseRelationship__c</name>
+        <relationshipLabel><!-- Inverse Relationship --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Inverse Role --></label>
+        <name>FinServ__InverseRole__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relationship Type --></label>
+        <name>FinServ__RelationshipType__c</name>
+        <picklistValues>
+            <masterLabel>Account Account Relation</masterLabel>
+            <translation>계정 계정 관계</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation>모두</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Contact Relation</masterLabel>
+            <translation>연락처 연락처 관계</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>FinServ__SourceSystemId__c</name>
+    </fields>
+    <nameFieldLabel>역할</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Account Role --></label>
+        <name>AccountRole</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contact Role --></label>
+        <name>ContactRole</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Reciprocal Role cannot be modified --></errorMessage>
+        <name>FinServ__ProhibitUpdates</name>
+    </validationRules>
+</CustomObjectTranslation>

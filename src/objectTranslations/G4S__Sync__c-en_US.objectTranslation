@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- API Response --></label>
+        <name>G4S__API_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment --></label>
+        <name>G4S__Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- End --></label>
+        <name>G4S__End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Events Created --></label>
+        <name>G4S__Events_Created__c</name>
+    </fields>
+    <fields>
+        <label><!-- Events Updated --></label>
+        <name>G4S__Events_Updated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Guests In Response --></label>
+        <name>G4S__Guests_In_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Leads Created --></label>
+        <name>G4S__Leads_Created__c</name>
+    </fields>
+    <fields>
+        <label><!-- Range End --></label>
+        <name>G4S__Range_End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Range Start --></label>
+        <name>G4S__Range_Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sessions In Response --></label>
+        <name>G4S__Sessions_In_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start --></label>
+        <name>G4S__Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>G4S__Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Users In Request --></label>
+        <name>G4S__Users_In_Request__c</name>
+    </fields>
+    <fields>
+        <label><!-- Users In Response --></label>
+        <name>G4S__Users_In_Response__c</name>
+    </fields>
+</CustomObjectTranslation>

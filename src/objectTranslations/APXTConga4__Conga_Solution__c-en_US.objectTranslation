@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Button/Link API Name --></label>
+        <name>APXTConga4__Button_Link_API_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Button Body (URL) --></label>
+        <name>APXTConga4__Button_body_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Composer Parameters --></label>
+        <name>APXTConga4__Composer_Parameters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conga Email Template Count --></label>
+        <name>APXTConga4__CongaEmailTemplateCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Object Id --></label>
+        <name>APXTConga4__Custom_Object_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Formula Field API Name --></label>
+        <name>APXTConga4__Formula_Field_API_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Formula Field Body --></label>
+        <name>APXTConga4__Formula_body_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Launch --></label>
+        <name>APXTConga4__Launch_C8_Formula_Button__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Object Type Validator --></label>
+        <name>APXTConga4__Master_Object_Type_Validator__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Object Type --></label>
+        <name>APXTConga4__Master_Object_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sample Record Id --></label>
+        <name>APXTConga4__Sample_Record_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Solution Description --></label>
+        <name>APXTConga4__Solution_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Solution Weblink Syntax --></label>
+        <name>APXTConga4__Solution_Weblink_Syntax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weblink Id --></label>
+        <name>APXTConga4__Weblink_Id__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Add_Conga_Email_Template --></label>
+        <name>APXTConga4__Add_Conga_Email_Template</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Parameters --></label>
+        <name>APXTConga4__Add_Parameters</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Queries --></label>
+        <name>APXTConga4__Add_Queries</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Reports --></label>
+        <name>APXTConga4__Add_Reports</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Templates --></label>
+        <name>APXTConga4__Add_Templates</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Button_Adder --></label>
+        <name>APXTConga4__Button_Adder</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CM_Launch_Button --></label>
+        <name>APXTConga4__CM_Launch_Button</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Sample_Record_Selector --></label>
+        <name>APXTConga4__Sample_Record_Selector</name>
+    </webLinks>
+</CustomObjectTranslation>

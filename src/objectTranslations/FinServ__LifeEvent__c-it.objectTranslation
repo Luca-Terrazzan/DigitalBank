@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Evento di vita</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Eventi di vita</value>
+    </caseValues>
+    <fields>
+        <label><!-- Client --></label>
+        <name>FinServ__Client__c</name>
+        <relationshipLabel><!-- Life Events --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Discussion Note --></label>
+        <name>FinServ__DiscussionNote__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Date --></label>
+        <name>FinServ__EventDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Type --></label>
+        <name>FinServ__EventType__c</name>
+        <picklistValues>
+            <masterLabel>College</masterLabel>
+            <translation>Università</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Baby</masterLabel>
+            <translation>Nuovo figlio</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Business</masterLabel>
+            <translation>Nuovo business</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Home</masterLabel>
+            <translation>Nuova casa</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Job</masterLabel>
+            <translation>Nuovo lavoro</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retirement</masterLabel>
+            <translation>Pensionamento</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Financial Goal --></label>
+        <name>FinServ__FinancialGoal__c</name>
+        <relationshipLabel><!-- Life Events --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Goal Type --></label>
+        <name>FinServ__GoalType__c</name>
+        <picklistValues>
+            <masterLabel>Saving for College</masterLabel>
+            <translation>Risparmio per l&apos;università</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving for Retirement</masterLabel>
+            <translation>Risparmio per la pensione</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>FinServ__SourceSystemId__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nome evento di vita</nameFieldLabel>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

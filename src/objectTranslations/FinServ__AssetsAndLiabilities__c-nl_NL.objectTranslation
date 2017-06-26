@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Activum en passivum</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Activa en passiva</value>
+    </caseValues>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Commercial</masterLabel>
+            <translation><!-- Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wealth</masterLabel>
+            <translation><!-- Wealth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>FinServ__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>FinServ__AssetsAndLiabilitiesSource__c</name>
+        <picklistValues>
+            <masterLabel>Manual Entry</masterLabel>
+            <translation>Handmatige invoer</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yodlee</masterLabel>
+            <translation>Yodlee</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>FinServ__AssetsAndLiabilitiesType__c</name>
+        <picklistValues>
+            <masterLabel>Auto Loan</masterLabel>
+            <translation>Lening voor een auto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automobile</masterLabel>
+            <translation>Automobiel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash</masterLabel>
+            <translation>Contant geld</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Collection</masterLabel>
+            <translation>Verzameling</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equipment</masterLabel>
+            <translation>Uitrusting</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation>Goud</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jewelry</masterLabel>
+            <translation>Juwelen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mortgage</masterLabel>
+            <translation>Hypotheek</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Overige</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Loan</masterLabel>
+            <translation>Persoonlijke lening</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Real Estate</masterLabel>
+            <translation>Onroerend goed</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>FinServ__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account --></label>
+        <name>FinServ__FinancialAccount__c</name>
+        <relationshipLabel><!-- Assets and Liabilities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Household --></label>
+        <name>FinServ__Household__c</name>
+        <relationshipLabel><!-- Household Assets and Liabilities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Joint Owner --></label>
+        <name>FinServ__JointOwner__c</name>
+        <relationshipLabel><!-- Joint Owner --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Owner Type --></label>
+        <name>FinServ__OwnerType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ownership --></label>
+        <name>FinServ__Ownership__c</name>
+        <picklistValues>
+            <masterLabel>Individual</masterLabel>
+            <translation>Individueel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joint</masterLabel>
+            <translation>Gezamenlijk</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trust</masterLabel>
+            <translation>Trust</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Primary Owner --></label>
+        <name>FinServ__PrimaryOwner__c</name>
+        <relationshipLabel><!-- Client Assets and Liabilities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>FinServ__SourceSystemId__c</name>
+    </fields>
+    <gender>Neuter</gender>
+    <nameFieldLabel>Naam van activum of schuld</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Liability --></label>
+        <name>Liability</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Asset --></label>
+        <name>NonfinancialAsset</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Individually owned accounts can&apos;t have a joint owner. --></errorMessage>
+        <name>FinServ__NoJointOwnerForIndividualAccounts</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The primary and joint owner must be different. --></errorMessage>
+        <name>FinServ__PrimaryAndJointOwnerCannotBeSame</name>
+    </validationRules>
+</CustomObjectTranslation>

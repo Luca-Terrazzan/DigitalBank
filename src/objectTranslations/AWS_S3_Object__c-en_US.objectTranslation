@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>AWS S3 Object</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>AWS S3 Objects</value>
+    </caseValues>
+    <fields>
+        <label><!-- Access --></label>
+        <name>Access__c</name>
+        <picklistValues>
+            <masterLabel>FULL_CONTROL</masterLabel>
+            <translation><!-- FULL_CONTROL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WRITE</masterLabel>
+            <translation><!-- WRITE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>public-read</masterLabel>
+            <translation><!-- public-read --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bucket Name --></label>
+        <name>Bucket_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Content Type --></label>
+        <name>Content_Type__c</name>
+        <picklistValues>
+            <masterLabel>gif</masterLabel>
+            <translation><!-- gif --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>image/gif</masterLabel>
+            <translation><!-- image/gif --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>image/jpeg</masterLabel>
+            <translation><!-- image/jpeg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>image/png</masterLabel>
+            <translation><!-- image/png --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>jpg</masterLabel>
+            <translation><!-- jpg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>pdf</masterLabel>
+            <translation><!-- pdf --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>text/html</masterLabel>
+            <translation><!-- text/html --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>text/plain</masterLabel>
+            <translation><!-- text/plain --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- File Name --></label>
+        <name>File_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Open the resource in a new window --></help>
+        <label><!-- Preview Link --></label>
+        <name>Preview_Link__c</name>
+    </fields>
+    <layouts>
+        <layout>AWS S3 Document Layout</layout>
+        <sections>
+            <label><!-- Preview --></label>
+            <section>Preview</section>
+        </sections>
+        <sections>
+            <label><!-- Upload --></label>
+            <section>Upload</section>
+        </sections>
+        <sections>
+            <label><!-- sdf --></label>
+            <section>sdf</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

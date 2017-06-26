@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>個別のメールの結果</value>
+    </caseValues>
+    <fields>
+        <label><!-- Clicked --></label>
+        <name>et4ae5__Clicked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact ID --></label>
+        <name>et4ae5__Contact_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>et4ae5__Contact__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>この購読者のメールアドレスがバウンスされた日時</help>
+        <label><!-- Date Bounced --></label>
+        <name>et4ae5__DateBounced__c</name>
+    </fields>
+    <fields>
+        <help>購読者がメールを開封した日時</help>
+        <label><!-- Date Opened --></label>
+        <name>et4ae5__DateOpened__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Sent --></label>
+        <name>et4ae5__DateSent__c</name>
+    </fields>
+    <fields>
+        <help>購読者が購読を取り消した日時</help>
+        <label><!-- Date Unsubscribed --></label>
+        <name>et4ae5__DateUnsubscribed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>et4ae5__Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Address --></label>
+        <name>et4ae5__FromAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Name --></label>
+        <name>et4ae5__FromName__c</name>
+    </fields>
+    <fields>
+        <help>この購読者に送信したメールが、永続的な条件のため拒否されました (通常、&quot;ユーザーが不明です&quot; または &quot;ドメインが見つかりません&quot; エラーの場合に発生します)</help>
+        <label><!-- Hard Bounce --></label>
+        <name>et4ae5__HardBounce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead ID --></label>
+        <name>et4ae5__Lead_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>et4ae5__Lead__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Merge Id --></label>
+        <name>et4ae5__MergeId__c</name>
+    </fields>
+    <fields>
+        <help>この購読者がこのメール内のリンクをクリックした合計回数</help>
+        <label><!-- Number of Total Clicks --></label>
+        <name>et4ae5__NumberOfTotalClicks__c</name>
+    </fields>
+    <fields>
+        <help>この購読者がこのメール内のリンクをクリックした一意の回数 (一意のとは、1 つのリンクにつき 1 回のクリックのみという意味)</help>
+        <label><!-- Number of Unique Clicks --></label>
+        <name>et4ae5__NumberOfUniqueClicks__c</name>
+    </fields>
+    <fields>
+        <help>購読者がメールを開封したかどうかを示します</help>
+        <label><!-- Opened --></label>
+        <name>et4ae5__Opened__c</name>
+    </fields>
+    <fields>
+        <help>メール送信の一意の識別子。必要に応じて Marketing Cloud サポートに連絡するときに、この番号の提示を求められる場合があります。</help>
+        <label><!-- Send Definition --></label>
+        <name>et4ae5__SendDefinition__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>送信したメールは、受信箱が満杯などの一時的と思われる状態のため、72 時間の間 15 分間隔で行われるメール送信の再試行に失敗した後で拒否されました。購読者は、3 回のソフトバウンスの後で、「保留」状況に設定されます</help>
+        <label><!-- Soft Bounce --></label>
+        <name>et4ae5__SoftBounce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subject Line --></label>
+        <name>et4ae5__SubjectLine__c</name>
+    </fields>
+    <fields>
+        <help>最後のトラッキング更新を Salesforce が受信した日時</help>
+        <label><!-- Tracking As Of --></label>
+        <name>et4ae5__Tracking_As_Of__c</name>
+    </fields>
+    <fields>
+        <label><!-- Triggered Send --></label>
+        <name>et4ae5__TriggeredSendDefinition__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <nameFieldLabel>メール名</nameFieldLabel>
+    <webLinks>
+        <label><!-- Request_Tracking_Immediately --></label>
+        <name>et4ae5__Request_Tracking_Immediately</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>High Growth.Featured:Cash Flow &amp; Lending</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Cash Flow &amp; Lending</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>High Growth.Featured:Real Estate Investments</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Real Estate Investments</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>High Growth.Featured:Stock Market</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Stock Market</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+</ManagedTopics>

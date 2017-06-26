@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Individuelles E-Mail-Ergebnis</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Individuelle E-Mail-Ergebnisse</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Individuelles E-Mail-Ergebnis</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Individuelle E-Mail-Ergebnisse</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Individuellen E-Mail-Ergebnisses</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Individueller E-Mail-Ergebnisse</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Individuellem E-Mail-Ergebnis</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Individuellen E-Mail-Ergebnissen</value>
+    </caseValues>
+    <fields>
+        <label><!-- Clicked --></label>
+        <name>et4ae5__Clicked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact ID --></label>
+        <name>et4ae5__Contact_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>et4ae5__Contact__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Das Datum und die Uhrzeit mit dem Bounce der E-Mail-Adresse dieses Abonnenten</help>
+        <label><!-- Date Bounced --></label>
+        <name>et4ae5__DateBounced__c</name>
+    </fields>
+    <fields>
+        <help>Das Datum und die Uhrzeit, zu denen der Abonnent die E-Mail geöffnet hat.</help>
+        <label><!-- Date Opened --></label>
+        <name>et4ae5__DateOpened__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Sent --></label>
+        <name>et4ae5__DateSent__c</name>
+    </fields>
+    <fields>
+        <help>Das Datum und die Uhrzeit, zu denen der Abonnent das Abonnement abbestellt hat.</help>
+        <label><!-- Date Unsubscribed --></label>
+        <name>et4ae5__DateUnsubscribed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>et4ae5__Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Address --></label>
+        <name>et4ae5__FromAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Name --></label>
+        <name>et4ae5__FromName__c</name>
+    </fields>
+    <fields>
+        <help>Die an diesen Abonnenten gesendete E-Mail wurde aufgrund dauerhafter Bedingungen abgelehnt (dies ist in der Regel der Fall, wenn Fehler vom Typ &quot;Benutzer unbekannt&quot; oder &quot;Domäne nicht gefunden&quot; auftreten).</help>
+        <label><!-- Hard Bounce --></label>
+        <name>et4ae5__HardBounce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead ID --></label>
+        <name>et4ae5__Lead_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>et4ae5__Lead__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Merge Id --></label>
+        <name>et4ae5__MergeId__c</name>
+    </fields>
+    <fields>
+        <help>Die Gesamtanzahl der Häufigkeit, mit der der Abonnent auf die Links in dieser E-Mail geklickt hat.</help>
+        <label><!-- Number of Total Clicks --></label>
+        <name>et4ae5__NumberOfTotalClicks__c</name>
+    </fields>
+    <fields>
+        <help>Die Häufigkeit, mit der der Abonnent einmalig auf die Links in dieser E-Mail geklickt hat (&quot;einmalig&quot; bedeutet ein Klick pro Link).</help>
+        <label><!-- Number of Unique Clicks --></label>
+        <name>et4ae5__NumberOfUniqueClicks__c</name>
+    </fields>
+    <fields>
+        <help>Gibt an, ob der Abonnent die E-Mail geöffnet hat oder nicht.</help>
+        <label><!-- Opened --></label>
+        <name>et4ae5__Opened__c</name>
+    </fields>
+    <fields>
+        <help>Die eindeutige ID der E-Mail-Sendung. Sie werden möglicherweise gebeten, diese Nummer anzugeben, falls Sie den Marketing Cloud-Support anrufen müssen.</help>
+        <label><!-- Send Definition --></label>
+        <name>et4ae5__SendDefinition__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Die gesendete E-Mail wurde aufgrund einer anscheinend vorübergehenden Bedingung abgelehnt. Dabei kann es sich um einen vollen Posteingang handeln, oder das System hat 72 Stunden lang alle 15 Minuten ohne Erfolg versucht, die E-Mail zu senden. Ein Abonnent wird nach drei Soft Bounces in den Status &quot;Gehalten&quot; versetzt.</help>
+        <label><!-- Soft Bounce --></label>
+        <name>et4ae5__SoftBounce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subject Line --></label>
+        <name>et4ae5__SubjectLine__c</name>
+    </fields>
+    <fields>
+        <help>Das Datum und die Uhrzeit, zu denen die letzte Tracking-Aktualisierung von Salesforce empfangen wurde.</help>
+        <label><!-- Tracking As Of --></label>
+        <name>et4ae5__Tracking_As_Of__c</name>
+    </fields>
+    <fields>
+        <label><!-- Triggered Send --></label>
+        <name>et4ae5__TriggeredSendDefinition__c</name>
+        <relationshipLabel><!-- Individual Email Results --></relationshipLabel>
+    </fields>
+    <gender>Neuter</gender>
+    <nameFieldLabel>E-Mail-Name</nameFieldLabel>
+    <webLinks>
+        <label><!-- Request_Tracking_Immediately --></label>
+        <name>et4ae5__Request_Tracking_Immediately</name>
+    </webLinks>
+</CustomObjectTranslation>

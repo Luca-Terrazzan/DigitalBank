@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>メールリンケージ</value>
+    </caseValues>
+    <fields>
+        <label><!-- ExcludedCampaigns --></label>
+        <name>et4ae5__ExcludedCampaigns__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExcludedReports --></label>
+        <name>et4ae5__ExcludedReports__c</name>
+    </fields>
+    <fields>
+        <label><!-- Excluded Campaigns --></label>
+        <name>et4ae5__Excluded_Campaigns__c</name>
+    </fields>
+    <fields>
+        <label><!-- Excluded Reports --></label>
+        <name>et4ae5__Excluded_Reports__c</name>
+    </fields>
+    <fields>
+        <label><!-- IncludedCampaigns --></label>
+        <name>et4ae5__IncludedCampaigns__c</name>
+    </fields>
+    <fields>
+        <label><!-- IncludedReports --></label>
+        <name>et4ae5__IncludedReports__c</name>
+    </fields>
+    <fields>
+        <label><!-- IncludedSubscriberLists --></label>
+        <name>et4ae5__IncludedSubscriberLists__c</name>
+    </fields>
+    <fields>
+        <label><!-- Included Campaigns --></label>
+        <name>et4ae5__Included_Campaigns__c</name>
+    </fields>
+    <fields>
+        <label><!-- Included Reports --></label>
+        <name>et4ae5__Included_Reports__c</name>
+    </fields>
+    <fields>
+        <label><!-- Included Subscriber Lists --></label>
+        <name>et4ae5__Included_Subscriber_Lists__c</name>
+    </fields>
+    <fields>
+        <label><!-- emailId --></label>
+        <name>et4ae5__emailId__c</name>
+    </fields>
+    <fields>
+        <label><!-- emailName --></label>
+        <name>et4ae5__emailName__c</name>
+    </fields>
+    <nameFieldLabel>メールリンケージ番号</nameFieldLabel>
+</CustomObjectTranslation>

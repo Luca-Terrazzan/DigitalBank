@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Status van DocuSign-ontvangers</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Status van DocuSign-ontvangers</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>dsfs__Account__c</name>
+        <relationshipLabel><!-- DocuSign Recipient Status --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>dsfs__Contact__c</name>
+        <relationshipLabel><!-- DocuSign Recipient Status --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date Declined --></label>
+        <name>dsfs__Date_Declined__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Delivered --></label>
+        <name>dsfs__Date_Delivered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Sent --></label>
+        <name>dsfs__Date_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Signed --></label>
+        <name>dsfs__Date_Signed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Decline Reason --></label>
+        <name>dsfs__Decline_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Recipient Company --></label>
+        <name>dsfs__DocuSign_Recipient_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Recipient Email --></label>
+        <name>dsfs__DocuSign_Recipient_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Recipient Id --></label>
+        <name>dsfs__DocuSign_Recipient_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Recipient Title --></label>
+        <name>dsfs__DocuSign_Recipient_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Routing Order --></label>
+        <name>dsfs__DocuSign_Routing_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Id --></label>
+        <name>dsfs__Envelope_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>dsfs__Lead__c</name>
+        <relationshipLabel><!-- DocuSign Recipient Status --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- DocuSign Status Record --></label>
+        <name>dsfs__Parent_Status_Record__c</name>
+        <relationshipLabel><!-- DocuSign Recipient Status --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Recipient Status --></label>
+        <name>dsfs__Recipient_Status__c</name>
+    </fields>
+    <gender>Neuter</gender>
+    <nameFieldLabel>Naam DocuSign-ontvanger</nameFieldLabel>
+    <webLinks>
+        <label><!-- ResendDocuSignEmail --></label>
+        <name>dsfs__ResendDocuSignEmail</name>
+    </webLinks>
+</CustomObjectTranslation>

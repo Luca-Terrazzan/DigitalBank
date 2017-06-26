@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Totaliseren op opzoekfiltercriteria</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Totaliseren op opzoekfiltercriteria</value>
+    </caseValues>
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>FinServ__FieldName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Value --></label>
+        <name>FinServ__FieldValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operator --></label>
+        <name>FinServ__Operator__c</name>
+        <picklistValues>
+            <masterLabel>contains</masterLabel>
+            <translation>bevat</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ends with</masterLabel>
+            <translation>eindigt met</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>equals</masterLabel>
+            <translation>is gelijk aan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater than</masterLabel>
+            <translation>groter dan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater than or equal to</masterLabel>
+            <translation>groter dan of gelijk aan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation>kleiner dan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than or equal to</masterLabel>
+            <translation>kleiner dan of gelijk aan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not contains</masterLabel>
+            <translation>bevat niet</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not equal to</masterLabel>
+            <translation>niet gelijk aan</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not like</masterLabel>
+            <translation>komt niet overeen met</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>starts with</masterLabel>
+            <translation>begint met</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RollupByLookupConfig --></label>
+        <name>FinServ__RollupByLookupConfig__c</name>
+        <relationshipLabel><!-- Rollup By Lookup Filter Criterias --></relationshipLabel>
+    </fields>
+    <gender>Neuter</gender>
+    <nameFieldLabel>Objectnaam</nameFieldLabel>
+</CustomObjectTranslation>

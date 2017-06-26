@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Unchecking this flag will prohibit your users from opening their own free trial Glance accounts from within the app. --></help>
+        <label><!-- Allow Free Trial? --></label>
+        <name>G4S__Allow_Free_Trial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch Job Id --></label>
+        <name>G4S__Batch_Job_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Allows admins to control whether users may post Scheduled Glance Meetings in their Chatter feeds. --></help>
+        <label><!-- Chatter When Scheduling Glance Meeting --></label>
+        <name>G4S__Chatter_When_Scheduling_Glance_Meeting__c</name>
+    </fields>
+    <fields>
+        <help><!-- Allows admins to control whether users may post Started Glance Sessions in their Chatter feeds. --></help>
+        <label><!-- Chatter When Starting Glance Session --></label>
+        <name>G4S__Chatter_When_Starting_Glance_Session__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cobrowse Account Enabled --></label>
+        <name>G4S__Cobrowse_Account_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cobrowse Account Field --></label>
+        <name>G4S__Cobrowse_Account_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cobrowse Case Enabled --></label>
+        <name>G4S__Cobrowse_Case_Enabled__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the field to be used as the Session Key when starting cobrowse sessions. --></help>
+        <label><!-- Cobrowse Case Field --></label>
+        <name>G4S__Cobrowse_Case_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cobrowse Contact Enabled --></label>
+        <name>G4S__Cobrowse_Contact_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cobrowse Contact Field --></label>
+        <name>G4S__Cobrowse_Contact_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cobrowse Enabled --></label>
+        <name>G4S__Cobrowse_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cobrowse Invitation Text --></label>
+        <name>G4S__Cobrowse_Invitation_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cobrowse Lead Enabled --></label>
+        <name>G4S__Cobrowse_Lead_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cobrowse Lead Field --></label>
+        <name>G4S__Cobrowse_Lead_Field__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the URL where your Glance cobrowse code is hosted. --></help>
+        <label><!-- Cobrowse Link --></label>
+        <name>G4S__Cobrowse_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cobrowse Window Options --></label>
+        <name>G4S__Cobrowse_Window_Options__c</name>
+        <picklistValues>
+            <masterLabel>Console Component</masterLabel>
+            <translation><!-- Console Component --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Window</masterLabel>
+            <translation><!-- New Window --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Should Glance create Events for sessions that users start outside of Salesforce, e.g., by using the Glance desktop client? --></help>
+        <label><!-- Create SF Events for non-SF Sessions --></label>
+        <name>G4S__Create_Events_From_Sessions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Glance can ask guests for contact info when they join your sessions and use it to create new Leads when appropriate. --></help>
+        <label><!-- Create Leads for Session Guests --></label>
+        <name>G4S__Create_Leads_From_Session_Guests__c</name>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Who Provide a New Email</masterLabel>
+            <translation><!-- Who Provide a New Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Who Provide a New Email and Name</masterLabel>
+            <translation><!-- Who Provide a New Email and Name --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Don&apos;t Open Glance Session Events --></label>
+        <name>G4S__Dont_Open_Glance_Session_Events__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable the Presence Indicator for the cobrowse button. --></help>
+        <label><!-- Enable Presence --></label>
+        <name>G4S__Enable_Presence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable SSO --></label>
+        <name>G4S__Enable_SSO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Universal Join --></label>
+        <name>G4S__Enable_Universal_Join__c</name>
+    </fields>
+    <fields>
+        <help><!-- When Glance session information is retrieved, Salesforce will attempt to find a matching Event record.  Event Match Window indicates how many minutes before AND after the Glance session start time Salesforce should search for a matching Event. --></help>
+        <label><!-- Event Match Window (mins) --></label>
+        <name>G4S__Event_Match_Window_mins__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the message your users will see if you choose to disable the Free Trial button. --></help>
+        <label><!-- Free Trial Disabled Message --></label>
+        <name>G4S__Free_Trial_Disabled_Message__c</name>
+    </fields>
+    <fields>
+        <help><!-- in hours --></help>
+        <label><!-- Hide Glance Buttons After --></label>
+        <name>G4S__Hide_Glance_Buttons_After__c</name>
+    </fields>
+    <fields>
+        <label><!-- How does your company use Salesforce? --></label>
+        <name>G4S__How_Does_Your_Company_Use_Salesforce__c</name>
+        <picklistValues>
+            <masterLabel>Sales Only</masterLabel>
+            <translation><!-- Sales Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales and Support</masterLabel>
+            <translation><!-- Sales and Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support Only</masterLabel>
+            <translation><!-- Support Only --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- IE Fallback Option --></label>
+        <name>G4S__IE_Fallback_Option__c</name>
+        <picklistValues>
+            <masterLabel>Link Via Chat</masterLabel>
+            <translation><!-- Link Via Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Verbal Key</masterLabel>
+            <translation><!-- Verbal Key --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Button text to accept a Cobrowse --></help>
+        <label><!-- Chat Accept Button Text --></label>
+        <name>G4S__Live_Agent_Chat_Accept_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- Button text to decline a Cobrowse --></help>
+        <label><!-- Chat Decline Button Text --></label>
+        <name>G4S__Live_Agent_Chat_Decline_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- Text displayed to visitor when Agent initiates a Cobrowse --></help>
+        <label><!-- Chat Prompt Text --></label>
+        <name>G4S__Live_Agent_Chat_Prompt_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- The web link to view the Terms &amp; Conditions for Cobrowsing --></help>
+        <label><!-- Chat Terms and Conditions Link --></label>
+        <name>G4S__Live_Agent_Chat_Terms_Link__c</name>
+    </fields>
+    <fields>
+        <help><!-- The text for the link to view Terms &amp; Conditions. If blank, no link is displayed. --></help>
+        <label><!-- Chat Terms and Conditions Text --></label>
+        <name>G4S__Live_Agent_Chat_Terms_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initiation Options --></label>
+        <name>G4S__Live_Agent_Initiation_Options__c</name>
+        <picklistValues>
+            <masterLabel>Automatic</masterLabel>
+            <translation><!-- Automatic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Click on Associated Field</masterLabel>
+            <translation><!-- Click on Associated Field --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Instant</masterLabel>
+            <translation><!-- Instant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Link Via Chat</masterLabel>
+            <translation><!-- Link Via Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Verbal Key</masterLabel>
+            <translation><!-- Verbal Key --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Partner User Id Field --></label>
+        <name>G4S__Partner_User_Id_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Presence Accept Terms --></label>
+        <name>G4S__Presence_Accept_Terms__c</name>
+    </fields>
+    <fields>
+        <help><!-- Salesforce users who get new Glance trial accounts will be assigned to this person’s group of Glance users. --></help>
+        <label><!-- Default Glance Admin --></label>
+        <lookupFilter>
+            <errorMessage><!-- User must be a Glance Administrator. --></errorMessage>
+        </lookupFilter>
+        <name>G4S__Primary_Glance_Admin__c</name>
+        <relationshipLabel><!-- Glance Company Settings --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Login link expiration, in seconds. --></help>
+        <label><!-- SSO Login Expiration --></label>
+        <name>G4S__SSO_Login_Expiration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Job Id --></label>
+        <name>G4S__Scheduled_Job_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show My Screen Enabled --></label>
+        <name>G4S__Show_My_Screen_Enabled__c</name>
+    </fields>
+    <fields>
+        <help><!-- Controls how often Salesforce checks the Glance service to retrieve new session data. --></help>
+        <label><!-- Sync Frequency --></label>
+        <name>G4S__Sync_Frequency__c</name>
+        <picklistValues>
+            <masterLabel>Daily</masterLabel>
+            <translation><!-- Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Every 2 hours</masterLabel>
+            <translation><!-- Every 2 hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hourly</masterLabel>
+            <translation><!-- Hourly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sync Type --></label>
+        <name>G4S__Sync_Type__c</name>
+        <picklistValues>
+            <masterLabel>Group</masterLabel>
+            <translation><!-- Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Individual Users</masterLabel>
+            <translation><!-- Individual Users --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Terms and Conditions --></label>
+        <name>G4S__Terms_and_Conditions__c</name>
+    </fields>
+    <fields>
+        <label><!-- View Guests Screen Enabled --></label>
+        <name>G4S__View_Guests_Screen_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- View Guests Screen Remote Control --></label>
+        <name>G4S__View_Guests_Screen_Remote_Control__c</name>
+        <picklistValues>
+            <masterLabel>Ask when session starts</masterLabel>
+            <translation><!-- Ask when session starts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None - View Only</masterLabel>
+            <translation><!-- None - View Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>View and Control</masterLabel>
+            <translation><!-- View and Control --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

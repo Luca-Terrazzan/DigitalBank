@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Client --></label>
+        <name>FinServ__Client__c</name>
+        <relationshipLabel><!-- Life Events --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Discussion Note --></label>
+        <name>FinServ__DiscussionNote__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Date --></label>
+        <name>FinServ__EventDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Type --></label>
+        <name>FinServ__EventType__c</name>
+        <picklistValues>
+            <masterLabel>College</masterLabel>
+            <translation><!-- College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Baby</masterLabel>
+            <translation><!-- New Baby --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Business</masterLabel>
+            <translation><!-- New Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Home</masterLabel>
+            <translation><!-- New Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Job</masterLabel>
+            <translation><!-- New Job --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retirement</masterLabel>
+            <translation><!-- Retirement --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Financial Goal --></label>
+        <name>FinServ__FinancialGoal__c</name>
+        <relationshipLabel><!-- Life Events --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Goal Type --></label>
+        <name>FinServ__GoalType__c</name>
+        <picklistValues>
+            <masterLabel>Saving for College</masterLabel>
+            <translation><!-- Saving for College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saving for Retirement</masterLabel>
+            <translation><!-- Saving for Retirement --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>FinServ__SourceSystemId__c</name>
+    </fields>
+</CustomObjectTranslation>

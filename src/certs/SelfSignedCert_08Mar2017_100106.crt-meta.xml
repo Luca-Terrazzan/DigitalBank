@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Certificate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caSigned>false</caSigned>
+    <encryptedWithPlatformEncryption>false</encryptedWithPlatformEncryption>
+    <expirationDate>2018-03-08T00:00:00.000Z</expirationDate>
+    <keySize>2048</keySize>
+    <masterLabel>SelfSignedCert_08Mar2017_100106</masterLabel>
+    <privateKeyExportable>true</privateKeyExportable>
+</Certificate>

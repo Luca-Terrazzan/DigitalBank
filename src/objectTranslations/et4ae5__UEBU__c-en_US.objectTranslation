@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Business Unit --></label>
+        <name>et4ae5__BU__c</name>
+        <relationshipLabel><!-- User Enabled Business Units --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Business Unit ID --></label>
+        <name>et4ae5__Business_Unit_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Unit Name --></label>
+        <name>et4ae5__Business_Unit_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enabled --></label>
+        <name>et4ae5__Enabled__c</name>
+    </fields>
+</CustomObjectTranslation>

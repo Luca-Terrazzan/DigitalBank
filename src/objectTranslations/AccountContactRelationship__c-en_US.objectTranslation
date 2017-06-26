@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Account-Contact Relationship</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Account-Contact Relationships</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Account-Contact Relationships --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Account-Contact Relationships --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- White Account Contact Id --></label>
+        <name>DGTB_AccountContactReference__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Include in Primary Group --></label>
+        <name>IncludeInGroup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>IsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Direct --></label>
+        <name>IsDirect__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Group --></label>
+        <name>PrimaryGroup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Member --></label>
+        <name>Primary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Roles --></label>
+        <name>Roles__c</name>
+        <picklistValues>
+            <masterLabel>Business User</masterLabel>
+            <translation><!-- Business User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Decision Maker</masterLabel>
+            <translation><!-- Decision Maker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Economic Buyer</masterLabel>
+            <translation><!-- Economic Buyer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Economic Decision Maker</masterLabel>
+            <translation><!-- Economic Decision Maker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee</masterLabel>
+            <translation><!-- Employee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evaluator</masterLabel>
+            <translation><!-- Evaluator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Executive Sponsor</masterLabel>
+            <translation><!-- Executive Sponsor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Influencer</masterLabel>
+            <translation><!-- Influencer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Buyer</masterLabel>
+            <translation><!-- Technical Buyer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Roll-Ups --></label>
+        <name>Rollups__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation><!-- All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assets and Liabilities</masterLabel>
+            <translation><!-- Assets and Liabilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Events</masterLabel>
+            <translation><!-- Events --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Accounts</masterLabel>
+            <translation><!-- Financial Accounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Goals</masterLabel>
+            <translation><!-- Financial Goals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tasks</masterLabel>
+            <translation><!-- Tasks --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>SourceSystemId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>StartDate__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

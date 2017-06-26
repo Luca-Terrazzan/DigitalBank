@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>金融口座ロール</value>
+    </caseValues>
+    <fields>
+        <label><!-- Balance --></label>
+        <name>Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>FinServ__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Editable --></label>
+        <name>FinServ__Editable__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>FinServ__EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account --></label>
+        <name>FinServ__FinancialAccount__c</name>
+        <relationshipLabel><!-- Financial Account Roles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Account --></label>
+        <name>FinServ__RelatedAccount__c</name>
+        <relationshipLabel><!-- Financial Account Roles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Contact --></label>
+        <name>FinServ__RelatedContact__c</name>
+        <relationshipLabel><!-- Financial Account Roles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>FinServ__Role__c</name>
+        <picklistValues>
+            <masterLabel>Accountant</masterLabel>
+            <translation>会計士</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Additional Owner</masterLabel>
+            <translation>その他の所有者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administrator</masterLabel>
+            <translation>管理者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advisor</masterLabel>
+            <translation>アドバイザー</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Annuitant</masterLabel>
+            <translation>年金受給者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Appoint / Remove Authority</masterLabel>
+            <translation>権限を任命/削除</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Authorized Agent</masterLabel>
+            <translation>委任代理人</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Authorized Agent / Beneficial Owner</masterLabel>
+            <translation>委任代理人 /実質的な所有者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Authorized Individual</masterLabel>
+            <translation>権利を持つ個人</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Authorized Signer</masterLabel>
+            <translation>承認された署名者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beneficial Owner</masterLabel>
+            <translation>実質的な所有者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beneficiary</masterLabel>
+            <translation>受取人</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Manager</masterLabel>
+            <translation>業務マネージャ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Committee Member</masterLabel>
+            <translation>委員</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conservator</masterLabel>
+            <translation>財産保管人</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Control Person</masterLabel>
+            <translation>監督者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporation</masterLabel>
+            <translation>法人</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cosigner</masterLabel>
+            <translation>連署者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custodian</masterLabel>
+            <translation>証券保管機関</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deceased Grantor</masterLabel>
+            <translation>死亡した譲渡人</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Decedent</masterLabel>
+            <translation>故人</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discretionary</masterLabel>
+            <translation>売買一任</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foundation</masterLabel>
+            <translation>財団</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Full Authority</masterLabel>
+            <translation>全権委任</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grantor</masterLabel>
+            <translation>譲与者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guardian</masterLabel>
+            <translation>後見人</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insured</masterLabel>
+            <translation>被保険者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interested Party</masterLabel>
+            <translation>当事者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minor Primary Owner</masterLabel>
+            <translation>未成年の主所有者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Original Depositor</masterLabel>
+            <translation>元の預金者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>その他</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Power of Attorney</masterLabel>
+            <translation>委任状</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary Owner</masterLabel>
+            <translation><!-- Primary Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proprietor</masterLabel>
+            <translation>所有権者</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOD Beneficiary</masterLabel>
+            <translation>TOD 受取人</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trustee</masterLabel>
+            <translation>管財人</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>FinServ__SourceSystemId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>FinServ__StartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account Category --></label>
+        <name>FinancialAccountCategory__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account Record Type --></label>
+        <name>Financial_Account_Record_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsLinkingPrimaryOwner --></label>
+        <name>IsLinkingPrimaryOwner__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsLoan --></label>
+        <name>IsLoan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account Type --></label>
+        <name>TypeIcon__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <nameFieldLabel>ロール番号</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Account Role --></label>
+        <name>AccountRole</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contact Role --></label>
+        <name>ContactRole</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- A Financial Account Role cannot be created as Inactive --></errorMessage>
+        <name>FinServ__CannotCreateInactiveRecord</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This record cannot be edited. To update role information, you can deactivate this record and create a new one. --></errorMessage>
+        <name>FinServ__FARCannotBeModified</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Inactive record cannot be edited. To update FAR, you can create a new one. --></errorMessage>
+        <name>FinServ__InactiveFARCannotBeEdited</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Inactive Financial Roles cannot be reactivated. --></errorMessage>
+        <name>FinServ__InactiveRecordCannotBeReactivated</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This record cannot be deactivated because ownership can be updated on the financial account only. --></errorMessage>
+        <name>FinServ__OwnershipRolesCannotBeDeactivated</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This record cannot be modified because ownership can be specified on the financial account only. --></errorMessage>
+        <name>FinServ__OwnershipRolesCannotBeModified</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Either Related Account or Related Contact is required. --></errorMessage>
+        <name>FinServ__RelatedAccountOrContactRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Role is required. --></errorMessage>
+        <name>FinServ__RoleIsMandatory</name>
+    </validationRules>
+</CustomObjectTranslation>

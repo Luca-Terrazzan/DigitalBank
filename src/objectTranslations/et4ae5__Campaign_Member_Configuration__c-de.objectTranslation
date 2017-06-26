@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Kampagnenmitgliedskonfiguration</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Kampagnenmitgliedskonfigurationen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Kampagnenmitgliedskonfiguration</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Kampagnenmitgliedskonfigurationen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Kampagnenmitgliedskonfiguration</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Kampagnenmitgliedskonfigurationen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Kampagnenmitgliedskonfiguration</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Kampagnenmitgliedskonfigurationen</value>
+    </caseValues>
+    <fields>
+        <help>Wenn dieses Kontrollkästchen aktiviert ist, wird der Kampagnenmitgliedstatus oder das Aktivitätsfeld in Abhängigkeit des Werts im Feld &quot;UpdateStatusOrActivity&quot; aktualisiert.</help>
+        <label><!-- CampaignMemberConnectorEnabled --></label>
+        <name>et4ae5__CampaignMemberIntegrationEnabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- UpdateStatusOrActivity --></label>
+        <name>et4ae5__UpdateStatusOrActivity__c</name>
+    </fields>
+    <fields>
+        <label><!-- mapClickedTo --></label>
+        <name>et4ae5__mapClickedTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- mapHardBounceTo --></label>
+        <name>et4ae5__mapHardBounceTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- mapOpenedTo --></label>
+        <name>et4ae5__mapOpenedTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- mapSentTo --></label>
+        <name>et4ae5__mapSentTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- mapSoftBounceTo --></label>
+        <name>et4ae5__mapSoftBounceTo__c</name>
+    </fields>
+    <fields>
+        <label><!-- mapUnsubscribedTo --></label>
+        <name>et4ae5__mapUnsubscribedTo__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Name der Kampagnenmitgliedskonfiguration</nameFieldLabel>
+</CustomObjectTranslation>

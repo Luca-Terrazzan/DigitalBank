@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Détail au niveau global des liens</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Détails au niveau global des liens</value>
+    </caseValues>
+    <fields>
+        <label><!-- Marketing Cloud Link ID --></label>
+        <name>et4ae5__ExactTargetLinkID__c</name>
+    </fields>
+    <fields>
+        <help>La date et l’heure du dernier clic sur ce lien</help>
+        <label><!-- Last Clicked --></label>
+        <name>et4ae5__Last_Clicked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link URL --></label>
+        <name>et4ae5__LinkURL__c</name>
+    </fields>
+    <fields>
+        <help>Le nombre global de clics sur ce lien</help>
+        <label><!-- Number of Total Clicks --></label>
+        <name>et4ae5__NumberOfTotalClicks__c</name>
+    </fields>
+    <fields>
+        <help>Le nombre global de clics uniques sur ce lien (unique signifie un clic par abonné)</help>
+        <label><!-- Number of Unique Clicks --></label>
+        <name>et4ae5__NumberOfUniqueClicks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Definition --></label>
+        <name>et4ae5__Send_Definition__c</name>
+        <relationshipLabel><!-- Aggregate Link Level Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Triggered Send --></label>
+        <name>et4ae5__TriggeredSendDefinition__c</name>
+        <relationshipLabel><!-- Aggregate Link Level Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unique Link ID --></label>
+        <name>et4ae5__Unique_Link_ID__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nom du lien</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

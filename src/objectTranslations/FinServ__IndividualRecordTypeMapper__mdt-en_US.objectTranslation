@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Record Type Namespace (Account) --></label>
+        <name>FinServ__AccountRecordTypeNamespace__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Record Type --></label>
+        <name>FinServ__AccountRecordType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Type Namespace (Contact) --></label>
+        <name>FinServ__ContactRecordTypeNamespace__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Record Type --></label>
+        <name>FinServ__ContactRecordType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detail Page --></label>
+        <name>FinServ__DetailPage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account SubType --></label>
+        <name>FinServ__IndividualType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Type Namespace (Lead) --></label>
+        <name>FinServ__LeadRecordTypeNamespace__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Record Type --></label>
+        <name>FinServ__LeadRecordType__c</name>
+    </fields>
+</CustomObjectTranslation>

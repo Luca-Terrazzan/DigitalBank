@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Rôle de compte financier</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Rôles de compte financier</value>
+    </caseValues>
+    <fields>
+        <label><!-- Balance --></label>
+        <name>Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>FinServ__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Editable --></label>
+        <name>FinServ__Editable__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>FinServ__EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account --></label>
+        <name>FinServ__FinancialAccount__c</name>
+        <relationshipLabel><!-- Financial Account Roles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Account --></label>
+        <name>FinServ__RelatedAccount__c</name>
+        <relationshipLabel><!-- Financial Account Roles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Contact --></label>
+        <name>FinServ__RelatedContact__c</name>
+        <relationshipLabel><!-- Financial Account Roles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>FinServ__Role__c</name>
+        <picklistValues>
+            <masterLabel>Accountant</masterLabel>
+            <translation>Comptable</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Additional Owner</masterLabel>
+            <translation>Propriétaire supplémentaire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administrator</masterLabel>
+            <translation>Administrateur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advisor</masterLabel>
+            <translation>Conseiller</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Annuitant</masterLabel>
+            <translation>Rentier</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Appoint / Remove Authority</masterLabel>
+            <translation>Désigner / retirer l&apos;autorité</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Authorized Agent</masterLabel>
+            <translation>Agent autorisé</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Authorized Agent / Beneficial Owner</masterLabel>
+            <translation>Agent autorisé / Propriétaire bénéficiaire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Authorized Individual</masterLabel>
+            <translation>Individu autorisé</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Authorized Signer</masterLabel>
+            <translation>Signataire autorisé</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beneficial Owner</masterLabel>
+            <translation>Propriétaire bénéficiaire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beneficiary</masterLabel>
+            <translation>Bénéficiaire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Manager</masterLabel>
+            <translation>Responsable d&apos;entreprise</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Committee Member</masterLabel>
+            <translation>Membre du comité</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conservator</masterLabel>
+            <translation>Conservateur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Control Person</masterLabel>
+            <translation>Personne de contrôle</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporation</masterLabel>
+            <translation>Entreprise</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cosigner</masterLabel>
+            <translation>Cosignataire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custodian</masterLabel>
+            <translation>Dépositaire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deceased Grantor</masterLabel>
+            <translation>Cédant décédé</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Decedent</masterLabel>
+            <translation> Défunt</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discretionary</masterLabel>
+            <translation>Discrétionnaire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foundation</masterLabel>
+            <translation>Fondation</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Full Authority</masterLabel>
+            <translation>Autorité totale</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grantor</masterLabel>
+            <translation>Cédant</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guardian</masterLabel>
+            <translation>Responsable légal</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insured</masterLabel>
+            <translation>Assuré</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interested Party</masterLabel>
+            <translation>Partie intéressée</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minor Primary Owner</masterLabel>
+            <translation>Propriétaire principal mineur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Original Depositor</masterLabel>
+            <translation>Dépositaire d&apos;origine</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation>Autre</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Power of Attorney</masterLabel>
+            <translation>Procuration</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary Owner</masterLabel>
+            <translation><!-- Primary Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proprietor</masterLabel>
+            <translation>Propriétaire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOD Beneficiary</masterLabel>
+            <translation>Bénéficiaire TOD</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trustee</masterLabel>
+            <translation>Mandataire</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>FinServ__SourceSystemId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>FinServ__StartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account Category --></label>
+        <name>FinancialAccountCategory__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account Record Type --></label>
+        <name>Financial_Account_Record_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsLinkingPrimaryOwner --></label>
+        <name>IsLinkingPrimaryOwner__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsLoan --></label>
+        <name>IsLoan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financial Account Type --></label>
+        <name>TypeIcon__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Numéro du rôle</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Account Role --></label>
+        <name>AccountRole</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contact Role --></label>
+        <name>ContactRole</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- A Financial Account Role cannot be created as Inactive --></errorMessage>
+        <name>FinServ__CannotCreateInactiveRecord</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This record cannot be edited. To update role information, you can deactivate this record and create a new one. --></errorMessage>
+        <name>FinServ__FARCannotBeModified</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Inactive record cannot be edited. To update FAR, you can create a new one. --></errorMessage>
+        <name>FinServ__InactiveFARCannotBeEdited</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Inactive Financial Roles cannot be reactivated. --></errorMessage>
+        <name>FinServ__InactiveRecordCannotBeReactivated</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This record cannot be deactivated because ownership can be updated on the financial account only. --></errorMessage>
+        <name>FinServ__OwnershipRolesCannotBeDeactivated</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This record cannot be modified because ownership can be specified on the financial account only. --></errorMessage>
+        <name>FinServ__OwnershipRolesCannotBeModified</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Either Related Account or Related Contact is required. --></errorMessage>
+        <name>FinServ__RelatedAccountOrContactRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Role is required. --></errorMessage>
+        <name>FinServ__RoleIsMandatory</name>
+    </validationRules>
+</CustomObjectTranslation>

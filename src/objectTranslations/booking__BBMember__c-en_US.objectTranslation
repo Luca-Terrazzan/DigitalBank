@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Address1 --></label>
+        <name>booking__Address1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address2 --></label>
+        <name>booking__Address2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address3 --></label>
+        <name>booking__Address3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address4 --></label>
+        <name>booking__Address4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address5 --></label>
+        <name>booking__Address5__c</name>
+    </fields>
+    <fields>
+        <label><!-- BookingBug ID --></label>
+        <name>booking__BookingBug_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comp Ref --></label>
+        <name>booking__Comp_Ref__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company ID --></label>
+        <name>booking__Company_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>booking__Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Company ID --></label>
+        <name>booking__Default_Company_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deleted --></label>
+        <name>booking__Deleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>booking__Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- External References --></label>
+        <name>booking__External_References__c</name>
+    </fields>
+    <fields>
+        <label><!-- Extra Info --></label>
+        <name>booking__Extra_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>booking__First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Global ID --></label>
+        <name>booking__Global_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Image ID --></label>
+        <name>booking__Image_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>booking__Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lat Long --></label>
+        <name>booking__Lat_Long__c</name>
+    </fields>
+    <fields>
+        <label><!-- LinkedIn UID --></label>
+        <name>booking__LinkedIn_UID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Login ID --></label>
+        <name>booking__Login_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mem Join Date --></label>
+        <name>booking__Mem_Join_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Member Level ID --></label>
+        <name>booking__Member_Level_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Member Type --></label>
+        <name>booking__Member_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Membership Expiry Old --></label>
+        <name>booking__Membership_Expiry_Old__c</name>
+    </fields>
+    <fields>
+        <label><!-- Merge ID --></label>
+        <name>booking__Merge_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mobile phone --></label>
+        <name>booking__Mobile_phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nick --></label>
+        <name>booking__Nick__c</name>
+    </fields>
+    <fields>
+        <label><!-- Od Twitter UID --></label>
+        <name>booking__Od_Twitter_UID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Facebook UID --></label>
+        <name>booking__Old_Facebook_UID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old MySpace UID --></label>
+        <name>booking__Old_MySpace_UID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Password Salt --></label>
+        <name>booking__Old_Password_Salt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Password --></label>
+        <name>booking__Old_Password__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>booking__Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postcode --></label>
+        <name>booking__Postcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Questions --></label>
+        <name>booking__Questions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registered --></label>
+        <name>booking__Registered__c</name>
+    </fields>
+    <fields>
+        <label><!-- SF reference --></label>
+        <name>booking__SF_reference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Site --></label>
+        <name>booking__Site__c</name>
+    </fields>
+    <fields>
+        <label><!-- Space Detail Map ID --></label>
+        <name>booking__Space_Detail_Map_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>booking__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Zone --></label>
+        <name>booking__Time_Zone__c</name>
+    </fields>
+</CustomObjectTranslation>

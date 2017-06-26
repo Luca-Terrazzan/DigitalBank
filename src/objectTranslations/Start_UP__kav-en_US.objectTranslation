@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Start Up</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Start Up</value>
+    </caseValues>
+    <fields>
+        <label><!-- Attached File --></label>
+        <name>Attached_File__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

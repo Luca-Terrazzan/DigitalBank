@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Compte financier</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Comptes financiers</value>
+    </caseValues>
+    <fields>
+        <label><!-- Branch --></label>
+        <name>Branch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Commercial</masterLabel>
+            <translation><!-- Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wealth</masterLabel>
+            <translation><!-- Wealth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Available Withdrawal --></label>
+        <name>DGTB_AvailableWithdrawal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current month withdrawals --></label>
+        <name>DGTB_CurrentMonthWithdrawals__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mobile Primary Account --></label>
+        <name>DGTB_MobilePrimaryAccount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Limit --></label>
+        <name>DGTB_MonthlyLimit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address 1 --></label>
+        <name>FinServ__Address1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address 2 --></label>
+        <name>FinServ__Address2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Application Date --></label>
+        <name>FinServ__ApplicationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asset Rebalance --></label>
+        <name>FinServ__AssetRebalance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average Balance --></label>
+        <name>FinServ__AverageBalance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Balance --></label>
+        <name>FinServ__Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cash Balance --></label>
+        <name>FinServ__CashBalance__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>FinServ__City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Closed --></label>
+        <name>FinServ__CloseDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>FinServ__Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>FinServ__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discretionary --></label>
+        <name>FinServ__Discretionary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Number --></label>
+        <name>FinServ__FinancialAccountNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>FinServ__FinancialAccountSource__c</name>
+        <picklistValues>
+            <masterLabel>Integrator</masterLabel>
+            <translation>Intégrateur</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual Entry</masterLabel>
+            <translation>Saisie manuelle</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation>En attente</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>FinServ__FinancialAccountType__c</name>
+        <picklistValues>
+            <masterLabel>Brokerage</masterLabel>
+            <translation>Courtage</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business credit card</masterLabel>
+            <translation><!-- Business credit card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CD</masterLabel>
+            <translation>CD</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash Management Account</masterLabel>
+            <translation>Compte de gestion de la trésorerie</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash and Equivalents</masterLabel>
+            <translation><!-- Cash and Equivalents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Checking</masterLabel>
+            <translation>Vérification</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Card</masterLabel>
+            <translation>Carte de crédit</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount Brokerage</masterLabel>
+            <translation>Courtage réduit</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ETFs</masterLabel>
+            <translation><!-- ETFs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equities</masterLabel>
+            <translation><!-- Equities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed Annuity</masterLabel>
+            <translation>Annuité fixe</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed Income</masterLabel>
+            <translation><!-- Fixed Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Individual Life</masterLabel>
+            <translation>Vie individuelle</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Long Term Loans</masterLabel>
+            <translation><!-- Long Term Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Managed Account</masterLabel>
+            <translation>Compte géré</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mortgage: 10 years</masterLabel>
+            <translation><!-- Mortgage: 10 years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mortgage: 15 years</masterLabel>
+            <translation><!-- Mortgage: 15 years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mortgage: 30 years</masterLabel>
+            <translation><!-- Mortgage: 30 years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mutual Fund</masterLabel>
+            <translation>Fonds commun</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Options</masterLabel>
+            <translation><!-- Options --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overdrafts</masterLabel>
+            <translation><!-- Overdrafts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Premium Credit Card</masterLabel>
+            <translation><!-- Premium Credit Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Savings</masterLabel>
+            <translation>Épargne</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short Term Loans</masterLabel>
+            <translation><!-- Short Term Loans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Term Life</masterLabel>
+            <translation>Vie temporaire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value credit card</masterLabel>
+            <translation><!-- Value credit card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Variable Annuity</masterLabel>
+            <translation>Annuité variable</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Variable Life</masterLabel>
+            <translation>Vie variable</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Whole Life</masterLabel>
+            <translation>Vie permanente</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Held Away --></label>
+        <name>FinServ__HeldAway__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Holdings --></label>
+        <name>FinServ__HoldingCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Household --></label>
+        <name>FinServ__Household__c</name>
+        <relationshipLabel><!-- Household Financial Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Insured Amount --></label>
+        <name>FinServ__InsuredAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Investment Objectives --></label>
+        <name>FinServ__InvestmentObjectives__c</name>
+        <picklistValues>
+            <masterLabel>Growth</masterLabel>
+            <translation>Croissance</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Income</masterLabel>
+            <translation>Revenu</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquidity</masterLabel>
+            <translation>Liquidités</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safety</masterLabel>
+            <translation>Sécurité</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tax Optimization</masterLabel>
+            <translation>Optimisation fiscale</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Joint Owner --></label>
+        <name>FinServ__JointOwner__c</name>
+        <relationshipLabel><!-- Financial Account Joint Owner --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Last Updated --></label>
+        <name>FinServ__LastUpdated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Managed --></label>
+        <name>FinServ__Managed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minimum Balance --></label>
+        <name>FinServ__MinimumBalance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Model Portfolio --></label>
+        <name>FinServ__ModelPortfolio__c</name>
+        <picklistValues>
+            <masterLabel>Aggressive</masterLabel>
+            <translation>Agressive</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Balanced</masterLabel>
+            <translation>Équilibré</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conservative</masterLabel>
+            <translation>Prudent</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Growth</masterLabel>
+            <translation>Croissance</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moderate</masterLabel>
+            <translation>Modéré</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date Opened --></label>
+        <name>FinServ__OpenDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner Type --></label>
+        <name>FinServ__OwnerType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ownership --></label>
+        <name>FinServ__Ownership__c</name>
+        <picklistValues>
+            <masterLabel>Individual</masterLabel>
+            <translation>Individu</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joint</masterLabel>
+            <translation>Copropriétaire</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trust</masterLabel>
+            <translation>Fiduciaire</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Paperless Delivery --></label>
+        <name>FinServ__PaperlessDelivery__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance 1Yr --></label>
+        <name>FinServ__Performance1Yr__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance 3Yr --></label>
+        <name>FinServ__Performance3Yr__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance MTD --></label>
+        <name>FinServ__PerformanceMTD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance QTD --></label>
+        <name>FinServ__PerformanceQTD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance YTD --></label>
+        <name>FinServ__PerformanceYTD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postal Code --></label>
+        <name>FinServ__PostalCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Premium --></label>
+        <name>FinServ__Premium__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Owner --></label>
+        <name>FinServ__PrimaryOwner__c</name>
+        <relationshipLabel><!-- Financial Account Primary Owner --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rebalance Frequency --></label>
+        <name>FinServ__RebalanceFrequency__c</name>
+        <picklistValues>
+            <masterLabel>Annually</masterLabel>
+            <translation>Annuelle</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation>Mensuelle</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation>Trimestrielle</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Semiannually</masterLabel>
+            <translation>Semestrielle</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Record Type --></label>
+        <name>FinServ__RecordTypeName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Date --></label>
+        <name>FinServ__RenewalDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Provider --></label>
+        <name>FinServ__ServiceProvider__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>FinServ__SourceSystemId__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>FinServ__State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>FinServ__Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation>Fermé</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation>Suspendu</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation>Ouvert</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation>En attente</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tax ID --></label>
+        <name>FinServ__TaxID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Status --></label>
+        <name>FinServ__TaxStatus__c</name>
+        <picklistValues>
+            <masterLabel>Nonqualified</masterLabel>
+            <translation>Non qualifié</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qualified</masterLabel>
+            <translation>Qualifié</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Time Horizon --></label>
+        <name>FinServ__TimeHorizon__c</name>
+        <picklistValues>
+            <masterLabel>Long Term</masterLabel>
+            <translation>Long terme</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium Term</masterLabel>
+            <translation>Moyen terme</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short Term</masterLabel>
+            <translation>Court terme</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- IsLoan --></label>
+        <name>IsLoan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mock --></label>
+        <name>Mock__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Financial Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <relationshipLabel><!-- Financial Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revenue --></label>
+        <name>Revenue__c</name>
+        <relationshipLabel><!-- Financial Accounts --></relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nom du compte financier</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Bank Account --></label>
+        <name>BankingAccount</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- General Account --></label>
+        <name>General</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Insurance Policy --></label>
+        <name>InsurancePolicy</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Investment Account --></label>
+        <name>InvestmentAccount</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Select either Managed or Held Away for this Financial Account. --></errorMessage>
+        <name>FinServ__ManagedAndHeldAwayCannotBeBothSelected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Individually owned accounts can&apos;t have a joint owner. --></errorMessage>
+        <name>FinServ__NoJointOwnerForIndividualAccounts</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The primary and joint owner must be different. --></errorMessage>
+        <name>FinServ__PrimaryAndJointOwnerCannotBeSame</name>
+    </validationRules>
+</CustomObjectTranslation>

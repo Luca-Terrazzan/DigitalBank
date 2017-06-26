@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Create Payload --></label>
+        <name>et4ae5__Create_Payload__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Object --></label>
+        <name>et4ae5__Custom_Object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Determine Winner By --></label>
+        <name>et4ae5__Determine_Winner_By__c</name>
+        <picklistValues>
+            <masterLabel>Higher unique click-through rate (CTR)</masterLabel>
+            <translation><!-- Higher unique click-through rate (CTR) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Higher unique open rate</masterLabel>
+            <translation><!-- Higher unique open rate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Type --></label>
+        <name>et4ae5__Test_Type__c</name>
+        <picklistValues>
+            <masterLabel>Content areas</masterLabel>
+            <translation><!-- Content areas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Emails</masterLabel>
+            <translation><!-- Emails --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>From names</masterLabel>
+            <translation><!-- From names --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preheaders</masterLabel>
+            <translation><!-- Preheaders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Send dates/times</masterLabel>
+            <translation><!-- Send dates/times --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subject lines</masterLabel>
+            <translation><!-- Subject lines --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- AB Instance Id --></label>
+        <name>et4ae5__abInstanceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- mid --></label>
+        <name>et4ae5__mid__c</name>
+    </fields>
+</CustomObjectTranslation>

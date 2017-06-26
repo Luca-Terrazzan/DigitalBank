@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- New Label --></label>
+        <name>FinServ__NewLabel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Field Name --></label>
+        <name>FinServ__ObjectFieldName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Type --></label>
+        <name>FinServ__ObjectName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Type Namespace --></label>
+        <name>FinServ__ObjectRTNamespace__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Record Type --></label>
+        <name>FinServ__ObjectRecordType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lookup Field --></label>
+        <name>FinServ__RelationshipName__c</name>
+    </fields>
+    <fields>
+        <label><!-- View Name --></label>
+        <name>FinServ__ViewName__c</name>
+    </fields>
+</CustomObjectTranslation>

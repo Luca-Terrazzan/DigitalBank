@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Prueba A/B</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pruebas A/B</value>
+    </caseValues>
+    <fields>
+        <label><!-- Create Payload --></label>
+        <name>et4ae5__Create_Payload__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Object --></label>
+        <name>et4ae5__Custom_Object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Determine Winner By --></label>
+        <name>et4ae5__Determine_Winner_By__c</name>
+        <picklistValues>
+            <masterLabel>Higher unique click-through rate (CTR)</masterLabel>
+            <translation>Índice de clics únicos más alto (CTR)</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Higher unique open rate</masterLabel>
+            <translation>Índice de aperturas únicas más alto</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Type --></label>
+        <name>et4ae5__Test_Type__c</name>
+        <picklistValues>
+            <masterLabel>Content areas</masterLabel>
+            <translation>Áreas de contenido</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Emails</masterLabel>
+            <translation>Emails</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>From names</masterLabel>
+            <translation>Nombres de los remitentes</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preheaders</masterLabel>
+            <translation>Preencabezados</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Send dates/times</masterLabel>
+            <translation>Fechas/horas de envío</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subject lines</masterLabel>
+            <translation>Líneas de asunto</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- AB Instance Id --></label>
+        <name>et4ae5__abInstanceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- mid --></label>
+        <name>et4ae5__mid__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nombre de la prueba A/B</nameFieldLabel>
+</CustomObjectTranslation>

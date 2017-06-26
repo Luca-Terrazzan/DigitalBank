@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Description --></label>
+        <name>APXTConga4__Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conga Email Template Group --></label>
+        <name>APXTConga4__Conga_Email_Template_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conga Email Template Name --></label>
+        <name>APXTConga4__Conga_Email_Template_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conga Email Template --></label>
+        <name>APXTConga4__Conga_Email_Template__c</name>
+        <relationshipLabel><!-- Conga Solution Email Templates --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Conga Solution --></label>
+        <name>APXTConga4__Conga_Solution__c</name>
+        <relationshipLabel><!-- Conga Solution Email Templates --></relationshipLabel>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Only one Conga Email Template is allowed per Conga Solution. To make changes, either modify the existing record or delete it and add a new one. --></errorMessage>
+        <name>APXTConga4__CET_Count_Validator</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Rôle réciproque</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Rôles réciproques</value>
+    </caseValues>
+    <fields>
+        <help>Si cette option est activée, un rôle inverse correspondant est automatiquement créé.</help>
+        <label><!-- Create Inverse Role --></label>
+        <name>FinServ__CreateInverseRole__c</name>
+    </fields>
+    <fields>
+        <label><!-- InverseRelationship --></label>
+        <name>FinServ__InverseRelationship__c</name>
+        <relationshipLabel><!-- Inverse Relationship --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Inverse Role --></label>
+        <name>FinServ__InverseRole__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relationship Type --></label>
+        <name>FinServ__RelationshipType__c</name>
+        <picklistValues>
+            <masterLabel>Account Account Relation</masterLabel>
+            <translation>Relation de compte à compte</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation>Tous</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Contact Relation</masterLabel>
+            <translation>Relation de contact à contact</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Source System ID --></label>
+        <name>FinServ__SourceSystemId__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Rôle</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Account Role --></label>
+        <name>AccountRole</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contact Role --></label>
+        <name>ContactRole</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Reciprocal Role cannot be modified --></errorMessage>
+        <name>FinServ__ProhibitUpdates</name>
+    </validationRules>
+</CustomObjectTranslation>

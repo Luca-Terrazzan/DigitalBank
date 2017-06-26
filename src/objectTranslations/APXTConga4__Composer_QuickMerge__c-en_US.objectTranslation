@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Conga Solution --></label>
+        <name>APXTConga4__Conga_Solution__c</name>
+        <relationshipLabel><!-- Conga Global Merges --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>APXTConga4__Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this button to launch the Composer QuickMerge Solution. Only available when the Button ID field is populated. --></help>
+        <label><!-- Launch --></label>
+        <name>APXTConga4__Launch_CM8__c</name>
+    </fields>
+    <fields>
+        <label><!-- Button ID --></label>
+        <name>APXTConga4__Weblink_ID_Formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Button ID --></label>
+        <name>APXTConga4__Weblink_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Button Name --></label>
+        <name>APXTConga4__Weblink_Name_Formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Button Name --></label>
+        <name>APXTConga4__Weblink_Name__c</name>
+    </fields>
+</CustomObjectTranslation>

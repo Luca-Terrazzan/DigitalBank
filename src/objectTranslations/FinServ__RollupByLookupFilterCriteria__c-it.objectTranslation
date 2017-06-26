@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Criterio di filtro roll-up in base a ricerca</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Criteri di filtro roll-up in base a ricerca</value>
+    </caseValues>
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>FinServ__FieldName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Value --></label>
+        <name>FinServ__FieldValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operator --></label>
+        <name>FinServ__Operator__c</name>
+        <picklistValues>
+            <masterLabel>contains</masterLabel>
+            <translation>contiene</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ends with</masterLabel>
+            <translation>finisce con</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>equals</masterLabel>
+            <translation>uguale a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater than</masterLabel>
+            <translation>maggiore di</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater than or equal to</masterLabel>
+            <translation>maggiore o uguale a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation>minore di</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than or equal to</masterLabel>
+            <translation>minore o uguale a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not contains</masterLabel>
+            <translation>non contiene</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not equal to</masterLabel>
+            <translation>non uguale a</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>not like</masterLabel>
+            <translation>non simile</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>starts with</masterLabel>
+            <translation>inizia con</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RollupByLookupConfig --></label>
+        <name>FinServ__RollupByLookupConfig__c</name>
+        <relationshipLabel><!-- Rollup By Lookup Filter Criterias --></relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nome oggetto</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
