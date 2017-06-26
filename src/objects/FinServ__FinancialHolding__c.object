@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>A holding within a client&apos;s investment account.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>WM_Client_FinancialHolding</fullName>
+        <description>Client profile&apos;s Financials tab: Investment Account</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__MarketValue__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__GainLoss__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__PercentChange__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__Shares__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__Price__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Financial Holding</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>WM_Household_FinancialHolding</fullName>
+        <description>Household profile&apos;s Financials tab: Investment Account</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__MarketValue__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__GainLoss__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__PercentChange__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__Shares__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FinServ__Price__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Financial Holding</label>
+    </fieldSets>
+    <fields>
+        <fullName>FinServ__AssetCategoryName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Market capitalization and investing style</description>
+        <externalId>false</externalId>
+        <label>Asset Category Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Large Growth</fullName>
+                    <default>false</default>
+                    <label>Large Growth</label>
+                </value>
+                <value>
+                    <fullName>Large Value</fullName>
+                    <default>false</default>
+                    <label>Large Value</label>
+                </value>
+                <value>
+                    <fullName>Large Blend</fullName>
+                    <default>false</default>
+                    <label>Large Blend</label>
+                </value>
+                <value>
+                    <fullName>Small Growth</fullName>
+                    <default>false</default>
+                    <label>Small Growth</label>
+                </value>
+                <value>
+                    <fullName>Small Value</fullName>
+                    <default>false</default>
+                    <label>Small Value</label>
+                </value>
+                <value>
+                    <fullName>Small Blend</fullName>
+                    <default>false</default>
+                    <label>Small Blend</label>
+                </value>
+                <value>
+                    <fullName>Mid-Cap Growth</fullName>
+                    <default>false</default>
+                    <label>Mid-Cap Growth</label>
+                </value>
+                <value>
+                    <fullName>Mid-Cap Value</fullName>
+                    <default>false</default>
+                    <label>Mid-Cap Value</label>
+                </value>
+                <value>
+                    <fullName>Mid-Cap Blend</fullName>
+                    <default>false</default>
+                    <label>Mid-Cap Blend</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FinServ__AssetCategory__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Subcategory of asset type.</description>
+        <externalId>false</externalId>
+        <label>Asset Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>U.S. Equity</fullName>
+                    <default>false</default>
+                    <label>U.S. Equity</label>
+                </value>
+                <value>
+                    <fullName>Sector Equity</fullName>
+                    <default>false</default>
+                    <label>Sector Equity</label>
+                </value>
+                <value>
+                    <fullName>Allocation</fullName>
+                    <default>false</default>
+                    <label>Allocation</label>
+                </value>
+                <value>
+                    <fullName>International Equity</fullName>
+                    <default>false</default>
+                    <label>International Equity</label>
+                </value>
+                <value>
+                    <fullName>Alternative</fullName>
+                    <default>false</default>
+                    <label>Alternative</label>
+                </value>
+                <value>
+                    <fullName>Commodities</fullName>
+                    <default>false</default>
+                    <label>Commodities</label>
+                </value>
+                <value>
+                    <fullName>Taxable Bond</fullName>
+                    <default>false</default>
+                    <label>Taxable Bond</label>
+                </value>
+                <value>
+                    <fullName>Municipal Bond</fullName>
+                    <default>false</default>
+                    <label>Municipal Bond</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FinServ__AssetClass__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Major category of asset type.</description>
+        <externalId>false</externalId>
+        <label>Asset Class</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Equities</fullName>
+                    <default>false</default>
+                    <label>Equities</label>
+                </value>
+                <value>
+                    <fullName>Fixed Income</fullName>
+                    <default>false</default>
+                    <label>Fixed Income</label>
+                </value>
+                <value>
+                    <fullName>Cash Equivalents</fullName>
+                    <default>false</default>
+                    <label>Cash Equivalents</label>
+                </value>
+                <value>
+                    <fullName>Alternative Investments</fullName>
+                    <default>false</default>
+                    <label>Alternative Investments</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FinServ__FinancialAccount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Financial Account</label>
+        <referenceTo>FinServ__FinancialAccount__c</referenceTo>
+        <relationshipLabel>Financial Holdings</relationshipLabel>
+        <relationshipName>FinancialHoldings</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>FinServ__GainLoss__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Change in value since purchase.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Change in value since purchase.</inlineHelpText>
+        <label>Gain/Loss</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__Household__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Household</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>Account.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>Household</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Household Financial Holdings</relationshipLabel>
+        <relationshipName>HouseholdFinancialHoldings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__LastUpdated__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Updated</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__MarketValue__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Current market value.</description>
+        <externalId>false</externalId>
+        <label>Market Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__PercentChange__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Percent change in value since purchase.</description>
+        <externalId>false</externalId>
+        <label>Percent Change</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__PrimaryOwner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Primary Owner</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>Account.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>IndustriesIndividual</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Client Financial Holdings</relationshipLabel>
+        <relationshipName>ClientFinancialHoldings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__PurchasePrice__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Purchase Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__Securities__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Symbol</label>
+        <referenceTo>FinServ__Securities__c</referenceTo>
+        <relationshipLabel>Securities</relationshipLabel>
+        <relationshipName>Securities</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__Shares__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Shares</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FinServ__SourceSystemId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Source System ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FinServ__Symbol__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Ticker symbol for the securities held. The value is copied from Securities__c and can&apos;t be changed.</description>
+        <externalId>false</externalId>
+        <formula>FinServ__Securities__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Symbol</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Financial Holding</label>
+    <listViews>
+        <fullName>FinServ__All</fullName>
+        <columns>NAME</columns>
+        <columns>FinServ__Securities__c</columns>
+        <columns>FinServ__MarketValue__c</columns>
+        <columns>FinServ__LastUpdated__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Financial Holding Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Financial Holdings</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>FinServ__FinancialAccount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FinServ__Securities__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FinServ__Shares__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FinServ__Price__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FinServ__MarketValue__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

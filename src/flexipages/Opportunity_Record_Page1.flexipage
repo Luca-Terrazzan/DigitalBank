@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>force:highlightsPanel</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>header</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>runtime_sales_pathassistant:pathAssistant</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>subheader</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>runtime_sales_activities:activityPanel</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>activityTabContent</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>forceChatter:recordFeedContainer</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>feedTabContent</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>force:detailPanel</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>detailTabContent</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;p&gt;Checks&lt;br /&gt;
+&lt;br /&gt;
+Document 1 : Mutual Fund Pack&lt;/p&gt;
+
+&lt;p&gt;Document 2 : Product Description&lt;/p&gt;
+
+&lt;p&gt;Document 3 : Company Information&lt;/p&gt;
+
+&lt;p&gt;Document 4 : Product Risks&lt;/p&gt;
+
+&lt;p&gt;Document 5 : Costs and Fees&lt;/p&gt;
+
+&lt;p&gt;Document 6 : Analyst Benchmarks&lt;/p&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+        </componentInstances>
+        <name>facet-7e12995d-7692-4411-b258-94759257db4a</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>APPROPRIATENESS ASSESSMENT&lt;br /&gt;
+&lt;br /&gt;
+All clients need to complete an appropriateness assessment if they wish to invest in a complex financial instrument. Please ensure there is a current valid appropriateness assessment to ensure the investment you will be proposing is suitable.&lt;br /&gt;
+&lt;br /&gt;
+What is a Complex Financial Instrument?&lt;br /&gt;
+A complex financial instrument could be anything that is not defined as non-complex. Non-complex financial instruments are;&lt;br /&gt;
+&amp;bull; Shares listed on a recognised stock exchange&lt;br /&gt;
+&amp;bull; Units/ shares in a UCITS qualifying Collective Investment Scheme&lt;br /&gt;
+&amp;bull; Bonds&lt;br /&gt;
+&amp;bull; Money market instruments&lt;br /&gt;
+&lt;br /&gt;
+A complex financial instrument is one that requires a greater experience and knowledge of investments to fully understand the risks involved, for example by including very speculative contracts like financial derivatives, by being valued infrequently or by not being &amp;lsquo;readily realisable&amp;rsquo; (potentially difficult to sell when you want to).&lt;br /&gt;
+&lt;br /&gt;
+Examples include:&lt;br /&gt;
+&amp;bull; Some types of exchange traded product&lt;br /&gt;
+&amp;bull; Shares in Collective Investment Schemes that are not FCA recognised (non mainstream pooled investments)&lt;br /&gt;
+&amp;bull; Warrants&lt;br /&gt;
+&amp;bull; Non-readily realisable investments</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+        </componentInstances>
+        <name>Facet-z5kw8whe5n</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>flowArguments</name>
+                <value>[{&quot;label&quot;:&quot;v_Opp_ID&quot;,&quot;dataType&quot;:&quot;String&quot;,&quot;supportsRecordId&quot;:true,&quot;value&quot;:&quot;{!Record.Id}&quot;}]</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>flowLayout</name>
+                <value>twoColumn</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>flowName</name>
+                <value>Create_Suitibility_Test</value>
+            </componentInstanceProperties>
+            <componentName>flowruntime:interview</componentName>
+        </componentInstances>
+        <name>facet-81693e00-a46a-4a62-97c2-f5fb102bb100</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;p&gt;Checks&lt;br /&gt;
+&lt;br /&gt;
+Document 1 : Mutual Fund Pack&lt;/p&gt;
+
+&lt;p&gt;Document 2 : Product Description&lt;/p&gt;
+
+&lt;p&gt;Document 3 : Company Information&lt;/p&gt;
+
+&lt;p&gt;Document 4 : Product Risks&lt;/p&gt;
+
+&lt;p&gt;Document 5 : Costs and Fees&lt;/p&gt;
+
+&lt;p&gt;Document 6 : Analyst Benchmarks&lt;/p&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+        </componentInstances>
+        <name>facet-b6ef8bd1-b3cd-4962-a4bc-86ae6d82fe68</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;p&gt;Checks&lt;br /&gt;
+&lt;br /&gt;
+Document 1 : Mutual Fund Pack&lt;/p&gt;
+
+&lt;p&gt;Document 2 : Product Description&lt;/p&gt;
+
+&lt;p&gt;Document 3 : Company Information&lt;/p&gt;
+
+&lt;p&gt;Document 4 : Product Risks&lt;/p&gt;
+
+&lt;p&gt;Document 5 : Costs and Fees&lt;/p&gt;
+
+&lt;p&gt;Document 6 : Analyst Benchmarks&lt;/p&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+        </componentInstances>
+        <name>Facet-8ypx7bxor8w</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>facet-7e12995d-7692-4411-b258-94759257db4a</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>01 NEW</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>Facet-z5kw8whe5n</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>02 QUALIFICATION</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>facet-81693e00-a46a-4a62-97c2-f5fb102bb100</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>03 SUITABILITY</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>facet-b6ef8bd1-b3cd-4962-a4bc-86ae6d82fe68</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>04 INVESTMENT</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>Facet-8ypx7bxor8w</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>05 ORDER</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <name>facet-e01b8e60-b244-4886-9e91-1a13e36af8e5</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>tabs</name>
+                <value>facet-e01b8e60-b244-4886-9e91-1a13e36af8e5</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tabset</componentName>
+        </componentInstances>
+        <name>facet-35dffb92-ac3f-4aa2-b13f-3ee2835057bf</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>active</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>activityTabContent</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Standard.Tab.activity</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>feedTabContent</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Standard.Tab.collaborate</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>detailTabContent</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Standard.Tab.detail</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
+                <value>facet-35dffb92-ac3f-4aa2-b13f-3ee2835057bf</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Regulatory</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>tabs</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>tabs</name>
+                <value>tabs</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tabset</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>main</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>force:relatedListContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>dsfs:DocuSignLightningSendingLocked</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>sidebar</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Opportunity Record Page</masterLabel>
+    <parentFlexiPage>sfa__Opportunity_rec_L</parentFlexiPage>
+    <sobjectType>Opportunity</sobjectType>
+    <template>
+        <name>flexipage:recordHomeWithSubheaderTemplateDesktop</name>
+    </template>
+    <type>RecordPage</type>
+</FlexiPage>

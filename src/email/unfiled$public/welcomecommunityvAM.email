@@ -130,7 +130,7 @@
                     you for choosing Digital Bank</span></h1>
 
 <p class="ebody">Hi {!Receiving_User.FirstName},</p>
-<p class="ebody">Welcome to {!Community_Name} Community! To get started <a href="{!Community_Url}">click here!</a></p>
+<p class="ebody">Would you like to joing the {!Community_Name} Community? To get started <a href="{!Community_Url}">click here!</a></p>
 
 <p class="ebody">Username: {!Receiving_User.Username}</a></p>
 

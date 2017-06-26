@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Contains Configuration information for DocuSign</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>dsfs__AccountId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign AccountID for this Organization</description>
+        <externalId>false</externalId>
+        <label>AccountId</label>
+        <length>36</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterActionsUndoAndSend__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Action Links Undo And Send</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterEnvCompletedText__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Envelope Completed Chatter Text</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterEnvCompleted__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Envelope Completed Chatter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterEnvDeclinedText__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Envelope Declined Chatter Text</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterEnvDeclined__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Envelope Declined Chatter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterEnvDeliveredText__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Envelope Delivered Chatter Text</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterEnvDelivered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Envelope Delivered Chatter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterEnvSentText__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Envelope Sent Chatter Text</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterEnvSent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Envelope Sent Chatter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterEnvVoidedText__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Envelope Voided Chatter Text</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterEnvVoided__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Envelope Voided Chatter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterEnvelopeSigning__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Action Links Envelope Signing</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterRecipCompletedText__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recipient Completed Chatter Text</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterRecipCompleted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recipient Completed Chatter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterRecipDeclinedText__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recipient  Declined Chatter Text</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterRecipDeclined__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recipient Declined Chatter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterRecipDeliveredText__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recipient Delivered Chatter Text</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterRecipDelivered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recipient Delivered Chatter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterRecipSentText__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>t</inlineHelpText>
+        <label>Recipient Sent Chatter Text</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterRecipSent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recipient Sent Chatter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterRecipSignedText__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recipient Signed Chatter Text</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterRecipSigned__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recipient Signed Chatter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__ChatterSetting__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Chatter Setting</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__DSProSFPassword__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>DSProSFPassword</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__DSProSFUsername__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>DSProSFUsername</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__DefaultExpireNDays__c</fullName>
+        <defaultValue>-1</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Expire Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__DefaultReminderNDays__c</fullName>
+        <defaultValue>-1</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Reminder Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__DefaultRepeatReminderNDays__c</fullName>
+        <defaultValue>-1</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Repeat Reminder Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__DefaultRoleNames__c</fullName>
+        <defaultValue>&quot;Signer 1&quot; &amp; BR() &amp;
+&quot;Signer 2&quot; &amp; BR() &amp;
+&quot;Signer 3&quot; &amp; BR() &amp;
+&quot;Signer 4&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Recipient role names that correspond with the recipient role values when sending with DocuSign.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Recipient role names that correspond with the recipient role values when sending with DocuSign.</inlineHelpText>
+        <label>DefaultRoleNames</label>
+        <length>500</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__DefaultRoleValues__c</fullName>
+        <defaultValue>&quot;1&quot; &amp; BR() &amp; 
+&quot;2&quot; &amp; BR() &amp; 
+&quot;3&quot; &amp; BR() &amp; 
+&quot;4&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Recipient role values that correspond with the recipient role names when sending with DocuSign</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Recipient role values that correspond with the recipient role names when sending with DocuSign</inlineHelpText>
+        <label>DefaultRoleValues</label>
+        <length>500</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__DefaultWarnOfExpireNDays__c</fullName>
+        <defaultValue>-1</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default warn of expiration days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Default_Apex_Timeout__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Apex Timeout</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__DisplayInPersonSigningInOwnWindow__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Checking this box means that when signing a document with DocuSign, the InPerson signing page will display in its own window, as opposed to being embedded inside Salesforce header/sidebar.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set the DocuSign InPerson signing page to display in its own window rather than embedded inside of the Salesforce header and/or sidebar.</inlineHelpText>
+        <label>Display InPerson Signing In Own Window</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__DisplayTaggerInOwnWindow__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Checking this box means that when sending a document through DocuSign, the Tagger will display in its own window, as opposed to being embedded inside Salesforce header/sidebar.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set the DocuSign tagger to display in its own window rather than embedded inside of the Salesforce header and/or sidebar.</inlineHelpText>
+        <label>Display Tagger In Own Window</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__DocuSignBaseURL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The base URL for the DocuSign account.</description>
+        <externalId>false</externalId>
+        <label>DocuSignBaseURL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__DocuSignEnvironment__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The DocuSign environment that api calls will be sent to. Value should be prod for normal use, and can be set to demo or preview for testing purposes, or when running in a sandbox.</description>
+        <externalId>false</externalId>
+        <label>DocuSignEnvironment</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>production</fullName>
+                    <default>true</default>
+                    <label>production</label>
+                </value>
+                <value>
+                    <fullName>demo</fullName>
+                    <default>false</default>
+                    <label>demo</label>
+                </value>
+                <value>
+                    <fullName>preview</fullName>
+                    <default>false</default>
+                    <label>preview</label>
+                </value>
+                <value>
+                    <fullName>test</fullName>
+                    <default>false</default>
+                    <label>test</label>
+                </value>
+                <value>
+                    <fullName>stage</fullName>
+                    <default>false</default>
+                    <label>stage</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailBody__c</fullName>
+        <defaultValue>&quot;I am sending you this request for your electronic signature, please review and electronically sign by following the link below.&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Body</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient.</inlineHelpText>
+        <label>EmailBody</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailBody_de__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Body for German</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient.</inlineHelpText>
+        <label>EmailBody_de</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailBody_es__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Body for Spanish</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient.</inlineHelpText>
+        <label>EmailBody_es</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailBody_fr__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Body for French</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient.</inlineHelpText>
+        <label>EmailBody_fr</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailBody_it__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Body for Italian</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient.</inlineHelpText>
+        <label>EmailBody_it</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailBody_ja__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Body in Japanese</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient.</inlineHelpText>
+        <label>EmailBody_ja</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailBody_ko__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Body in Korean</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient.</inlineHelpText>
+        <label>EmailBody_ko</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailBody_nl__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Body in Dutch</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient.</inlineHelpText>
+        <label>EmailBody_nl</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailBody_pt_BR__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Body in Portuguese Brazilian</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient.</inlineHelpText>
+        <label>EmailBody_pt_BR</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailBody_ru__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Body in Russian</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient.</inlineHelpText>
+        <label>EmailBody_ru</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailBody_zh_CN__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Body in Chinese</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient.</inlineHelpText>
+        <label>EmailBody_zh_CN</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailSubject__c</fullName>
+        <defaultValue>&quot;Documents for your DocuSign Signature&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Subject</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients.</inlineHelpText>
+        <label>EmailSubject</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailSubject_de__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Subject for German</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients.</inlineHelpText>
+        <label>EmailSubject_de</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailSubject_es__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Subject for Spanish</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients.</inlineHelpText>
+        <label>EmailSubject_es</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailSubject_fr__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Subject for French</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients.</inlineHelpText>
+        <label>EmailSubject_fr</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailSubject_it__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Subject for Italian</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients.</inlineHelpText>
+        <label>EmailSubject_it</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailSubject_ja__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Subject for Japanese</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients.</inlineHelpText>
+        <label>EmailSubject_ja</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailSubject_ko__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Subject for Korean</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients.</inlineHelpText>
+        <label>EmailSubject_ko</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailSubject_nl__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Subject for Dutch</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients.</inlineHelpText>
+        <label>EmailSubject_nl</label>
+        <length>244</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailSubject_pt_BR__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Subject for Portuguese Brazilian</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients.</inlineHelpText>
+        <label>EmailSubject_pt_BR</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailSubject_ru__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Subject for Russian</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients.</inlineHelpText>
+        <label>EmailSubject_ru</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__EmailSubject_zh_CN__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Email Subject for Chinese</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients.</inlineHelpText>
+        <label>EmailSubject_zh_CN</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__EnableNewMobileTaggingUI__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>EnableNewMobileTaggingUI</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__FetchDocuments__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Supports large DocuSign envelopes by sending envelopes to DocuSign without document data and allowing DocuSign to fetch document data as needed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Supports large DocuSign envelopes by sending envelopes to DocuSign without document data and allowing DocuSign to fetch document data as needed. Turn on only if sending envelopes exceeds Salesforce callout limits.</inlineHelpText>
+        <label>Fetch Documents</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__HideChatter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>HideChatter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__HideEmailMessage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>HideEmailMessage</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__HideEmailSubject__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>HideEmailSubject</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__HideRemindExpire__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>HideRemindExpire</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__HideSendNowButton__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>HideSendNowButton</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__HideTagButton__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>HideTagButton</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__IncludeDefaultAnchorTabs__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>IncludeDefaultAnchorTabs</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__Lightning_Component_Logging__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Client side logging</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__LoadFiles__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Add attached Files to envelopes</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__LookupUser__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>LookupUser</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>DocuSignAccountConfigurations</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__ManageUsersFields__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A comma separated list of field ids of user information to display in the Manage Users page.</description>
+        <externalId>false</externalId>
+        <label>Manage Users Fields</label>
+        <length>2500</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__OrganizationId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Salesforce OrganizationId</description>
+        <externalId>false</externalId>
+        <label>OrgId</label>
+        <length>36</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__SetupDone__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>SetupDone</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__UpgradeHelper__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to determine if fields have been initialized.</description>
+        <externalId>false</externalId>
+        <label>UpgradeHelper</label>
+        <length>3</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__UseAccountNotificationDefaults__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enabling Reminder and Expiration Settings allows you to specify reminder and expiration defaults in DocuSign for Salesforce. These settings override the default Reminders &amp; Expirations settings from your DocuSign account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enabling Reminder and Expiration Settings allows you to specify reminder and expiration defaults in DocuSign for Salesforce. These settings override the default Reminders &amp; Expirations settings from your DocuSign account.</inlineHelpText>
+        <label>Use Account Notification Defaults</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__UseSendOnBehalfOf__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Use Send On Behalf Of</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>DocuSign Account Configuration</label>
+    <listViews>
+        <fullName>dsfs__All_DS_Configurations</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>DSX-{00}</displayFormat>
+        <label>DocuSign Account Configuration</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>DocuSign Account Configurations</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__EmailName__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__NumberSent__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__DateSent__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__Send_Status_View__c</field>
+    </columns>
+    <columns>
+        <field>et4ae5__SendDefinition__c.et4ae5__Status_Date_Time__c</field>
+    </columns>
+    <description>To provide information about the number of subscribers over a period of time for a specific campaign</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Campaign Performance over Time</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$et4ae5__SendDefinition__c@et4ae5__SendDefinition__c.et4ae5__Campaign__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>et4ae5__SendDefinition__c.et4ae5__SendTime__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

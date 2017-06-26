@@ -34,28 +34,28 @@
     </navigationLinkSet>
     <networkMemberGroups>
         <profile>Admin</profile>
-        <profile>standardaul</profile>
-        <profile>force.com - free user</profile>
-        <profile>company communities user</profile>
-        <profile>chatter only user</profile>
-        <profile>cross org data proxy user</profile>
-        <profile>work.com only user</profile>
-        <profile>analytics cloud security user</profile>
-        <profile>analytics cloud integration user</profile>
-        <profile>solutionmanager</profile>
-        <profile>community high growth</profile>
-        <profile>custom: sales profile</profile>
-        <profile>custom: marketing profile</profile>
-        <profile>custom: support profile</profile>
-        <profile>marketingprofile</profile>
-        <profile>contractmanager</profile>
+        <profile>StandardAul</profile>
+        <profile>Force%2Ecom - Free User</profile>
+        <profile>Company Communities User</profile>
+        <profile>Chatter Only User</profile>
+        <profile>Cross Org Data Proxy User</profile>
+        <profile>Work%2Ecom Only User</profile>
+        <profile>Analytics Cloud Security User</profile>
+        <profile>Analytics Cloud Integration User</profile>
+        <profile>SolutionManager</profile>
+        <profile>Community High Growth</profile>
+        <profile>Custom%3A Sales Profile</profile>
+        <profile>Custom%3A Marketing Profile</profile>
+        <profile>Custom%3A Support Profile</profile>
+        <profile>MarketingProfile</profile>
+        <profile>ContractManager</profile>
         <profile>Standard</profile>
-        <profile>advisor</profile>
-        <profile>customer associate</profile>
-        <profile>sales associate</profile>
-        <profile>manager</profile>
-        <profile>servicecloud</profile>
-        <profile>readonly</profile>
+        <profile>Advisor</profile>
+        <profile>Customer Associate</profile>
+        <profile>Sales Associate</profile>
+        <profile>Manager</profile>
+        <profile>ServiceCloud</profile>
+        <profile>ReadOnly</profile>
     </networkMemberGroups>
     <picassoSite>High_Growth1</picassoSite>
     <selfRegistration>false</selfRegistration>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>User$Name</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Number of Sends</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <field>User.et4ae5__SendDefinition__c$OwnerId$Name</field>
+    </columns>
+    <columns>
+        <field>User.et4ae5__SendDefinition__c$OwnerId$et4ae5__EmailName__c</field>
+    </columns>
+    <columns>
+        <field>User.et4ae5__SendDefinition__c$OwnerId$et4ae5__fBusiness_Unit__c</field>
+    </columns>
+    <columns>
+        <field>User.et4ae5__SendDefinition__c$OwnerId$et4ae5__Created_Date_Time__c</field>
+    </columns>
+    <columns>
+        <field>User.et4ae5__SendDefinition__c$OwnerId$et4ae5__Send_Status_View__c</field>
+    </columns>
+    <columns>
+        <field>User.et4ae5__SendDefinition__c$OwnerId$et4ae5__Status_Date_Time__c</field>
+    </columns>
+    <columns>
+        <field>User.et4ae5__SendDefinition__c$OwnerId$et4ae5__FromName__c</field>
+    </columns>
+    <columns>
+        <field>User.et4ae5__SendDefinition__c$OwnerId$et4ae5__Campaigns__c</field>
+    </columns>
+    <columns>
+        <field>User.et4ae5__SendDefinition__c$OwnerId$et4ae5__Reports__c</field>
+    </columns>
+    <description>To provide information as to how many sends each user has sent</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Email Sends by User over Time</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>et4ae5__Users_with_or_without_Email_Sends__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User.et4ae5__SendDefinition__c$OwnerId$et4ae5__DateSent__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

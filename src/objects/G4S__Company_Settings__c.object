@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>G4S__Allow_Free_Trial__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Unchecking this flag will prohibit your users from opening their own free trial Glance accounts from within the app.</inlineHelpText>
+        <label>Allow Free Trial?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Batch_Job_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Id of the CronTrigger object for the Session Match batch job.</description>
+        <externalId>false</externalId>
+        <label>Batch Job Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Chatter_When_Scheduling_Glance_Meeting__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Allows admins to control whether users may post Scheduled Glance Meetings in their Chatter feeds.</inlineHelpText>
+        <label>Chatter When Scheduling Glance Meeting</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Chatter_When_Starting_Glance_Session__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Allows admins to control whether users may post Started Glance Sessions in their Chatter feeds.</inlineHelpText>
+        <label>Chatter When Starting Glance Session</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Cobrowse_Account_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cobrowse Account Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Cobrowse_Account_Field__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cobrowse Account Field</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Cobrowse_Case_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cobrowse Case Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Cobrowse_Case_Field__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the field to be used as the Session Key when starting cobrowse sessions.</inlineHelpText>
+        <label>Cobrowse Case Field</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Cobrowse_Contact_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cobrowse Contact Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Cobrowse_Contact_Field__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cobrowse Contact Field</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Cobrowse_Enabled__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cobrowse Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Cobrowse_Invitation_Text__c</fullName>
+        <defaultValue>&quot;Please click this link, so I can browse the website with you:&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cobrowse Invitation Text</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Cobrowse_Lead_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cobrowse Lead Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Cobrowse_Lead_Field__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cobrowse Lead Field</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Cobrowse_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the URL where your Glance cobrowse code is hosted.</inlineHelpText>
+        <label>Cobrowse Link</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Cobrowse_Window_Options__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cobrowse Window Options</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Console Component</fullName>
+                    <default>true</default>
+                    <label>Console Component</label>
+                </value>
+                <value>
+                    <fullName>New Window</fullName>
+                    <default>false</default>
+                    <label>New Window</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>G4S__Create_Events_From_Sessions__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Should Glance create Events for sessions that users start outside of Salesforce, e.g., by using the Glance desktop client?</inlineHelpText>
+        <label>Create SF Events for non-SF Sessions</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Create_Leads_From_Session_Guests__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Glance can ask guests for contact info when they join your sessions and use it to create new Leads when appropriate.</inlineHelpText>
+        <label>Create Leads for Session Guests</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Never</fullName>
+                    <default>true</default>
+                    <label>Never</label>
+                </value>
+                <value>
+                    <fullName>Who Provide a New Email and Name</fullName>
+                    <default>false</default>
+                    <label>Who Provide a New Email and Name</label>
+                </value>
+                <value>
+                    <fullName>Who Provide a New Email</fullName>
+                    <default>false</default>
+                    <label>Who Provide a New Email</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>G4S__Dont_Open_Glance_Session_Events__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Don&apos;t Open Glance Session Events</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Enable_Presence__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable the Presence Indicator for the cobrowse button.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable the Presence Indicator for the cobrowse button.</inlineHelpText>
+        <label>Enable Presence</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Enable_SSO__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Enable SSO</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Enable_Universal_Join__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Enable Universal Join</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Event_Match_Window_mins__c</fullName>
+        <defaultValue>60</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Max value is 1440 minutes, i.e. 1 day.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When Glance session information is retrieved, Salesforce will attempt to find a matching Event record.  Event Match Window indicates how many minutes before AND after the Glance session start time Salesforce should search for a matching Event.</inlineHelpText>
+        <label>Event Match Window (mins)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Free_Trial_Disabled_Message__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the message your users will see if you choose to disable the Free Trial button.</inlineHelpText>
+        <label>Free Trial Disabled Message</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Hide_Glance_Buttons_After__c</fullName>
+        <defaultValue>24</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>in hours</inlineHelpText>
+        <label>Hide Glance Buttons After</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__How_Does_Your_Company_Use_Salesforce__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>How does your company use Salesforce?</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sales and Support</fullName>
+                    <default>true</default>
+                    <label>Sales and Support</label>
+                </value>
+                <value>
+                    <fullName>Sales Only</fullName>
+                    <default>false</default>
+                    <label>Sales Only</label>
+                </value>
+                <value>
+                    <fullName>Support Only</fullName>
+                    <default>false</default>
+                    <label>Support Only</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>G4S__IE_Fallback_Option__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>IE Fallback Option</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Verbal Key</fullName>
+                    <default>true</default>
+                    <label>Verbal Key</label>
+                </value>
+                <value>
+                    <fullName>Link Via Chat</fullName>
+                    <default>false</default>
+                    <label>Link Via Chat</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>G4S__Live_Agent_Chat_Accept_Text__c</fullName>
+        <defaultValue>&quot;Yes&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Button text to accept a Cobrowse</inlineHelpText>
+        <label>Chat Accept Button Text</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Live_Agent_Chat_Decline_Text__c</fullName>
+        <defaultValue>&quot;Decline&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Button text to decline a Cobrowse</inlineHelpText>
+        <label>Chat Decline Button Text</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Live_Agent_Chat_Prompt_Text__c</fullName>
+        <defaultValue>&quot;May we browse the website together?&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Text displayed to visitor when Agent initiates a Cobrowse</inlineHelpText>
+        <label>Chat Prompt Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Live_Agent_Chat_Terms_Link__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The web link to view the Terms &amp; Conditions for Cobrowsing</inlineHelpText>
+        <label>Chat Terms and Conditions Link</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Live_Agent_Chat_Terms_Text__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The text for the link to view Terms &amp; Conditions. If blank, no link is displayed.</inlineHelpText>
+        <label>Chat Terms and Conditions Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Live_Agent_Initiation_Options__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Initiation Options</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Verbal Key</fullName>
+                    <default>false</default>
+                    <label>Verbal Key</label>
+                </value>
+                <value>
+                    <fullName>Click on Associated Field</fullName>
+                    <default>false</default>
+                    <label>Click on Associated Field</label>
+                </value>
+                <value>
+                    <fullName>Link Via Chat</fullName>
+                    <default>false</default>
+                    <label>Link Via Chat</label>
+                </value>
+                <value>
+                    <fullName>Automatic</fullName>
+                    <default>false</default>
+                    <label>Automatic</label>
+                </value>
+                <value>
+                    <fullName>Instant</fullName>
+                    <default>false</default>
+                    <label>Instant</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>G4S__Partner_User_Id_Field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>API Name on the User object to be used as the Partner Id for Glance single sign on</description>
+        <externalId>false</externalId>
+        <label>Partner User Id Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Presence_Accept_Terms__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Presence Accept Terms</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Primary_Glance_Admin__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Salesforce users who get new Glance trial accounts will be assigned to this person’s group of Glance users.</inlineHelpText>
+        <label>Default Glance Admin</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>User must be a Glance Administrator.</errorMessage>
+            <filterItems>
+                <field>G4S__User_Settings__c.G4S__Glance_Admin__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>G4S__User_Settings__c</referenceTo>
+        <relationshipLabel>Glance Company Settings</relationshipLabel>
+        <relationshipName>Glance_Company_Settings</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>G4S__SSO_Login_Expiration__c</fullName>
+        <defaultValue>60</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Login link expiration, in seconds.</inlineHelpText>
+        <label>SSO Login Expiration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Scheduled_Job_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Id of the CronTrigger object for the Session Sync scheduled job.</description>
+        <externalId>false</externalId>
+        <label>Scheduled Job Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G4S__Show_My_Screen_Enabled__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Show My Screen Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__Sync_Frequency__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Controls how often Salesforce checks the Glance service to retrieve new session data.</inlineHelpText>
+        <label>Sync Frequency</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Hourly</fullName>
+                    <default>true</default>
+                    <label>Hourly</label>
+                </value>
+                <value>
+                    <fullName>Every 2 hours</fullName>
+                    <default>false</default>
+                    <label>Every 2 hours</label>
+                </value>
+                <value>
+                    <fullName>Daily</fullName>
+                    <default>false</default>
+                    <label>Daily</label>
+                </value>
+                <value>
+                    <fullName>Never</fullName>
+                    <default>false</default>
+                    <label>Never</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>G4S__Sync_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sync Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Group</fullName>
+                    <default>true</default>
+                    <label>Group</label>
+                </value>
+                <value>
+                    <fullName>Individual Users</fullName>
+                    <default>false</default>
+                    <label>Individual Users</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>G4S__Terms_and_Conditions__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Terms and Conditions</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>G4S__View_Guests_Screen_Enabled__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>View Guests Screen Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>G4S__View_Guests_Screen_Remote_Control__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>View Guests Screen Remote Control</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Ask when session starts</fullName>
+                    <default>false</default>
+                    <label>Ask when session starts</label>
+                </value>
+                <value>
+                    <fullName>View and Control</fullName>
+                    <default>false</default>
+                    <label>View and Control</label>
+                </value>
+                <value>
+                    <fullName>None - View Only</fullName>
+                    <default>false</default>
+                    <label>None - View Only</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Glance Company Settings</label>
+    <nameField>
+        <label>Glance Company Settings Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Glance Company Settings</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

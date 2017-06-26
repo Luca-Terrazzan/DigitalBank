@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>DocuSign Status is the foundation Custom Object for integration of DocuSign and Salesforce.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>dsfs__Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>DocuSign Status</relationshipLabel>
+        <relationshipName>R00N80000002vw3fEAA</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__Company__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>DocuSign Status</relationshipLabel>
+        <relationshipName>R00N80000002eb1GEAQ</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__Completed_Age__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>NOW() - dsfs__Completed_Date_Time__c</formula>
+        <label>Completed Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Completed_Date_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Completed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>DocuSign Status</relationshipLabel>
+        <relationshipName>DocuSign_Status</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__Contract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>DocuSign Status</relationshipLabel>
+        <relationshipName>R00N80000002vvynEAA</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__Days_to_Complete__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>(NOW() -  dsfs__Sent_Date_Time__c ) - (NOW() - dsfs__Completed_Date_Time__c)</formula>
+        <label>Days to Complete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Declined_Date_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Declined</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__Declined_Reason_Extended__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Declined Reason</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__Declined_Reason__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Declined Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__DocuSign_Envelope_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>DocuSign Envelope ID</label>
+        <length>56</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Envelope_Link__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Envelope Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__Envelope_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Envelope Status</label>
+        <length>56</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Hours_to_Complete__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>dsfs__Minutes_to_Complete__c /60</formula>
+        <label>Hours to Complete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Hrs_Sent_to_Sign__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( dsfs__Envelope_Status__c  = &quot;Voided&quot;,  0,  IF(dsfs__Envelope_Status__c  = &quot;Declined&quot;,  0,   IF(dsfs__Envelope_Status__c  = &quot;Sent&quot;,  dsfs__Sent_Age__c * 24,  dsfs__Hours_to_Complete__c ) ) )</formula>
+        <label>Hours Sent to Sign</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>DocuSign Status</relationshipLabel>
+        <relationshipName>DocuSign_Status</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__Minutes_to_Complete__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>dsfs__Days_to_Complete__c * 1440</formula>
+        <label>Minutes to Complete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Number_Completed__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( dsfs__Envelope_Status__c = &quot;Completed&quot;, 1, null)</formula>
+        <label>Number Completed</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>DocuSign Status</relationshipLabel>
+        <relationshipName>R00N80000002fD9vEAE</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__Sender_Email__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sender Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Sender__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sender</label>
+        <length>56</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Sent_Age__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>NOW() -  dsfs__Sent_Date_Time__c</formula>
+        <label>Sent Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Sent_Date_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sent</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__Subject__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Subject</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Time_to_Complete__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( dsfs__Envelope_Status__c  = &quot;Voided&quot;, &quot;&quot;,  IF(dsfs__Envelope_Status__c  = &quot;Declined&quot;,  &quot;&quot;,   IF(dsfs__Envelope_Status__c  = &quot;Sent&quot;,  &quot;&quot;, TEXT( 
+ROUND( 
+( dsfs__Completed_Date_Time__c  -  dsfs__Sent_Date_Time__c ) - 
+MOD(dsfs__Completed_Date_Time__c  - dsfs__Sent_Date_Time__c,1) 
+,0) 
+) 
+&amp;&quot; day(s), &quot;&amp; 
+TEXT( 
+ROUND( 
+MOD(dsfs__Completed_Date_Time__c - dsfs__Sent_Date_Time__c,1)*24 - 
+MOD(MOD(dsfs__Completed_Date_Time__c - dsfs__Sent_Date_Time__c,1)*24,1) 
+,0) 
+) 
+&amp;&quot; hour(s), &quot;&amp; 
+TEXT( 
+ROUND( 
+MOD(MOD(dsfs__Completed_Date_Time__c - dsfs__Sent_Date_Time__c,1)*24,1) 
+*60 
+,0) 
+)&amp;&quot; minute(s)&quot;) ) )</formula>
+        <label>Time to Complete</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Viewed_Date_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Viewed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__Voided_Date_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Voided</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__Voided_Reason__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Voided Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>DocuSign Status</label>
+    <listViews>
+        <fullName>dsfs__All1</fullName>
+        <columns>NAME</columns>
+        <columns>dsfs__DocuSign_Envelope_ID__c</columns>
+        <columns>dsfs__Sent_Date_Time__c</columns>
+        <columns>dsfs__Envelope_Status__c</columns>
+        <columns>dsfs__Company__c</columns>
+        <columns>dsfs__Opportunity__c</columns>
+        <columns>dsfs__Case__c</columns>
+        <columns>dsfs__Contract__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>dsfs__All_Completed_Envelopes</fullName>
+        <columns>NAME</columns>
+        <columns>dsfs__Sender__c</columns>
+        <columns>dsfs__Subject__c</columns>
+        <columns>dsfs__Sent_Date_Time__c</columns>
+        <columns>dsfs__Completed_Date_Time__c</columns>
+        <columns>dsfs__Hours_to_Complete__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>dsfs__Envelope_Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>All Completed Envelopes</label>
+    </listViews>
+    <listViews>
+        <fullName>dsfs__All_Envelopes</fullName>
+        <columns>NAME</columns>
+        <columns>dsfs__Sender__c</columns>
+        <columns>dsfs__Subject__c</columns>
+        <columns>dsfs__Envelope_Status__c</columns>
+        <columns>dsfs__Opportunity__c</columns>
+        <columns>dsfs__Sent_Date_Time__c</columns>
+        <columns>dsfs__Viewed_Date_Time__c</columns>
+        <columns>dsfs__Completed_Date_Time__c</columns>
+        <columns>dsfs__Hrs_Sent_to_Sign__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Envelopes</label>
+    </listViews>
+    <nameField>
+        <displayFormat>DSX-{0000000}</displayFormat>
+        <label>Envelope#</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>DocuSign Status</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>dsfs__Sender__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>dsfs__Subject__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>dsfs__Envelope_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>dsfs__Hrs_Sent_to_Sign__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>dsfs__Sent_Date_Time__c</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>dsfs__Sender__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>dsfs__Subject__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>dsfs__Sender__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>dsfs__Subject__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>dsfs__Company__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchResultsAdditionalFields>dsfs__Sender__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>dsfs__Subject__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>dsfs__CorrectInDocuSign</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Correct In DocuSign</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>if (&quot;{!dsfs__DocuSign_Status__c.dsfs__Envelope_Status__c}&quot; != &quot;Sent&quot; &amp;&amp; &quot;{!dsfs__DocuSign_Status__c.dsfs__Envelope_Status__c}&quot; != &quot;Delivered&quot;)
+{
+     alert(&quot;{!$Label.dsfs__statuscorrectindocusignerrormessage}&quot;);
+}
+else
+{
+window.location.href=&apos;/apex/dsfs__DocuSignAdvCorrectStandalone?e={!dsfs__DocuSign_Status__c.dsfs__DocuSign_Envelope_ID__c}&apos;
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__Resend_DocuSign_EmailDS</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Resend DocuSign Email</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>if (&quot;{!dsfs__DocuSign_Status__c.dsfs__Envelope_Status__c}&quot; != &quot;Sent&quot; &amp;&amp; &quot;{!dsfs__DocuSign_Status__c.dsfs__Envelope_Status__c}&quot; != &quot;Delivered&quot;)
+{
+alert(&quot;{!$Label.dsfs__statusvoidenvelopeerror}&quot;); 
+}
+else
+{
+window.location.href=&apos;/apex/dsfs__DocuSign_ResendEnvelope?id={!dsfs__DocuSign_Status__c.Id}&apos;;
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__View_In_DocuSign</fullName>
+        <availability>online</availability>
+        <description>This button will open your Envelope in DocuSign</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>View In DocuSign</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/dsfs__DocuSignConsoleStandAlone?e={!dsfs__DocuSign_Status__c.dsfs__DocuSign_Envelope_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__View_In_DocuSign_Button</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>View In DocuSign</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/dsfs__DocuSignConsoleStandAlone?e={!dsfs__DocuSign_Status__c.dsfs__DocuSign_Envelope_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>dsfs__VoidEnvelope</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Void Envelope</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>if (&quot;{!dsfs__DocuSign_Status__c.dsfs__Envelope_Status__c}&quot; != &quot;Sent&quot; &amp;&amp; &quot;{!dsfs__DocuSign_Status__c.dsfs__Envelope_Status__c}&quot; != &quot;Delivered&quot;)
+{
+     alert(&quot;{!$Label.dsfs__statusvoidenvelopeerrormessage}&quot;);
+}
+else
+{
+window.location.href=&apos;/apex/dsfs__DocuSignVoidEnvelopeStandAlone?e={!dsfs__DocuSign_Status__c.dsfs__DocuSign_Envelope_ID__c}&apos;
+}</url>
+    </webLinks>
+</CustomObject>

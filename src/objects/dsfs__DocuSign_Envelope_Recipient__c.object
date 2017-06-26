@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>DocuSign Envelope Recipient</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>dsfs__Access_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Access Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ACCESS CODE</inlineHelpText>
+        <label>Access Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__DSER_ContactID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>DocuSign Envelope Recipient Contact ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DOCUSIGN ENVELOPE RECIPIENT CONTACT ID</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>DocuSign Envelope Recipient</relationshipLabel>
+        <relationshipName>DocuSign_Envelope_Recipient</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__DSER_CustomFeaturesEx__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>CustomFeaturesEx</label>
+        <length>1024</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__DSER_CustomFeatures__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>CustomFeatures</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__DSER_CustomId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>CustomId</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__DSER_CustomName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>CustomName</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__DSER_LeadID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>DocuSign Envelope Recipient Lead ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DOCUSIGN ENVELOPE RECIPIENT LEAD ID</inlineHelpText>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>DocuSign Envelope Recipient</relationshipLabel>
+        <relationshipName>DocuSign_Envelope_Recipient</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__DSER_UserID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>DocuSign Envelope Recipient User ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DOCUSIGN ENVELOPE RECIPIENT USER ID</inlineHelpText>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>DocuSign_Envelope_Recipient</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__DocuSign_EnvelopeID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Envelope ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DOCUSIGN ENVELOPE ID</inlineHelpText>
+        <label>DocuSign Envelope</label>
+        <referenceTo>dsfs__DocuSign_Envelope__c</referenceTo>
+        <relationshipLabel>DocuSign Envelope Recipient</relationshipLabel>
+        <relationshipName>DocuSign_Envelope_Recipient</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>dsfs__DocuSign_Recipient_Role__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Recipient Role</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DOCUSIGN RECIPIENT ROLE</inlineHelpText>
+        <label>DocuSign Signer Role</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Customer 1</fullName>
+                    <default>true</default>
+                    <label>Customer 1</label>
+                </value>
+                <value>
+                    <fullName>Customer 2</fullName>
+                    <default>false</default>
+                    <label>Customer 2</label>
+                </value>
+                <value>
+                    <fullName>Company 1</fullName>
+                    <default>false</default>
+                    <label>Company 1</label>
+                </value>
+                <value>
+                    <fullName>Company 2</fullName>
+                    <default>false</default>
+                    <label>Company 2</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>dsfs__DocuSign_Signature_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Signature  Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DOCUSIGN SIGNATURE  NAME</inlineHelpText>
+        <label>DocuSign Signature Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__DocuSign_Signer_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DocuSign Signer Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DOCUSIGN SIGNER TYPE</inlineHelpText>
+        <label>DocuSign Signer Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Signer</fullName>
+                    <default>true</default>
+                    <label>Signer</label>
+                </value>
+                <value>
+                    <fullName>Carbon Copy</fullName>
+                    <default>false</default>
+                    <label>Carbon Copy</label>
+                </value>
+                <value>
+                    <fullName>Certified Delivery</fullName>
+                    <default>false</default>
+                    <label>Certified Delivery</label>
+                </value>
+                <value>
+                    <fullName>Sign in person</fullName>
+                    <default>false</default>
+                    <label>Sign in person</label>
+                </value>
+                <value>
+                    <fullName>Address recipients</fullName>
+                    <default>false</default>
+                    <label>Address recipients</label>
+                </value>
+                <value>
+                    <fullName>Manage envelope</fullName>
+                    <default>false</default>
+                    <label>Manage envelope</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>dsfs__Email_Body__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Email Body</label>
+        <length>10000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__Email_Subject__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Email Subject</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__ID_Check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>$ID Check</description>
+        <externalId>false</externalId>
+        <inlineHelpText>$ID CHECK</inlineHelpText>
+        <label>ID Check</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__LanguageCode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>2 Character language code.</description>
+        <externalId>false</externalId>
+        <label>Language Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Language__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Friendly name.</description>
+        <externalId>false</externalId>
+        <label>Language</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Recipient_Email__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recipient Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Recipient_Note_Long__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Note for Recipient</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Note for Recipient</inlineHelpText>
+        <label>Recipient Note</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dsfs__Recipient_Note__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Note for Recipient</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NOTE FOR RECIPIENT</inlineHelpText>
+        <label>Recipient Note</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__RoleName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>RoleName</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__RoleValue__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Value associated with the DocuSign Recipient Role. This value is used to map to default anchor tags in documents.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>VALUE ASSOCIATED WITH THE DOCUSIGN RECIPIENT ROLE. THIS VALUE IS USED TO MAP TO DEFAULT ANCHOR TAGS IN DOCUMENTS.</inlineHelpText>
+        <label>RoleValue</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Routing_Order__c</fullName>
+        <defaultValue>1</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Routing Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ROUTING ORDER</inlineHelpText>
+        <label>Routing Order</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Salesforce_Recipient_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Salesforce Recipient Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>SALESFORCE RECIPIENT TYPE</inlineHelpText>
+        <label>Salesforce Recipient Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Contact</fullName>
+                    <default>false</default>
+                    <label>Contact</label>
+                </value>
+                <value>
+                    <fullName>Lead</fullName>
+                    <default>false</default>
+                    <label>Lead</label>
+                </value>
+                <value>
+                    <fullName>User</fullName>
+                    <default>false</default>
+                    <label>User</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>dsfs__SignInPersonEmail__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sign In Person Email</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__SignInPersonName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Name of person siging when Sign In Person is set.</description>
+        <externalId>false</externalId>
+        <label>Sign In Person Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__SignNow__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>SignNow</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dsfs__SigningGroupId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Signing Group Id</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dsfs__Validation_Message__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Validation Message</description>
+        <externalId>false</externalId>
+        <inlineHelpText>VALIDATION MESSAGE</inlineHelpText>
+        <label>Validation Message</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>DocuSign Envelope Recipient</label>
+    <nameField>
+        <displayFormat>DSER-{0000000}</displayFormat>
+        <label>DocuSign Envelope Recipient Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>DocuSign Envelope Recipient</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

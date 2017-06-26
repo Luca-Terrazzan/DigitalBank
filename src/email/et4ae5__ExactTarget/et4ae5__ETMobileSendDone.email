@@ -1,0 +1,20 @@
+{!$Label.et4ae5__mobilesend}: {!et4ae5__SMSDefinition__c.Name}
+<br/>
+{!$Label.et4ae5__initiatdon} {!et4ae5__SMSDefinition__c.et4ae5__InitiatedDate__c}
+<br/>
+{!$Label.et4ae5__status}: {!et4ae5__SMSDefinition__c.et4ae5__SendStatus__c} {!$Label.et4ae5__at_lc} {!et4ae5__SMSDefinition__c.et4ae5__Status_Date_Time__c}
+<br/><br/>
+{!$Label.et4ae5__message} {!$Label.et4ae5__name}: {!et4ae5__SMSDefinition__c.et4ae5__smsName__c}
+<br/>
+{!$Label.et4ae5__shortcode}: {!et4ae5__SMSDefinition__c.et4ae5__shortCode__c}
+<br/>
+{!$Label.et4ae5__keyword}: {!et4ae5__SMSDefinition__c.et4ae5__Keyword__c}
+<br/>
+{!$Label.et4ae5__msgtext}: {!et4ae5__SMSDefinition__c.et4ae5__Message_Text__c}
+<br/><br/>
+{!$Label.et4ae5__recpsourcs}:
+{!et4ae5__SMSDefinition__c.et4ae5__AllSources__c}
+<br/><br/>
+{!et4ae5__SMSDefinition__c.et4ae5__Messages__c}
+<br/><br/>
+{!et4ae5__SMSDefinition__c.Link}

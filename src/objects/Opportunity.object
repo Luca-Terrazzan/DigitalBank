@@ -217,6 +217,15 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>DGTB_CreatedFromApp__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Created from app</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>DGTB_LossReason__c</fullName>
         <externalId>false</externalId>
         <label>Loss Reason</label>

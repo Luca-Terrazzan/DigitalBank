@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ETMobileSendDone</name>
+    <style>none</style>
+    <subject>{!$Label.et4ae5__etmosend} {!et4ae5__SMSDefinition__c.Name} - {!et4ae5__SMSDefinition__c.et4ae5__SendStatus__c}</subject>
+    <textOnly>{!$Label.et4ae5__mobilesend}: {!et4ae5__SMSDefinition__c.Name}
+{!$Label.et4ae5__initiatdon} {!et4ae5__SMSDefinition__c.et4ae5__InitiatedDate__c}
+{!$Label.et4ae5__status}: {!et4ae5__SMSDefinition__c.et4ae5__SendStatus__c} {!$Label.et4ae5__at_lc} {!et4ae5__SMSDefinition__c.et4ae5__Status_Date_Time__c}
+
+{!$Label.et4ae5__message} {!$Label.et4ae5__name}: {!et4ae5__SMSDefinition__c.et4ae5__smsName__c}
+{!$Label.et4ae5__shortcode}: {!et4ae5__SMSDefinition__c.et4ae5__shortCode__c}
+{!$Label.et4ae5__keyword}: {!et4ae5__SMSDefinition__c.et4ae5__Keyword__c}
+{!$Label.et4ae5__msgtext}: {!et4ae5__SMSDefinition__c.et4ae5__Message_Text__c}
+
+{!$Label.et4ae5__recpsourcs}:
+{!et4ae5__SMSDefinition__c.et4ae5__AllSources__c}
+
+{!et4ae5__SMSDefinition__c.et4ae5__Messages__c}
+
+{!et4ae5__SMSDefinition__c.Link}</textOnly>
+    <type>custom</type>
+</EmailTemplate>

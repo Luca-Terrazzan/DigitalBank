@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Defines Wealth configurations.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>FinServ__InteractionUpdateFrequency__c</fullName>
+        <defaultValue>15</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Frequency (in minutes) with which the Last Interaction and Next Interaction dates are automatically updated.</description>
+        <externalId>false</externalId>
+        <label>Interaction Update Frequency</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Wealth Application Config</label>
+    <visibility>Public</visibility>
+</CustomObject>

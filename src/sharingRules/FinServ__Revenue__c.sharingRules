@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Branch_1</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Branch 1</label>
+        <sharedTo>
+            <group>Opp_B1</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Branch__c</field>
+            <operation>equals</operation>
+            <value>Oxford Branch</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Branch_2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Branch 2</label>
+        <sharedTo>
+            <group>Opp_B2</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Branch__c</field>
+            <operation>equals</operation>
+            <value>Waterloo Branch</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Branch_3</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Branch 3</label>
+        <sharedTo>
+            <group>Opp_B3</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Branch__c</field>
+            <operation>equals</operation>
+            <value>Paddington Branch</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

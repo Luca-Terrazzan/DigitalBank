@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Defines B2C lead configurations.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>FinServ__OverrideCompanyName__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Replaces the company name with the lead&apos;s full name when saving a B2C lead.</description>
+        <externalId>false</externalId>
+        <label>Override Company Name</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>B2C Lead Company Name Config</label>
+    <visibility>Public</visibility>
+</CustomObject>

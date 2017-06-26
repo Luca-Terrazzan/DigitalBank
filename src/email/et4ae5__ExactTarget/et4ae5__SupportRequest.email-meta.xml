@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent for ET Support Request</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>SupportRequest</name>
+    <style>none</style>
+    <subject>{!$Label.et4ae5__etsupreq} ({!$Label.et4ae5__emailsend}: {!et4ae5__SendDefinition__c.Name})</subject>
+    <type>text</type>
+</EmailTemplate>

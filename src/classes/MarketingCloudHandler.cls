@@ -18,6 +18,10 @@ global virtual class MarketingCloudHandler implements Social.InboundSocialPostHa
     }
 
     global Social.InboundSocialPostResult handleInboundSocialPost(SocialPost post, SocialPersona persona, Map<String, Object> rawData) {
+        System.debug('rawdata: ');
+        for(String key: rawdata.keySet()) {
+            System.debug(key + ': ' + rawdata.get(key));
+        }
         Social.InboundSocialPostResult result = new Social.InboundSocialPostResult();
         result.setSuccess(true);
         matchPost(post);

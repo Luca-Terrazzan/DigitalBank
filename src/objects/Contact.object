@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
+        <actionName>AddCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>AddToCampaign</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -339,7 +343,7 @@
         <fullName>Driving_License__c</fullName>
         <externalId>false</externalId>
         <label>Driving License</label>
-        <length>25</length>
+        <length>255</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
@@ -449,11 +453,11 @@ if(And( month(Today())= month(Birthdate), Day(Today())&lt; Day(Birthdate)),
         <deprecated>false</deprecated>
         <description>Compound field for Billing Address.</description>
         <externalId>false</externalId>
-        <formula>if(LEN(Account.BillingStreet)&gt;0, Account.BillingStreet &amp; &quot;\\n&quot; , &quot;&quot; )&amp;
-if(LEN(Account.BillingCity)&gt;0, Account.BillingCity &amp; &quot;, &quot; , &quot;&quot; )&amp;
-if(LEN(Account.BillingState)&gt;0, Account.BillingState &amp; &quot; &quot; , &quot;&quot; )&amp;
-if(LEN(Account.BillingPostalCode)&gt;0, Account.BillingPostalCode &amp; &quot;\\n&quot;,&quot;&quot;) &amp;
-If(LEN( Account.BillingCountry) &gt;0, Account.BillingCountry,&quot;&quot;)</formula>
+        <formula>if(ISBLANK(Account.BillingStreet), &quot;&quot; , Account.BillingStreet &amp; &quot;\\n&quot; )&amp;
+if(ISBLANK(Account.BillingCity), &quot;&quot; , Account.BillingCity &amp; &quot;, &quot; )&amp;
+if(ISBLANK(Account.BillingState), &quot;&quot; , Account.BillingState &amp; &quot; &quot; )&amp;
+if(ISBLANK(Account.BillingPostalCode), &quot;&quot; , Account.BillingPostalCode &amp; &quot;\\n&quot;)&amp;
+if(ISBLANK(Account.BillingCountry), &quot;&quot; , Account.BillingCountry)</formula>
         <label>Billing Address</label>
         <required>false</required>
         <type>Text</type>
@@ -624,11 +628,11 @@ If(LEN( Account.BillingCountry) &gt;0, Account.BillingCountry,&quot;&quot;)</for
         <deprecated>false</deprecated>
         <description>Compound field for Mailing Address.</description>
         <externalId>false</externalId>
-        <formula>if(LEN(MailingStreet)&gt;0, MailingStreet&amp; &quot;\\n&quot; , &quot;&quot; ) &amp;
-if(LEN(MailingCity)&gt;0, MailingCity&amp; &quot;, &quot; , &quot;&quot; )&amp;
-if(LEN(MailingState)&gt;0, MailingState&amp; &quot; &quot; , &quot;&quot; )&amp;
-if(LEN(MailingPostalCode)&gt;0, MailingPostalCode &amp; &quot;\\n&quot; ,&quot;&quot;) &amp;
-If(LEN( MailingCountry) &gt;0, MailingCountry,&quot;&quot;)</formula>
+        <formula>if(ISBLANK(MailingStreet),  &quot;&quot; , MailingStreet&amp; &quot;\\n&quot; ) &amp;
+if(ISBLANK(MailingCity),  &quot;&quot; , MailingCity&amp; &quot;, &quot; ) &amp;
+if(ISBLANK(MailingState),  &quot;&quot; , MailingState&amp; &quot; &quot; ) &amp;
+if(ISBLANK(MailingPostalCode),  &quot;&quot; , MailingPostalCode &amp; &quot;\\n&quot; ) &amp;
+if(ISBLANK(MailingCountry),  &quot;&quot; , MailingCountry)</formula>
         <label>Mailing Address</label>
         <required>false</required>
         <type>Text</type>
@@ -707,11 +711,11 @@ If(LEN( MailingCountry) &gt;0, MailingCountry,&quot;&quot;)</formula>
         <deprecated>false</deprecated>
         <description>Compound field for Other Address.</description>
         <externalId>false</externalId>
-        <formula>if(LEN(OtherStreet)&gt;0,OtherStreet&amp; &quot;\\n&quot; , &quot;&quot; ) &amp;
-if(LEN(OtherCity)&gt;0, OtherCity&amp; &quot;, &quot; , &quot;&quot; )&amp;
-if(LEN(OtherState)&gt;0, OtherState&amp; &quot; &quot; , &quot;&quot; )&amp;
-if(LEN(OtherPostalCode)&gt;0, OtherPostalCode &amp; &quot;\\n&quot; ,&quot;&quot;) &amp;
-If(LEN( OtherCountry) &gt;0, OtherCountry,&quot;&quot;)</formula>
+        <formula>if(ISBLANK(OtherStreet), &quot;&quot; , OtherStreet&amp; &quot;\\n&quot; ) &amp;
+if(ISBLANK(OtherCity), &quot;&quot; , OtherCity&amp; &quot;, &quot; ) &amp;
+if(ISBLANK(OtherState), &quot;&quot; , OtherState&amp; &quot; &quot; ) &amp;
+if(ISBLANK(OtherPostalCode), &quot;&quot; , OtherPostalCode &amp; &quot;\\n&quot; ) &amp;
+if(ISBLANK(OtherCountry), &quot;&quot; , OtherCountry)</formula>
         <label>Other Address</label>
         <required>false</required>
         <type>Text</type>
@@ -799,11 +803,11 @@ If(LEN( OtherCountry) &gt;0, OtherCountry,&quot;&quot;)</formula>
         <deprecated>false</deprecated>
         <description>Concatenated shipping address field.</description>
         <externalId>false</externalId>
-        <formula>if(LEN(Account.ShippingStreet)&gt;0, Account.ShippingStreet&amp; &quot;\\n&quot; , &quot;&quot; ) &amp;
-if(LEN(Account.ShippingCity)&gt;0, Account.ShippingCity&amp; &quot;, &quot; , &quot;&quot; )&amp;
-if(LEN(Account.ShippingState)&gt;0, Account.ShippingState&amp; &quot; &quot; , &quot;&quot; )&amp;
-if(LEN(Account.ShippingPostalCode)&gt;0,Account.ShippingPostalCode &amp; &quot;\\n&quot;,&quot;&quot;)  &amp;
-If(LEN( Account.ShippingCountry) &gt;0, Account.ShippingCountry,&quot;&quot;)</formula>
+        <formula>if(ISBLANK(Account.ShippingStreet), &quot;&quot; , Account.ShippingStreet&amp; &quot;\\n&quot;) &amp;
+if(ISBLANK(Account.ShippingCity), &quot;&quot; , Account.ShippingCity&amp; &quot;, &quot;)&amp;
+if(ISBLANK(Account.ShippingState),  &quot;&quot; , Account.ShippingState&amp; &quot; &quot;)&amp;
+if(ISBLANK(Account.ShippingPostalCode), &quot;&quot; , Account.ShippingPostalCode &amp; &quot;\\n&quot;)  &amp;
+If(ISBLANK( Account.ShippingCountry), &quot;&quot; , Account.ShippingCountry)</formula>
         <label>Shipping Address</label>
         <required>false</required>
         <type>Text</type>

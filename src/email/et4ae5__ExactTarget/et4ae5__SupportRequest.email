@@ -1,0 +1,17 @@
+{!$Label.et4ae5__suprtreq}
+
+{!$Label.et4ae5__emailsend}:
+{!et4ae5__SupportRequest__c.et4ae5__Send_Definition__c}
+{!et4ae5__SupportRequest__c.et4ae5__Send_DefinitionId__c}
+
+{!$Label.et4ae5__requestdby}:
+{!et4ae5__SupportRequest__c.CreatedBy} {!$Label.on} {!et4ae5__SupportRequest__c.CreatedDate}
+{!$Label.et4ae5__id}: {!et4ae5__SupportRequest__c.CreatedById}
+{!$Label.et4ae5__email}: {!et4ae5__SupportRequest__c.et4ae5__RequestEmail__c}
+{!$Label.et4ae5__phone}: {!et4ae5__SupportRequest__c.et4ae5__RequestPhone__c}
+
+
+{!$Label.et4ae5__comment}:
+{!et4ae5__SupportRequest__c.et4ae5__Comment__c}
+
+{!et4ae5__SupportRequest__c.Link}

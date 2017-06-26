@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Defines basic Industries configurations.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>FinServ__AccountNameFormat__c</fullName>
+        <defaultValue>&quot;{firstname} {lastname}&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Define an individual&apos;s account name format</description>
+        <externalId>false</externalId>
+        <inlineHelpText>By default, account names are displayed: {firstname} {lastname}. To change the order, enter: {lastname} {firstname}</inlineHelpText>
+        <label>Account Name Format</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FinServ__AppName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Reserved for Salesforce internal use</description>
+        <externalId>false</externalId>
+        <label>Application Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FinServ__AutoCreateInverseRole__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Reserved for Salesforce internal use</description>
+        <externalId>false</externalId>
+        <label>Create Inverse (Salesforce only)</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__AutocreateIndividualAccount__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Creates the account part of the Individual when creating a contact</description>
+        <externalId>false</externalId>
+        <label>Individual Account Creation from Contact</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__DefaultIndividualType__c</fullName>
+        <defaultValue>&quot;Individual&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Reserved for Salesforce internal use</description>
+        <externalId>false</externalId>
+        <label>Default Individual Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FinServ__DependentPackageNS__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Comma-separated list of dependent packages</description>
+        <externalId>false</externalId>
+        <label>Dependent Packages</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FinServ__LeadConversionBatchSize__c</fullName>
+        <defaultValue>50</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Defines the batch size for processing lead conversions when converting multiple Individual leads</description>
+        <externalId>false</externalId>
+        <label>Lead Conversion Batch Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FinServ__MultipleRelationshipGroups__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enables a contact to be a member or related member of multiple relationship groups.</description>
+        <externalId>false</externalId>
+        <label>Multiple Relationship Groups</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FinServ__PageLayoutApiVersion__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Specifies the REST API version when retrieving page layout information</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For example : v32.0</inlineHelpText>
+        <label>Page Layout Api Version</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>FinServ__ShowDetailedError__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Shows detailed error messages</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Show a detailed error message when someone performs an action without having permission.</inlineHelpText>
+        <label>Show Detailed Error Messages</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Industries Application Config</label>
+    <visibility>Public</visibility>
+</CustomObject>

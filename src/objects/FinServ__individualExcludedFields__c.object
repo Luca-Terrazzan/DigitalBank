@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Fields that are not returned for an Individual.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>FinServ__ExcludedFields__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Excluded Fields</description>
+        <externalId>false</externalId>
+        <label>Excluded Fields</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Individual Excluded Fields</label>
+    <visibility>Public</visibility>
+</CustomObject>
